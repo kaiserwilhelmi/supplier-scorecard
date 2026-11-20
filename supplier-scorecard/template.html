@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Supplier Scorecard Dashboard</title>
+<style>
+.sc {
+  color-scheme: light;
+  --bg: #f6f5f2; --surface: #fcfcfb; --border: #e3e1db; --grid: #ebe9e4;
+  --text: #0b0b0b; --text-2: #52514e; --text-3: #7a7974;
+  --accent: #2a78d6; --accent-soft: #cde2fb;
+  --good: #0ca30c; --warn: #fab219; --serious: #ec835a; --crit: #d03b3b; --neutral: #8a8984;
+  --good-ink: #006300; --warn-ink: #8a5a00; --crit-ink: #a52222; --neutral-ink: #52514e;
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) .sc {
+    color-scheme: dark;
+    --bg: #121211; --surface: #1a1a19; --border: #33332f; --grid: #2a2a27;
+    --text: #f0efec; --text-2: #c3c2b7; --text-3: #94938b;
+    --accent: #3987e5; --accent-soft: #1c3a5e;
+    --neutral: #8f8e86;
+    --good-ink: #4cc94c; --warn-ink: #fab219; --crit-ink: #f07a7a; --neutral-ink: #c3c2b7;
+  }
+}
+:root[data-theme="dark"] .sc {
+    color-scheme: dark;
+    --bg: #121211; --surface: #1a1a19; --border: #33332f; --grid: #2a2a27;
+    --text: #f0efec; --text-2: #c3c2b7; --text-3: #94938b;
+    --accent: #3987e5; --accent-soft: #1c3a5e;
+    --neutral: #8f8e86;
+    --good-ink: #4cc94c; --warn-ink: #fab219; --crit-ink: #f07a7a; --neutral-ink: #c3c2b7;
+}
+* { box-sizing: border-box; }
+.sc details summary { cursor: pointer; font-weight: 600; }
+.sc textarea { width: 100%; min-height: 140px; font: 12px/1.4 ui-monospace, Menlo, monospace; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 8px; margin: 8px 0; }
+.sc .btn { font: inherit; border: 1px solid var(--border); background: var(--surface); color: var(--text); border-radius: 8px; padding: 8px 14px; cursor: pointer; margin-right: 8px; }
+.sc .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+body { margin: 0; }
+.sc { background: var(--bg); color: var(--text); min-height: 100vh;
+  font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  padding: 24px clamp(12px, 3vw, 40px) 48px; }
+.sc h1 { font-size: 24px; margin: 0 0 4px; letter-spacing: -0.01em; }
+.sc h2 { font-size: 16px; margin: 0 0 2px; }
+.sc .sub { color: var(--text-2); margin: 0; }
+.sc .note { color: var(--text-3); font-size: 12px; }
+.wrap { max-width: 1240px; margin: 0 auto; }
+.topbar { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-end; justify-content: space-between; margin-bottom: 20px; }
+.badge-sample { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
+  color: var(--text-2); border: 1px solid var(--border); border-radius: 999px; padding: 2px 8px; margin-left: 8px; vertical-align: 3px; }
+.filters { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.seg { display: inline-flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; background: var(--surface); }
+.seg button { border: 0; background: none; color: var(--text-2); font: inherit; padding: 6px 12px; cursor: pointer; }
+.seg button + button { border-left: 1px solid var(--border); }
+.seg button[aria-pressed="true"] { background: var(--accent); color: #fff; }
+.sc select { font: inherit; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 16px; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+.tile .label { color: var(--text-2); font-size: 13px; }
+.tile .value { font-size: 28px; font-weight: 650; letter-spacing: -0.02em; margin: 2px 0; font-variant-numeric: tabular-nums; }
+.tile .ctx { color: var(--text-3); font-size: 12px; }
+.grid2 { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 16px; margin-bottom: 16px; }
+@media (max-width: 900px) { .grid2 { grid-template-columns: minmax(0,1fr); } }
+.card-head { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; margin-bottom: 12px; flex-wrap: wrap; }
+.tablewrap { overflow-x: auto; margin: 0 -16px; padding: 0 16px; }
+table.sc-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; min-width: 860px; }
+.sc-table th { text-align: right; font-weight: 600; font-size: 12px; color: var(--text-2); padding: 8px 8px; border-bottom: 1px solid var(--border);
+  cursor: pointer; white-space: nowrap; user-select: none; position: sticky; top: 0; background: var(--surface); }
+.sc-table th.l, .sc-table td.l { text-align: left; }
+.sc-table th[aria-sort="ascending"]::after { content: " ▲"; font-size: 9px; }
+.sc-table th[aria-sort="descending"]::after { content: " ▼"; font-size: 9px; }
+.sc-table td { text-align: right; padding: 9px 8px; border-bottom: 1px solid var(--grid); white-space: nowrap; }
+.sc-table tbody tr { cursor: pointer; }
+.sc-table tbody tr:hover { background: color-mix(in srgb, var(--accent) 6%, transparent); }
+.sc-table tbody tr.sel { background: color-mix(in srgb, var(--accent) 12%, transparent); }
+.sc-table .sup { font-weight: 600; }
+.sc-table .cat { color: var(--text-3); font-size: 12px; }
+.scorecell { display: flex; align-items: center; gap: 8px; justify-content: flex-end; }
+.scorebar { width: 64px; height: 6px; border-radius: 3px; background: var(--grid); overflow: hidden; }
+.scorebar i { display: block; height: 100%; border-radius: 3px; background: var(--accent); }
+.tier { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; }
+.tier .dot { width: 8px; height: 8px; border-radius: 50%; }
+.tier.Preferred { color: var(--good-ink); } .tier.Preferred .dot { background: var(--good); }
+.tier.Approved { color: var(--neutral-ink); } .tier.Approved .dot { background: var(--neutral); }
+.tier.Watch { color: var(--warn-ink); } .tier.Watch .dot { background: var(--warn); }
+.tier.Probation { color: var(--crit-ink); } .tier.Probation .dot { background: var(--crit); }
+.chg.up { color: var(--good-ink); } .chg.down { color: var(--crit-ink); } .chg.flat { color: var(--text-3); }
+.miss { color: var(--crit-ink); font-weight: 600; }
+.detail-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; }
+.bigscore { font-size: 40px; font-weight: 700; letter-spacing: -0.03em; line-height: 1; font-variant-numeric: tabular-nums; }
+.kpirows { margin-top: 14px; display: grid; gap: 10px; }
+.kpirow .top { display: flex; justify-content: space-between; font-size: 13px; gap: 8px; }
+.kpirow .top b { font-weight: 600; }
+.kpirow .val { color: var(--text-2); font-variant-numeric: tabular-nums; }
+.track { height: 8px; background: var(--grid); border-radius: 4px; margin-top: 4px; overflow: hidden; }
+.track i { display: block; height: 100%; background: var(--accent); border-radius: 4px; }
+.chart { width: 100%; position: relative; }
+.chart svg { display: block; overflow: visible; }
+.chart text { fill: var(--text-2); font-size: 11px; }
+.tip { position: absolute; pointer-events: none; background: var(--surface); color: var(--text); border: 1px solid var(--border);
+  border-radius: 8px; padding: 8px 10px; font-size: 12px; box-shadow: 0 4px 16px rgba(0,0,0,.12); opacity: 0; transition: opacity .1s;
+  white-space: nowrap; z-index: 5; }
+.tip b { font-weight: 600; }
+.legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: var(--text-2); margin-top: 8px; }
+.method table { border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; width: 100%; }
+.method th, .method td { padding: 6px 8px; border-bottom: 1px solid var(--grid); text-align: right; }
+.method th:first-child, .method td:first-child { text-align: left; }
+.method th { color: var(--text-2); font-weight: 600; font-size: 12px; }
+.method p { color: var(--text-2); margin: 8px 0; }
+.insights { margin: 0; padding-left: 18px; color: var(--text); }
+.insights li { margin: 4px 0; }
+</style>
+</head>
+<body>
+<div class="sc">
+<div class="wrap">
+
+  <div class="topbar">
+    <div>
+      <h1>Supplier Scorecard <span class="badge-sample">Sample data</span></h1>
+      <p class="sub">Office-supply distributor · 12 suppliers · weighted scoring on delivery, fill rate, quality, invoicing and price</p>
+    </div>
+    <div class="filters">
+      <div class="seg" id="period" role="group" aria-label="Period">
+        <button data-m="3">Last 3 mo</button><button data-m="6" aria-pressed="true">Last 6 mo</button><button data-m="12">Last 12 mo</button>
+      </div>
+      <select id="cat" aria-label="Category"><option value="">All categories</option></select>
+    </div>
+  </div>
+
+  <div class="tiles" id="tiles"></div>
+
+  <div class="card" style="margin-bottom:16px">
+    <div class="card-head">
+      <div><h2>Key findings</h2><span class="note" id="findings-note"></span></div>
+    </div>
+    <ul class="insights" id="insights"></ul>
+  </div>
+
+  <div class="card" style="margin-bottom:16px">
+    <div class="card-head">
+      <div><h2>Scorecard</h2><span class="note">Click a supplier for its breakdown · click a column to sort · red = below target</span></div>
+      <span class="note" id="range-note"></span>
+    </div>
+    <div class="tablewrap"><table class="sc-table" id="table"></table></div>
+  </div>
+
+  <div class="grid2">
+    <div class="card" id="detail"></div>
+    <div class="card">
+      <div class="card-head"><div><h2>Spend vs. performance</h2><span class="note">Where the money sits relative to supplier score</span></div></div>
+      <div class="chart" id="matrix"></div>
+      <div class="legend" id="matrix-legend"></div>
+    </div>
+  </div>
+
+  <div class="card method">
+    <h2>How the score works</h2>
+    <p>Each KPI earns 0–100 points on a straight line from its floor (0 points) to its target (100 points), capped at both ends. The composite score is the weighted sum. Calculated from purchase-order data rolled up by month; the change column compares against the same-length period just before.</p>
+    <div class="tablewrap" style="margin:0"><table id="method-table" style="min-width:520px"></table></div>
+    <p><b>Tiers:</b> Preferred ≥ 85 · Approved 70–85 · Watch 55–70 · Probation &lt; 55.</p>
+    <p class="note">All suppliers and figures are fictional, generated for demonstration. Built with Python (data + scoring) and vanilla JavaScript/SVG.</p>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <details>
+      <summary>Score your own suppliers</summary>
+      <p class="note">Paste a CSV with one row per supplier per month and these columns (header row required):<br>
+      <code>supplier,category,month,spend,contract_value,pos,on_time_pos,lines_ordered,lines_filled,units_received,units_defective,invoices,invoices_accurate,lead_time_days_total</code><br>
+      Month as YYYY-MM. Everything stays in your browser.</p>
+      <textarea id="csv" spellcheck="false" aria-label="CSV data"></textarea>
+      <button class="btn primary" id="load">Load data</button><button class="btn" id="reset">Back to sample data</button>
+      <span class="note" id="csv-msg"></span>
+    </details>
+  </div>
+
+</div>
+</div>
+
+<script>
+const SAMPLE = /*__DATA__*/[];
+let ROWS = SAMPLE;
+
+const KPIS = [
+  { key: "otd",     label: "On-time delivery", unit: "%", w: 0.30, floor: 80,  target: 97,  dp: 1 },
+  { key: "fill",    label: "Fill rate",        unit: "%", w: 0.20, floor: 88,  target: 99,  dp: 1 },
+  { key: "quality", label: "Defect rate",      unit: "%", w: 0.20, floor: 3,   target: 0.3, dp: 2 },
+  { key: "invoice", label: "Invoice accuracy", unit: "%", w: 0.15, floor: 92,  target: 99.5, dp: 1 },
+  { key: "price",   label: "Price vs. contract", unit: "%", w: 0.15, floor: 3, target: 0,   dp: 2, signed: true },
+];
+const TIERS = [[85, "Preferred"], [70, "Approved"], [55, "Watch"], [0, "Probation"]];
+let MONTHS = [...new Set(ROWS.map(r => r.month))].sort();
+const state = { months: 6, cat: "", sort: { key: "score", dir: -1 }, selected: null };
+
+const pts = (v, f, t) => Math.max(0, Math.min(100, (v - f) / (t - f) * 100));
+const tierOf = s => TIERS.find(([c]) => s >= c)[1];
+const fmt$ = v => v >= 1e6 ? "$" + (v / 1e6).toFixed(2) + "M" : v >= 1e3 ? "$" + Math.round(v / 1e3) + "K" : "$" + Math.round(v);
+const fmtK = (k, v) => (k.signed && v > 0 ? "+" : "") + v.toFixed(k.dp) + k.unit;
+const monthLabel = m => new Date(m + "-02").toLocaleString("en-US", { month: "short", year: "2-digit" });
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+function metrics(rows) {
+  const s = k => rows.reduce((a, r) => a + r[k], 0);
+  if (!rows.length) return null;
+  const m = {
+    spend: s("spend"), pos: s("pos"),
+    otd: s("on_time_pos") / s("pos") * 100,
+    fill: s("lines_filled") / s("lines_ordered") * 100,
+    quality: s("units_defective") / s("units_received") * 100,
+    invoice: s("invoices_accurate") / s("invoices") * 100,
+    price: (s("spend") / s("contract_value") - 1) * 100,
+    lead: s("lead_time_days_total") / s("pos"),
+  };
+  m.points = Object.fromEntries(KPIS.map(k => [k.key, pts(m[k.key], k.floor, k.target)]));
+  m.score = KPIS.reduce((a, k) => a + k.w * m.points[k.key], 0);
+  m.tier = tierOf(m.score);
+  return m;
+}
+
+function suppliersFor(monthSet) {
+  const by = {};
+  ROWS.forEach(r => {
+    if (!monthSet.has(r.month)) return;
+    if (state.cat && r.category !== state.cat) return;
+    (by[r.supplier] ||= { name: r.supplier, category: r.category, rows: [] }).rows.push(r);
+  });
+  return Object.values(by).map(s => ({ ...s, ...metrics(s.rows) }));
+}
+
+function compute() {
+  const cur = MONTHS.slice(-state.months);
+  const prev = MONTHS.slice(-2 * state.months, -state.months);
+  const list = suppliersFor(new Set(cur));
+  const prevBy = Object.fromEntries(suppliersFor(new Set(prev)).map(s => [s.name, s]));
+  list.forEach(s => { s.change = prev.length === state.months && prevBy[s.name] ? s.score - prevBy[s.name].score : null; });
+  const total = list.reduce((a, s) => a + s.spend, 0);
+  list.forEach(s => s.share = s.spend / total * 100);
+  return { list, cur, total };
+}
+
+/* ---------- tiles ---------- */
+function renderTiles({ list, total, cur }) {
+  const all = metrics(list.flatMap(s => s.rows));
+  const wScore = list.reduce((a, s) => a + s.score * s.spend, 0) / total;
+  const risk = list.filter(s => s.tier === "Watch" || s.tier === "Probation");
+  const riskSpend = risk.reduce((a, s) => a + s.spend, 0);
+  const tiles = [
+    ["Spend in period", fmt$(total), `${all.pos.toLocaleString()} purchase orders`],
+    ["Spend-weighted score", wScore.toFixed(1), `Tier: ${tierOf(wScore)} · weighted by dollars`],
+    ["Spend at risk", (riskSpend / total * 100).toFixed(0) + "%", `${fmt$(riskSpend)} with ${risk.length} Watch/Probation supplier${risk.length === 1 ? "" : "s"}`],
+    ["On-time delivery", all.otd.toFixed(1) + "%", `Target 97% · avg lead time ${all.lead.toFixed(1)} days`],
+  ];
+  document.getElementById("tiles").innerHTML = tiles.map(([l, v, c]) =>
+    `<div class="card tile"><div class="label">${l}</div><div class="value">${v}</div><div class="ctx">${esc(c)}</div></div>`).join("");
+  document.getElementById("range-note").textContent = `${monthLabel(cur[0])} – ${monthLabel(cur[cur.length - 1])}`;
+}
+
+/* ---------- findings (generated from data) ---------- */
+function renderInsights({ list, total }) {
+  const out = [];
+  const bySpend = [...list].sort((a, b) => b.spend - a.spend);
+  const strategicRisk = bySpend.filter(s => s.score < 70 && s.share >= 8);
+  strategicRisk.forEach(s => {
+    const worst = KPIS.map(k => ({ k, gap: 100 - s.points[k.key], w: k.w })).sort((a, b) => b.gap * b.w - a.gap * a.w)[0];
+    out.push(`<b>${esc(s.name)}</b> holds ${s.share.toFixed(0)}% of spend but scores ${s.score.toFixed(0)} (${s.tier}). Biggest drag: ${worst.k.label.toLowerCase()} at ${fmtK(worst.k, s[worst.k.key])} vs. ${fmtK(worst.k, worst.k.target)} target.`);
+  });
+  const movers = list.filter(s => s.change !== null).sort((a, b) => a.change - b.change);
+  if (movers.length) {
+    const dn = movers[0], up = movers[movers.length - 1];
+    if (dn.change < -5) out.push(`<b>${esc(dn.name)}</b> fell ${Math.abs(dn.change).toFixed(0)} points vs. the prior period, now ${dn.tier}.`);
+    if (up.change > 5) out.push(`<b>${esc(up.name)}</b> improved ${up.change.toFixed(0)} points vs. the prior period, now ${up.tier}.`);
+  }
+  const top = bySpend.slice(0, 3);
+  out.push(`Top 3 suppliers account for ${(top.reduce((a, s) => a + s.share, 0)).toFixed(0)}% of spend (${top.map(s => esc(s.name)).join(", ")}).`);
+  const over = list.filter(s => s.price > 1).reduce((a, s) => a + (s.spend - s.spend / (1 + s.price / 100)), 0);
+  if (over > 0) out.push(`Estimated ${fmt$(over)} paid above contract price with suppliers running more than 1% over.`);
+  document.getElementById("insights").innerHTML = out.map(x => `<li>${x}</li>`).join("");
+  document.getElementById("findings-note").textContent = "Generated from the data for the selected period and category";
+}
+
+/* ---------- table ---------- */
+const COLS = [
+  { key: "rank", label: "#", cls: "l", noSort: true },
+  { key: "name", label: "Supplier", cls: "l" },
+  { key: "score", label: "Score" },
+  { key: "tier", label: "Tier", cls: "l", sortVal: s => s.score },
+  { key: "change", label: "Δ vs prior" },
+  { key: "spend", label: "Spend" },
+  ...KPIS.map(k => ({ key: k.key, label: k.label.replace("Price vs. contract", "Price var.").replace("Invoice accuracy", "Invoice acc.").replace("On-time delivery", "On-time"), kpi: k })),
+  { key: "lead", label: "Lead days" },
+];
+function renderTable({ list }) {
+  const { key, dir } = state.sort;
+  const col = COLS.find(c => c.key === key);
+  const val = s => col.sortVal ? col.sortVal(s) : s[key];
+  const rows = [...list].sort((a, b) => {
+    const va = val(a), vb = val(b);
+    if (va === null) return 1; if (vb === null) return -1;
+    return (typeof va === "string" ? va.localeCompare(vb) : va - vb) * dir;
+  });
+  const rankBy = [...list].sort((a, b) => b.score - a.score).map(s => s.name);
+  const th = COLS.map(c => `<th class="${c.cls || ""}" data-k="${c.key}" ${c.key === key ? `aria-sort="${dir > 0 ? "ascending" : "descending"}"` : ""}>${c.label}</th>`).join("");
+  const td = s => COLS.map(c => {
+    switch (c.key) {
+      case "rank": return `<td class="l note">${rankBy.indexOf(s.name) + 1}</td>`;
+      case "name": return `<td class="l"><div class="sup">${esc(s.name)}</div><div class="cat">${esc(s.category)}</div></td>`;
+      case "score": return `<td><div class="scorecell"><div class="scorebar"><i style="width:${s.score}%"></i></div><b>${s.score.toFixed(1)}</b></div></td>`;
+      case "tier": return `<td class="l"><span class="tier ${s.tier}"><span class="dot"></span>${s.tier}</span></td>`;
+      case "change": return s.change === null ? `<td class="chg flat">—</td>` :
+        `<td class="chg ${s.change > 1 ? "up" : s.change < -1 ? "down" : "flat"}">${s.change > 1 ? "▲" : s.change < -1 ? "▼" : "•"} ${Math.abs(s.change).toFixed(1)}</td>`;
+      case "spend": return `<td>${fmt$(s.spend)}<div class="cat">${s.share.toFixed(1)}%</div></td>`;
+      case "lead": return `<td>${s.lead.toFixed(1)}</td>`;
+      default: { const k = c.kpi; return `<td class="${s.points[k.key] < 60 ? "miss" : ""}">${fmtK(k, s[k.key])}</td>`; }
+    }
+  }).join("");
+  const t = document.getElementById("table");
+  t.innerHTML = `<thead><tr>${th}</tr></thead><tbody>${rows.map(s =>
+    `<tr data-n="${esc(s.name)}" class="${s.name === state.selected ? "sel" : ""}">${td(s)}</tr>`).join("")}</tbody>`;
+}
+
+/* ---------- detail ---------- */
+function renderDetail({ list }) {
+  const el = document.getElementById("detail");
+  const s = list.find(x => x.name === state.selected) || [...list].sort((a, b) => b.spend - a.spend)[0];
+  if (!s) { el.innerHTML = "<p class='note'>No suppliers in this category.</p>"; return; }
+  state.selected = s.name;
+  el.innerHTML = `
+    <div class="detail-head">
+      <div><h2>${esc(s.name)}</h2><span class="note">${esc(s.category)} · ${fmt$(s.spend)} spend · ${s.pos} POs</span></div>
+      <div style="text-align:right"><div class="bigscore">${s.score.toFixed(1)}</div><span class="tier ${s.tier}"><span class="dot"></span>${s.tier}</span></div>
+    </div>
+    <div class="kpirows">${KPIS.map(k => `
+      <div class="kpirow">
+        <div class="top"><span><b>${k.label}</b> <span class="val">${fmtK(k, s[k.key])} · target ${fmtK(k, k.target)}</span></span>
+        <span class="val">${(k.w * s.points[k.key]).toFixed(1)} / ${k.w * 100} pts</span></div>
+        <div class="track"><i style="width:${s.points[k.key]}%"></i></div>
+      </div>`).join("")}
+    </div>
+    <h2 style="margin-top:20px">Score trend</h2><span class="note">Rolling 3-month score, all 12 months · shaded bands are tiers</span>
+    <div class="chart" id="trend"></div>`;
+  drawTrend(s.name);
+}
+
+function svgEl(w, h) { return `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img">`; }
+function tipFor(container) {
+  let tip = container.querySelector(".tip");
+  if (!tip) { tip = document.createElement("div"); tip.className = "tip"; container.appendChild(tip); }
+  return {
+    show(html, x, y) {
+      tip.innerHTML = html; tip.style.opacity = 1;
+      const cw = container.clientWidth, tw = tip.offsetWidth;
+      tip.style.left = Math.max(0, Math.min(cw - tw, x + 12)) + "px";
+      tip.style.top = Math.max(0, y - tip.offsetHeight - 10) + "px";
+    },
+    hide() { tip.style.opacity = 0; }
+  };
+}
+
+function drawTrend(name) {
+  const box = document.getElementById("trend");
+  const W = box.clientWidth, H = 180, m = { l: 30, r: 10, t: 10, b: 24 };
+  const pts3 = [];
+  for (let i = 2; i < MONTHS.length; i++) {
+    const set = new Set(MONTHS.slice(i - 2, i + 1));
+    const rows = ROWS.filter(r => r.supplier === name && set.has(r.month));
+    pts3.push({ m: MONTHS[i], s: metrics(rows).score });
+  }
+  const x = i => m.l + i * (W - m.l - m.r) / (pts3.length - 1);
+  const y = v => m.t + (100 - v) * (H - m.t - m.b) / 100;
+  const bands = [[85, 100, "--good"], [70, 85, "--neutral"], [55, 70, "--warn"], [0, 55, "--crit"]];
+  let g = svgEl(W, H);
+  bands.forEach(([a, b, c]) => g += `<rect x="${m.l}" y="${y(b)}" width="${W - m.l - m.r}" height="${y(a) - y(b)}" fill="var(${c})" opacity=".09"/>`);
+  [0, 55, 70, 85, 100].forEach(v => g += `<text x="${m.l - 6}" y="${y(v) + 4}" text-anchor="end">${v}</text>`);
+  pts3.forEach((p, i) => { if (i % 2 === 0 || i === pts3.length - 1) g += `<text x="${x(i)}" y="${H - 6}" text-anchor="middle">${monthLabel(p.m)}</text>`; });
+  g += `<path d="${pts3.map((p, i) => (i ? "L" : "M") + x(i).toFixed(1) + "," + y(p.s).toFixed(1)).join("")}" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"/>`;
+  const last = pts3[pts3.length - 1];
+  g += `<circle cx="${x(pts3.length - 1)}" cy="${y(last.s)}" r="4" fill="var(--accent)" stroke="var(--surface)" stroke-width="2"/>`;
+  g += `<line id="xh" x1="0" x2="0" y1="${m.t}" y2="${H - m.b}" stroke="var(--text-3)" stroke-dasharray="3 3" opacity="0"/>`;
+  g += `<circle id="xd" r="5" fill="var(--accent)" stroke="var(--surface)" stroke-width="2" opacity="0"/>`;
+  g += `<rect x="${m.l}" y="0" width="${W - m.l - m.r}" height="${H}" fill="transparent" id="hit"/></svg>`;
+  box.innerHTML = g;
+  const tip = tipFor(box), svg = box.querySelector("svg");
+  const xh = svg.querySelector("#xh"), xd = svg.querySelector("#xd");
+  svg.querySelector("#hit").addEventListener("pointermove", e => {
+    const r = svg.getBoundingClientRect(), px = e.clientX - r.left;
+    const i = Math.max(0, Math.min(pts3.length - 1, Math.round((px - m.l) / (W - m.l - m.r) * (pts3.length - 1))));
+    const p = pts3[i];
+    xh.setAttribute("x1", x(i)); xh.setAttribute("x2", x(i)); xh.setAttribute("opacity", 1);
+    xd.setAttribute("cx", x(i)); xd.setAttribute("cy", y(p.s)); xd.setAttribute("opacity", 1);
+    tip.show(`<b>3 mo. ending ${monthLabel(p.m)}</b><br>Score ${p.s.toFixed(1)} · ${tierOf(p.s)}`, x(i), y(p.s));
+  });
+  svg.querySelector("#hit").addEventListener("pointerleave", () => { tip.hide(); xh.setAttribute("opacity", 0); xd.setAttribute("opacity", 0); });
+}
+
+/* ---------- matrix ---------- */
+function drawMatrix({ list }) {
+  const box = document.getElementById("matrix");
+  const W = box.clientWidth, H = Math.max(260, Math.min(360, W * 0.75)), m = { l: 48, r: 14, t: 14, b: 34 };
+  const maxSpend = Math.max(...list.map(s => s.spend)) * 1.1 || 1;
+  const x = v => m.l + v / 100 * (W - m.l - m.r);
+  const y = v => m.t + (1 - v / maxSpend) * (H - m.t - m.b);
+  const medSpend = [...list.map(s => s.spend)].sort((a, b) => a - b)[Math.floor(list.length / 2)] || 0;
+  const color = { Preferred: "--good", Approved: "--neutral", Watch: "--warn", Probation: "--crit" };
+  let g = svgEl(W, H);
+  // risk quadrant
+  g += `<rect x="${x(0)}" y="${y(maxSpend)}" width="${x(70) - x(0)}" height="${y(medSpend) - y(maxSpend)}" fill="var(--crit)" opacity=".07"/>`;
+  g += `<text x="${x(1)}" y="${y(maxSpend) + 14}" style="font-weight:600;fill:var(--crit-ink)">High spend, low score</text>`;
+  g += `<line x1="${x(70)}" x2="${x(70)}" y1="${m.t}" y2="${H - m.b}" stroke="var(--border)" stroke-dasharray="4 4"/>`;
+  g += `<line x1="${m.l}" x2="${W - m.r}" y1="${y(medSpend)}" y2="${y(medSpend)}" stroke="var(--border)" stroke-dasharray="4 4"/>`;
+  [0, 25, 50, 70, 85, 100].forEach(v => g += `<text x="${x(v)}" y="${H - m.b + 16}" text-anchor="middle">${v}</text>`);
+  g += `<text x="${(m.l + W - m.r) / 2}" y="${H - 2}" text-anchor="middle">Supplier score →</text>`;
+  const ticks = 4; for (let i = 0; i <= ticks; i++) { const v = maxSpend / ticks * i; g += `<text x="${m.l - 6}" y="${y(v) + 4}" text-anchor="end">${fmt$(v)}</text>`; }
+  g += `<line x1="${m.l}" x2="${W - m.r}" y1="${H - m.b}" y2="${H - m.b}" stroke="var(--border)"/>`;
+  const labeled = new Set([...list].sort((a, b) => b.spend - a.spend).slice(0, 3).map(s => s.name).concat(list.filter(s => s.score < 70 && s.spend >= medSpend).map(s => s.name)));
+  list.forEach(s => {
+    const cx = x(s.score), cy = y(s.spend), sel = s.name === state.selected;
+    g += `<circle cx="${cx}" cy="${cy}" r="${sel ? 8 : 6}" fill="var(${color[s.tier]})" stroke="${sel ? "var(--text)" : "var(--surface)"}" stroke-width="2"/>`;
+    if (labeled.has(s.name) || sel) {
+      const right = cx < W * 0.62;
+      g += `<text x="${cx + (right ? 10 : -10)}" y="${cy + 4}" text-anchor="${right ? "start" : "end"}" style="fill:var(--text);font-weight:${sel ? 600 : 400}">${esc(s.name.split(" ").slice(0, 2).join(" "))}</text>`;
+    }
+    g += `<circle cx="${cx}" cy="${cy}" r="14" fill="transparent" data-n="${esc(s.name)}" style="cursor:pointer"/>`;
+  });
+  box.innerHTML = g + "</svg>";
+  const tip = tipFor(box);
+  box.querySelectorAll("circle[data-n]").forEach(c => {
+    const s = list.find(v => v.name === c.dataset.n);
+    c.addEventListener("pointerenter", () => tip.show(`<b>${esc(s.name)}</b><br>Score ${s.score.toFixed(1)} · ${s.tier}<br>Spend ${fmt$(s.spend)} (${s.share.toFixed(1)}%)`, +c.getAttribute("cx"), +c.getAttribute("cy")));
+    c.addEventListener("pointerleave", () => tip.hide());
+    c.addEventListener("click", () => { state.selected = s.name; render(); });
+  });
+  document.getElementById("matrix-legend").innerHTML = TIERS.map(([, t]) => `<span class="tier ${t}"><span class="dot"></span>${t}</span>`).join("") +
+    `<span class="note">Dashed lines: Approved cutoff (70) and median spend</span>`;
+}
+
+function renderMethod() {
+  document.getElementById("method-table").innerHTML = `<thead><tr><th>KPI</th><th>Weight</th><th>Floor (0 pts)</th><th>Target (100 pts)</th><th>How it's measured</th></tr></thead><tbody>` +
+    KPIS.map((k, i) => `<tr><td>${k.label}</td><td>${k.w * 100}%</td><td>${fmtK(k, k.floor)}</td><td>${fmtK(k, k.target)}</td><td class="note" style="text-align:right">${[
+      "POs received by promised date", "Order lines shipped complete", "Defective units ÷ units received", "Invoices matching PO & receipt", "Price paid vs. contracted price"][i]}</td></tr>`).join("") + "</tbody>";
+}
+
+function render() {
+  const d = compute();
+  renderTiles(d); renderInsights(d); renderTable(d); renderDetail(d); drawMatrix(d);
+}
+
+/* ---------- events ---------- */
+function fillCats() {
+  document.getElementById("cat").innerHTML = '<option value="">All categories</option>' +
+    [...new Set(ROWS.map(r => r.category))].sort().map(c => `<option>${esc(c)}</option>`).join("");
+}
+function useRows(rows) {
+  ROWS = rows; MONTHS = [...new Set(ROWS.map(r => r.month))].sort();
+  state.cat = ""; state.selected = null;
+  state.months = Math.min(state.months, MONTHS.length);
+  fillCats(); render();
+}
+const NUM = ["spend","contract_value","pos","on_time_pos","lines_ordered","lines_filled","units_received","units_defective","invoices","invoices_accurate","lead_time_days_total"];
+document.getElementById("load").addEventListener("click", () => {
+  const msg = document.getElementById("csv-msg");
+  try {
+    const lines = document.getElementById("csv").value.trim().split(/\r?\n/).filter(Boolean);
+    const head = lines[0].split(",").map(h => h.trim());
+    const need = ["supplier","category","month",...NUM].filter(c => !head.includes(c));
+    if (need.length) throw new Error("Missing columns: " + need.join(", "));
+    const rows = lines.slice(1).map((ln, i) => {
+      const cells = ln.split(","), r = {};
+      head.forEach((h, j) => r[h] = (cells[j] || "").trim());
+      NUM.forEach(k => { r[k] = parseFloat(r[k]); if (!isFinite(r[k])) throw new Error(`Row ${i + 2}: ${k} is not a number`); });
+      if (!/^\d{4}-\d{2}$/.test(r.month)) throw new Error(`Row ${i + 2}: month must be YYYY-MM`);
+      return r;
+    });
+    if (!rows.length) throw new Error("No data rows");
+    useRows(rows); msg.textContent = `Loaded ${rows.length} rows across ${MONTHS.length} months.`;
+  } catch (e) { msg.textContent = e.message; }
+});
+document.getElementById("reset").addEventListener("click", () => { useRows(SAMPLE); document.getElementById("csv-msg").textContent = "Showing sample data."; });
+fillCats();
+document.getElementById("cat").addEventListener("change", e => { state.cat = e.target.value; state.selected = null; render(); });
+document.getElementById("period").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  state.months = +b.dataset.m;
+  document.querySelectorAll("#period button").forEach(x => x.setAttribute("aria-pressed", x === b));
+  render();
+});
+document.getElementById("table").addEventListener("click", e => {
+  const th = e.target.closest("th");
+  if (th) { const k = th.dataset.k; if (COLS.find(c => c.key === k).noSort) return;
+    state.sort = { key: k, dir: state.sort.key === k ? -state.sort.dir : (k === "name" || k === "quality" || k === "price" || k === "lead" ? 1 : -1) }; render(); return; }
+  const tr = e.target.closest("tr[data-n]");
+  if (tr) { state.selected = tr.dataset.n; render(); if (window.innerWidth < 900) document.getElementById("detail").scrollIntoView({ behavior: "smooth" }); }
+});
+let rt; window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(render, 120); });
+renderMethod();
+render();
+</script>
+</body>
+</html>
