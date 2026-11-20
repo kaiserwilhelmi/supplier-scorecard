@@ -1,0 +1,2019 @@
+po_number,supplier,category,month,amount,contract_value,lines_ordered,lines_filled,units_received,units_defective,on_time,lead_time_days,invoice_accurate
+PO-40101,Harbor Line Paper,Paper,2025-12,539.38,536.15,5,5,165,1,0,8,1
+PO-40102,Harbor Line Paper,Paper,2025-12,466.74,468.72,7,6,105,1,0,7,1
+PO-40103,Harbor Line Paper,Paper,2025-12,589.55,582.13,7,7,105,2,1,3,1
+PO-40104,Harbor Line Paper,Paper,2025-12,616.88,600.18,17,17,493,2,1,4,1
+PO-40105,Harbor Line Paper,Paper,2025-12,314.28,317.31,10,10,280,1,1,4,1
+PO-40106,Harbor Line Paper,Paper,2025-12,601.02,600.1,7,7,266,1,1,3,1
+PO-40107,Harbor Line Paper,Paper,2025-12,572.98,570.81,8,8,176,0,1,4,1
+PO-40108,Harbor Line Paper,Paper,2025-12,316.37,317.33,15,15,225,1,1,4,1
+PO-40109,Harbor Line Paper,Paper,2025-12,589.15,589.86,9,9,180,0,1,5,1
+PO-40110,Harbor Line Paper,Paper,2025-12,381.41,375.66,18,18,504,4,1,5,1
+PO-40111,Harbor Line Paper,Paper,2025-12,484.31,486.73,7,7,175,1,1,4,1
+PO-40112,Harbor Line Paper,Paper,2025-12,557.72,551.53,3,3,87,0,1,3,1
+PO-40113,Harbor Line Paper,Paper,2025-12,334.88,333.56,8,7,176,0,1,3,1
+PO-40114,Harbor Line Paper,Paper,2025-12,502.34,507.34,5,4,130,1,1,4,1
+PO-40115,Harbor Line Paper,Paper,2025-12,305.87,308.01,13,12,169,1,1,3,1
+PO-40116,Harbor Line Paper,Paper,2025-12,476.03,480.76,10,10,280,0,1,2,1
+PO-40117,Harbor Line Paper,Paper,2025-12,446.87,439.36,18,18,162,1,1,3,1
+PO-40118,Harbor Line Paper,Paper,2025-12,362.23,363.9,5,5,85,0,1,3,1
+PO-40119,Harbor Line Paper,Paper,2025-12,610.28,603.64,11,10,341,2,1,5,1
+PO-40120,Harbor Line Paper,Paper,2025-12,381.15,384.67,15,15,195,0,1,3,1
+PO-40121,Harbor Line Paper,Paper,2025-12,527.64,519.21,4,3,160,1,1,5,1
+PO-40122,Harbor Line Paper,Paper,2025-12,606.81,607.61,18,17,648,3,1,4,1
+PO-40123,Harbor Line Paper,Paper,2025-12,545.41,541.12,16,16,128,0,1,5,1
+PO-40124,Harbor Line Paper,Paper,2025-12,286.69,286.38,6,6,234,0,1,3,1
+PO-40125,Harbor Line Paper,Paper,2025-12,333.37,332.78,14,13,84,0,1,4,1
+PO-40126,Harbor Line Paper,Paper,2025-12,395.35,394.45,12,12,288,0,1,4,1
+PO-40127,Harbor Line Paper,Paper,2025-12,366.57,366.7,17,16,187,0,1,3,1
+PO-40128,Harbor Line Paper,Paper,2025-12,378.61,376.39,15,15,285,0,1,4,1
+PO-40129,Harbor Line Paper,Paper,2025-12,545.07,544.48,10,10,370,4,1,4,1
+PO-40130,Harbor Line Paper,Paper,2025-12,557.31,551.21,10,9,300,0,0,6,1
+PO-40131,Harbor Line Paper,Paper,2025-12,357.89,357.08,5,5,85,0,0,7,1
+PO-40132,Harbor Line Paper,Paper,2025-12,587.62,586.22,6,6,186,1,1,4,1
+PO-40133,Harbor Line Paper,Paper,2025-12,408.84,404.66,13,13,325,1,1,4,1
+PO-40134,Harbor Line Paper,Paper,2025-12,471.76,473.77,7,7,182,2,1,5,1
+PO-40135,Harbor Line Paper,Paper,2025-12,434.0,433.99,16,16,160,1,1,4,1
+PO-40136,Harbor Line Paper,Paper,2025-12,610.13,609.71,11,11,99,0,1,3,1
+PO-40137,Harbor Line Paper,Paper,2025-12,422.08,418.89,17,16,374,0,1,4,1
+PO-40138,Harbor Line Paper,Paper,2025-12,467.2,467.5,3,3,72,0,1,4,1
+PO-40139,Harbor Line Paper,Paper,2025-12,371.06,371.1,6,6,72,0,1,4,1
+PO-40140,Harbor Line Paper,Paper,2025-12,511.4,505.24,7,7,266,0,1,3,1
+PO-40141,Harbor Line Paper,Paper,2025-12,619.67,620.15,18,18,378,0,1,4,1
+PO-40142,Harbor Line Paper,Paper,2026-01,463.51,468.55,8,8,48,0,1,5,1
+PO-40143,Harbor Line Paper,Paper,2026-01,459.01,458.09,16,16,480,1,1,4,1
+PO-40144,Harbor Line Paper,Paper,2026-01,777.39,778.85,12,12,276,0,1,5,1
+PO-40145,Harbor Line Paper,Paper,2026-01,644.59,649.36,13,12,91,0,1,5,1
+PO-40146,Harbor Line Paper,Paper,2026-01,709.93,708.95,5,5,170,0,1,4,1
+PO-40147,Harbor Line Paper,Paper,2026-01,801.06,796.37,7,7,273,0,1,5,1
+PO-40148,Harbor Line Paper,Paper,2026-01,659.02,651.75,10,10,90,0,1,4,1
+PO-40149,Harbor Line Paper,Paper,2026-01,528.76,527.19,16,16,240,0,1,3,1
+PO-40150,Harbor Line Paper,Paper,2026-01,446.71,443.69,15,15,540,1,1,4,1
+PO-40151,Harbor Line Paper,Paper,2026-01,792.99,793.29,18,18,630,1,1,3,1
+PO-40152,Harbor Line Paper,Paper,2026-01,410.09,413.73,11,11,341,2,1,4,1
+PO-40153,Harbor Line Paper,Paper,2026-01,829.22,827.87,3,3,30,0,1,3,1
+PO-40154,Harbor Line Paper,Paper,2026-01,692.98,694.11,15,15,405,3,1,5,1
+PO-40155,Harbor Line Paper,Paper,2026-01,473.35,471.6,8,8,240,2,1,4,1
+PO-40156,Harbor Line Paper,Paper,2026-01,376.98,378.67,4,4,24,0,1,3,1
+PO-40157,Harbor Line Paper,Paper,2026-01,472.36,472.41,5,5,65,0,1,4,1
+PO-40158,Harbor Line Paper,Paper,2026-01,731.88,724.79,4,4,76,0,1,5,1
+PO-40159,Harbor Line Paper,Paper,2026-01,817.06,816.49,4,4,32,0,1,3,1
+PO-40160,Harbor Line Paper,Paper,2026-01,520.15,521.28,10,10,160,2,1,4,1
+PO-40161,Harbor Line Paper,Paper,2026-01,549.0,558.55,16,16,544,2,1,4,1
+PO-40162,Harbor Line Paper,Paper,2026-01,421.18,413.43,14,14,238,2,1,4,1
+PO-40163,Harbor Line Paper,Paper,2026-01,756.14,756.59,15,15,330,3,1,7,1
+PO-40164,Harbor Line Paper,Paper,2026-01,767.2,766.41,16,16,416,5,1,4,1
+PO-40165,Harbor Line Paper,Paper,2026-01,657.97,664.42,10,10,160,1,1,5,1
+PO-40166,Harbor Line Paper,Paper,2026-01,782.15,788.74,7,7,112,0,1,4,1
+PO-40167,Harbor Line Paper,Paper,2026-01,781.86,775.22,4,4,48,1,1,4,1
+PO-40168,Harbor Line Paper,Paper,2026-01,790.45,786.84,6,6,150,2,1,4,1
+PO-40169,Harbor Line Paper,Paper,2026-01,760.04,758.91,15,14,150,0,1,4,1
+PO-40170,Harbor Line Paper,Paper,2026-01,750.95,754.41,14,14,140,0,1,4,1
+PO-40171,Harbor Line Paper,Paper,2026-01,506.45,500.82,11,11,297,1,1,5,1
+PO-40172,Harbor Line Paper,Paper,2026-01,430.03,430.95,10,10,270,2,1,4,1
+PO-40173,Harbor Line Paper,Paper,2026-01,392.8,391.11,8,8,112,2,1,4,1
+PO-40174,Harbor Line Paper,Paper,2026-01,409.73,413.46,16,16,208,3,1,4,1
+PO-40175,Harbor Line Paper,Paper,2026-01,570.62,575.12,4,4,140,0,1,4,1
+PO-40176,Harbor Line Paper,Paper,2026-01,793.07,788.92,11,10,242,1,1,4,1
+PO-40177,Harbor Line Paper,Paper,2026-01,485.93,486.81,10,10,100,0,1,5,1
+PO-40178,Harbor Line Paper,Paper,2026-01,654.83,653.05,13,13,390,5,1,2,1
+PO-40179,Harbor Line Paper,Paper,2026-01,363.33,366.03,12,12,408,1,1,5,1
+PO-40180,Harbor Line Paper,Paper,2026-02,761.54,759.48,16,16,432,1,1,3,1
+PO-40181,Harbor Line Paper,Paper,2026-02,551.11,543.94,16,15,480,3,1,7,1
+PO-40182,Harbor Line Paper,Paper,2026-02,392.89,389.62,5,5,195,1,1,4,1
+PO-40183,Harbor Line Paper,Paper,2026-02,340.86,342.15,3,3,18,0,1,4,1
+PO-40184,Harbor Line Paper,Paper,2026-02,575.25,579.9,4,4,136,1,1,2,1
+PO-40185,Harbor Line Paper,Paper,2026-02,386.63,391.2,12,12,324,2,1,5,1
+PO-40186,Harbor Line Paper,Paper,2026-02,339.33,338.0,7,7,280,1,1,4,1
+PO-40187,Harbor Line Paper,Paper,2026-02,674.07,664.11,7,7,42,0,1,4,1
+PO-40188,Harbor Line Paper,Paper,2026-02,473.64,471.72,5,5,70,2,1,4,1
+PO-40189,Harbor Line Paper,Paper,2026-02,408.21,401.86,4,4,52,0,1,3,1
+PO-40190,Harbor Line Paper,Paper,2026-02,593.7,595.61,16,16,464,2,1,4,1
+PO-40191,Harbor Line Paper,Paper,2026-02,490.05,492.95,12,12,360,1,1,4,1
+PO-40192,Harbor Line Paper,Paper,2026-02,329.45,327.86,5,5,105,0,1,4,1
+PO-40193,Harbor Line Paper,Paper,2026-02,519.07,525.27,9,9,180,1,1,4,1
+PO-40194,Harbor Line Paper,Paper,2026-02,505.59,502.47,14,13,420,0,1,3,1
+PO-40195,Harbor Line Paper,Paper,2026-02,713.17,716.86,8,8,208,1,1,3,1
+PO-40196,Harbor Line Paper,Paper,2026-02,362.71,359.21,11,11,143,2,1,4,1
+PO-40197,Harbor Line Paper,Paper,2026-02,540.67,535.47,5,5,60,0,1,4,1
+PO-40198,Harbor Line Paper,Paper,2026-02,407.12,409.3,9,9,234,0,1,4,1
+PO-40199,Harbor Line Paper,Paper,2026-02,645.44,646.41,3,3,69,0,1,5,1
+PO-40200,Harbor Line Paper,Paper,2026-02,659.07,651.96,14,14,490,3,1,4,1
+PO-40201,Harbor Line Paper,Paper,2026-02,503.99,505.4,16,16,640,5,1,4,1
+PO-40202,Harbor Line Paper,Paper,2026-02,503.86,496.15,17,16,561,1,1,4,1
+PO-40203,Harbor Line Paper,Paper,2026-02,357.41,357.52,18,18,558,2,1,4,1
+PO-40204,Harbor Line Paper,Paper,2026-02,741.38,739.25,10,10,210,1,1,4,1
+PO-40205,Harbor Line Paper,Paper,2026-02,362.82,362.6,6,6,150,2,1,3,1
+PO-40206,Harbor Line Paper,Paper,2026-02,497.46,492.77,14,14,154,1,1,4,1
+PO-40207,Harbor Line Paper,Paper,2026-02,488.33,490.12,17,17,476,4,1,3,1
+PO-40208,Harbor Line Paper,Paper,2026-02,718.97,718.63,17,17,612,0,1,4,1
+PO-40209,Harbor Line Paper,Paper,2026-02,583.93,584.65,11,11,308,2,1,5,1
+PO-40210,Harbor Line Paper,Paper,2026-02,386.94,392.46,16,16,272,0,1,3,1
+PO-40211,Harbor Line Paper,Paper,2026-02,381.06,384.2,5,5,135,2,1,4,1
+PO-40212,Harbor Line Paper,Paper,2026-02,549.39,549.71,18,18,558,4,1,3,1
+PO-40213,Harbor Line Paper,Paper,2026-02,567.88,558.72,5,5,115,1,1,3,1
+PO-40214,Harbor Line Paper,Paper,2026-02,350.86,345.85,5,5,170,1,0,8,1
+PO-40215,Harbor Line Paper,Paper,2026-02,458.99,462.49,6,6,198,0,1,4,1
+PO-40216,Harbor Line Paper,Paper,2026-02,568.57,570.66,5,5,100,0,1,3,1
+PO-40217,Harbor Line Paper,Paper,2026-02,636.32,634.04,11,10,308,0,1,4,1
+PO-40218,Harbor Line Paper,Paper,2026-02,616.51,615.82,8,8,40,0,1,4,1
+PO-40219,Harbor Line Paper,Paper,2026-03,776.1,775.94,14,14,280,2,1,5,1
+PO-40220,Harbor Line Paper,Paper,2026-03,541.27,547.11,4,4,120,0,1,5,1
+PO-40221,Harbor Line Paper,Paper,2026-03,620.79,621.14,17,16,408,0,1,5,1
+PO-40222,Harbor Line Paper,Paper,2026-03,715.23,717.99,3,3,54,0,1,3,1
+PO-40223,Harbor Line Paper,Paper,2026-03,351.88,353.15,3,3,30,0,1,3,1
+PO-40224,Harbor Line Paper,Paper,2026-03,737.78,742.57,14,14,154,1,1,4,1
+PO-40225,Harbor Line Paper,Paper,2026-03,646.86,648.65,17,17,476,1,1,4,1
+PO-40226,Harbor Line Paper,Paper,2026-03,344.77,346.41,4,4,32,0,1,3,1
+PO-40227,Harbor Line Paper,Paper,2026-03,537.04,544.76,5,5,145,1,0,6,1
+PO-40228,Harbor Line Paper,Paper,2026-03,522.4,530.67,16,16,128,0,1,4,1
+PO-40229,Harbor Line Paper,Paper,2026-03,440.99,446.11,10,10,150,0,1,4,1
+PO-40230,Harbor Line Paper,Paper,2026-03,339.42,338.03,11,10,55,0,1,5,1
+PO-40231,Harbor Line Paper,Paper,2026-03,394.28,386.89,11,11,77,1,1,5,1
+PO-40232,Harbor Line Paper,Paper,2026-03,418.08,419.26,16,16,384,3,1,5,1
+PO-40233,Harbor Line Paper,Paper,2026-03,764.94,747.73,5,5,65,0,1,4,1
+PO-40234,Harbor Line Paper,Paper,2026-03,414.84,417.08,7,7,168,0,1,4,1
+PO-40235,Harbor Line Paper,Paper,2026-03,675.63,679.15,13,13,195,2,0,8,1
+PO-40236,Harbor Line Paper,Paper,2026-03,561.53,550.15,10,10,380,1,1,4,0
+PO-40237,Harbor Line Paper,Paper,2026-03,365.77,363.4,6,6,204,1,1,4,1
+PO-40238,Harbor Line Paper,Paper,2026-03,590.02,582.93,3,3,69,0,1,3,1
+PO-40239,Harbor Line Paper,Paper,2026-03,597.52,592.79,17,17,187,1,1,2,1
+PO-40240,Harbor Line Paper,Paper,2026-03,740.2,735.06,8,7,152,1,1,4,1
+PO-40241,Harbor Line Paper,Paper,2026-03,633.34,630.04,4,4,48,0,1,4,1
+PO-40242,Harbor Line Paper,Paper,2026-03,718.59,712.9,16,15,560,2,1,4,1
+PO-40243,Harbor Line Paper,Paper,2026-03,534.51,530.38,9,9,315,2,1,4,1
+PO-40244,Harbor Line Paper,Paper,2026-03,407.19,404.11,6,6,72,0,1,3,1
+PO-40245,Harbor Line Paper,Paper,2026-03,718.03,720.35,6,6,180,1,1,5,1
+PO-40246,Harbor Line Paper,Paper,2026-03,705.77,700.42,3,3,111,0,1,4,1
+PO-40247,Harbor Line Paper,Paper,2026-03,427.38,427.0,3,3,78,0,1,3,1
+PO-40248,Harbor Line Paper,Paper,2026-03,387.83,384.86,14,14,560,2,1,4,1
+PO-40249,Harbor Line Paper,Paper,2026-03,400.07,400.17,4,4,88,0,1,4,1
+PO-40250,Harbor Line Paper,Paper,2026-03,778.5,780.28,3,3,81,0,1,5,1
+PO-40251,Harbor Line Paper,Paper,2026-03,674.6,660.89,11,11,231,1,1,5,1
+PO-40252,Harbor Line Paper,Paper,2026-03,785.95,784.26,15,13,150,0,1,4,1
+PO-40253,Harbor Line Paper,Paper,2026-03,388.97,385.8,13,13,195,0,1,5,1
+PO-40254,Harbor Line Paper,Paper,2026-04,316.93,314.85,7,7,252,5,1,3,1
+PO-40255,Harbor Line Paper,Paper,2026-04,561.29,562.64,5,5,75,0,1,4,1
+PO-40256,Harbor Line Paper,Paper,2026-04,666.49,677.61,18,18,594,3,1,3,1
+PO-40257,Harbor Line Paper,Paper,2026-04,454.48,451.54,4,4,148,0,1,4,1
+PO-40258,Harbor Line Paper,Paper,2026-04,523.71,531.67,16,15,592,3,1,4,1
+PO-40259,Harbor Line Paper,Paper,2026-04,315.9,314.32,5,4,25,0,1,5,1
+PO-40260,Harbor Line Paper,Paper,2026-04,684.07,673.47,4,4,32,0,1,3,1
+PO-40261,Harbor Line Paper,Paper,2026-04,655.18,649.73,13,13,247,2,1,4,1
+PO-40262,Harbor Line Paper,Paper,2026-04,672.04,667.66,3,3,93,2,1,3,1
+PO-40263,Harbor Line Paper,Paper,2026-04,477.36,477.62,14,14,70,0,1,3,1
+PO-40264,Harbor Line Paper,Paper,2026-04,662.22,660.43,5,5,35,0,1,4,1
+PO-40265,Harbor Line Paper,Paper,2026-04,529.69,528.9,13,13,494,2,1,5,1
+PO-40266,Harbor Line Paper,Paper,2026-04,662.32,659.35,4,4,104,1,1,3,1
+PO-40267,Harbor Line Paper,Paper,2026-04,436.9,431.26,5,5,110,0,1,5,1
+PO-40268,Harbor Line Paper,Paper,2026-04,405.07,405.48,12,12,456,2,1,4,1
+PO-40269,Harbor Line Paper,Paper,2026-04,599.67,593.13,12,12,360,3,1,3,1
+PO-40270,Harbor Line Paper,Paper,2026-04,353.77,350.28,14,14,140,1,1,6,1
+PO-40271,Harbor Line Paper,Paper,2026-04,543.53,537.64,7,7,63,0,1,2,1
+PO-40272,Harbor Line Paper,Paper,2026-04,487.46,485.43,18,18,666,4,1,3,0
+PO-40273,Harbor Line Paper,Paper,2026-04,466.48,468.14,11,9,99,0,1,3,1
+PO-40274,Harbor Line Paper,Paper,2026-04,395.92,390.94,9,9,63,1,1,5,1
+PO-40275,Harbor Line Paper,Paper,2026-04,600.61,604.15,3,2,30,0,0,9,1
+PO-40276,Harbor Line Paper,Paper,2026-04,613.9,610.05,3,3,75,0,1,4,1
+PO-40277,Harbor Line Paper,Paper,2026-04,418.12,423.27,5,5,65,0,1,5,1
+PO-40278,Harbor Line Paper,Paper,2026-04,678.14,677.59,15,15,555,1,1,4,1
+PO-40279,Harbor Line Paper,Paper,2026-04,477.13,481.8,3,3,54,0,1,5,1
+PO-40280,Harbor Line Paper,Paper,2026-04,571.17,569.64,18,18,540,1,1,5,1
+PO-40281,Harbor Line Paper,Paper,2026-04,313.75,318.86,8,7,224,1,1,2,1
+PO-40282,Harbor Line Paper,Paper,2026-04,314.27,315.79,3,3,66,1,1,5,1
+PO-40283,Harbor Line Paper,Paper,2026-04,614.08,610.72,15,15,555,2,1,5,1
+PO-40284,Harbor Line Paper,Paper,2026-04,676.22,676.61,13,13,455,2,1,5,1
+PO-40285,Harbor Line Paper,Paper,2026-04,590.79,591.26,18,18,486,2,1,4,1
+PO-40286,Harbor Line Paper,Paper,2026-04,540.57,539.43,8,8,192,3,1,4,1
+PO-40287,Harbor Line Paper,Paper,2026-04,647.45,648.26,14,14,406,0,1,5,0
+PO-40288,Harbor Line Paper,Paper,2026-04,485.11,484.11,3,3,99,0,1,3,1
+PO-40289,Harbor Line Paper,Paper,2026-04,550.6,555.11,5,5,115,0,1,6,1
+PO-40290,Harbor Line Paper,Paper,2026-04,623.57,625.84,4,4,60,1,1,4,1
+PO-40291,Harbor Line Paper,Paper,2026-05,291.03,290.8,17,17,289,1,1,3,1
+PO-40292,Harbor Line Paper,Paper,2026-05,282.26,284.63,4,4,120,1,1,2,1
+PO-40293,Harbor Line Paper,Paper,2026-05,355.01,354.79,15,14,540,3,1,4,1
+PO-40294,Harbor Line Paper,Paper,2026-05,591.51,588.77,6,6,186,1,1,3,1
+PO-40295,Harbor Line Paper,Paper,2026-05,377.83,377.45,11,11,275,0,1,4,1
+PO-40296,Harbor Line Paper,Paper,2026-05,426.96,429.36,13,13,104,0,1,5,1
+PO-40297,Harbor Line Paper,Paper,2026-05,558.19,560.44,12,12,444,1,1,5,1
+PO-40298,Harbor Line Paper,Paper,2026-05,386.18,392.09,12,12,396,1,1,3,1
+PO-40299,Harbor Line Paper,Paper,2026-05,345.65,347.41,4,4,108,0,1,4,1
+PO-40300,Harbor Line Paper,Paper,2026-05,463.43,463.43,12,11,468,2,1,3,1
+PO-40301,Harbor Line Paper,Paper,2026-05,453.85,446.95,10,10,150,0,1,5,1
+PO-40302,Harbor Line Paper,Paper,2026-05,647.02,647.49,12,12,360,3,1,4,1
+PO-40303,Harbor Line Paper,Paper,2026-05,283.25,277.02,7,7,98,0,1,5,1
+PO-40304,Harbor Line Paper,Paper,2026-05,350.64,347.64,12,12,300,2,1,3,1
+PO-40305,Harbor Line Paper,Paper,2026-05,330.44,328.61,12,12,408,2,1,5,1
+PO-40306,Harbor Line Paper,Paper,2026-05,619.53,617.87,14,14,182,0,1,4,1
+PO-40307,Harbor Line Paper,Paper,2026-05,358.05,357.31,17,17,408,1,1,3,1
+PO-40308,Harbor Line Paper,Paper,2026-05,313.98,312.89,6,5,72,0,1,4,1
+PO-40309,Harbor Line Paper,Paper,2026-05,298.75,298.93,15,15,285,0,1,4,1
+PO-40310,Harbor Line Paper,Paper,2026-05,457.48,459.3,16,16,592,2,1,5,1
+PO-40311,Harbor Line Paper,Paper,2026-05,535.3,525.73,17,17,85,0,1,3,1
+PO-40312,Harbor Line Paper,Paper,2026-05,539.59,545.22,7,7,70,0,1,4,1
+PO-40313,Harbor Line Paper,Paper,2026-05,289.47,286.81,6,6,48,1,1,5,1
+PO-40314,Harbor Line Paper,Paper,2026-05,294.05,290.7,15,15,510,3,1,3,1
+PO-40315,Harbor Line Paper,Paper,2026-05,299.48,299.74,4,4,20,0,1,3,1
+PO-40316,Harbor Line Paper,Paper,2026-05,544.36,546.07,5,5,140,0,1,3,0
+PO-40317,Harbor Line Paper,Paper,2026-05,447.03,448.74,14,13,504,2,1,3,1
+PO-40318,Harbor Line Paper,Paper,2026-05,342.21,346.15,11,11,396,2,1,4,1
+PO-40319,Harbor Line Paper,Paper,2026-05,518.41,509.79,15,15,135,0,1,3,1
+PO-40320,Harbor Line Paper,Paper,2026-05,564.02,562.54,3,3,102,0,1,3,1
+PO-40321,Harbor Line Paper,Paper,2026-05,308.29,306.07,13,13,286,2,1,4,1
+PO-40322,Harbor Line Paper,Paper,2026-05,380.35,382.49,18,16,378,2,1,5,1
+PO-40323,Harbor Line Paper,Paper,2026-05,569.4,565.26,18,18,378,1,1,4,1
+PO-40324,Harbor Line Paper,Paper,2026-05,475.16,477.85,9,9,360,0,1,4,1
+PO-40325,Harbor Line Paper,Paper,2026-05,474.06,478.54,18,18,360,1,1,3,1
+PO-40326,Harbor Line Paper,Paper,2026-05,515.03,505.75,16,16,160,1,1,4,1
+PO-40327,Harbor Line Paper,Paper,2026-05,404.9,400.7,14,13,518,0,1,5,1
+PO-40328,Harbor Line Paper,Paper,2026-05,625.08,628.57,7,7,105,0,1,4,1
+PO-40329,Harbor Line Paper,Paper,2026-06,693.49,692.54,11,11,286,1,1,4,1
+PO-40330,Harbor Line Paper,Paper,2026-06,602.23,599.52,18,18,270,0,1,5,1
+PO-40331,Harbor Line Paper,Paper,2026-06,467.44,469.07,7,7,210,1,1,4,1
+PO-40332,Harbor Line Paper,Paper,2026-06,975.56,978.36,5,5,170,0,1,4,1
+PO-40333,Harbor Line Paper,Paper,2026-06,587.38,595.26,10,10,90,1,1,4,1
+PO-40334,Harbor Line Paper,Paper,2026-06,784.66,782.59,6,6,210,2,1,5,1
+PO-40335,Harbor Line Paper,Paper,2026-06,490.03,490.16,15,15,75,0,0,10,1
+PO-40336,Harbor Line Paper,Paper,2026-06,738.9,750.57,16,15,560,1,1,4,1
+PO-40337,Harbor Line Paper,Paper,2026-06,821.92,822.72,16,16,528,0,1,5,1
+PO-40338,Harbor Line Paper,Paper,2026-06,943.13,935.46,3,3,66,0,1,5,1
+PO-40339,Harbor Line Paper,Paper,2026-06,661.54,664.41,17,17,238,1,1,5,1
+PO-40340,Harbor Line Paper,Paper,2026-06,480.97,476.13,11,11,396,1,1,4,1
+PO-40341,Harbor Line Paper,Paper,2026-06,631.31,629.87,3,3,24,0,1,5,1
+PO-40342,Harbor Line Paper,Paper,2026-06,948.81,955.32,5,5,190,0,1,4,1
+PO-40343,Harbor Line Paper,Paper,2026-06,919.16,919.27,17,17,391,1,1,3,1
+PO-40344,Harbor Line Paper,Paper,2026-06,781.8,783.8,11,11,220,1,1,3,1
+PO-40345,Harbor Line Paper,Paper,2026-06,677.91,684.48,12,12,432,1,1,4,1
+PO-40346,Harbor Line Paper,Paper,2026-06,937.05,940.77,9,9,324,0,1,4,1
+PO-40347,Harbor Line Paper,Paper,2026-06,447.13,444.51,3,3,102,0,1,4,1
+PO-40348,Harbor Line Paper,Paper,2026-06,886.36,899.1,14,14,434,2,1,4,1
+PO-40349,Harbor Line Paper,Paper,2026-06,890.9,894.78,5,5,125,0,1,4,1
+PO-40350,Harbor Line Paper,Paper,2026-06,748.77,747.24,14,14,182,0,1,5,1
+PO-40351,Harbor Line Paper,Paper,2026-06,740.38,741.69,17,17,680,2,1,4,1
+PO-40352,Harbor Line Paper,Paper,2026-06,803.37,803.08,17,17,357,3,1,5,1
+PO-40353,Harbor Line Paper,Paper,2026-06,562.3,553.76,5,5,70,0,1,3,1
+PO-40354,Harbor Line Paper,Paper,2026-07,691.41,685.43,16,16,608,2,1,5,1
+PO-40355,Harbor Line Paper,Paper,2026-07,670.04,668.41,18,18,396,1,1,3,1
+PO-40356,Harbor Line Paper,Paper,2026-07,379.58,377.62,9,9,135,1,0,8,1
+PO-40357,Harbor Line Paper,Paper,2026-07,612.66,613.14,4,4,136,0,1,4,1
+PO-40358,Harbor Line Paper,Paper,2026-07,681.62,682.56,9,8,45,1,1,3,1
+PO-40359,Harbor Line Paper,Paper,2026-07,792.5,792.53,16,16,432,1,1,4,1
+PO-40360,Harbor Line Paper,Paper,2026-07,345.69,345.53,10,10,160,0,1,5,1
+PO-40361,Harbor Line Paper,Paper,2026-07,369.32,371.04,3,3,15,0,1,3,1
+PO-40362,Harbor Line Paper,Paper,2026-07,612.89,614.56,11,11,308,0,1,3,1
+PO-40363,Harbor Line Paper,Paper,2026-07,700.63,694.8,4,4,144,0,1,5,1
+PO-40364,Harbor Line Paper,Paper,2026-07,670.76,676.15,5,5,25,1,1,5,1
+PO-40365,Harbor Line Paper,Paper,2026-07,363.88,356.79,11,10,143,0,1,4,1
+PO-40366,Harbor Line Paper,Paper,2026-07,648.82,653.62,12,12,132,0,1,4,1
+PO-40367,Harbor Line Paper,Paper,2026-07,370.84,370.99,9,9,324,2,1,4,1
+PO-40368,Harbor Line Paper,Paper,2026-07,569.96,565.89,6,6,198,1,1,4,1
+PO-40369,Harbor Line Paper,Paper,2026-07,625.18,632.8,14,14,448,3,1,4,1
+PO-40370,Harbor Line Paper,Paper,2026-07,389.98,384.07,18,17,450,0,1,3,1
+PO-40371,Harbor Line Paper,Paper,2026-07,595.68,592.81,8,8,104,0,1,4,1
+PO-40372,Harbor Line Paper,Paper,2026-07,425.76,420.17,14,13,168,2,1,4,1
+PO-40373,Harbor Line Paper,Paper,2026-07,644.8,641.13,5,5,130,1,1,3,1
+PO-40374,Harbor Line Paper,Paper,2026-07,756.92,754.13,12,12,300,3,1,4,1
+PO-40375,Harbor Line Paper,Paper,2026-07,382.96,381.53,16,16,112,0,1,3,1
+PO-40376,Harbor Line Paper,Paper,2026-07,400.86,403.37,4,4,140,0,1,3,1
+PO-40377,Harbor Line Paper,Paper,2026-07,778.23,792.15,10,10,110,0,1,4,1
+PO-40378,Harbor Line Paper,Paper,2026-07,708.22,697.02,13,13,234,2,1,5,1
+PO-40379,Harbor Line Paper,Paper,2026-07,662.16,656.31,11,11,77,2,1,4,1
+PO-40380,Harbor Line Paper,Paper,2026-07,553.18,553.29,5,5,90,1,1,3,1
+PO-40381,Harbor Line Paper,Paper,2026-07,504.7,500.71,18,18,216,0,1,4,1
+PO-40382,Harbor Line Paper,Paper,2026-07,387.43,387.4,18,18,468,4,1,4,1
+PO-40383,Harbor Line Paper,Paper,2026-07,408.96,410.82,11,11,99,0,1,3,1
+PO-40384,Harbor Line Paper,Paper,2026-07,413.78,410.3,5,5,100,0,1,4,1
+PO-40385,Harbor Line Paper,Paper,2026-07,563.39,558.67,8,8,80,1,1,3,1
+PO-40386,Harbor Line Paper,Paper,2026-07,649.85,650.03,4,4,60,1,1,4,1
+PO-40387,Harbor Line Paper,Paper,2026-07,349.07,351.05,16,16,96,0,1,4,1
+PO-40388,Harbor Line Paper,Paper,2026-07,443.74,434.94,12,12,168,2,1,5,1
+PO-40389,Harbor Line Paper,Paper,2026-07,652.18,650.71,18,18,162,0,1,4,1
+PO-40390,Harbor Line Paper,Paper,2026-07,736.01,741.19,16,16,144,0,0,7,1
+PO-40391,Harbor Line Paper,Paper,2026-07,741.79,742.76,17,16,544,2,1,4,1
+PO-40392,Harbor Line Paper,Paper,2026-07,542.7,540.78,10,10,80,0,1,4,1
+PO-40393,Harbor Line Paper,Paper,2026-08,883.72,885.96,14,14,182,0,1,3,1
+PO-40394,Harbor Line Paper,Paper,2026-08,650.91,651.1,4,3,76,0,1,2,1
+PO-40395,Harbor Line Paper,Paper,2026-08,625.05,626.98,6,6,222,2,1,4,0
+PO-40396,Harbor Line Paper,Paper,2026-08,477.14,469.79,6,6,102,0,1,4,1
+PO-40397,Harbor Line Paper,Paper,2026-08,565.53,562.35,11,10,440,0,1,5,1
+PO-40398,Harbor Line Paper,Paper,2026-08,547.03,542.66,7,7,280,1,1,3,1
+PO-40399,Harbor Line Paper,Paper,2026-08,845.7,838.21,6,6,198,1,1,5,1
+PO-40400,Harbor Line Paper,Paper,2026-08,684.98,685.18,18,18,702,4,1,5,1
+PO-40401,Harbor Line Paper,Paper,2026-08,827.62,820.03,17,16,221,1,1,5,1
+PO-40402,Harbor Line Paper,Paper,2026-08,886.42,881.9,8,8,192,2,1,4,1
+PO-40403,Harbor Line Paper,Paper,2026-08,566.09,565.07,10,10,300,3,1,5,1
+PO-40404,Harbor Line Paper,Paper,2026-08,641.33,631.72,5,5,75,0,1,6,1
+PO-40405,Harbor Line Paper,Paper,2026-08,607.36,600.83,6,6,150,2,1,2,1
+PO-40406,Harbor Line Paper,Paper,2026-08,451.29,450.37,16,15,352,1,1,5,1
+PO-40407,Harbor Line Paper,Paper,2026-08,762.77,763.8,6,6,102,0,1,3,1
+PO-40408,Harbor Line Paper,Paper,2026-08,572.82,575.22,17,17,578,1,1,5,1
+PO-40409,Harbor Line Paper,Paper,2026-08,514.32,508.86,6,6,240,1,1,4,1
+PO-40410,Harbor Line Paper,Paper,2026-08,466.52,460.95,14,14,280,0,1,4,1
+PO-40411,Harbor Line Paper,Paper,2026-08,475.63,479.59,4,4,60,0,1,3,1
+PO-40412,Harbor Line Paper,Paper,2026-08,577.81,581.01,9,9,81,0,1,4,1
+PO-40413,Harbor Line Paper,Paper,2026-08,841.38,836.4,10,10,260,0,1,4,1
+PO-40414,Harbor Line Paper,Paper,2026-08,770.27,768.94,12,11,348,0,1,4,1
+PO-40415,Harbor Line Paper,Paper,2026-08,700.39,702.58,16,16,624,0,1,4,1
+PO-40416,Harbor Line Paper,Paper,2026-08,755.55,750.8,4,4,100,0,1,3,1
+PO-40417,Harbor Line Paper,Paper,2026-08,407.87,408.47,4,4,60,0,1,4,1
+PO-40418,Harbor Line Paper,Paper,2026-08,815.01,810.76,14,14,448,0,1,3,1
+PO-40419,Harbor Line Paper,Paper,2026-08,499.57,501.38,3,3,117,1,1,3,1
+PO-40420,Harbor Line Paper,Paper,2026-08,589.54,588.49,6,6,210,1,1,3,1
+PO-40421,Harbor Line Paper,Paper,2026-08,712.4,707.55,5,5,85,1,1,4,1
+PO-40422,Harbor Line Paper,Paper,2026-08,884.41,878.84,14,13,462,2,1,3,1
+PO-40423,Harbor Line Paper,Paper,2026-08,445.58,440.77,7,7,175,0,1,4,1
+PO-40424,Harbor Line Paper,Paper,2026-08,604.93,614.63,4,4,56,0,1,3,1
+PO-40425,Harbor Line Paper,Paper,2026-08,642.58,641.98,17,17,493,2,1,4,1
+PO-40426,Harbor Line Paper,Paper,2026-08,500.24,497.52,6,6,54,1,1,4,1
+PO-40427,Harbor Line Paper,Paper,2026-08,484.54,482.15,14,14,378,2,1,4,1
+PO-40428,Harbor Line Paper,Paper,2026-08,440.75,438.47,4,4,144,0,1,5,1
+PO-40429,Harbor Line Paper,Paper,2026-08,542.67,548.16,5,5,100,0,1,4,1
+PO-40430,Harbor Line Paper,Paper,2026-08,458.49,458.33,11,11,407,2,1,4,1
+PO-40431,Harbor Line Paper,Paper,2026-08,490.44,483.74,10,10,370,5,1,4,1
+PO-40432,Harbor Line Paper,Paper,2026-08,509.33,506.0,5,4,145,0,1,3,1
+PO-40433,Harbor Line Paper,Paper,2026-08,791.49,781.31,11,11,264,0,1,3,1
+PO-40434,Harbor Line Paper,Paper,2026-08,763.39,763.31,16,16,512,3,1,5,1
+PO-40435,Harbor Line Paper,Paper,2026-08,530.4,529.45,7,7,105,3,1,5,1
+PO-40436,Harbor Line Paper,Paper,2026-08,403.86,401.6,10,10,280,0,1,3,1
+PO-40437,Harbor Line Paper,Paper,2026-08,522.04,519.79,11,11,154,0,1,5,1
+PO-40438,Harbor Line Paper,Paper,2026-09,957.78,947.96,15,15,540,2,1,4,1
+PO-40439,Harbor Line Paper,Paper,2026-09,923.31,914.53,15,15,510,1,1,4,1
+PO-40440,Harbor Line Paper,Paper,2026-09,878.94,867.01,17,17,561,5,1,5,1
+PO-40441,Harbor Line Paper,Paper,2026-09,427.8,426.54,12,11,456,1,1,5,1
+PO-40442,Harbor Line Paper,Paper,2026-09,678.47,671.94,8,8,192,0,1,4,1
+PO-40443,Harbor Line Paper,Paper,2026-09,869.72,868.59,4,3,124,0,1,4,1
+PO-40444,Harbor Line Paper,Paper,2026-09,478.9,480.7,9,9,324,1,1,4,1
+PO-40445,Harbor Line Paper,Paper,2026-09,819.26,819.95,13,12,403,0,0,10,1
+PO-40446,Harbor Line Paper,Paper,2026-09,785.3,777.82,11,11,363,0,1,4,1
+PO-40447,Harbor Line Paper,Paper,2026-09,955.36,955.06,12,12,468,0,1,4,1
+PO-40448,Harbor Line Paper,Paper,2026-09,628.18,623.49,10,10,80,0,1,4,1
+PO-40449,Harbor Line Paper,Paper,2026-09,936.36,936.93,6,6,174,1,1,2,1
+PO-40450,Harbor Line Paper,Paper,2026-09,830.71,837.95,10,10,140,0,1,4,1
+PO-40451,Harbor Line Paper,Paper,2026-09,734.41,734.96,15,15,255,3,1,5,1
+PO-40452,Harbor Line Paper,Paper,2026-09,754.86,756.36,11,11,132,0,1,5,1
+PO-40453,Harbor Line Paper,Paper,2026-09,475.62,471.03,13,13,247,1,1,4,1
+PO-40454,Harbor Line Paper,Paper,2026-09,512.8,511.23,9,8,162,0,0,6,1
+PO-40455,Harbor Line Paper,Paper,2026-09,764.39,759.28,11,11,385,1,1,5,1
+PO-40456,Harbor Line Paper,Paper,2026-09,429.36,425.95,11,11,440,3,1,4,1
+PO-40457,Harbor Line Paper,Paper,2026-09,443.31,446.33,17,16,289,1,1,5,1
+PO-40458,Harbor Line Paper,Paper,2026-09,522.55,516.66,9,9,108,1,1,4,1
+PO-40459,Harbor Line Paper,Paper,2026-09,751.92,749.47,7,7,203,1,1,5,1
+PO-40460,Harbor Line Paper,Paper,2026-09,764.25,766.54,11,11,286,2,1,5,1
+PO-40461,Harbor Line Paper,Paper,2026-09,439.5,444.36,7,7,252,0,1,4,1
+PO-40462,Harbor Line Paper,Paper,2026-09,740.11,746.3,3,3,120,1,1,3,1
+PO-40463,Harbor Line Paper,Paper,2026-09,508.98,502.25,8,8,88,2,1,3,1
+PO-40464,Harbor Line Paper,Paper,2026-09,481.51,479.33,3,3,120,0,1,4,1
+PO-40465,Harbor Line Paper,Paper,2026-09,675.24,668.28,5,4,110,0,1,4,1
+PO-40466,Harbor Line Paper,Paper,2026-09,477.47,476.6,9,9,198,0,1,3,1
+PO-40467,Harbor Line Paper,Paper,2026-09,677.44,676.36,14,14,210,2,1,6,1
+PO-40468,Harbor Line Paper,Paper,2026-09,514.35,512.29,6,6,72,0,1,5,1
+PO-40469,Harbor Line Paper,Paper,2026-09,873.23,865.24,9,9,63,2,1,4,1
+PO-40470,Harbor Line Paper,Paper,2026-09,726.07,716.14,18,18,432,2,1,3,1
+PO-40471,Harbor Line Paper,Paper,2026-09,944.63,942.33,15,15,315,1,0,8,1
+PO-40472,Harbor Line Paper,Paper,2026-10,595.5,591.79,6,6,114,0,1,3,1
+PO-40473,Harbor Line Paper,Paper,2026-10,731.02,723.42,17,15,136,0,1,4,1
+PO-40474,Harbor Line Paper,Paper,2026-10,430.72,432.11,7,7,196,0,1,3,1
+PO-40475,Harbor Line Paper,Paper,2026-10,328.13,330.54,15,15,315,0,1,4,1
+PO-40476,Harbor Line Paper,Paper,2026-10,562.44,562.43,8,8,304,0,1,3,1
+PO-40477,Harbor Line Paper,Paper,2026-10,618.12,625.91,8,8,240,1,1,3,1
+PO-40478,Harbor Line Paper,Paper,2026-10,399.17,402.19,4,3,120,0,1,4,1
+PO-40479,Harbor Line Paper,Paper,2026-10,699.09,693.42,9,9,252,2,1,4,1
+PO-40480,Harbor Line Paper,Paper,2026-10,377.44,381.31,12,12,444,2,1,5,1
+PO-40481,Harbor Line Paper,Paper,2026-10,506.89,514.41,16,16,528,2,1,3,1
+PO-40482,Harbor Line Paper,Paper,2026-10,524.04,520.04,6,6,90,0,1,4,1
+PO-40483,Harbor Line Paper,Paper,2026-10,745.24,748.77,4,4,88,0,1,4,1
+PO-40484,Harbor Line Paper,Paper,2026-10,386.66,391.79,3,3,18,0,1,3,1
+PO-40485,Harbor Line Paper,Paper,2026-10,733.36,743.58,3,3,93,1,1,5,1
+PO-40486,Harbor Line Paper,Paper,2026-10,485.49,481.96,3,3,15,0,1,4,1
+PO-40487,Harbor Line Paper,Paper,2026-10,657.97,655.72,13,13,299,1,1,4,1
+PO-40488,Harbor Line Paper,Paper,2026-10,497.05,496.48,15,15,210,1,1,4,1
+PO-40489,Harbor Line Paper,Paper,2026-10,474.42,475.56,9,9,81,0,1,4,1
+PO-40490,Harbor Line Paper,Paper,2026-10,491.3,493.18,6,6,54,0,1,4,1
+PO-40491,Harbor Line Paper,Paper,2026-10,589.29,587.99,7,7,175,0,1,3,1
+PO-40492,Harbor Line Paper,Paper,2026-10,574.58,570.61,5,5,150,0,1,3,1
+PO-40493,Harbor Line Paper,Paper,2026-10,723.44,723.18,13,13,130,0,1,4,1
+PO-40494,Harbor Line Paper,Paper,2026-10,497.9,495.17,4,4,80,0,1,4,1
+PO-40495,Harbor Line Paper,Paper,2026-10,424.43,416.97,9,9,117,0,1,6,1
+PO-40496,Harbor Line Paper,Paper,2026-10,440.38,431.56,4,4,112,0,1,3,1
+PO-40497,Harbor Line Paper,Paper,2026-10,527.82,522.58,10,10,50,0,1,4,1
+PO-40498,Harbor Line Paper,Paper,2026-10,390.92,387.77,13,12,520,0,1,4,1
+PO-40499,Harbor Line Paper,Paper,2026-10,418.32,416.49,7,7,238,2,1,4,1
+PO-40500,Harbor Line Paper,Paper,2026-10,594.35,592.16,4,4,104,0,1,4,1
+PO-40501,Harbor Line Paper,Paper,2026-10,576.59,575.25,5,5,130,2,0,8,1
+PO-40502,Harbor Line Paper,Paper,2026-10,555.84,549.34,8,8,208,0,1,5,1
+PO-40503,Harbor Line Paper,Paper,2026-10,542.19,541.48,4,4,120,0,1,3,1
+PO-40504,Harbor Line Paper,Paper,2026-10,465.85,465.89,3,3,78,0,1,5,1
+PO-40505,Harbor Line Paper,Paper,2026-10,590.42,599.89,13,12,65,0,1,4,1
+PO-40506,Harbor Line Paper,Paper,2026-10,461.87,458.39,3,3,117,0,1,4,1
+PO-40507,Harbor Line Paper,Paper,2026-10,407.96,406.88,18,18,108,0,1,3,1
+PO-40508,Harbor Line Paper,Paper,2026-10,408.11,410.02,9,9,360,0,1,4,1
+PO-40509,Harbor Line Paper,Paper,2026-11,623.81,630.27,10,10,300,2,1,3,1
+PO-40510,Harbor Line Paper,Paper,2026-11,583.24,584.32,9,9,279,2,1,2,1
+PO-40511,Harbor Line Paper,Paper,2026-11,530.08,521.69,7,7,168,1,1,4,1
+PO-40512,Harbor Line Paper,Paper,2026-11,595.16,587.59,5,5,145,0,1,5,1
+PO-40513,Harbor Line Paper,Paper,2026-11,399.49,395.23,18,18,108,2,1,5,1
+PO-40514,Harbor Line Paper,Paper,2026-11,406.84,410.08,16,16,272,0,1,4,1
+PO-40515,Harbor Line Paper,Paper,2026-11,288.97,290.64,17,17,459,3,0,6,1
+PO-40516,Harbor Line Paper,Paper,2026-11,608.2,612.68,7,7,217,0,1,3,1
+PO-40517,Harbor Line Paper,Paper,2026-11,441.25,439.5,7,7,56,0,1,5,1
+PO-40518,Harbor Line Paper,Paper,2026-11,289.03,292.31,7,7,56,0,1,5,1
+PO-40519,Harbor Line Paper,Paper,2026-11,316.5,318.99,12,12,408,1,1,4,1
+PO-40520,Harbor Line Paper,Paper,2026-11,658.6,658.71,5,5,150,3,1,4,1
+PO-40521,Harbor Line Paper,Paper,2026-11,560.81,562.77,10,10,310,1,1,4,1
+PO-40522,Harbor Line Paper,Paper,2026-11,595.27,598.49,12,12,408,3,1,5,1
+PO-40523,Harbor Line Paper,Paper,2026-11,414.41,412.73,10,9,50,0,1,3,1
+PO-40524,Harbor Line Paper,Paper,2026-11,424.84,423.59,11,11,396,0,1,5,1
+PO-40525,Harbor Line Paper,Paper,2026-11,555.02,550.58,8,8,64,0,1,6,1
+PO-40526,Harbor Line Paper,Paper,2026-11,427.49,428.1,16,16,592,5,1,4,1
+PO-40527,Harbor Line Paper,Paper,2026-11,602.99,603.84,15,15,210,0,1,3,1
+PO-40528,Harbor Line Paper,Paper,2026-11,610.18,610.23,12,12,216,1,0,8,1
+PO-40529,Harbor Line Paper,Paper,2026-11,485.62,482.24,8,7,280,0,1,5,1
+PO-40530,Harbor Line Paper,Paper,2026-11,290.54,286.38,16,15,400,2,1,4,1
+PO-40531,Harbor Line Paper,Paper,2026-11,592.26,597.35,11,11,187,0,1,5,1
+PO-40532,Harbor Line Paper,Paper,2026-11,628.83,630.71,13,12,377,1,1,5,1
+PO-40533,Harbor Line Paper,Paper,2026-11,355.88,351.96,7,7,252,2,1,5,1
+PO-40534,Harbor Line Paper,Paper,2026-11,525.05,527.2,9,9,252,3,1,4,1
+PO-40535,Harbor Line Paper,Paper,2026-11,525.77,533.76,13,12,286,1,1,4,1
+PO-40536,Harbor Line Paper,Paper,2026-11,551.07,548.31,3,3,93,1,1,4,1
+PO-40537,Harbor Line Paper,Paper,2026-11,429.75,426.66,15,15,570,3,1,5,1
+PO-40538,Harbor Line Paper,Paper,2026-11,350.16,349.13,6,6,78,0,1,4,1
+PO-40539,Harbor Line Paper,Paper,2026-11,333.39,333.78,4,4,92,1,1,4,1
+PO-40540,Harbor Line Paper,Paper,2026-11,289.97,290.56,16,15,160,2,1,4,1
+PO-40541,Harbor Line Paper,Paper,2026-11,593.48,590.05,13,13,377,0,1,3,1
+PO-40542,Harbor Line Paper,Paper,2026-11,301.11,296.84,6,6,168,0,1,5,1
+PO-40543,Harbor Line Paper,Paper,2026-11,290.67,291.31,5,4,105,1,1,3,1
+PO-40544,Harbor Line Paper,Paper,2026-11,610.58,609.4,9,9,216,1,0,7,1
+PO-40545,Harbor Line Paper,Paper,2026-11,422.59,418.89,12,12,324,0,1,3,1
+PO-40546,Harbor Line Paper,Paper,2026-11,507.63,504.88,15,15,390,1,1,4,1
+PO-40547,Harbor Line Paper,Paper,2026-11,431.24,432.06,13,13,351,0,1,5,1
+PO-40548,Harbor Line Paper,Paper,2026-11,542.81,539.32,5,5,65,1,1,3,1
+PO-40549,Harbor Line Paper,Paper,2026-11,626.24,621.39,6,6,156,1,1,5,1
+PO-40550,Harbor Line Paper,Paper,2026-11,437.96,434.48,13,13,312,0,1,4,1
+PO-40551,Harbor Line Paper,Paper,2026-11,366.67,360.12,5,5,105,0,1,2,1
+PO-40552,Clearwater Ink & Toner,Toner & Ink,2025-12,733.5,739.89,6,6,222,1,1,5,1
+PO-40553,Clearwater Ink & Toner,Toner & Ink,2025-12,692.17,689.53,18,18,666,8,1,5,1
+PO-40554,Clearwater Ink & Toner,Toner & Ink,2025-12,548.9,539.91,11,11,231,0,1,5,1
+PO-40555,Clearwater Ink & Toner,Toner & Ink,2025-12,574.97,577.7,12,11,480,3,1,4,1
+PO-40556,Clearwater Ink & Toner,Toner & Ink,2025-12,814.46,816.48,16,15,400,7,1,5,1
+PO-40557,Clearwater Ink & Toner,Toner & Ink,2025-12,539.82,527.11,15,15,495,2,0,10,1
+PO-40558,Clearwater Ink & Toner,Toner & Ink,2025-12,992.39,983.06,3,3,66,0,1,5,1
+PO-40559,Clearwater Ink & Toner,Toner & Ink,2025-12,449.07,446.62,17,17,663,5,1,6,1
+PO-40560,Clearwater Ink & Toner,Toner & Ink,2025-12,441.58,445.41,4,4,128,2,1,6,1
+PO-40561,Clearwater Ink & Toner,Toner & Ink,2025-12,519.14,510.67,13,12,130,0,1,3,0
+PO-40562,Clearwater Ink & Toner,Toner & Ink,2025-12,801.73,801.83,14,13,434,4,1,4,1
+PO-40563,Clearwater Ink & Toner,Toner & Ink,2025-12,581.93,575.74,3,2,69,1,1,6,1
+PO-40564,Clearwater Ink & Toner,Toner & Ink,2025-12,860.78,846.72,11,11,99,0,1,5,1
+PO-40565,Clearwater Ink & Toner,Toner & Ink,2025-12,831.56,828.27,10,10,110,1,1,6,1
+PO-40566,Clearwater Ink & Toner,Toner & Ink,2025-12,911.81,912.63,10,10,190,3,1,5,1
+PO-40567,Clearwater Ink & Toner,Toner & Ink,2025-12,974.7,974.45,14,14,350,1,1,4,1
+PO-40568,Clearwater Ink & Toner,Toner & Ink,2025-12,611.92,604.53,8,8,232,0,1,6,1
+PO-40569,Clearwater Ink & Toner,Toner & Ink,2025-12,854.53,845.61,16,15,400,2,1,4,1
+PO-40570,Clearwater Ink & Toner,Toner & Ink,2025-12,966.59,950.99,16,15,272,1,1,4,1
+PO-40571,Clearwater Ink & Toner,Toner & Ink,2025-12,542.02,534.58,13,13,507,7,1,4,1
+PO-40572,Clearwater Ink & Toner,Toner & Ink,2026-01,515.69,517.12,15,14,480,8,1,6,1
+PO-40573,Clearwater Ink & Toner,Toner & Ink,2026-01,548.03,542.9,5,5,50,0,1,7,1
+PO-40574,Clearwater Ink & Toner,Toner & Ink,2026-01,500.87,505.55,7,7,210,1,1,4,1
+PO-40575,Clearwater Ink & Toner,Toner & Ink,2026-01,667.98,656.71,10,10,280,1,1,5,1
+PO-40576,Clearwater Ink & Toner,Toner & Ink,2026-01,353.86,352.62,18,17,252,4,1,5,1
+PO-40577,Clearwater Ink & Toner,Toner & Ink,2026-01,345.26,345.74,7,7,35,0,1,6,1
+PO-40578,Clearwater Ink & Toner,Toner & Ink,2026-01,620.86,617.65,10,10,210,2,1,6,1
+PO-40579,Clearwater Ink & Toner,Toner & Ink,2026-01,530.18,521.5,4,4,160,1,1,5,1
+PO-40580,Clearwater Ink & Toner,Toner & Ink,2026-01,358.54,356.64,16,16,480,4,1,5,1
+PO-40581,Clearwater Ink & Toner,Toner & Ink,2026-01,626.15,629.17,3,3,96,0,1,6,1
+PO-40582,Clearwater Ink & Toner,Toner & Ink,2026-01,399.96,400.88,9,9,162,2,1,6,1
+PO-40583,Clearwater Ink & Toner,Toner & Ink,2026-01,451.74,454.24,5,5,60,0,1,5,1
+PO-40584,Clearwater Ink & Toner,Toner & Ink,2026-01,460.04,464.19,15,15,300,3,1,3,1
+PO-40585,Clearwater Ink & Toner,Toner & Ink,2026-01,638.83,638.55,14,14,378,0,1,4,1
+PO-40586,Clearwater Ink & Toner,Toner & Ink,2026-01,364.7,360.41,17,17,85,0,1,6,1
+PO-40587,Clearwater Ink & Toner,Toner & Ink,2026-01,500.41,499.3,7,7,196,1,1,4,1
+PO-40588,Clearwater Ink & Toner,Toner & Ink,2026-01,509.41,504.71,16,16,528,5,1,4,1
+PO-40589,Clearwater Ink & Toner,Toner & Ink,2026-01,433.79,427.57,15,15,360,4,1,4,1
+PO-40590,Clearwater Ink & Toner,Toner & Ink,2026-01,464.04,459.01,10,10,50,1,1,5,1
+PO-40591,Clearwater Ink & Toner,Toner & Ink,2026-01,583.98,580.76,15,15,525,5,1,3,1
+PO-40592,Clearwater Ink & Toner,Toner & Ink,2026-01,407.73,406.38,17,16,221,2,1,4,1
+PO-40593,Clearwater Ink & Toner,Toner & Ink,2026-01,495.21,488.88,15,14,600,6,1,5,1
+PO-40594,Clearwater Ink & Toner,Toner & Ink,2026-01,309.19,305.3,3,2,69,0,1,6,1
+PO-40595,Clearwater Ink & Toner,Toner & Ink,2026-01,530.07,535.89,17,15,544,8,1,6,1
+PO-40596,Clearwater Ink & Toner,Toner & Ink,2026-01,678.0,671.6,11,11,341,4,1,4,1
+PO-40597,Clearwater Ink & Toner,Toner & Ink,2026-01,361.85,361.02,13,12,507,5,1,8,1
+PO-40598,Clearwater Ink & Toner,Toner & Ink,2026-01,570.25,566.12,14,13,434,3,1,5,1
+PO-40599,Clearwater Ink & Toner,Toner & Ink,2026-01,570.73,566.22,11,11,231,2,1,5,1
+PO-40600,Clearwater Ink & Toner,Toner & Ink,2026-01,640.69,639.78,15,15,195,0,1,5,1
+PO-40601,Clearwater Ink & Toner,Toner & Ink,2026-01,508.19,509.22,14,14,168,1,1,8,1
+PO-40602,Clearwater Ink & Toner,Toner & Ink,2026-01,504.76,497.03,16,15,176,0,1,4,1
+PO-40603,Clearwater Ink & Toner,Toner & Ink,2026-01,423.96,420.0,3,3,42,0,1,5,1
+PO-40604,Clearwater Ink & Toner,Toner & Ink,2026-01,575.34,573.36,5,5,55,0,1,5,1
+PO-40605,Clearwater Ink & Toner,Toner & Ink,2026-02,598.45,598.17,10,10,80,0,1,5,1
+PO-40606,Clearwater Ink & Toner,Toner & Ink,2026-02,756.24,754.94,13,13,442,6,1,3,1
+PO-40607,Clearwater Ink & Toner,Toner & Ink,2026-02,752.99,746.63,17,17,187,1,1,6,1
+PO-40608,Clearwater Ink & Toner,Toner & Ink,2026-02,889.66,889.14,14,14,448,1,1,4,1
+PO-40609,Clearwater Ink & Toner,Toner & Ink,2026-02,984.39,965.28,11,11,154,2,1,5,1
+PO-40610,Clearwater Ink & Toner,Toner & Ink,2026-02,648.05,644.33,12,11,324,5,1,5,1
+PO-40611,Clearwater Ink & Toner,Toner & Ink,2026-02,826.54,825.01,10,10,270,3,1,6,1
+PO-40612,Clearwater Ink & Toner,Toner & Ink,2026-02,993.85,980.25,9,9,234,0,1,5,1
+PO-40613,Clearwater Ink & Toner,Toner & Ink,2026-02,569.47,573.03,7,7,119,2,1,5,1
+PO-40614,Clearwater Ink & Toner,Toner & Ink,2026-02,846.83,822.09,14,14,140,1,1,4,1
+PO-40615,Clearwater Ink & Toner,Toner & Ink,2026-02,555.28,546.62,7,7,259,1,1,6,1
+PO-40616,Clearwater Ink & Toner,Toner & Ink,2026-02,730.72,716.22,8,7,96,0,1,3,1
+PO-40617,Clearwater Ink & Toner,Toner & Ink,2026-02,662.19,667.21,15,15,405,5,1,5,1
+PO-40618,Clearwater Ink & Toner,Toner & Ink,2026-02,759.33,754.95,9,7,243,2,1,6,1
+PO-40619,Clearwater Ink & Toner,Toner & Ink,2026-02,566.38,571.02,11,11,165,3,1,5,1
+PO-40620,Clearwater Ink & Toner,Toner & Ink,2026-02,1011.69,1017.32,13,13,156,0,1,6,1
+PO-40621,Clearwater Ink & Toner,Toner & Ink,2026-02,1017.35,1007.42,6,6,78,0,1,3,1
+PO-40622,Clearwater Ink & Toner,Toner & Ink,2026-02,665.67,658.24,10,10,150,2,1,6,1
+PO-40623,Clearwater Ink & Toner,Toner & Ink,2026-02,528.76,524.43,13,13,221,2,0,7,1
+PO-40624,Clearwater Ink & Toner,Toner & Ink,2026-02,914.83,909.05,17,17,459,3,1,6,1
+PO-40625,Clearwater Ink & Toner,Toner & Ink,2026-02,655.18,646.82,3,3,51,1,1,3,1
+PO-40626,Clearwater Ink & Toner,Toner & Ink,2026-02,1000.9,1007.53,15,15,345,2,1,5,1
+PO-40627,Clearwater Ink & Toner,Toner & Ink,2026-02,772.69,774.68,5,5,130,2,1,4,1
+PO-40628,Clearwater Ink & Toner,Toner & Ink,2026-02,560.29,553.47,9,9,171,0,1,5,1
+PO-40629,Clearwater Ink & Toner,Toner & Ink,2026-03,459.07,455.83,12,12,432,3,1,5,1
+PO-40630,Clearwater Ink & Toner,Toner & Ink,2026-03,596.25,597.03,7,7,154,1,0,9,1
+PO-40631,Clearwater Ink & Toner,Toner & Ink,2026-03,618.65,607.39,4,4,60,1,1,4,1
+PO-40632,Clearwater Ink & Toner,Toner & Ink,2026-03,634.88,639.36,18,18,558,6,1,7,1
+PO-40633,Clearwater Ink & Toner,Toner & Ink,2026-03,533.51,527.2,16,15,400,5,1,5,1
+PO-40634,Clearwater Ink & Toner,Toner & Ink,2026-03,352.53,349.37,15,13,210,1,1,4,1
+PO-40635,Clearwater Ink & Toner,Toner & Ink,2026-03,346.86,340.35,8,8,296,2,1,6,1
+PO-40636,Clearwater Ink & Toner,Toner & Ink,2026-03,499.02,501.42,10,10,200,2,1,5,1
+PO-40637,Clearwater Ink & Toner,Toner & Ink,2026-03,357.64,355.72,12,9,72,1,1,8,1
+PO-40638,Clearwater Ink & Toner,Toner & Ink,2026-03,455.75,453.17,6,6,222,3,1,5,1
+PO-40639,Clearwater Ink & Toner,Toner & Ink,2026-03,419.7,421.55,10,10,270,4,1,4,1
+PO-40640,Clearwater Ink & Toner,Toner & Ink,2026-03,671.26,673.36,6,6,78,0,1,6,1
+PO-40641,Clearwater Ink & Toner,Toner & Ink,2026-03,605.49,600.23,8,8,88,0,1,5,1
+PO-40642,Clearwater Ink & Toner,Toner & Ink,2026-03,376.2,367.07,5,5,130,2,0,11,1
+PO-40643,Clearwater Ink & Toner,Toner & Ink,2026-03,691.21,686.03,9,9,162,0,1,5,1
+PO-40644,Clearwater Ink & Toner,Toner & Ink,2026-03,361.88,361.31,11,11,253,2,1,4,1
+PO-40645,Clearwater Ink & Toner,Toner & Ink,2026-03,316.54,310.19,5,4,70,0,1,3,1
+PO-40646,Clearwater Ink & Toner,Toner & Ink,2026-03,443.63,441.75,13,13,65,0,1,6,1
+PO-40647,Clearwater Ink & Toner,Toner & Ink,2026-03,445.08,442.2,4,3,132,0,1,6,1
+PO-40648,Clearwater Ink & Toner,Toner & Ink,2026-03,386.86,377.95,14,14,546,5,1,5,1
+PO-40649,Clearwater Ink & Toner,Toner & Ink,2026-03,612.72,609.25,10,10,70,0,1,4,1
+PO-40650,Clearwater Ink & Toner,Toner & Ink,2026-03,588.57,579.12,7,7,35,0,1,3,1
+PO-40651,Clearwater Ink & Toner,Toner & Ink,2026-03,596.81,587.81,13,13,143,0,1,5,1
+PO-40652,Clearwater Ink & Toner,Toner & Ink,2026-03,368.86,369.58,4,3,32,0,1,4,0
+PO-40653,Clearwater Ink & Toner,Toner & Ink,2026-03,456.22,450.5,17,17,442,4,1,6,1
+PO-40654,Clearwater Ink & Toner,Toner & Ink,2026-03,440.5,441.35,7,7,77,2,1,5,1
+PO-40655,Clearwater Ink & Toner,Toner & Ink,2026-03,602.91,593.38,18,18,576,7,1,3,1
+PO-40656,Clearwater Ink & Toner,Toner & Ink,2026-03,606.68,598.03,11,11,187,0,1,5,1
+PO-40657,Clearwater Ink & Toner,Toner & Ink,2026-03,682.7,678.82,8,6,280,1,1,3,1
+PO-40658,Clearwater Ink & Toner,Toner & Ink,2026-03,532.43,523.12,6,6,192,1,1,5,1
+PO-40659,Clearwater Ink & Toner,Toner & Ink,2026-03,681.61,665.52,15,14,390,3,1,6,1
+PO-40660,Clearwater Ink & Toner,Toner & Ink,2026-03,688.39,680.13,11,11,308,1,1,5,1
+PO-40661,Clearwater Ink & Toner,Toner & Ink,2026-03,539.44,543.74,6,6,240,2,1,6,1
+PO-40662,Clearwater Ink & Toner,Toner & Ink,2026-03,595.3,598.04,16,15,416,2,1,6,1
+PO-40663,Clearwater Ink & Toner,Toner & Ink,2026-03,348.81,345.82,10,9,220,3,1,6,1
+PO-40664,Clearwater Ink & Toner,Toner & Ink,2026-04,732.66,721.54,4,4,40,1,1,4,1
+PO-40665,Clearwater Ink & Toner,Toner & Ink,2026-04,790.36,787.87,5,4,105,0,1,4,1
+PO-40666,Clearwater Ink & Toner,Toner & Ink,2026-04,762.11,753.93,16,16,448,6,1,4,1
+PO-40667,Clearwater Ink & Toner,Toner & Ink,2026-04,482.72,478.08,16,16,80,0,1,5,1
+PO-40668,Clearwater Ink & Toner,Toner & Ink,2026-04,554.59,549.52,7,7,98,0,1,4,1
+PO-40669,Clearwater Ink & Toner,Toner & Ink,2026-04,783.85,779.39,13,13,351,4,1,5,1
+PO-40670,Clearwater Ink & Toner,Toner & Ink,2026-04,699.82,705.53,17,17,595,9,1,5,1
+PO-40671,Clearwater Ink & Toner,Toner & Ink,2026-04,555.99,550.64,15,15,450,3,1,6,1
+PO-40672,Clearwater Ink & Toner,Toner & Ink,2026-04,836.17,831.58,3,3,15,0,1,6,1
+PO-40673,Clearwater Ink & Toner,Toner & Ink,2026-04,801.08,787.3,14,14,560,3,1,5,1
+PO-40674,Clearwater Ink & Toner,Toner & Ink,2026-04,560.63,558.46,11,10,352,5,0,8,1
+PO-40675,Clearwater Ink & Toner,Toner & Ink,2026-04,718.41,724.36,16,16,320,2,1,6,1
+PO-40676,Clearwater Ink & Toner,Toner & Ink,2026-04,786.66,786.03,12,12,156,2,1,4,1
+PO-40677,Clearwater Ink & Toner,Toner & Ink,2026-04,659.08,655.55,15,15,90,3,1,5,1
+PO-40678,Clearwater Ink & Toner,Toner & Ink,2026-04,547.19,536.99,4,4,32,0,1,6,1
+PO-40679,Clearwater Ink & Toner,Toner & Ink,2026-04,643.25,633.36,5,5,60,0,1,5,1
+PO-40680,Clearwater Ink & Toner,Toner & Ink,2026-04,578.15,569.59,3,3,36,0,1,4,1
+PO-40681,Clearwater Ink & Toner,Toner & Ink,2026-04,849.0,845.98,10,10,70,0,1,3,1
+PO-40682,Clearwater Ink & Toner,Toner & Ink,2026-04,737.79,722.76,9,9,72,0,1,5,1
+PO-40683,Clearwater Ink & Toner,Toner & Ink,2026-04,735.89,727.8,16,15,192,1,1,4,1
+PO-40684,Clearwater Ink & Toner,Toner & Ink,2026-04,644.45,637.67,16,16,640,7,1,6,0
+PO-40685,Clearwater Ink & Toner,Toner & Ink,2026-04,388.91,382.84,9,8,153,5,1,5,1
+PO-40686,Clearwater Ink & Toner,Toner & Ink,2026-04,802.15,795.88,7,7,196,4,1,6,1
+PO-40687,Clearwater Ink & Toner,Toner & Ink,2026-04,778.29,768.9,3,3,111,2,1,4,1
+PO-40688,Clearwater Ink & Toner,Toner & Ink,2026-04,380.01,381.33,15,15,555,6,1,6,1
+PO-40689,Clearwater Ink & Toner,Toner & Ink,2026-04,422.8,419.33,12,11,72,0,1,4,1
+PO-40690,Clearwater Ink & Toner,Toner & Ink,2026-04,511.84,507.88,14,13,280,0,1,7,1
+PO-40691,Clearwater Ink & Toner,Toner & Ink,2026-04,790.66,785.88,6,5,150,3,1,6,1
+PO-40692,Clearwater Ink & Toner,Toner & Ink,2026-05,550.55,544.18,16,16,592,9,1,5,1
+PO-40693,Clearwater Ink & Toner,Toner & Ink,2026-05,649.64,647.19,11,11,209,1,1,4,1
+PO-40694,Clearwater Ink & Toner,Toner & Ink,2026-05,326.55,332.38,5,5,35,0,1,6,1
+PO-40695,Clearwater Ink & Toner,Toner & Ink,2026-05,358.44,356.09,3,3,36,2,1,6,1
+PO-40696,Clearwater Ink & Toner,Toner & Ink,2026-05,353.95,353.69,9,9,117,1,1,4,1
+PO-40697,Clearwater Ink & Toner,Toner & Ink,2026-05,457.27,452.58,15,14,495,7,1,4,1
+PO-40698,Clearwater Ink & Toner,Toner & Ink,2026-05,307.87,305.03,7,7,63,1,1,3,1
+PO-40699,Clearwater Ink & Toner,Toner & Ink,2026-05,314.32,309.46,5,5,125,1,1,5,1
+PO-40700,Clearwater Ink & Toner,Toner & Ink,2026-05,507.58,507.12,14,14,168,1,1,5,1
+PO-40701,Clearwater Ink & Toner,Toner & Ink,2026-05,325.75,324.32,12,12,396,3,1,5,1
+PO-40702,Clearwater Ink & Toner,Toner & Ink,2026-05,351.87,345.34,4,4,160,0,1,3,1
+PO-40703,Clearwater Ink & Toner,Toner & Ink,2026-05,343.88,338.48,3,3,93,2,1,3,1
+PO-40704,Clearwater Ink & Toner,Toner & Ink,2026-05,305.22,303.12,16,15,496,4,1,5,1
+PO-40705,Clearwater Ink & Toner,Toner & Ink,2026-05,379.26,378.31,11,11,374,6,1,3,1
+PO-40706,Clearwater Ink & Toner,Toner & Ink,2026-05,553.27,551.61,11,9,198,0,1,6,1
+PO-40707,Clearwater Ink & Toner,Toner & Ink,2026-05,299.86,295.33,3,3,30,0,1,6,1
+PO-40708,Clearwater Ink & Toner,Toner & Ink,2026-05,568.59,555.55,10,10,220,0,1,4,1
+PO-40709,Clearwater Ink & Toner,Toner & Ink,2026-05,337.06,336.57,4,4,76,1,1,6,1
+PO-40710,Clearwater Ink & Toner,Toner & Ink,2026-05,306.22,304.58,15,15,360,5,1,5,1
+PO-40711,Clearwater Ink & Toner,Toner & Ink,2026-05,635.34,628.94,10,10,190,1,1,6,1
+PO-40712,Clearwater Ink & Toner,Toner & Ink,2026-05,364.87,364.78,13,13,104,0,1,6,1
+PO-40713,Clearwater Ink & Toner,Toner & Ink,2026-05,592.77,585.54,4,4,104,1,1,5,1
+PO-40714,Clearwater Ink & Toner,Toner & Ink,2026-05,455.16,449.92,4,4,120,1,1,6,1
+PO-40715,Clearwater Ink & Toner,Toner & Ink,2026-05,538.3,534.66,4,4,104,0,1,7,1
+PO-40716,Clearwater Ink & Toner,Toner & Ink,2026-05,406.07,407.06,13,13,65,2,1,5,1
+PO-40717,Clearwater Ink & Toner,Toner & Ink,2026-05,449.64,449.39,16,16,256,0,1,3,1
+PO-40718,Clearwater Ink & Toner,Toner & Ink,2026-05,343.08,341.96,12,12,204,3,1,7,1
+PO-40719,Clearwater Ink & Toner,Toner & Ink,2026-05,316.1,317.19,6,6,48,1,1,7,1
+PO-40720,Clearwater Ink & Toner,Toner & Ink,2026-05,650.74,647.67,13,12,104,0,1,6,1
+PO-40721,Clearwater Ink & Toner,Toner & Ink,2026-05,491.38,489.96,16,16,592,6,1,7,1
+PO-40722,Clearwater Ink & Toner,Toner & Ink,2026-05,305.06,304.34,17,17,612,5,1,6,1
+PO-40723,Clearwater Ink & Toner,Toner & Ink,2026-05,604.53,604.51,18,17,198,0,1,5,1
+PO-40724,Clearwater Ink & Toner,Toner & Ink,2026-06,851.5,850.14,7,7,49,2,1,5,1
+PO-40725,Clearwater Ink & Toner,Toner & Ink,2026-06,582.38,579.0,11,11,385,7,1,5,1
+PO-40726,Clearwater Ink & Toner,Toner & Ink,2026-06,644.43,637.78,10,10,320,4,1,4,1
+PO-40727,Clearwater Ink & Toner,Toner & Ink,2026-06,521.13,512.9,4,4,36,1,1,6,1
+PO-40728,Clearwater Ink & Toner,Toner & Ink,2026-06,850.52,841.51,7,7,56,1,1,6,0
+PO-40729,Clearwater Ink & Toner,Toner & Ink,2026-06,609.15,597.67,3,3,51,0,1,5,1
+PO-40730,Clearwater Ink & Toner,Toner & Ink,2026-06,878.94,876.81,17,17,680,3,1,6,1
+PO-40731,Clearwater Ink & Toner,Toner & Ink,2026-06,825.3,817.88,16,16,400,1,1,3,1
+PO-40732,Clearwater Ink & Toner,Toner & Ink,2026-06,750.2,740.95,10,10,70,1,1,7,1
+PO-40733,Clearwater Ink & Toner,Toner & Ink,2026-06,545.52,536.67,16,15,320,2,1,6,1
+PO-40734,Clearwater Ink & Toner,Toner & Ink,2026-06,550.11,552.99,8,7,96,0,1,5,1
+PO-40735,Clearwater Ink & Toner,Toner & Ink,2026-06,456.59,452.06,8,8,176,0,1,5,1
+PO-40736,Clearwater Ink & Toner,Toner & Ink,2026-06,801.11,783.38,14,13,462,7,1,4,1
+PO-40737,Clearwater Ink & Toner,Toner & Ink,2026-06,672.18,661.99,12,12,444,2,1,5,1
+PO-40738,Clearwater Ink & Toner,Toner & Ink,2026-06,675.08,665.54,7,7,84,1,1,3,1
+PO-40739,Clearwater Ink & Toner,Toner & Ink,2026-06,872.17,868.46,8,8,264,2,1,6,1
+PO-40740,Clearwater Ink & Toner,Toner & Ink,2026-06,820.88,815.22,11,11,154,1,1,4,1
+PO-40741,Clearwater Ink & Toner,Toner & Ink,2026-06,551.95,550.24,12,11,84,2,1,5,1
+PO-40742,Clearwater Ink & Toner,Toner & Ink,2026-06,525.07,516.5,18,17,432,2,1,6,1
+PO-40743,Clearwater Ink & Toner,Toner & Ink,2026-06,502.29,503.01,7,7,266,3,0,9,1
+PO-40744,Clearwater Ink & Toner,Toner & Ink,2026-06,628.36,621.17,17,17,425,6,1,6,1
+PO-40745,Clearwater Ink & Toner,Toner & Ink,2026-06,795.89,791.15,10,9,150,3,1,5,1
+PO-40746,Clearwater Ink & Toner,Toner & Ink,2026-07,388.32,383.95,13,12,130,0,1,4,1
+PO-40747,Clearwater Ink & Toner,Toner & Ink,2026-07,665.47,649.52,14,13,210,4,1,7,1
+PO-40748,Clearwater Ink & Toner,Toner & Ink,2026-07,346.62,340.93,10,10,330,7,1,5,1
+PO-40749,Clearwater Ink & Toner,Toner & Ink,2026-07,591.74,580.88,7,7,147,4,1,4,0
+PO-40750,Clearwater Ink & Toner,Toner & Ink,2026-07,419.64,416.97,11,11,198,2,1,5,1
+PO-40751,Clearwater Ink & Toner,Toner & Ink,2026-07,314.1,313.06,3,3,93,0,0,7,1
+PO-40752,Clearwater Ink & Toner,Toner & Ink,2026-07,359.36,355.12,4,4,92,1,1,5,1
+PO-40753,Clearwater Ink & Toner,Toner & Ink,2026-07,521.9,514.68,6,6,186,3,1,5,1
+PO-40754,Clearwater Ink & Toner,Toner & Ink,2026-07,430.68,428.47,14,14,462,5,1,5,1
+PO-40755,Clearwater Ink & Toner,Toner & Ink,2026-07,352.54,352.34,5,5,120,1,1,4,1
+PO-40756,Clearwater Ink & Toner,Toner & Ink,2026-07,416.49,409.31,18,18,594,5,1,4,1
+PO-40757,Clearwater Ink & Toner,Toner & Ink,2026-07,621.14,613.82,5,5,70,3,1,4,1
+PO-40758,Clearwater Ink & Toner,Toner & Ink,2026-07,295.8,295.2,9,9,234,4,1,6,1
+PO-40759,Clearwater Ink & Toner,Toner & Ink,2026-07,489.09,485.51,8,8,80,0,1,6,1
+PO-40760,Clearwater Ink & Toner,Toner & Ink,2026-07,462.41,450.11,11,11,121,1,1,5,1
+PO-40761,Clearwater Ink & Toner,Toner & Ink,2026-07,652.35,643.21,15,15,450,3,1,4,1
+PO-40762,Clearwater Ink & Toner,Toner & Ink,2026-07,410.11,407.03,16,16,592,10,1,4,1
+PO-40763,Clearwater Ink & Toner,Toner & Ink,2026-07,347.15,341.57,6,6,192,2,1,4,1
+PO-40764,Clearwater Ink & Toner,Toner & Ink,2026-07,531.0,521.87,8,8,160,5,1,5,1
+PO-40765,Clearwater Ink & Toner,Toner & Ink,2026-07,516.97,516.39,7,7,35,1,1,7,1
+PO-40766,Clearwater Ink & Toner,Toner & Ink,2026-07,293.96,286.41,6,6,66,1,1,5,1
+PO-40767,Clearwater Ink & Toner,Toner & Ink,2026-07,650.88,637.66,9,9,315,5,1,4,1
+PO-40768,Clearwater Ink & Toner,Toner & Ink,2026-07,465.47,460.34,11,11,99,0,1,6,1
+PO-40769,Clearwater Ink & Toner,Toner & Ink,2026-07,612.85,598.66,11,10,110,1,1,4,1
+PO-40770,Clearwater Ink & Toner,Toner & Ink,2026-07,576.22,569.91,10,10,340,8,1,4,1
+PO-40771,Clearwater Ink & Toner,Toner & Ink,2026-07,466.03,457.03,14,14,546,3,1,5,1
+PO-40772,Clearwater Ink & Toner,Toner & Ink,2026-07,430.0,422.56,10,9,320,2,1,5,1
+PO-40773,Clearwater Ink & Toner,Toner & Ink,2026-07,472.04,457.03,8,8,232,2,1,5,1
+PO-40774,Clearwater Ink & Toner,Toner & Ink,2026-07,648.05,647.22,11,11,253,2,1,5,1
+PO-40775,Clearwater Ink & Toner,Toner & Ink,2026-07,444.85,439.75,15,15,105,1,1,5,1
+PO-40776,Clearwater Ink & Toner,Toner & Ink,2026-07,341.32,338.95,7,7,98,0,0,6,1
+PO-40777,Clearwater Ink & Toner,Toner & Ink,2026-07,559.86,550.17,11,11,154,2,1,6,1
+PO-40778,Clearwater Ink & Toner,Toner & Ink,2026-07,573.43,564.8,4,4,152,0,0,6,1
+PO-40779,Clearwater Ink & Toner,Toner & Ink,2026-07,409.53,402.77,7,7,35,0,1,4,1
+PO-40780,Clearwater Ink & Toner,Toner & Ink,2026-07,300.9,295.5,15,14,210,6,1,6,1
+PO-40781,Clearwater Ink & Toner,Toner & Ink,2026-07,396.99,394.63,16,16,512,1,1,5,1
+PO-40782,Clearwater Ink & Toner,Toner & Ink,2026-07,300.13,294.04,18,16,666,11,1,6,1
+PO-40783,Clearwater Ink & Toner,Toner & Ink,2026-07,355.69,352.43,13,12,195,4,1,4,1
+PO-40784,Clearwater Ink & Toner,Toner & Ink,2026-08,411.72,408.45,5,5,140,3,1,7,1
+PO-40785,Clearwater Ink & Toner,Toner & Ink,2026-08,519.62,512.32,18,18,378,4,1,5,1
+PO-40786,Clearwater Ink & Toner,Toner & Ink,2026-08,916.08,914.64,5,5,65,2,1,5,1
+PO-40787,Clearwater Ink & Toner,Toner & Ink,2026-08,897.53,886.75,10,9,270,2,1,5,1
+PO-40788,Clearwater Ink & Toner,Toner & Ink,2026-08,448.69,446.26,4,4,72,0,1,5,1
+PO-40789,Clearwater Ink & Toner,Toner & Ink,2026-08,911.43,902.05,6,5,90,1,1,5,1
+PO-40790,Clearwater Ink & Toner,Toner & Ink,2026-08,737.55,730.03,4,4,32,1,1,4,1
+PO-40791,Clearwater Ink & Toner,Toner & Ink,2026-08,582.91,570.2,10,8,90,3,1,3,1
+PO-40792,Clearwater Ink & Toner,Toner & Ink,2026-08,585.17,582.72,8,8,320,5,1,4,1
+PO-40793,Clearwater Ink & Toner,Toner & Ink,2026-08,896.19,880.69,14,13,532,5,1,4,1
+PO-40794,Clearwater Ink & Toner,Toner & Ink,2026-08,761.7,750.19,3,3,45,0,1,4,0
+PO-40795,Clearwater Ink & Toner,Toner & Ink,2026-08,488.46,482.13,8,8,96,0,1,6,1
+PO-40796,Clearwater Ink & Toner,Toner & Ink,2026-08,602.97,594.41,15,14,510,7,1,6,1
+PO-40797,Clearwater Ink & Toner,Toner & Ink,2026-08,816.13,797.06,14,14,182,1,1,5,1
+PO-40798,Clearwater Ink & Toner,Toner & Ink,2026-08,478.82,460.03,5,5,160,4,1,5,1
+PO-40799,Clearwater Ink & Toner,Toner & Ink,2026-08,853.69,848.55,9,8,198,4,0,8,1
+PO-40800,Clearwater Ink & Toner,Toner & Ink,2026-08,757.49,752.52,9,9,135,1,1,7,1
+PO-40801,Clearwater Ink & Toner,Toner & Ink,2026-08,768.58,757.32,3,3,36,0,1,5,1
+PO-40802,Clearwater Ink & Toner,Toner & Ink,2026-08,414.76,406.31,12,12,108,1,1,3,1
+PO-40803,Clearwater Ink & Toner,Toner & Ink,2026-08,735.55,725.03,16,16,448,6,0,9,1
+PO-40804,Clearwater Ink & Toner,Toner & Ink,2026-08,758.87,752.87,8,8,192,2,1,4,1
+PO-40805,Clearwater Ink & Toner,Toner & Ink,2026-08,398.29,389.49,8,8,264,6,1,5,1
+PO-40806,Clearwater Ink & Toner,Toner & Ink,2026-08,560.72,555.06,9,9,333,4,1,7,1
+PO-40807,Clearwater Ink & Toner,Toner & Ink,2026-08,586.76,582.17,5,5,50,0,1,5,1
+PO-40808,Clearwater Ink & Toner,Toner & Ink,2026-08,415.42,411.15,13,12,130,2,1,4,1
+PO-40809,Clearwater Ink & Toner,Toner & Ink,2026-08,498.11,493.45,5,5,40,0,1,3,1
+PO-40810,Clearwater Ink & Toner,Toner & Ink,2026-08,811.51,803.17,9,9,135,3,1,7,1
+PO-40811,Clearwater Ink & Toner,Toner & Ink,2026-08,514.74,500.8,4,3,68,2,1,6,1
+PO-40812,Clearwater Ink & Toner,Toner & Ink,2026-08,517.06,515.79,3,3,66,0,1,8,1
+PO-40813,Clearwater Ink & Toner,Toner & Ink,2026-08,853.91,834.89,14,13,490,2,1,5,1
+PO-40814,Clearwater Ink & Toner,Toner & Ink,2026-08,517.64,519.06,12,11,192,4,0,10,1
+PO-40815,Clearwater Ink & Toner,Toner & Ink,2026-08,668.85,680.66,15,12,120,0,1,4,1
+PO-40816,Clearwater Ink & Toner,Toner & Ink,2026-08,902.32,885.35,8,8,296,1,0,11,1
+PO-40817,Clearwater Ink & Toner,Toner & Ink,2026-08,710.12,694.51,18,17,468,8,0,10,1
+PO-40818,Clearwater Ink & Toner,Toner & Ink,2026-08,688.25,675.35,6,6,84,1,1,6,0
+PO-40819,Clearwater Ink & Toner,Toner & Ink,2026-09,553.44,546.05,8,8,48,0,1,6,1
+PO-40820,Clearwater Ink & Toner,Toner & Ink,2026-09,598.94,586.07,18,18,216,2,1,5,1
+PO-40821,Clearwater Ink & Toner,Toner & Ink,2026-09,621.62,616.8,15,15,390,3,1,6,1
+PO-40822,Clearwater Ink & Toner,Toner & Ink,2026-09,660.16,642.22,17,17,408,8,1,5,1
+PO-40823,Clearwater Ink & Toner,Toner & Ink,2026-09,433.75,425.81,6,5,66,1,1,4,1
+PO-40824,Clearwater Ink & Toner,Toner & Ink,2026-09,539.69,526.13,14,14,266,4,1,6,1
+PO-40825,Clearwater Ink & Toner,Toner & Ink,2026-09,561.96,556.27,5,5,165,3,0,6,1
+PO-40826,Clearwater Ink & Toner,Toner & Ink,2026-09,618.31,607.81,12,11,468,6,1,6,1
+PO-40827,Clearwater Ink & Toner,Toner & Ink,2026-09,431.85,424.08,5,5,140,1,1,5,1
+PO-40828,Clearwater Ink & Toner,Toner & Ink,2026-09,582.08,576.66,14,14,84,1,1,4,1
+PO-40829,Clearwater Ink & Toner,Toner & Ink,2026-09,595.03,588.56,18,18,306,6,1,5,1
+PO-40830,Clearwater Ink & Toner,Toner & Ink,2026-09,619.65,619.01,12,12,360,5,0,8,1
+PO-40831,Clearwater Ink & Toner,Toner & Ink,2026-09,388.68,378.96,14,14,294,5,0,9,1
+PO-40832,Clearwater Ink & Toner,Toner & Ink,2026-09,465.35,458.68,14,14,448,8,1,3,1
+PO-40833,Clearwater Ink & Toner,Toner & Ink,2026-09,658.36,637.07,11,10,110,1,1,3,1
+PO-40834,Clearwater Ink & Toner,Toner & Ink,2026-09,541.26,531.59,9,9,360,7,1,4,1
+PO-40835,Clearwater Ink & Toner,Toner & Ink,2026-09,490.5,481.83,16,16,304,8,1,5,1
+PO-40836,Clearwater Ink & Toner,Toner & Ink,2026-09,644.76,627.9,12,12,384,5,1,6,1
+PO-40837,Clearwater Ink & Toner,Toner & Ink,2026-09,417.48,411.69,18,18,108,1,1,5,1
+PO-40838,Clearwater Ink & Toner,Toner & Ink,2026-09,582.15,567.26,8,7,136,1,0,6,1
+PO-40839,Clearwater Ink & Toner,Toner & Ink,2026-09,489.42,482.41,18,17,450,4,1,5,1
+PO-40840,Clearwater Ink & Toner,Toner & Ink,2026-09,336.24,333.94,11,10,176,2,1,6,1
+PO-40841,Clearwater Ink & Toner,Toner & Ink,2026-09,573.3,568.44,5,5,160,0,1,5,1
+PO-40842,Clearwater Ink & Toner,Toner & Ink,2026-09,663.02,648.01,14,13,294,2,0,8,1
+PO-40843,Clearwater Ink & Toner,Toner & Ink,2026-09,327.5,323.51,3,3,120,1,1,7,1
+PO-40844,Clearwater Ink & Toner,Toner & Ink,2026-09,575.41,562.07,13,12,325,5,0,10,1
+PO-40845,Clearwater Ink & Toner,Toner & Ink,2026-09,626.01,607.52,8,8,160,0,1,6,1
+PO-40846,Clearwater Ink & Toner,Toner & Ink,2026-09,305.25,297.96,10,8,70,2,1,5,1
+PO-40847,Clearwater Ink & Toner,Toner & Ink,2026-09,409.17,406.88,6,6,78,0,1,6,1
+PO-40848,Clearwater Ink & Toner,Toner & Ink,2026-09,348.44,344.17,4,3,104,3,1,6,1
+PO-40849,Clearwater Ink & Toner,Toner & Ink,2026-09,311.21,303.16,12,12,264,3,1,5,1
+PO-40850,Clearwater Ink & Toner,Toner & Ink,2026-09,409.81,403.5,17,14,612,6,1,3,1
+PO-40851,Clearwater Ink & Toner,Toner & Ink,2026-09,360.62,353.09,18,17,324,7,1,6,1
+PO-40852,Clearwater Ink & Toner,Toner & Ink,2026-09,660.82,648.83,15,15,450,4,1,3,1
+PO-40853,Clearwater Ink & Toner,Toner & Ink,2026-09,411.71,406.52,17,17,544,10,1,4,1
+PO-40854,Clearwater Ink & Toner,Toner & Ink,2026-09,638.4,627.31,12,12,348,5,1,4,1
+PO-40855,Clearwater Ink & Toner,Toner & Ink,2026-09,336.83,329.26,14,14,462,11,1,5,1
+PO-40856,Clearwater Ink & Toner,Toner & Ink,2026-10,880.28,863.2,17,15,425,2,1,4,1
+PO-40857,Clearwater Ink & Toner,Toner & Ink,2026-10,581.22,562.63,11,10,396,3,1,6,1
+PO-40858,Clearwater Ink & Toner,Toner & Ink,2026-10,638.01,620.08,11,10,363,1,0,9,1
+PO-40859,Clearwater Ink & Toner,Toner & Ink,2026-10,459.79,455.46,5,4,145,0,1,6,1
+PO-40860,Clearwater Ink & Toner,Toner & Ink,2026-10,538.49,527.44,7,7,154,4,1,5,1
+PO-40861,Clearwater Ink & Toner,Toner & Ink,2026-10,530.42,515.23,3,2,120,0,1,5,1
+PO-40862,Clearwater Ink & Toner,Toner & Ink,2026-10,490.15,475.4,16,16,400,11,0,6,1
+PO-40863,Clearwater Ink & Toner,Toner & Ink,2026-10,934.21,906.03,14,13,126,3,1,4,1
+PO-40864,Clearwater Ink & Toner,Toner & Ink,2026-10,697.19,682.41,4,4,48,0,1,7,1
+PO-40865,Clearwater Ink & Toner,Toner & Ink,2026-10,800.26,781.97,14,13,462,8,1,4,1
+PO-40866,Clearwater Ink & Toner,Toner & Ink,2026-10,690.35,679.14,9,9,288,6,1,6,1
+PO-40867,Clearwater Ink & Toner,Toner & Ink,2026-10,864.15,848.6,13,13,442,9,1,6,1
+PO-40868,Clearwater Ink & Toner,Toner & Ink,2026-10,943.99,940.65,6,6,114,1,1,3,1
+PO-40869,Clearwater Ink & Toner,Toner & Ink,2026-10,606.83,598.96,9,9,81,1,0,9,1
+PO-40870,Clearwater Ink & Toner,Toner & Ink,2026-10,666.56,644.39,5,5,135,3,1,4,1
+PO-40871,Clearwater Ink & Toner,Toner & Ink,2026-10,790.12,782.01,15,15,90,1,0,5,1
+PO-40872,Clearwater Ink & Toner,Toner & Ink,2026-10,696.16,682.14,8,7,120,0,1,4,1
+PO-40873,Clearwater Ink & Toner,Toner & Ink,2026-10,591.07,573.45,8,8,176,1,1,4,1
+PO-40874,Clearwater Ink & Toner,Toner & Ink,2026-10,907.06,888.44,13,11,364,6,1,6,1
+PO-40875,Clearwater Ink & Toner,Toner & Ink,2026-10,454.64,446.0,14,12,560,11,1,6,1
+PO-40876,Clearwater Ink & Toner,Toner & Ink,2026-10,599.63,592.62,4,4,28,0,1,5,1
+PO-40877,Clearwater Ink & Toner,Toner & Ink,2026-11,385.21,371.86,8,8,288,1,1,5,1
+PO-40878,Clearwater Ink & Toner,Toner & Ink,2026-11,486.12,473.38,4,3,56,2,1,6,1
+PO-40879,Clearwater Ink & Toner,Toner & Ink,2026-11,350.83,338.9,16,16,432,3,1,5,1
+PO-40880,Clearwater Ink & Toner,Toner & Ink,2026-11,506.34,490.8,18,18,324,3,1,7,1
+PO-40881,Clearwater Ink & Toner,Toner & Ink,2026-11,355.66,347.32,13,13,429,7,1,4,1
+PO-40882,Clearwater Ink & Toner,Toner & Ink,2026-11,725.63,706.45,6,6,222,2,0,5,1
+PO-40883,Clearwater Ink & Toner,Toner & Ink,2026-11,426.56,414.56,9,8,198,2,1,5,1
+PO-40884,Clearwater Ink & Toner,Toner & Ink,2026-11,495.32,479.46,5,4,160,1,1,5,1
+PO-40885,Clearwater Ink & Toner,Toner & Ink,2026-11,414.16,407.01,6,5,210,2,1,5,1
+PO-40886,Clearwater Ink & Toner,Toner & Ink,2026-11,520.41,498.66,11,11,198,4,1,4,1
+PO-40887,Clearwater Ink & Toner,Toner & Ink,2026-11,654.35,638.32,15,15,330,5,1,6,1
+PO-40888,Clearwater Ink & Toner,Toner & Ink,2026-11,676.15,661.69,10,10,210,5,1,8,1
+PO-40889,Clearwater Ink & Toner,Toner & Ink,2026-11,661.91,639.85,16,16,304,6,1,7,1
+PO-40890,Clearwater Ink & Toner,Toner & Ink,2026-11,477.73,463.31,14,13,476,7,1,5,1
+PO-40891,Clearwater Ink & Toner,Toner & Ink,2026-11,356.13,344.04,18,15,378,3,1,6,1
+PO-40892,Clearwater Ink & Toner,Toner & Ink,2026-11,579.29,570.64,16,15,192,4,0,8,1
+PO-40893,Clearwater Ink & Toner,Toner & Ink,2026-11,405.81,397.79,16,15,224,2,1,5,1
+PO-40894,Clearwater Ink & Toner,Toner & Ink,2026-11,536.36,528.43,4,2,160,2,0,10,1
+PO-40895,Clearwater Ink & Toner,Toner & Ink,2026-11,664.58,640.42,5,5,155,1,1,6,1
+PO-40896,Clearwater Ink & Toner,Toner & Ink,2026-11,382.95,369.98,5,4,155,2,1,5,1
+PO-40897,Clearwater Ink & Toner,Toner & Ink,2026-11,486.89,472.16,7,7,175,3,1,4,1
+PO-40898,Clearwater Ink & Toner,Toner & Ink,2026-11,397.84,383.07,5,5,170,1,0,7,1
+PO-40899,Clearwater Ink & Toner,Toner & Ink,2026-11,471.55,469.16,4,4,116,3,1,5,1
+PO-40900,Clearwater Ink & Toner,Toner & Ink,2026-11,614.92,605.67,12,12,288,3,1,5,1
+PO-40901,Clearwater Ink & Toner,Toner & Ink,2026-11,526.2,512.93,7,5,105,1,1,6,1
+PO-40902,Mesa Office Furniture,Furniture,2025-12,583.23,577.09,12,11,384,11,1,11,0
+PO-40903,Mesa Office Furniture,Furniture,2025-12,505.46,492.15,16,15,416,10,1,17,1
+PO-40904,Mesa Office Furniture,Furniture,2025-12,506.53,505.23,5,5,150,3,1,14,1
+PO-40905,Mesa Office Furniture,Furniture,2025-12,597.99,588.8,13,11,351,4,0,16,1
+PO-40906,Mesa Office Furniture,Furniture,2025-12,581.23,582.73,15,15,270,9,1,13,1
+PO-40907,Mesa Office Furniture,Furniture,2025-12,386.26,377.07,3,3,96,2,1,15,1
+PO-40908,Mesa Office Furniture,Furniture,2025-12,501.65,494.01,6,6,162,1,1,19,1
+PO-40909,Mesa Office Furniture,Furniture,2025-12,377.26,371.52,3,3,63,0,1,17,1
+PO-40910,Mesa Office Furniture,Furniture,2025-12,505.98,491.45,4,4,76,3,1,16,1
+PO-40911,Mesa Office Furniture,Furniture,2025-12,415.2,410.61,16,15,368,4,1,16,1
+PO-40912,Mesa Office Furniture,Furniture,2025-12,405.98,397.34,14,13,518,7,1,13,1
+PO-40913,Mesa Office Furniture,Furniture,2025-12,572.22,567.55,18,16,252,5,1,15,1
+PO-40914,Mesa Office Furniture,Furniture,2025-12,601.38,595.61,10,10,200,5,1,15,1
+PO-40915,Mesa Office Furniture,Furniture,2025-12,659.45,650.25,13,12,117,2,1,8,1
+PO-40916,Mesa Office Furniture,Furniture,2025-12,542.2,528.22,16,16,608,13,1,15,1
+PO-40917,Mesa Office Furniture,Furniture,2025-12,497.94,488.71,6,6,234,0,1,14,1
+PO-40918,Mesa Office Furniture,Furniture,2025-12,514.08,511.17,5,4,115,1,1,17,1
+PO-40919,Mesa Office Furniture,Furniture,2025-12,358.94,353.23,4,4,36,0,1,13,1
+PO-40920,Mesa Office Furniture,Furniture,2025-12,660.05,650.06,15,15,105,2,1,15,1
+PO-40921,Mesa Office Furniture,Furniture,2025-12,323.6,319.62,12,11,312,6,1,15,1
+PO-40922,Mesa Office Furniture,Furniture,2025-12,658.51,642.3,8,7,144,3,0,11,1
+PO-40923,Mesa Office Furniture,Furniture,2025-12,655.29,653.72,12,11,60,1,1,11,1
+PO-40924,Mesa Office Furniture,Furniture,2025-12,333.86,330.89,5,4,165,4,1,18,1
+PO-40925,Mesa Office Furniture,Furniture,2025-12,471.19,456.96,5,5,155,3,1,17,1
+PO-40926,Mesa Office Furniture,Furniture,2025-12,537.23,522.09,12,12,252,2,1,18,1
+PO-40927,Mesa Office Furniture,Furniture,2026-01,589.24,581.51,3,3,27,0,1,15,1
+PO-40928,Mesa Office Furniture,Furniture,2026-01,458.95,450.31,11,9,132,1,1,16,1
+PO-40929,Mesa Office Furniture,Furniture,2026-01,907.33,890.99,16,15,448,6,1,13,1
+PO-40930,Mesa Office Furniture,Furniture,2026-01,483.51,476.85,16,16,336,4,1,13,1
+PO-40931,Mesa Office Furniture,Furniture,2026-01,555.87,550.86,18,15,594,15,1,19,1
+PO-40932,Mesa Office Furniture,Furniture,2026-01,444.22,433.24,3,2,18,0,1,14,1
+PO-40933,Mesa Office Furniture,Furniture,2026-01,569.63,561.43,8,8,136,1,1,16,1
+PO-40934,Mesa Office Furniture,Furniture,2026-01,787.93,769.59,3,3,81,2,1,16,1
+PO-40935,Mesa Office Furniture,Furniture,2026-01,746.34,740.46,16,15,112,1,1,15,1
+PO-40936,Mesa Office Furniture,Furniture,2026-01,499.82,489.51,7,5,224,1,1,7,1
+PO-40937,Mesa Office Furniture,Furniture,2026-01,731.32,717.64,10,8,100,1,1,12,1
+PO-40938,Mesa Office Furniture,Furniture,2026-01,530.17,525.85,3,3,63,1,1,22,1
+PO-40939,Mesa Office Furniture,Furniture,2026-01,422.51,415.58,14,12,98,0,0,19,1
+PO-40940,Mesa Office Furniture,Furniture,2026-01,593.38,584.41,3,3,84,1,1,12,1
+PO-40941,Mesa Office Furniture,Furniture,2026-01,466.83,462.83,15,15,555,9,1,10,1
+PO-40942,Mesa Office Furniture,Furniture,2026-01,917.55,899.94,10,8,340,9,1,15,1
+PO-40943,Mesa Office Furniture,Furniture,2026-01,486.08,479.46,4,4,76,4,1,8,1
+PO-40944,Mesa Office Furniture,Furniture,2026-01,440.0,433.07,16,15,112,2,1,18,1
+PO-40945,Mesa Office Furniture,Furniture,2026-01,770.37,753.89,11,11,407,8,1,14,1
+PO-40946,Mesa Office Furniture,Furniture,2026-01,634.87,627.72,16,15,384,5,1,12,1
+PO-40947,Mesa Office Furniture,Furniture,2026-01,649.01,641.79,7,7,35,0,0,16,1
+PO-40948,Mesa Office Furniture,Furniture,2026-01,680.49,662.42,12,12,264,4,0,21,1
+PO-40949,Mesa Office Furniture,Furniture,2026-01,908.26,913.14,5,4,25,0,1,16,1
+PO-40950,Mesa Office Furniture,Furniture,2026-01,535.11,522.09,9,8,153,4,0,21,1
+PO-40951,Mesa Office Furniture,Furniture,2026-02,374.43,370.59,12,12,312,2,1,12,1
+PO-40952,Mesa Office Furniture,Furniture,2026-02,578.42,577.11,8,8,72,3,1,18,1
+PO-40953,Mesa Office Furniture,Furniture,2026-02,376.21,376.13,18,18,540,9,1,11,1
+PO-40954,Mesa Office Furniture,Furniture,2026-02,573.32,564.9,3,3,15,0,1,15,1
+PO-40955,Mesa Office Furniture,Furniture,2026-02,634.37,626.74,9,9,108,1,1,19,1
+PO-40956,Mesa Office Furniture,Furniture,2026-02,623.41,617.74,18,17,378,15,1,14,0
+PO-40957,Mesa Office Furniture,Furniture,2026-02,803.17,785.94,17,17,544,13,1,14,1
+PO-40958,Mesa Office Furniture,Furniture,2026-02,763.42,750.86,17,14,153,2,1,17,1
+PO-40959,Mesa Office Furniture,Furniture,2026-02,771.3,771.42,16,16,576,17,1,11,1
+PO-40960,Mesa Office Furniture,Furniture,2026-02,600.21,597.07,12,10,348,7,1,12,1
+PO-40961,Mesa Office Furniture,Furniture,2026-02,525.97,512.25,15,15,600,4,1,17,1
+PO-40962,Mesa Office Furniture,Furniture,2026-02,588.38,588.58,17,17,272,4,1,13,1
+PO-40963,Mesa Office Furniture,Furniture,2026-02,445.27,434.32,18,17,630,15,1,11,1
+PO-40964,Mesa Office Furniture,Furniture,2026-02,424.67,415.45,3,2,18,0,1,20,1
+PO-40965,Mesa Office Furniture,Furniture,2026-02,709.98,700.44,12,11,228,5,1,16,1
+PO-40966,Mesa Office Furniture,Furniture,2026-02,783.67,780.03,7,6,49,0,1,13,1
+PO-40967,Mesa Office Furniture,Furniture,2026-02,714.21,694.25,18,18,324,7,1,16,1
+PO-40968,Mesa Office Furniture,Furniture,2026-02,674.48,668.61,7,7,105,1,1,14,1
+PO-40969,Mesa Office Furniture,Furniture,2026-02,383.97,373.28,16,16,592,7,1,13,1
+PO-40970,Mesa Office Furniture,Furniture,2026-02,511.88,502.98,4,4,76,0,0,16,1
+PO-40971,Mesa Office Furniture,Furniture,2026-02,469.71,460.53,16,15,288,5,0,18,1
+PO-40972,Mesa Office Furniture,Furniture,2026-03,835.48,828.74,18,15,234,2,1,10,1
+PO-40973,Mesa Office Furniture,Furniture,2026-03,670.86,665.72,3,3,45,0,1,14,1
+PO-40974,Mesa Office Furniture,Furniture,2026-03,549.5,536.11,12,12,300,7,1,13,1
+PO-40975,Mesa Office Furniture,Furniture,2026-03,724.5,706.52,8,7,40,0,1,15,1
+PO-40976,Mesa Office Furniture,Furniture,2026-03,809.2,802.16,12,11,264,1,1,13,1
+PO-40977,Mesa Office Furniture,Furniture,2026-03,533.33,535.51,4,4,96,1,1,14,1
+PO-40978,Mesa Office Furniture,Furniture,2026-03,861.7,859.02,10,8,210,6,1,16,1
+PO-40979,Mesa Office Furniture,Furniture,2026-03,373.75,365.79,16,15,560,6,1,18,1
+PO-40980,Mesa Office Furniture,Furniture,2026-03,852.74,847.44,18,16,144,2,1,14,1
+PO-40981,Mesa Office Furniture,Furniture,2026-03,578.84,579.15,17,15,578,8,1,11,1
+PO-40982,Mesa Office Furniture,Furniture,2026-03,409.21,404.69,9,8,360,6,1,13,1
+PO-40983,Mesa Office Furniture,Furniture,2026-03,667.16,661.91,7,6,266,5,1,10,1
+PO-40984,Mesa Office Furniture,Furniture,2026-03,675.6,665.09,8,8,48,0,1,16,1
+PO-40985,Mesa Office Furniture,Furniture,2026-03,746.09,730.94,9,9,333,5,1,11,1
+PO-40986,Mesa Office Furniture,Furniture,2026-03,585.81,583.53,17,17,663,11,1,17,1
+PO-40987,Mesa Office Furniture,Furniture,2026-03,723.83,709.1,9,9,189,2,1,17,1
+PO-40988,Mesa Office Furniture,Furniture,2026-03,598.03,596.79,6,6,186,5,1,12,1
+PO-40989,Mesa Office Furniture,Furniture,2026-03,611.14,598.93,17,17,153,3,0,19,1
+PO-40990,Mesa Office Furniture,Furniture,2026-03,400.12,392.34,9,8,108,0,1,14,1
+PO-40991,Mesa Office Furniture,Furniture,2026-04,753.48,743.32,6,6,174,3,1,18,1
+PO-40992,Mesa Office Furniture,Furniture,2026-04,761.21,751.47,8,8,224,4,1,17,1
+PO-40993,Mesa Office Furniture,Furniture,2026-04,599.93,599.74,12,12,408,6,1,15,1
+PO-40994,Mesa Office Furniture,Furniture,2026-04,641.94,640.33,11,11,198,0,1,15,1
+PO-40995,Mesa Office Furniture,Furniture,2026-04,562.66,552.72,18,17,108,0,1,14,1
+PO-40996,Mesa Office Furniture,Furniture,2026-04,562.41,551.31,5,5,170,3,1,17,1
+PO-40997,Mesa Office Furniture,Furniture,2026-04,798.5,781.91,17,17,204,1,1,19,1
+PO-40998,Mesa Office Furniture,Furniture,2026-04,419.26,414.96,10,9,150,4,1,11,1
+PO-40999,Mesa Office Furniture,Furniture,2026-04,716.2,708.73,15,14,390,4,1,13,1
+PO-41000,Mesa Office Furniture,Furniture,2026-04,781.65,765.45,18,18,720,14,1,13,1
+PO-41001,Mesa Office Furniture,Furniture,2026-04,837.58,808.94,10,10,370,14,1,14,1
+PO-41002,Mesa Office Furniture,Furniture,2026-04,736.72,730.95,15,15,495,10,1,12,0
+PO-41003,Mesa Office Furniture,Furniture,2026-04,947.46,931.62,9,9,171,3,1,16,1
+PO-41004,Mesa Office Furniture,Furniture,2026-04,540.2,536.36,6,6,36,1,1,14,1
+PO-41005,Mesa Office Furniture,Furniture,2026-04,568.24,557.71,14,13,112,3,1,13,1
+PO-41006,Mesa Office Furniture,Furniture,2026-05,769.14,758.76,6,6,162,3,1,13,1
+PO-41007,Mesa Office Furniture,Furniture,2026-05,831.36,822.56,18,17,144,6,1,14,1
+PO-41008,Mesa Office Furniture,Furniture,2026-05,721.16,721.41,3,3,30,0,1,11,1
+PO-41009,Mesa Office Furniture,Furniture,2026-05,547.88,541.93,17,16,153,2,1,12,1
+PO-41010,Mesa Office Furniture,Furniture,2026-05,559.42,548.83,5,4,135,3,1,19,1
+PO-41011,Mesa Office Furniture,Furniture,2026-05,877.48,859.71,3,3,108,2,1,15,1
+PO-41012,Mesa Office Furniture,Furniture,2026-05,535.62,527.28,3,3,24,0,1,16,1
+PO-41013,Mesa Office Furniture,Furniture,2026-05,411.06,407.76,3,3,108,2,1,11,1
+PO-41014,Mesa Office Furniture,Furniture,2026-05,849.11,829.57,3,3,45,0,1,20,1
+PO-41015,Mesa Office Furniture,Furniture,2026-05,842.02,828.23,12,11,408,10,1,11,1
+PO-41016,Mesa Office Furniture,Furniture,2026-05,596.91,586.24,16,16,80,1,0,12,1
+PO-41017,Mesa Office Furniture,Furniture,2026-05,411.01,403.42,16,16,432,9,1,8,1
+PO-41018,Mesa Office Furniture,Furniture,2026-05,947.05,921.8,12,12,216,8,1,10,1
+PO-41019,Mesa Office Furniture,Furniture,2026-05,741.99,724.1,10,9,400,2,1,12,1
+PO-41020,Mesa Office Furniture,Furniture,2026-05,536.15,519.8,9,9,45,0,0,20,1
+PO-41021,Mesa Office Furniture,Furniture,2026-05,666.63,653.51,9,9,126,5,1,17,1
+PO-41022,Mesa Office Furniture,Furniture,2026-05,915.14,904.32,7,7,224,2,1,14,1
+PO-41023,Mesa Office Furniture,Furniture,2026-05,481.14,470.78,12,12,348,7,1,12,1
+PO-41024,Mesa Office Furniture,Furniture,2026-06,644.27,630.23,5,5,160,4,1,8,1
+PO-41025,Mesa Office Furniture,Furniture,2026-06,726.41,712.83,16,14,496,8,1,17,1
+PO-41026,Mesa Office Furniture,Furniture,2026-06,492.6,489.38,12,9,348,7,1,13,1
+PO-41027,Mesa Office Furniture,Furniture,2026-06,705.57,687.15,16,14,608,18,1,13,1
+PO-41028,Mesa Office Furniture,Furniture,2026-06,806.46,781.39,9,9,243,3,1,12,1
+PO-41029,Mesa Office Furniture,Furniture,2026-06,801.08,798.37,8,8,112,3,1,11,1
+PO-41030,Mesa Office Furniture,Furniture,2026-06,644.15,638.0,17,15,340,4,1,14,1
+PO-41031,Mesa Office Furniture,Furniture,2026-06,446.33,436.98,4,4,56,1,1,14,1
+PO-41032,Mesa Office Furniture,Furniture,2026-06,468.26,459.48,16,14,544,10,1,10,1
+PO-41033,Mesa Office Furniture,Furniture,2026-06,527.82,527.44,13,12,104,0,1,6,1
+PO-41034,Mesa Office Furniture,Furniture,2026-06,722.64,722.42,4,4,84,3,0,20,1
+PO-41035,Mesa Office Furniture,Furniture,2026-06,728.02,719.89,8,7,120,1,0,16,1
+PO-41036,Mesa Office Furniture,Furniture,2026-06,842.0,826.14,16,16,192,4,1,10,1
+PO-41037,Mesa Office Furniture,Furniture,2026-06,843.32,838.45,18,18,630,6,1,15,1
+PO-41038,Mesa Office Furniture,Furniture,2026-06,596.9,585.76,5,5,40,1,1,16,1
+PO-41039,Mesa Office Furniture,Furniture,2026-06,620.91,619.16,4,4,132,1,1,9,1
+PO-41040,Mesa Office Furniture,Furniture,2026-06,836.73,818.01,14,13,392,4,1,16,1
+PO-41041,Mesa Office Furniture,Furniture,2026-06,649.17,634.1,7,7,231,3,1,12,1
+PO-41042,Mesa Office Furniture,Furniture,2026-06,508.73,497.69,7,7,224,6,1,13,1
+PO-41043,Mesa Office Furniture,Furniture,2026-07,330.54,322.93,3,3,72,2,1,14,1
+PO-41044,Mesa Office Furniture,Furniture,2026-07,598.6,603.68,6,6,174,8,1,16,1
+PO-41045,Mesa Office Furniture,Furniture,2026-07,574.22,565.09,7,7,147,8,1,12,1
+PO-41046,Mesa Office Furniture,Furniture,2026-07,492.17,490.87,8,8,200,0,1,12,1
+PO-41047,Mesa Office Furniture,Furniture,2026-07,472.28,461.05,3,3,75,1,1,15,1
+PO-41048,Mesa Office Furniture,Furniture,2026-07,399.96,393.19,11,11,231,6,1,16,1
+PO-41049,Mesa Office Furniture,Furniture,2026-07,495.71,484.05,18,16,396,7,1,10,1
+PO-41050,Mesa Office Furniture,Furniture,2026-07,669.83,655.06,9,8,171,2,1,12,1
+PO-41051,Mesa Office Furniture,Furniture,2026-07,425.09,417.45,10,9,380,8,1,16,0
+PO-41052,Mesa Office Furniture,Furniture,2026-07,501.74,490.92,17,17,510,8,1,17,1
+PO-41053,Mesa Office Furniture,Furniture,2026-07,713.71,695.43,13,13,104,2,1,14,1
+PO-41054,Mesa Office Furniture,Furniture,2026-07,562.41,551.74,3,3,111,0,1,15,1
+PO-41055,Mesa Office Furniture,Furniture,2026-07,329.13,321.83,17,17,374,7,1,11,1
+PO-41056,Mesa Office Furniture,Furniture,2026-07,687.57,677.81,10,10,130,1,0,12,1
+PO-41057,Mesa Office Furniture,Furniture,2026-07,393.94,380.86,5,5,55,0,1,18,1
+PO-41058,Mesa Office Furniture,Furniture,2026-07,709.65,692.15,18,18,414,11,1,14,1
+PO-41059,Mesa Office Furniture,Furniture,2026-07,508.53,501.61,15,15,495,4,1,20,1
+PO-41060,Mesa Office Furniture,Furniture,2026-07,669.02,657.97,18,17,252,5,1,18,1
+PO-41061,Mesa Office Furniture,Furniture,2026-07,530.49,516.23,10,10,150,4,1,18,1
+PO-41062,Mesa Office Furniture,Furniture,2026-07,590.86,576.27,13,13,169,4,1,17,1
+PO-41063,Mesa Office Furniture,Furniture,2026-07,456.36,442.7,4,4,84,0,1,17,1
+PO-41064,Mesa Office Furniture,Furniture,2026-07,656.4,649.9,4,4,100,4,1,13,1
+PO-41065,Mesa Office Furniture,Furniture,2026-07,325.32,323.51,16,16,240,4,1,13,1
+PO-41066,Mesa Office Furniture,Furniture,2026-07,377.29,371.42,16,15,208,1,0,16,1
+PO-41067,Mesa Office Furniture,Furniture,2026-07,665.06,658.5,11,10,77,1,1,13,1
+PO-41068,Mesa Office Furniture,Furniture,2026-07,383.77,376.8,5,5,55,0,1,8,1
+PO-41069,Mesa Office Furniture,Furniture,2026-08,853.74,843.58,6,6,102,1,1,11,1
+PO-41070,Mesa Office Furniture,Furniture,2026-08,855.79,836.4,9,9,360,5,1,19,1
+PO-41071,Mesa Office Furniture,Furniture,2026-08,810.36,800.21,9,9,117,1,1,17,1
+PO-41072,Mesa Office Furniture,Furniture,2026-08,803.6,797.21,18,18,270,1,1,14,1
+PO-41073,Mesa Office Furniture,Furniture,2026-08,527.53,519.27,4,4,92,4,1,17,1
+PO-41074,Mesa Office Furniture,Furniture,2026-08,563.24,549.09,15,15,255,3,1,18,1
+PO-41075,Mesa Office Furniture,Furniture,2026-08,613.91,605.14,9,9,198,4,1,12,1
+PO-41076,Mesa Office Furniture,Furniture,2026-08,558.23,555.19,7,7,63,2,1,18,1
+PO-41077,Mesa Office Furniture,Furniture,2026-08,515.92,501.74,11,10,286,6,1,8,1
+PO-41078,Mesa Office Furniture,Furniture,2026-08,420.9,413.17,13,12,312,9,1,9,1
+PO-41079,Mesa Office Furniture,Furniture,2026-08,659.15,646.51,7,6,259,5,1,18,1
+PO-41080,Mesa Office Furniture,Furniture,2026-08,890.43,866.68,18,16,108,4,1,11,1
+PO-41081,Mesa Office Furniture,Furniture,2026-08,874.19,861.28,14,14,98,1,1,18,1
+PO-41082,Mesa Office Furniture,Furniture,2026-08,490.06,481.03,5,5,195,4,1,9,1
+PO-41083,Mesa Office Furniture,Furniture,2026-08,868.43,864.53,10,10,110,2,1,16,1
+PO-41084,Mesa Office Furniture,Furniture,2026-08,565.79,550.21,12,11,180,1,1,13,1
+PO-41085,Mesa Office Furniture,Furniture,2026-08,437.73,429.91,5,5,175,3,1,13,1
+PO-41086,Mesa Office Furniture,Furniture,2026-08,712.74,694.57,9,8,189,5,1,12,1
+PO-41087,Mesa Office Furniture,Furniture,2026-08,503.83,496.74,17,15,595,11,1,13,1
+PO-41088,Mesa Office Furniture,Furniture,2026-08,497.11,482.07,11,11,407,6,1,12,1
+PO-41089,Mesa Office Furniture,Furniture,2026-08,657.09,645.88,9,8,207,1,1,16,1
+PO-41090,Mesa Office Furniture,Furniture,2026-08,501.48,490.98,17,15,561,7,1,14,1
+PO-41091,Mesa Office Furniture,Furniture,2026-09,455.33,446.76,4,4,128,2,1,14,1
+PO-41092,Mesa Office Furniture,Furniture,2026-09,415.05,407.09,13,13,390,4,1,15,1
+PO-41093,Mesa Office Furniture,Furniture,2026-09,446.42,440.93,12,12,480,8,1,13,1
+PO-41094,Mesa Office Furniture,Furniture,2026-09,371.42,366.14,16,14,624,7,1,13,1
+PO-41095,Mesa Office Furniture,Furniture,2026-09,564.21,556.69,9,8,72,0,1,13,1
+PO-41096,Mesa Office Furniture,Furniture,2026-09,454.87,441.94,6,6,114,0,1,14,1
+PO-41097,Mesa Office Furniture,Furniture,2026-09,494.95,488.1,12,11,324,4,1,14,1
+PO-41098,Mesa Office Furniture,Furniture,2026-09,586.42,574.28,5,5,25,0,1,15,1
+PO-41099,Mesa Office Furniture,Furniture,2026-09,417.19,415.49,10,10,390,10,1,16,1
+PO-41100,Mesa Office Furniture,Furniture,2026-09,387.2,380.13,13,13,143,1,1,8,1
+PO-41101,Mesa Office Furniture,Furniture,2026-09,448.24,442.07,6,6,78,3,0,16,1
+PO-41102,Mesa Office Furniture,Furniture,2026-09,368.22,365.2,10,9,270,8,1,13,1
+PO-41103,Mesa Office Furniture,Furniture,2026-09,295.39,284.93,12,11,372,4,1,10,1
+PO-41104,Mesa Office Furniture,Furniture,2026-09,306.38,299.79,13,12,143,1,0,22,1
+PO-41105,Mesa Office Furniture,Furniture,2026-09,309.23,301.19,9,9,225,2,1,12,1
+PO-41106,Mesa Office Furniture,Furniture,2026-09,546.48,537.55,7,7,203,5,0,20,1
+PO-41107,Mesa Office Furniture,Furniture,2026-09,622.36,620.09,10,10,280,6,1,18,1
+PO-41108,Mesa Office Furniture,Furniture,2026-09,551.68,539.15,6,6,156,3,1,15,1
+PO-41109,Mesa Office Furniture,Furniture,2026-09,537.28,523.03,13,11,429,6,1,11,1
+PO-41110,Mesa Office Furniture,Furniture,2026-09,440.44,436.44,9,8,171,3,0,19,1
+PO-41111,Mesa Office Furniture,Furniture,2026-09,585.73,574.35,14,14,350,9,0,18,1
+PO-41112,Mesa Office Furniture,Furniture,2026-09,390.08,382.3,14,14,210,6,1,18,1
+PO-41113,Mesa Office Furniture,Furniture,2026-09,312.69,307.43,7,7,238,2,0,18,1
+PO-41114,Mesa Office Furniture,Furniture,2026-09,445.45,436.06,12,12,480,8,1,9,1
+PO-41115,Mesa Office Furniture,Furniture,2026-10,753.95,752.63,17,16,646,7,1,18,1
+PO-41116,Mesa Office Furniture,Furniture,2026-10,683.11,669.02,9,7,225,1,0,17,1
+PO-41117,Mesa Office Furniture,Furniture,2026-10,512.6,508.38,17,16,578,16,1,12,1
+PO-41118,Mesa Office Furniture,Furniture,2026-10,372.54,369.91,14,13,308,8,1,6,1
+PO-41119,Mesa Office Furniture,Furniture,2026-10,695.51,686.49,7,7,112,4,1,11,1
+PO-41120,Mesa Office Furniture,Furniture,2026-10,420.4,412.56,11,11,132,3,1,17,1
+PO-41121,Mesa Office Furniture,Furniture,2026-10,386.48,382.83,5,4,70,1,1,16,1
+PO-41122,Mesa Office Furniture,Furniture,2026-10,530.72,526.67,7,7,42,0,1,17,0
+PO-41123,Mesa Office Furniture,Furniture,2026-10,751.33,751.32,15,14,450,9,1,10,1
+PO-41124,Mesa Office Furniture,Furniture,2026-10,715.77,711.45,12,10,312,7,1,12,1
+PO-41125,Mesa Office Furniture,Furniture,2026-10,342.46,339.64,11,11,396,5,1,10,1
+PO-41126,Mesa Office Furniture,Furniture,2026-10,730.88,730.51,6,6,72,3,1,11,1
+PO-41127,Mesa Office Furniture,Furniture,2026-10,367.41,364.97,13,10,351,6,1,15,1
+PO-41128,Mesa Office Furniture,Furniture,2026-10,544.1,534.91,14,14,140,4,1,17,1
+PO-41129,Mesa Office Furniture,Furniture,2026-10,669.51,660.07,18,16,504,10,1,16,1
+PO-41130,Mesa Office Furniture,Furniture,2026-10,495.41,486.2,3,3,36,2,1,15,1
+PO-41131,Mesa Office Furniture,Furniture,2026-10,682.95,674.4,13,12,299,8,1,8,1
+PO-41132,Mesa Office Furniture,Furniture,2026-10,682.87,668.5,11,9,143,3,0,16,1
+PO-41133,Mesa Office Furniture,Furniture,2026-10,560.74,559.58,15,14,600,9,1,15,1
+PO-41134,Mesa Office Furniture,Furniture,2026-10,432.23,423.68,18,17,450,8,1,12,1
+PO-41135,Mesa Office Furniture,Furniture,2026-10,405.8,395.36,11,10,429,6,1,13,1
+PO-41136,Mesa Office Furniture,Furniture,2026-10,563.86,551.79,5,5,30,1,1,12,1
+PO-41137,Mesa Office Furniture,Furniture,2026-11,442.33,433.39,12,12,324,5,1,13,1
+PO-41138,Mesa Office Furniture,Furniture,2026-11,726.73,708.29,13,11,156,4,1,13,1
+PO-41139,Mesa Office Furniture,Furniture,2026-11,461.97,453.55,9,9,288,9,1,15,1
+PO-41140,Mesa Office Furniture,Furniture,2026-11,473.07,468.5,9,9,234,3,1,14,1
+PO-41141,Mesa Office Furniture,Furniture,2026-11,519.77,508.4,8,8,64,0,1,16,1
+PO-41142,Mesa Office Furniture,Furniture,2026-11,633.97,630.32,15,15,540,12,1,16,1
+PO-41143,Mesa Office Furniture,Furniture,2026-11,809.07,796.37,6,6,96,2,1,11,1
+PO-41144,Mesa Office Furniture,Furniture,2026-11,675.01,667.8,3,3,102,2,1,15,1
+PO-41145,Mesa Office Furniture,Furniture,2026-11,404.15,399.88,15,15,255,5,1,10,0
+PO-41146,Mesa Office Furniture,Furniture,2026-11,656.25,644.02,6,4,240,2,1,13,1
+PO-41147,Mesa Office Furniture,Furniture,2026-11,890.63,868.12,6,6,36,0,1,20,1
+PO-41148,Mesa Office Furniture,Furniture,2026-11,435.1,430.73,17,15,476,8,1,14,1
+PO-41149,Mesa Office Furniture,Furniture,2026-11,774.22,753.18,17,16,680,10,1,9,1
+PO-41150,Mesa Office Furniture,Furniture,2026-11,515.24,512.27,8,8,48,1,1,14,1
+PO-41151,Mesa Office Furniture,Furniture,2026-11,756.33,744.98,9,9,180,5,1,15,1
+PO-41152,Mesa Office Furniture,Furniture,2026-11,698.59,687.93,13,13,221,6,1,14,1
+PO-41153,Granite Seating Co.,Furniture,2025-12,542.19,538.28,8,8,48,0,1,14,1
+PO-41154,Granite Seating Co.,Furniture,2025-12,690.25,688.47,9,9,225,3,1,10,1
+PO-41155,Granite Seating Co.,Furniture,2025-12,942.4,928.91,5,5,50,0,1,14,1
+PO-41156,Granite Seating Co.,Furniture,2025-12,663.57,664.86,17,17,578,5,1,11,1
+PO-41157,Granite Seating Co.,Furniture,2025-12,472.21,471.62,18,18,612,12,1,9,1
+PO-41158,Granite Seating Co.,Furniture,2025-12,446.24,437.91,13,13,182,3,1,13,1
+PO-41159,Granite Seating Co.,Furniture,2025-12,890.51,876.21,16,15,240,4,1,14,1
+PO-41160,Granite Seating Co.,Furniture,2025-12,492.03,489.21,7,7,161,1,1,11,1
+PO-41161,Granite Seating Co.,Furniture,2025-12,493.37,494.44,5,5,105,2,1,7,1
+PO-41162,Granite Seating Co.,Furniture,2025-12,606.44,600.71,14,13,336,5,1,8,1
+PO-41163,Granite Seating Co.,Furniture,2026-01,503.61,500.4,8,8,288,4,1,11,1
+PO-41164,Granite Seating Co.,Furniture,2026-01,406.15,395.92,15,15,570,4,0,14,1
+PO-41165,Granite Seating Co.,Furniture,2026-01,302.77,298.92,8,8,280,2,1,12,1
+PO-41166,Granite Seating Co.,Furniture,2026-01,388.41,387.4,17,17,119,0,1,15,1
+PO-41167,Granite Seating Co.,Furniture,2026-01,529.59,525.47,7,7,182,1,1,12,1
+PO-41168,Granite Seating Co.,Furniture,2026-01,350.86,343.49,4,4,44,0,1,13,1
+PO-41169,Granite Seating Co.,Furniture,2026-01,623.24,613.5,17,16,170,2,1,14,1
+PO-41170,Granite Seating Co.,Furniture,2026-01,409.58,405.8,5,5,140,2,1,9,1
+PO-41171,Granite Seating Co.,Furniture,2026-01,601.01,592.35,14,13,112,4,0,14,1
+PO-41172,Granite Seating Co.,Furniture,2026-01,484.08,477.32,16,14,624,6,1,11,1
+PO-41173,Granite Seating Co.,Furniture,2026-01,342.5,332.22,3,3,33,0,1,14,1
+PO-41174,Granite Seating Co.,Furniture,2026-01,519.92,520.12,12,11,372,5,1,12,1
+PO-41175,Granite Seating Co.,Furniture,2026-01,570.49,563.45,8,7,40,1,1,9,1
+PO-41176,Granite Seating Co.,Furniture,2026-01,636.23,632.26,10,10,160,1,1,7,1
+PO-41177,Granite Seating Co.,Furniture,2026-01,567.71,562.53,16,15,496,4,1,14,1
+PO-41178,Granite Seating Co.,Furniture,2026-01,406.21,404.16,15,15,600,4,0,16,1
+PO-41179,Granite Seating Co.,Furniture,2026-02,528.0,520.59,9,9,342,3,1,8,1
+PO-41180,Granite Seating Co.,Furniture,2026-02,629.09,615.72,17,16,136,2,1,14,1
+PO-41181,Granite Seating Co.,Furniture,2026-02,614.65,604.06,7,7,217,1,1,10,1
+PO-41182,Granite Seating Co.,Furniture,2026-02,540.35,534.81,9,9,225,4,1,12,1
+PO-41183,Granite Seating Co.,Furniture,2026-02,366.05,367.12,6,6,54,0,1,9,1
+PO-41184,Granite Seating Co.,Furniture,2026-02,650.16,636.96,8,7,224,1,1,16,1
+PO-41185,Granite Seating Co.,Furniture,2026-02,508.31,508.51,5,5,145,2,0,9,1
+PO-41186,Granite Seating Co.,Furniture,2026-02,499.96,494.6,10,8,320,1,1,16,1
+PO-41187,Granite Seating Co.,Furniture,2026-02,651.57,645.84,7,7,182,3,1,11,1
+PO-41188,Granite Seating Co.,Furniture,2026-02,539.51,539.35,9,8,216,5,1,11,1
+PO-41189,Granite Seating Co.,Furniture,2026-02,328.22,327.05,5,5,175,2,1,11,1
+PO-41190,Granite Seating Co.,Furniture,2026-02,357.04,356.93,3,3,69,2,1,11,1
+PO-41191,Granite Seating Co.,Furniture,2026-02,384.64,380.08,11,11,253,1,1,11,1
+PO-41192,Granite Seating Co.,Furniture,2026-02,528.62,525.18,10,9,300,3,1,7,1
+PO-41193,Granite Seating Co.,Furniture,2026-02,498.72,500.3,16,16,224,5,1,13,1
+PO-41194,Granite Seating Co.,Furniture,2026-03,975.25,965.16,14,14,420,8,1,14,1
+PO-41195,Granite Seating Co.,Furniture,2026-03,486.21,483.5,16,15,496,5,1,12,1
+PO-41196,Granite Seating Co.,Furniture,2026-03,892.68,884.52,3,3,66,2,0,17,1
+PO-41197,Granite Seating Co.,Furniture,2026-03,800.9,806.48,9,8,81,1,0,15,1
+PO-41198,Granite Seating Co.,Furniture,2026-03,820.0,812.26,7,7,266,4,1,13,1
+PO-41199,Granite Seating Co.,Furniture,2026-03,863.74,850.0,7,7,84,1,1,14,1
+PO-41200,Granite Seating Co.,Furniture,2026-03,629.5,625.99,7,7,168,3,1,9,1
+PO-41201,Granite Seating Co.,Furniture,2026-03,482.71,480.96,3,2,18,0,1,10,1
+PO-41202,Granite Seating Co.,Furniture,2026-03,827.71,827.48,17,17,527,9,1,11,1
+PO-41203,Granite Seating Co.,Furniture,2026-03,846.68,843.08,12,11,132,0,1,16,1
+PO-41204,Granite Seating Co.,Furniture,2026-04,885.95,873.01,6,6,150,2,1,12,1
+PO-41205,Granite Seating Co.,Furniture,2026-04,771.18,758.35,6,5,162,4,1,15,1
+PO-41206,Granite Seating Co.,Furniture,2026-04,577.7,567.24,9,9,144,2,1,13,1
+PO-41207,Granite Seating Co.,Furniture,2026-04,770.57,769.27,17,17,663,6,1,16,1
+PO-41208,Granite Seating Co.,Furniture,2026-04,528.12,521.98,10,10,210,1,1,13,1
+PO-41209,Granite Seating Co.,Furniture,2026-04,411.13,412.75,3,3,111,1,0,11,1
+PO-41210,Granite Seating Co.,Furniture,2026-04,589.96,582.46,12,12,264,0,1,14,1
+PO-41211,Granite Seating Co.,Furniture,2026-04,465.4,463.96,12,12,84,0,1,9,1
+PO-41212,Granite Seating Co.,Furniture,2026-04,499.17,491.19,12,12,60,3,1,11,1
+PO-41213,Granite Seating Co.,Furniture,2026-05,809.95,810.41,6,4,60,0,1,13,1
+PO-41214,Granite Seating Co.,Furniture,2026-05,611.28,602.27,11,11,374,3,1,10,1
+PO-41215,Granite Seating Co.,Furniture,2026-05,730.71,724.73,3,3,15,0,1,7,1
+PO-41216,Granite Seating Co.,Furniture,2026-05,504.72,492.55,7,7,105,1,1,16,1
+PO-41217,Granite Seating Co.,Furniture,2026-05,797.88,792.21,10,10,100,0,1,11,1
+PO-41218,Granite Seating Co.,Furniture,2026-05,537.51,528.15,7,7,196,2,1,11,1
+PO-41219,Granite Seating Co.,Furniture,2026-05,675.44,674.71,12,12,324,6,1,10,1
+PO-41220,Granite Seating Co.,Furniture,2026-05,425.89,418.82,8,7,176,5,1,9,1
+PO-41221,Granite Seating Co.,Furniture,2026-05,475.46,468.74,16,15,528,6,0,13,1
+PO-41222,Granite Seating Co.,Furniture,2026-05,543.14,537.33,10,10,220,1,1,15,1
+PO-41223,Granite Seating Co.,Furniture,2026-05,614.7,612.16,16,16,544,8,1,9,1
+PO-41224,Granite Seating Co.,Furniture,2026-05,743.42,740.76,15,15,180,4,1,12,1
+PO-41225,Granite Seating Co.,Furniture,2026-06,466.09,462.27,7,7,49,1,1,14,1
+PO-41226,Granite Seating Co.,Furniture,2026-06,457.23,450.48,8,8,136,2,1,7,1
+PO-41227,Granite Seating Co.,Furniture,2026-06,793.67,785.11,14,14,560,5,0,17,1
+PO-41228,Granite Seating Co.,Furniture,2026-06,491.74,485.12,10,10,80,3,1,13,1
+PO-41229,Granite Seating Co.,Furniture,2026-06,493.76,487.87,13,11,286,3,1,9,1
+PO-41230,Granite Seating Co.,Furniture,2026-06,718.89,710.77,12,12,132,0,1,10,1
+PO-41231,Granite Seating Co.,Furniture,2026-06,648.66,636.56,15,13,450,6,1,11,1
+PO-41232,Granite Seating Co.,Furniture,2026-06,860.73,862.9,13,13,65,0,1,12,1
+PO-41233,Granite Seating Co.,Furniture,2026-06,456.85,445.05,12,12,324,3,1,10,1
+PO-41234,Granite Seating Co.,Furniture,2026-06,794.63,783.1,6,4,216,5,1,12,1
+PO-41235,Granite Seating Co.,Furniture,2026-07,680.41,664.99,7,5,238,3,1,7,1
+PO-41236,Granite Seating Co.,Furniture,2026-07,650.4,639.39,10,10,50,0,1,10,1
+PO-41237,Granite Seating Co.,Furniture,2026-07,482.81,478.57,6,5,192,2,1,10,1
+PO-41238,Granite Seating Co.,Furniture,2026-07,711.78,699.81,18,18,594,8,1,13,1
+PO-41239,Granite Seating Co.,Furniture,2026-07,791.85,781.84,6,6,204,3,1,15,1
+PO-41240,Granite Seating Co.,Furniture,2026-07,829.68,820.63,3,3,102,1,1,10,1
+PO-41241,Granite Seating Co.,Furniture,2026-07,384.42,381.54,16,16,320,4,1,9,1
+PO-41242,Granite Seating Co.,Furniture,2026-07,427.25,422.08,7,7,133,0,1,10,1
+PO-41243,Granite Seating Co.,Furniture,2026-07,634.82,630.77,8,8,304,7,1,13,1
+PO-41244,Granite Seating Co.,Furniture,2026-07,398.62,393.63,17,17,289,2,1,14,1
+PO-41245,Granite Seating Co.,Furniture,2026-07,574.64,578.01,13,12,273,7,1,12,1
+PO-41246,Granite Seating Co.,Furniture,2026-07,536.5,522.79,16,15,336,4,1,8,1
+PO-41247,Granite Seating Co.,Furniture,2026-07,404.75,405.03,13,12,130,1,1,12,1
+PO-41248,Granite Seating Co.,Furniture,2026-07,514.76,508.21,14,14,518,9,1,12,0
+PO-41249,Granite Seating Co.,Furniture,2026-08,532.21,523.46,6,6,114,2,0,16,1
+PO-41250,Granite Seating Co.,Furniture,2026-08,663.73,655.52,6,6,192,0,1,15,1
+PO-41251,Granite Seating Co.,Furniture,2026-08,532.02,534.27,12,12,288,6,1,12,1
+PO-41252,Granite Seating Co.,Furniture,2026-08,314.83,316.65,7,7,245,5,1,12,1
+PO-41253,Granite Seating Co.,Furniture,2026-08,443.61,436.25,4,4,76,0,1,12,1
+PO-41254,Granite Seating Co.,Furniture,2026-08,420.55,418.47,4,4,52,0,1,15,1
+PO-41255,Granite Seating Co.,Furniture,2026-08,615.46,610.57,14,14,322,5,1,14,1
+PO-41256,Granite Seating Co.,Furniture,2026-08,523.64,514.35,14,14,434,6,1,11,1
+PO-41257,Granite Seating Co.,Furniture,2026-08,620.44,612.26,4,4,32,0,1,8,1
+PO-41258,Granite Seating Co.,Furniture,2026-08,594.09,583.35,15,15,435,8,0,14,1
+PO-41259,Granite Seating Co.,Furniture,2026-08,540.09,536.71,9,9,144,2,0,16,1
+PO-41260,Granite Seating Co.,Furniture,2026-08,324.76,320.01,17,16,544,6,1,12,1
+PO-41261,Granite Seating Co.,Furniture,2026-08,506.64,494.94,6,6,216,3,1,11,1
+PO-41262,Granite Seating Co.,Furniture,2026-08,710.33,701.92,16,14,208,3,1,12,1
+PO-41263,Granite Seating Co.,Furniture,2026-08,368.15,369.11,10,9,150,2,1,11,1
+PO-41264,Granite Seating Co.,Furniture,2026-08,660.69,662.81,5,4,60,0,1,17,1
+PO-41265,Granite Seating Co.,Furniture,2026-08,610.54,600.26,14,14,448,3,1,10,1
+PO-41266,Granite Seating Co.,Furniture,2026-08,711.67,704.22,3,3,78,1,1,13,1
+PO-41267,Granite Seating Co.,Furniture,2026-09,415.8,407.84,18,18,720,14,1,14,1
+PO-41268,Granite Seating Co.,Furniture,2026-09,814.64,812.37,5,4,200,1,0,12,1
+PO-41269,Granite Seating Co.,Furniture,2026-09,782.91,773.68,16,16,400,7,1,7,1
+PO-41270,Granite Seating Co.,Furniture,2026-09,606.3,596.8,18,18,432,6,1,16,1
+PO-41271,Granite Seating Co.,Furniture,2026-09,691.48,685.96,15,14,525,9,1,13,1
+PO-41272,Granite Seating Co.,Furniture,2026-09,671.91,656.57,8,8,224,3,1,13,1
+PO-41273,Granite Seating Co.,Furniture,2026-09,367.05,365.15,13,12,325,4,1,12,1
+PO-41274,Granite Seating Co.,Furniture,2026-09,637.52,637.5,6,6,180,2,1,10,1
+PO-41275,Granite Seating Co.,Furniture,2026-09,713.27,711.53,11,10,407,4,1,15,0
+PO-41276,Granite Seating Co.,Furniture,2026-09,419.87,413.93,7,7,49,0,1,9,1
+PO-41277,Granite Seating Co.,Furniture,2026-09,810.23,808.68,10,9,150,2,1,17,1
+PO-41278,Granite Seating Co.,Furniture,2026-09,592.09,589.9,12,9,60,4,1,20,1
+PO-41279,Granite Seating Co.,Furniture,2026-10,800.68,793.09,7,7,210,1,1,10,1
+PO-41280,Granite Seating Co.,Furniture,2026-10,614.31,608.11,14,13,238,7,1,10,1
+PO-41281,Granite Seating Co.,Furniture,2026-10,619.08,604.77,12,12,228,2,1,12,1
+PO-41282,Granite Seating Co.,Furniture,2026-10,863.79,856.2,18,17,684,8,0,15,1
+PO-41283,Granite Seating Co.,Furniture,2026-10,830.67,818.19,7,6,245,2,1,14,1
+PO-41284,Granite Seating Co.,Furniture,2026-10,519.17,516.89,4,4,44,0,0,15,1
+PO-41285,Granite Seating Co.,Furniture,2026-10,875.19,871.38,9,9,72,1,0,16,1
+PO-41286,Granite Seating Co.,Furniture,2026-10,654.2,647.2,7,7,126,2,1,13,1
+PO-41287,Granite Seating Co.,Furniture,2026-10,875.34,875.0,10,10,190,4,0,11,1
+PO-41288,Granite Seating Co.,Furniture,2026-10,663.61,660.95,17,16,442,5,1,13,1
+PO-41289,Granite Seating Co.,Furniture,2026-10,836.04,829.14,10,10,240,3,1,15,1
+PO-41290,Granite Seating Co.,Furniture,2026-11,324.86,325.57,11,11,242,2,1,13,1
+PO-41291,Granite Seating Co.,Furniture,2026-11,563.01,559.0,3,3,117,1,1,14,1
+PO-41292,Granite Seating Co.,Furniture,2026-11,612.71,615.33,18,18,558,4,1,9,1
+PO-41293,Granite Seating Co.,Furniture,2026-11,567.06,563.81,8,8,256,4,1,13,1
+PO-41294,Granite Seating Co.,Furniture,2026-11,593.2,584.76,11,11,187,1,1,15,0
+PO-41295,Granite Seating Co.,Furniture,2026-11,628.21,623.0,12,11,216,3,1,8,1
+PO-41296,Granite Seating Co.,Furniture,2026-11,518.13,523.93,3,3,120,2,1,13,1
+PO-41297,Granite Seating Co.,Furniture,2026-11,575.93,572.2,3,3,81,1,1,7,1
+PO-41298,Granite Seating Co.,Furniture,2026-11,309.93,308.22,15,13,105,2,1,11,1
+PO-41299,Granite Seating Co.,Furniture,2026-11,557.09,548.39,11,11,396,4,1,12,1
+PO-41300,Granite Seating Co.,Furniture,2026-11,623.04,619.15,8,8,224,4,1,14,1
+PO-41301,Granite Seating Co.,Furniture,2026-11,457.49,450.76,7,7,91,1,1,14,1
+PO-41302,Granite Seating Co.,Furniture,2026-11,635.67,629.38,18,18,126,0,1,13,1
+PO-41303,Northgate Janitorial,Janitorial,2025-12,570.29,563.42,8,8,280,4,1,3,1
+PO-41304,Northgate Janitorial,Janitorial,2025-12,453.23,442.99,12,12,96,0,1,3,1
+PO-41305,Northgate Janitorial,Janitorial,2025-12,417.09,410.88,5,5,60,0,1,4,1
+PO-41306,Northgate Janitorial,Janitorial,2025-12,434.71,433.91,16,16,608,7,1,4,1
+PO-41307,Northgate Janitorial,Janitorial,2025-12,598.9,596.18,13,13,273,0,1,3,1
+PO-41308,Northgate Janitorial,Janitorial,2025-12,338.42,340.0,4,3,92,0,1,3,1
+PO-41309,Northgate Janitorial,Janitorial,2025-12,435.64,438.9,6,6,192,2,1,2,1
+PO-41310,Northgate Janitorial,Janitorial,2025-12,479.27,468.85,9,9,81,1,1,3,1
+PO-41311,Northgate Janitorial,Janitorial,2025-12,517.18,522.11,6,6,192,3,1,2,1
+PO-41312,Northgate Janitorial,Janitorial,2025-12,368.19,368.22,4,4,132,1,1,2,1
+PO-41313,Northgate Janitorial,Janitorial,2025-12,391.63,391.75,4,3,120,1,1,3,1
+PO-41314,Northgate Janitorial,Janitorial,2025-12,579.26,577.32,10,9,240,3,1,1,1
+PO-41315,Northgate Janitorial,Janitorial,2026-01,471.02,469.17,10,10,70,0,1,4,1
+PO-41316,Northgate Janitorial,Janitorial,2026-01,474.74,470.95,15,15,405,3,1,4,1
+PO-41317,Northgate Janitorial,Janitorial,2026-01,672.01,675.81,3,3,117,0,1,3,1
+PO-41318,Northgate Janitorial,Janitorial,2026-01,477.2,476.28,4,4,152,3,1,5,1
+PO-41319,Northgate Janitorial,Janitorial,2026-01,600.87,603.15,7,7,49,0,1,2,1
+PO-41320,Northgate Janitorial,Janitorial,2026-01,592.6,587.72,3,3,30,1,1,3,1
+PO-41321,Northgate Janitorial,Janitorial,2026-01,639.55,633.73,9,9,234,5,0,8,1
+PO-41322,Northgate Janitorial,Janitorial,2026-01,600.3,604.26,5,5,105,0,1,4,1
+PO-41323,Northgate Janitorial,Janitorial,2026-01,305.15,305.12,4,3,32,1,1,3,1
+PO-41324,Northgate Janitorial,Janitorial,2026-01,576.69,576.64,10,10,110,0,1,3,1
+PO-41325,Northgate Janitorial,Janitorial,2026-01,337.9,334.85,5,5,100,0,1,3,1
+PO-41326,Northgate Janitorial,Janitorial,2026-01,553.55,545.3,7,7,273,1,1,3,1
+PO-41327,Northgate Janitorial,Janitorial,2026-02,449.41,451.23,17,16,340,0,1,3,1
+PO-41328,Northgate Janitorial,Janitorial,2026-02,963.88,961.87,16,14,144,0,0,7,1
+PO-41329,Northgate Janitorial,Janitorial,2026-02,711.58,709.27,14,14,182,2,1,3,1
+PO-41330,Northgate Janitorial,Janitorial,2026-02,656.97,649.24,12,12,180,1,0,3,1
+PO-41331,Northgate Janitorial,Janitorial,2026-02,876.96,855.51,16,15,256,1,0,4,1
+PO-41332,Northgate Janitorial,Janitorial,2026-02,699.3,690.75,4,4,104,2,1,2,1
+PO-41333,Northgate Janitorial,Janitorial,2026-02,600.5,598.82,7,7,266,2,1,2,1
+PO-41334,Northgate Janitorial,Janitorial,2026-02,699.22,702.87,6,6,228,4,1,2,1
+PO-41335,Northgate Janitorial,Janitorial,2026-02,644.47,647.48,7,7,273,1,1,3,1
+PO-41336,Northgate Janitorial,Janitorial,2026-03,424.65,425.87,11,10,66,3,1,2,1
+PO-41337,Northgate Janitorial,Janitorial,2026-03,811.28,816.89,14,14,546,3,1,3,1
+PO-41338,Northgate Janitorial,Janitorial,2026-03,483.74,482.0,13,13,78,2,1,3,1
+PO-41339,Northgate Janitorial,Janitorial,2026-03,571.06,578.79,17,17,663,9,1,3,1
+PO-41340,Northgate Janitorial,Janitorial,2026-03,764.15,750.53,6,6,126,1,1,2,1
+PO-41341,Northgate Janitorial,Janitorial,2026-03,741.33,737.15,13,13,182,0,1,3,1
+PO-41342,Northgate Janitorial,Janitorial,2026-03,544.27,542.44,3,3,69,1,1,4,1
+PO-41343,Northgate Janitorial,Janitorial,2026-03,551.78,549.99,12,11,264,1,1,3,1
+PO-41344,Northgate Janitorial,Janitorial,2026-03,805.23,808.0,16,15,448,6,1,2,1
+PO-41345,Northgate Janitorial,Janitorial,2026-03,779.32,776.13,12,12,108,1,1,3,1
+PO-41346,Northgate Janitorial,Janitorial,2026-03,786.18,792.8,12,12,384,4,1,2,1
+PO-41347,Northgate Janitorial,Janitorial,2026-04,501.74,498.7,11,10,176,4,1,3,1
+PO-41348,Northgate Janitorial,Janitorial,2026-04,499.86,497.29,5,5,125,1,1,3,1
+PO-41349,Northgate Janitorial,Janitorial,2026-04,478.43,478.08,3,3,84,0,1,3,1
+PO-41350,Northgate Janitorial,Janitorial,2026-04,416.63,414.37,18,18,396,2,1,3,1
+PO-41351,Northgate Janitorial,Janitorial,2026-04,468.95,469.57,5,5,170,0,1,2,1
+PO-41352,Northgate Janitorial,Janitorial,2026-04,574.4,569.92,13,13,364,0,1,4,1
+PO-41353,Northgate Janitorial,Janitorial,2026-04,625.22,621.02,13,13,143,1,1,1,1
+PO-41354,Northgate Janitorial,Janitorial,2026-04,461.15,458.17,10,10,230,4,1,3,1
+PO-41355,Northgate Janitorial,Janitorial,2026-04,618.03,618.16,15,15,375,0,1,3,1
+PO-41356,Northgate Janitorial,Janitorial,2026-04,748.89,742.35,18,18,234,3,1,3,1
+PO-41357,Northgate Janitorial,Janitorial,2026-04,340.58,343.4,5,5,155,0,1,2,1
+PO-41358,Northgate Janitorial,Janitorial,2026-04,380.15,380.46,18,17,324,4,1,3,1
+PO-41359,Northgate Janitorial,Janitorial,2026-05,485.17,483.74,6,6,36,0,1,4,1
+PO-41360,Northgate Janitorial,Janitorial,2026-05,423.09,425.51,10,9,190,3,1,2,1
+PO-41361,Northgate Janitorial,Janitorial,2026-05,475.51,478.99,16,16,208,1,1,2,1
+PO-41362,Northgate Janitorial,Janitorial,2026-05,560.43,557.92,13,12,169,0,1,3,1
+PO-41363,Northgate Janitorial,Janitorial,2026-05,520.19,520.47,6,6,216,1,1,2,1
+PO-41364,Northgate Janitorial,Janitorial,2026-05,536.83,530.06,7,7,56,1,1,4,1
+PO-41365,Northgate Janitorial,Janitorial,2026-05,393.35,388.32,18,18,504,2,1,4,1
+PO-41366,Northgate Janitorial,Janitorial,2026-05,399.85,400.41,3,3,18,0,1,3,1
+PO-41367,Northgate Janitorial,Janitorial,2026-05,713.75,700.54,12,12,144,0,1,2,1
+PO-41368,Northgate Janitorial,Janitorial,2026-05,473.95,470.79,12,12,420,2,1,2,1
+PO-41369,Northgate Janitorial,Janitorial,2026-06,614.53,609.88,16,16,176,1,1,3,1
+PO-41370,Northgate Janitorial,Janitorial,2026-06,547.96,548.71,16,13,624,4,1,3,1
+PO-41371,Northgate Janitorial,Janitorial,2026-06,849.5,848.89,17,15,612,2,1,3,1
+PO-41372,Northgate Janitorial,Janitorial,2026-06,729.64,722.45,9,9,189,1,1,5,1
+PO-41373,Northgate Janitorial,Janitorial,2026-06,493.52,496.95,16,15,592,7,1,3,1
+PO-41374,Northgate Janitorial,Janitorial,2026-06,727.69,721.88,10,10,100,3,1,3,1
+PO-41375,Northgate Janitorial,Janitorial,2026-06,537.59,539.1,15,14,165,2,1,3,1
+PO-41376,Northgate Janitorial,Janitorial,2026-07,679.73,679.3,13,12,299,1,1,3,1
+PO-41377,Northgate Janitorial,Janitorial,2026-07,684.17,672.07,10,10,110,0,1,3,1
+PO-41378,Northgate Janitorial,Janitorial,2026-07,574.08,557.37,10,10,360,3,1,3,1
+PO-41379,Northgate Janitorial,Janitorial,2026-07,850.86,848.23,10,10,330,4,1,4,1
+PO-41380,Northgate Janitorial,Janitorial,2026-07,373.67,374.47,17,17,646,3,1,3,1
+PO-41381,Northgate Janitorial,Janitorial,2026-07,735.43,735.91,6,6,108,0,1,3,1
+PO-41382,Northgate Janitorial,Janitorial,2026-07,379.05,377.08,18,17,468,2,1,3,1
+PO-41383,Northgate Janitorial,Janitorial,2026-07,721.26,719.08,13,13,468,2,1,3,1
+PO-41384,Northgate Janitorial,Janitorial,2026-07,399.06,404.28,17,17,170,2,1,4,1
+PO-41385,Northgate Janitorial,Janitorial,2026-07,543.48,547.73,15,15,270,8,1,3,1
+PO-41386,Northgate Janitorial,Janitorial,2026-07,817.41,812.45,17,17,408,2,1,2,1
+PO-41387,Northgate Janitorial,Janitorial,2026-07,447.99,446.83,8,8,216,1,1,4,1
+PO-41388,Northgate Janitorial,Janitorial,2026-08,793.83,787.6,16,16,528,2,1,3,1
+PO-41389,Northgate Janitorial,Janitorial,2026-08,612.79,606.56,8,8,280,1,1,2,1
+PO-41390,Northgate Janitorial,Janitorial,2026-08,526.29,528.04,11,11,220,1,1,3,0
+PO-41391,Northgate Janitorial,Janitorial,2026-08,496.43,491.25,8,8,160,1,1,4,1
+PO-41392,Northgate Janitorial,Janitorial,2026-08,612.04,615.09,17,17,595,5,1,3,1
+PO-41393,Northgate Janitorial,Janitorial,2026-08,688.13,683.64,6,6,96,2,1,2,1
+PO-41394,Northgate Janitorial,Janitorial,2026-08,444.15,443.95,8,8,272,2,1,2,1
+PO-41395,Northgate Janitorial,Janitorial,2026-08,607.48,608.72,17,17,476,2,1,2,1
+PO-41396,Northgate Janitorial,Janitorial,2026-08,561.93,566.01,6,6,84,1,1,3,1
+PO-41397,Northgate Janitorial,Janitorial,2026-08,722.39,717.83,7,7,210,0,1,4,1
+PO-41398,Northgate Janitorial,Janitorial,2026-08,496.46,486.74,8,7,152,0,1,1,1
+PO-41399,Northgate Janitorial,Janitorial,2026-08,399.65,401.02,18,18,432,3,1,2,1
+PO-41400,Northgate Janitorial,Janitorial,2026-08,392.13,392.29,8,8,80,1,1,3,1
+PO-41401,Northgate Janitorial,Janitorial,2026-08,774.6,774.96,13,12,273,0,1,3,1
+PO-41402,Northgate Janitorial,Janitorial,2026-09,709.09,714.67,11,11,132,2,1,4,1
+PO-41403,Northgate Janitorial,Janitorial,2026-09,830.78,826.42,13,13,377,2,1,3,1
+PO-41404,Northgate Janitorial,Janitorial,2026-09,581.0,578.44,15,15,525,4,1,2,1
+PO-41405,Northgate Janitorial,Janitorial,2026-09,963.58,965.97,13,12,507,5,1,3,1
+PO-41406,Northgate Janitorial,Janitorial,2026-09,868.43,866.59,6,6,72,0,1,2,1
+PO-41407,Northgate Janitorial,Janitorial,2026-09,854.76,853.07,7,7,273,4,1,3,1
+PO-41408,Northgate Janitorial,Janitorial,2026-09,785.81,792.23,14,14,434,2,1,3,1
+PO-41409,Northgate Janitorial,Janitorial,2026-09,656.22,651.34,10,10,220,3,1,3,1
+PO-41410,Northgate Janitorial,Janitorial,2026-09,740.89,742.52,14,14,238,2,1,2,1
+PO-41411,Northgate Janitorial,Janitorial,2026-09,892.25,889.15,11,11,341,2,0,5,1
+PO-41412,Northgate Janitorial,Janitorial,2026-10,692.8,691.89,16,15,256,3,1,3,1
+PO-41413,Northgate Janitorial,Janitorial,2026-10,311.15,308.82,18,18,234,6,1,3,1
+PO-41414,Northgate Janitorial,Janitorial,2026-10,331.16,328.81,15,15,300,3,1,2,1
+PO-41415,Northgate Janitorial,Janitorial,2026-10,467.19,468.01,9,9,216,1,1,3,1
+PO-41416,Northgate Janitorial,Janitorial,2026-10,373.22,365.8,5,5,200,1,1,4,1
+PO-41417,Northgate Janitorial,Janitorial,2026-10,482.46,478.09,6,6,114,1,1,3,1
+PO-41418,Northgate Janitorial,Janitorial,2026-10,596.51,594.74,16,16,560,6,1,3,1
+PO-41419,Northgate Janitorial,Janitorial,2026-10,628.27,624.4,18,17,684,6,1,4,1
+PO-41420,Northgate Janitorial,Janitorial,2026-10,433.57,428.21,10,10,300,2,1,3,1
+PO-41421,Northgate Janitorial,Janitorial,2026-10,691.27,688.55,16,16,112,1,1,3,1
+PO-41422,Northgate Janitorial,Janitorial,2026-10,338.64,336.96,14,13,504,2,1,3,1
+PO-41423,Northgate Janitorial,Janitorial,2026-10,329.33,327.96,5,5,40,0,1,3,1
+PO-41424,Northgate Janitorial,Janitorial,2026-10,668.65,671.11,7,6,84,0,1,3,1
+PO-41425,Northgate Janitorial,Janitorial,2026-11,405.05,407.77,6,6,216,2,1,2,1
+PO-41426,Northgate Janitorial,Janitorial,2026-11,337.74,332.02,5,5,70,0,0,7,1
+PO-41427,Northgate Janitorial,Janitorial,2026-11,372.61,369.69,4,4,120,1,1,3,1
+PO-41428,Northgate Janitorial,Janitorial,2026-11,342.4,344.02,12,12,180,4,1,2,1
+PO-41429,Northgate Janitorial,Janitorial,2026-11,322.7,318.82,5,4,55,1,1,3,1
+PO-41430,Northgate Janitorial,Janitorial,2026-11,421.08,422.13,5,5,110,0,1,2,1
+PO-41431,Northgate Janitorial,Janitorial,2026-11,649.99,648.17,11,11,418,3,1,3,1
+PO-41432,Northgate Janitorial,Janitorial,2026-11,493.62,490.19,7,6,56,0,1,3,1
+PO-41433,Northgate Janitorial,Janitorial,2026-11,422.92,422.76,13,12,325,3,1,3,1
+PO-41434,Northgate Janitorial,Janitorial,2026-11,645.82,646.0,12,12,168,1,1,3,1
+PO-41435,Northgate Janitorial,Janitorial,2026-11,531.73,531.48,17,16,119,2,1,3,1
+PO-41436,Northgate Janitorial,Janitorial,2026-11,464.68,461.6,9,9,198,2,1,3,1
+PO-41437,Brightmark Writing Goods,Writing,2025-12,657.78,657.15,13,13,442,2,1,3,1
+PO-41438,Brightmark Writing Goods,Writing,2025-12,733.11,734.79,12,12,384,2,1,4,1
+PO-41439,Brightmark Writing Goods,Writing,2025-12,679.72,678.86,13,13,169,2,1,4,1
+PO-41440,Brightmark Writing Goods,Writing,2025-12,737.02,739.41,15,15,120,0,1,3,1
+PO-41441,Brightmark Writing Goods,Writing,2025-12,585.41,589.13,7,7,259,2,1,4,1
+PO-41442,Brightmark Writing Goods,Writing,2025-12,576.04,570.07,12,12,360,2,1,3,1
+PO-41443,Brightmark Writing Goods,Writing,2025-12,832.07,832.12,13,13,247,1,1,3,1
+PO-41444,Brightmark Writing Goods,Writing,2026-01,600.15,592.32,8,8,240,1,1,3,1
+PO-41445,Brightmark Writing Goods,Writing,2026-01,430.15,427.69,13,13,143,1,1,4,1
+PO-41446,Brightmark Writing Goods,Writing,2026-01,409.3,408.33,8,8,136,0,1,4,1
+PO-41447,Brightmark Writing Goods,Writing,2026-01,932.64,934.15,3,3,78,2,0,5,1
+PO-41448,Brightmark Writing Goods,Writing,2026-01,630.45,630.22,17,17,170,0,1,3,1
+PO-41449,Brightmark Writing Goods,Writing,2026-01,727.0,733.13,11,11,110,0,1,4,1
+PO-41450,Brightmark Writing Goods,Writing,2026-01,811.19,822.94,3,3,72,0,1,4,1
+PO-41451,Brightmark Writing Goods,Writing,2026-02,440.88,439.59,12,12,456,2,1,4,1
+PO-41452,Brightmark Writing Goods,Writing,2026-02,750.05,741.04,11,11,352,1,1,4,1
+PO-41453,Brightmark Writing Goods,Writing,2026-02,756.58,759.5,9,9,315,1,1,3,1
+PO-41454,Brightmark Writing Goods,Writing,2026-02,896.36,907.5,10,10,140,1,1,4,1
+PO-41455,Brightmark Writing Goods,Writing,2026-02,406.29,405.17,4,4,72,0,1,4,1
+PO-41456,Brightmark Writing Goods,Writing,2026-02,466.02,468.63,10,10,370,3,1,3,1
+PO-41457,Brightmark Writing Goods,Writing,2026-02,531.79,542.65,16,16,240,1,1,5,1
+PO-41458,Brightmark Writing Goods,Writing,2026-03,405.92,405.62,5,4,165,0,1,4,1
+PO-41459,Brightmark Writing Goods,Writing,2026-03,585.66,583.85,10,10,50,0,1,4,1
+PO-41460,Brightmark Writing Goods,Writing,2026-03,368.42,373.57,17,17,629,1,1,3,1
+PO-41461,Brightmark Writing Goods,Writing,2026-03,438.18,434.25,12,12,312,2,1,4,1
+PO-41462,Brightmark Writing Goods,Writing,2026-03,395.55,393.07,4,4,64,0,1,3,1
+PO-41463,Brightmark Writing Goods,Writing,2026-03,528.85,535.4,11,10,209,1,1,4,1
+PO-41464,Brightmark Writing Goods,Writing,2026-03,315.17,319.24,5,5,180,0,1,4,1
+PO-41465,Brightmark Writing Goods,Writing,2026-03,683.97,684.99,3,3,84,0,1,5,1
+PO-41466,Brightmark Writing Goods,Writing,2026-03,373.3,371.34,14,14,210,1,1,5,1
+PO-41467,Brightmark Writing Goods,Writing,2026-04,485.63,478.37,3,3,111,0,1,3,1
+PO-41468,Brightmark Writing Goods,Writing,2026-04,554.75,554.73,17,17,408,2,1,3,1
+PO-41469,Brightmark Writing Goods,Writing,2026-04,500.73,506.52,10,10,150,0,1,4,1
+PO-41470,Brightmark Writing Goods,Writing,2026-04,280.69,284.65,18,18,306,1,1,6,1
+PO-41471,Brightmark Writing Goods,Writing,2026-04,588.44,593.12,6,6,150,1,1,4,1
+PO-41472,Brightmark Writing Goods,Writing,2026-04,592.57,597.06,11,10,99,0,1,4,1
+PO-41473,Brightmark Writing Goods,Writing,2026-04,578.31,579.85,10,10,120,1,1,7,1
+PO-41474,Brightmark Writing Goods,Writing,2026-04,512.64,516.27,8,8,72,0,1,4,1
+PO-41475,Brightmark Writing Goods,Writing,2026-04,362.01,363.8,13,13,104,1,1,6,1
+PO-41476,Brightmark Writing Goods,Writing,2026-04,434.31,437.69,14,14,420,0,1,6,1
+PO-41477,Brightmark Writing Goods,Writing,2026-05,550.87,551.73,12,12,252,0,1,5,1
+PO-41478,Brightmark Writing Goods,Writing,2026-05,605.7,599.2,10,10,340,0,1,4,1
+PO-41479,Brightmark Writing Goods,Writing,2026-05,471.93,473.58,11,11,220,2,1,3,1
+PO-41480,Brightmark Writing Goods,Writing,2026-05,529.76,536.77,7,7,266,0,1,5,1
+PO-41481,Brightmark Writing Goods,Writing,2026-05,561.27,568.15,13,13,312,0,1,4,1
+PO-41482,Brightmark Writing Goods,Writing,2026-05,447.39,444.73,13,13,520,1,1,5,1
+PO-41483,Brightmark Writing Goods,Writing,2026-05,411.23,419.66,7,7,231,0,1,4,1
+PO-41484,Brightmark Writing Goods,Writing,2026-05,533.64,537.33,13,13,377,1,1,4,1
+PO-41485,Brightmark Writing Goods,Writing,2026-06,354.7,354.91,13,13,91,0,1,5,1
+PO-41486,Brightmark Writing Goods,Writing,2026-06,333.11,332.69,11,11,55,0,1,3,1
+PO-41487,Brightmark Writing Goods,Writing,2026-06,375.77,377.94,9,9,108,0,1,5,1
+PO-41488,Brightmark Writing Goods,Writing,2026-06,598.21,596.48,5,5,70,0,1,4,1
+PO-41489,Brightmark Writing Goods,Writing,2026-06,640.47,640.68,18,18,540,1,1,5,1
+PO-41490,Brightmark Writing Goods,Writing,2026-06,358.03,358.97,10,9,310,0,1,4,1
+PO-41491,Brightmark Writing Goods,Writing,2026-06,400.0,398.37,6,6,78,0,1,5,1
+PO-41492,Brightmark Writing Goods,Writing,2026-06,662.68,659.06,3,3,66,0,1,4,1
+PO-41493,Brightmark Writing Goods,Writing,2026-06,331.97,337.06,8,8,136,0,1,4,1
+PO-41494,Brightmark Writing Goods,Writing,2026-07,389.6,386.78,3,3,96,0,1,5,1
+PO-41495,Brightmark Writing Goods,Writing,2026-07,636.93,639.93,5,5,25,0,1,5,1
+PO-41496,Brightmark Writing Goods,Writing,2026-07,500.73,500.66,4,4,48,0,1,5,1
+PO-41497,Brightmark Writing Goods,Writing,2026-07,569.89,573.08,3,3,30,0,1,3,1
+PO-41498,Brightmark Writing Goods,Writing,2026-07,576.52,586.51,3,3,51,0,1,4,1
+PO-41499,Brightmark Writing Goods,Writing,2026-07,495.24,490.42,15,15,120,0,1,3,1
+PO-41500,Brightmark Writing Goods,Writing,2026-07,544.54,552.29,14,14,70,0,1,4,1
+PO-41501,Brightmark Writing Goods,Writing,2026-07,317.64,321.56,17,17,357,2,1,4,1
+PO-41502,Brightmark Writing Goods,Writing,2026-07,585.77,590.99,9,9,288,1,1,4,1
+PO-41503,Brightmark Writing Goods,Writing,2026-07,383.89,383.52,18,18,324,1,1,4,1
+PO-41504,Brightmark Writing Goods,Writing,2026-07,293.01,294.76,12,12,384,2,1,4,1
+PO-41505,Brightmark Writing Goods,Writing,2026-07,352.49,356.79,13,12,234,1,1,3,1
+PO-41506,Brightmark Writing Goods,Writing,2026-08,675.66,681.74,9,8,288,2,1,3,1
+PO-41507,Brightmark Writing Goods,Writing,2026-08,523.83,519.2,16,15,432,2,1,4,1
+PO-41508,Brightmark Writing Goods,Writing,2026-08,500.23,500.33,17,16,170,2,1,3,0
+PO-41509,Brightmark Writing Goods,Writing,2026-08,663.52,659.8,12,12,432,2,1,4,1
+PO-41510,Brightmark Writing Goods,Writing,2026-08,581.25,581.73,4,4,96,0,1,4,1
+PO-41511,Brightmark Writing Goods,Writing,2026-08,497.76,498.6,5,5,175,0,1,4,1
+PO-41512,Brightmark Writing Goods,Writing,2026-08,406.8,406.4,8,8,192,1,1,2,1
+PO-41513,Brightmark Writing Goods,Writing,2026-08,468.34,471.0,6,5,126,1,1,5,1
+PO-41514,Brightmark Writing Goods,Writing,2026-08,696.69,707.6,13,13,507,2,1,3,1
+PO-41515,Brightmark Writing Goods,Writing,2026-08,715.98,716.74,3,2,96,0,1,5,1
+PO-41516,Brightmark Writing Goods,Writing,2026-09,657.2,658.18,4,4,112,2,1,5,1
+PO-41517,Brightmark Writing Goods,Writing,2026-09,668.61,674.65,13,13,247,1,1,4,1
+PO-41518,Brightmark Writing Goods,Writing,2026-09,454.94,457.94,6,6,36,0,1,5,1
+PO-41519,Brightmark Writing Goods,Writing,2026-09,517.93,514.42,18,18,468,0,1,4,1
+PO-41520,Brightmark Writing Goods,Writing,2026-09,577.22,583.37,9,9,117,0,1,4,1
+PO-41521,Brightmark Writing Goods,Writing,2026-09,580.68,584.93,8,8,112,0,1,4,1
+PO-41522,Brightmark Writing Goods,Writing,2026-09,441.49,439.26,3,3,66,0,1,4,1
+PO-41523,Brightmark Writing Goods,Writing,2026-09,650.31,652.32,11,11,143,2,1,4,1
+PO-41524,Brightmark Writing Goods,Writing,2026-10,482.89,478.57,13,13,299,2,1,4,1
+PO-41525,Brightmark Writing Goods,Writing,2026-10,470.81,473.51,14,14,406,0,1,3,1
+PO-41526,Brightmark Writing Goods,Writing,2026-10,525.32,526.62,9,9,297,2,1,3,1
+PO-41527,Brightmark Writing Goods,Writing,2026-10,535.8,536.15,14,14,336,2,1,3,1
+PO-41528,Brightmark Writing Goods,Writing,2026-10,607.47,609.97,18,18,90,1,1,5,1
+PO-41529,Brightmark Writing Goods,Writing,2026-10,535.38,536.27,17,16,629,3,1,4,1
+PO-41530,Brightmark Writing Goods,Writing,2026-10,416.89,416.8,11,10,407,1,1,5,1
+PO-41531,Brightmark Writing Goods,Writing,2026-11,654.57,657.93,9,9,45,0,1,4,1
+PO-41532,Brightmark Writing Goods,Writing,2026-11,785.69,784.16,4,4,64,1,1,3,1
+PO-41533,Brightmark Writing Goods,Writing,2026-11,412.07,413.46,3,3,84,0,1,4,1
+PO-41534,Brightmark Writing Goods,Writing,2026-11,736.41,731.27,12,12,168,0,1,4,1
+PO-41535,Brightmark Writing Goods,Writing,2026-11,804.19,810.26,9,8,63,0,1,4,1
+PO-41536,Brightmark Writing Goods,Writing,2026-11,617.95,620.0,4,4,148,0,1,4,1
+PO-41537,Brightmark Writing Goods,Writing,2026-11,827.01,838.4,4,4,76,1,1,4,1
+PO-41538,Summit Tech Accessories,Technology,2025-12,789.36,760.4,8,6,160,5,1,7,1
+PO-41539,Summit Tech Accessories,Technology,2025-12,777.52,765.07,10,9,310,8,1,9,1
+PO-41540,Summit Tech Accessories,Technology,2025-12,470.64,463.54,16,15,544,9,1,8,1
+PO-41541,Summit Tech Accessories,Technology,2025-12,739.58,727.59,3,3,45,3,1,7,1
+PO-41542,Summit Tech Accessories,Technology,2025-12,428.08,421.8,13,13,65,1,0,8,1
+PO-41543,Summit Tech Accessories,Technology,2025-12,469.25,457.28,8,7,56,0,1,5,1
+PO-41544,Summit Tech Accessories,Technology,2025-12,442.66,428.88,7,7,42,2,1,5,1
+PO-41545,Summit Tech Accessories,Technology,2025-12,489.23,477.08,9,9,306,6,1,8,1
+PO-41546,Summit Tech Accessories,Technology,2025-12,714.42,699.14,9,6,306,7,1,6,1
+PO-41547,Summit Tech Accessories,Technology,2025-12,742.58,725.93,8,7,40,0,1,7,1
+PO-41548,Summit Tech Accessories,Technology,2025-12,436.85,430.38,17,16,663,19,1,7,1
+PO-41549,Summit Tech Accessories,Technology,2025-12,677.37,656.37,9,9,216,3,1,7,1
+PO-41550,Summit Tech Accessories,Technology,2025-12,707.08,682.78,5,5,170,4,1,5,1
+PO-41551,Summit Tech Accessories,Technology,2025-12,675.74,670.87,10,9,70,1,1,8,1
+PO-41552,Summit Tech Accessories,Technology,2025-12,778.36,766.99,15,15,345,10,0,12,0
+PO-41553,Summit Tech Accessories,Technology,2026-01,599.25,593.64,10,10,310,5,1,6,1
+PO-41554,Summit Tech Accessories,Technology,2026-01,918.81,907.72,11,11,319,10,1,8,1
+PO-41555,Summit Tech Accessories,Technology,2026-01,515.34,498.55,13,13,338,9,0,13,1
+PO-41556,Summit Tech Accessories,Technology,2026-01,540.08,531.34,18,15,504,14,1,7,1
+PO-41557,Summit Tech Accessories,Technology,2026-01,662.03,644.66,9,9,153,3,0,12,1
+PO-41558,Summit Tech Accessories,Technology,2026-01,769.02,762.75,17,16,85,2,1,7,1
+PO-41559,Summit Tech Accessories,Technology,2026-01,430.98,426.08,6,5,84,3,0,12,1
+PO-41560,Summit Tech Accessories,Technology,2026-01,772.55,760.72,17,16,272,4,1,8,1
+PO-41561,Summit Tech Accessories,Technology,2026-01,927.32,904.13,8,7,232,3,1,7,1
+PO-41562,Summit Tech Accessories,Technology,2026-01,478.56,469.89,5,5,60,1,1,8,1
+PO-41563,Summit Tech Accessories,Technology,2026-01,491.92,475.49,6,6,126,3,1,6,1
+PO-41564,Summit Tech Accessories,Technology,2026-01,924.41,906.29,10,9,320,8,1,7,1
+PO-41565,Summit Tech Accessories,Technology,2026-01,842.75,819.52,10,9,190,3,1,8,1
+PO-41566,Summit Tech Accessories,Technology,2026-01,782.96,769.54,7,6,42,0,1,8,0
+PO-41567,Summit Tech Accessories,Technology,2026-01,908.25,895.44,18,18,594,12,1,7,1
+PO-41568,Summit Tech Accessories,Technology,2026-02,766.44,748.25,15,15,315,8,1,8,1
+PO-41569,Summit Tech Accessories,Technology,2026-02,539.67,534.22,18,15,162,6,1,6,1
+PO-41570,Summit Tech Accessories,Technology,2026-02,625.53,606.48,9,9,288,7,1,7,1
+PO-41571,Summit Tech Accessories,Technology,2026-02,643.61,638.8,18,18,612,13,1,6,1
+PO-41572,Summit Tech Accessories,Technology,2026-02,705.87,691.2,12,11,444,7,1,9,1
+PO-41573,Summit Tech Accessories,Technology,2026-02,707.15,694.86,11,11,209,2,1,6,1
+PO-41574,Summit Tech Accessories,Technology,2026-02,507.34,503.23,3,2,36,1,1,6,1
+PO-41575,Summit Tech Accessories,Technology,2026-02,519.75,505.74,16,15,192,4,1,6,1
+PO-41576,Summit Tech Accessories,Technology,2026-02,719.27,703.46,10,10,230,9,1,8,1
+PO-41577,Summit Tech Accessories,Technology,2026-02,667.53,653.74,8,8,144,5,1,6,1
+PO-41578,Summit Tech Accessories,Technology,2026-02,337.6,328.89,16,16,208,2,1,6,1
+PO-41579,Summit Tech Accessories,Technology,2026-02,748.49,729.91,17,16,442,8,1,8,1
+PO-41580,Summit Tech Accessories,Technology,2026-02,440.07,430.03,13,12,338,20,0,11,1
+PO-41581,Summit Tech Accessories,Technology,2026-02,487.22,485.89,17,16,374,11,0,13,1
+PO-41582,Summit Tech Accessories,Technology,2026-02,500.8,488.01,6,6,102,1,0,12,1
+PO-41583,Summit Tech Accessories,Technology,2026-02,762.41,753.24,14,14,112,2,1,9,1
+PO-41584,Summit Tech Accessories,Technology,2026-02,420.29,408.49,13,11,442,13,1,7,1
+PO-41585,Summit Tech Accessories,Technology,2026-02,354.0,352.22,12,12,60,4,1,9,1
+PO-41586,Summit Tech Accessories,Technology,2026-03,467.58,461.57,15,13,345,6,1,6,1
+PO-41587,Summit Tech Accessories,Technology,2026-03,571.56,555.51,14,13,126,3,1,9,1
+PO-41588,Summit Tech Accessories,Technology,2026-03,579.02,566.81,10,8,220,5,0,9,1
+PO-41589,Summit Tech Accessories,Technology,2026-03,502.57,493.8,9,8,117,5,1,7,1
+PO-41590,Summit Tech Accessories,Technology,2026-03,497.3,487.97,16,13,608,8,1,7,1
+PO-41591,Summit Tech Accessories,Technology,2026-03,595.13,588.57,17,17,374,8,1,8,1
+PO-41592,Summit Tech Accessories,Technology,2026-03,371.76,366.42,17,16,476,11,1,6,1
+PO-41593,Summit Tech Accessories,Technology,2026-03,645.57,629.48,12,12,396,5,1,7,1
+PO-41594,Summit Tech Accessories,Technology,2026-03,466.06,461.83,14,12,294,4,1,6,1
+PO-41595,Summit Tech Accessories,Technology,2026-03,390.91,382.11,9,9,90,4,1,8,1
+PO-41596,Summit Tech Accessories,Technology,2026-03,543.01,542.51,4,4,64,0,1,6,1
+PO-41597,Summit Tech Accessories,Technology,2026-03,664.54,663.19,3,3,81,2,0,11,1
+PO-41598,Summit Tech Accessories,Technology,2026-03,576.1,563.18,14,14,462,10,0,10,1
+PO-41599,Summit Tech Accessories,Technology,2026-03,492.41,487.68,5,5,50,1,1,8,1
+PO-41600,Summit Tech Accessories,Technology,2026-03,641.43,629.29,11,11,286,6,1,6,1
+PO-41601,Summit Tech Accessories,Technology,2026-03,649.79,639.36,14,13,70,0,1,5,1
+PO-41602,Summit Tech Accessories,Technology,2026-03,602.72,591.75,14,14,434,15,1,9,0
+PO-41603,Summit Tech Accessories,Technology,2026-03,478.87,477.49,8,8,320,9,1,6,1
+PO-41604,Summit Tech Accessories,Technology,2026-04,453.67,453.11,3,3,117,2,0,10,1
+PO-41605,Summit Tech Accessories,Technology,2026-04,361.4,360.45,15,14,510,10,0,9,0
+PO-41606,Summit Tech Accessories,Technology,2026-04,359.65,348.47,16,15,512,2,1,7,1
+PO-41607,Summit Tech Accessories,Technology,2026-04,570.46,567.78,17,16,272,6,1,7,1
+PO-41608,Summit Tech Accessories,Technology,2026-04,584.31,577.02,7,6,98,5,1,5,1
+PO-41609,Summit Tech Accessories,Technology,2026-04,606.64,590.74,13,12,208,4,0,8,1
+PO-41610,Summit Tech Accessories,Technology,2026-04,466.53,458.75,8,8,280,3,1,6,1
+PO-41611,Summit Tech Accessories,Technology,2026-04,669.36,646.8,15,13,585,9,1,7,1
+PO-41612,Summit Tech Accessories,Technology,2026-04,681.7,665.01,13,12,312,8,1,7,1
+PO-41613,Summit Tech Accessories,Technology,2026-04,428.69,420.43,5,4,75,2,1,6,1
+PO-41614,Summit Tech Accessories,Technology,2026-04,620.54,604.98,8,8,232,5,1,6,1
+PO-41615,Summit Tech Accessories,Technology,2026-04,534.83,535.9,5,3,95,2,1,6,1
+PO-41616,Summit Tech Accessories,Technology,2026-04,494.71,483.17,4,3,84,2,1,6,1
+PO-41617,Summit Tech Accessories,Technology,2026-04,537.24,532.54,5,5,175,2,1,5,1
+PO-41618,Summit Tech Accessories,Technology,2026-04,532.08,524.91,10,10,370,3,0,10,1
+PO-41619,Summit Tech Accessories,Technology,2026-04,365.5,353.99,14,12,504,9,1,9,1
+PO-41620,Summit Tech Accessories,Technology,2026-04,351.73,348.04,4,4,20,0,1,9,1
+PO-41621,Summit Tech Accessories,Technology,2026-05,523.28,519.88,17,15,510,7,1,9,1
+PO-41622,Summit Tech Accessories,Technology,2026-05,552.15,536.17,8,8,184,5,1,7,1
+PO-41623,Summit Tech Accessories,Technology,2026-05,800.39,788.37,7,6,98,3,0,12,1
+PO-41624,Summit Tech Accessories,Technology,2026-05,818.18,806.19,6,6,216,8,1,9,1
+PO-41625,Summit Tech Accessories,Technology,2026-05,831.09,819.67,13,13,247,3,1,6,1
+PO-41626,Summit Tech Accessories,Technology,2026-05,556.14,552.13,11,11,132,0,1,4,1
+PO-41627,Summit Tech Accessories,Technology,2026-05,640.14,634.17,9,9,63,2,1,6,1
+PO-41628,Summit Tech Accessories,Technology,2026-05,629.18,618.49,13,11,143,1,1,9,1
+PO-41629,Summit Tech Accessories,Technology,2026-05,499.62,491.32,6,6,228,5,1,7,1
+PO-41630,Summit Tech Accessories,Technology,2026-05,467.68,467.04,8,6,104,3,1,6,1
+PO-41631,Summit Tech Accessories,Technology,2026-05,603.53,598.57,14,13,98,1,1,6,1
+PO-41632,Summit Tech Accessories,Technology,2026-05,634.63,617.05,4,3,80,1,1,8,1
+PO-41633,Summit Tech Accessories,Technology,2026-05,624.77,611.13,5,3,90,4,1,8,1
+PO-41634,Summit Tech Accessories,Technology,2026-05,713.38,700.79,17,17,595,7,1,5,1
+PO-41635,Summit Tech Accessories,Technology,2026-05,660.37,659.57,6,6,96,1,1,6,1
+PO-41636,Summit Tech Accessories,Technology,2026-06,659.3,646.93,10,10,290,1,1,5,1
+PO-41637,Summit Tech Accessories,Technology,2026-06,472.79,463.55,18,14,324,2,1,6,1
+PO-41638,Summit Tech Accessories,Technology,2026-06,859.15,845.0,6,6,42,2,0,10,1
+PO-41639,Summit Tech Accessories,Technology,2026-06,530.78,526.99,5,4,45,1,1,7,1
+PO-41640,Summit Tech Accessories,Technology,2026-06,874.16,863.29,9,9,306,6,1,8,1
+PO-41641,Summit Tech Accessories,Technology,2026-06,584.29,576.91,10,9,310,5,0,11,1
+PO-41642,Summit Tech Accessories,Technology,2026-06,520.33,513.53,16,15,192,4,1,6,1
+PO-41643,Summit Tech Accessories,Technology,2026-06,873.92,874.78,9,9,324,6,1,8,1
+PO-41644,Summit Tech Accessories,Technology,2026-06,390.66,380.92,16,15,592,10,1,4,1
+PO-41645,Summit Tech Accessories,Technology,2026-06,870.79,856.9,3,2,81,0,1,8,1
+PO-41646,Summit Tech Accessories,Technology,2026-06,861.64,843.3,3,3,54,3,1,7,1
+PO-41647,Summit Tech Accessories,Technology,2026-06,625.23,616.21,9,8,243,4,1,6,1
+PO-41648,Summit Tech Accessories,Technology,2026-07,430.99,426.72,9,9,171,0,0,8,1
+PO-41649,Summit Tech Accessories,Technology,2026-07,395.31,390.25,12,12,456,12,1,7,0
+PO-41650,Summit Tech Accessories,Technology,2026-07,526.87,520.64,14,14,154,1,1,9,1
+PO-41651,Summit Tech Accessories,Technology,2026-07,724.04,709.54,7,7,224,1,1,8,1
+PO-41652,Summit Tech Accessories,Technology,2026-07,674.42,668.7,11,10,121,0,1,6,1
+PO-41653,Summit Tech Accessories,Technology,2026-07,485.54,478.61,11,11,264,2,1,9,1
+PO-41654,Summit Tech Accessories,Technology,2026-07,512.5,502.06,18,18,324,3,1,6,1
+PO-41655,Summit Tech Accessories,Technology,2026-07,779.41,755.23,9,9,108,1,1,8,1
+PO-41656,Summit Tech Accessories,Technology,2026-07,541.88,540.95,17,16,119,4,1,8,1
+PO-41657,Summit Tech Accessories,Technology,2026-07,604.91,597.62,14,14,490,4,1,7,1
+PO-41658,Summit Tech Accessories,Technology,2026-07,738.27,725.6,5,5,170,3,1,7,1
+PO-41659,Summit Tech Accessories,Technology,2026-07,754.03,745.04,7,7,252,6,1,6,0
+PO-41660,Summit Tech Accessories,Technology,2026-07,788.45,779.0,3,3,63,1,1,7,0
+PO-41661,Summit Tech Accessories,Technology,2026-07,528.87,525.36,18,17,234,1,1,7,1
+PO-41662,Summit Tech Accessories,Technology,2026-07,692.87,688.49,10,10,70,1,1,7,1
+PO-41663,Summit Tech Accessories,Technology,2026-07,554.37,548.79,7,6,161,1,0,9,1
+PO-41664,Summit Tech Accessories,Technology,2026-08,460.69,451.18,17,16,527,9,1,7,1
+PO-41665,Summit Tech Accessories,Technology,2026-08,585.06,573.38,3,2,66,2,1,11,1
+PO-41666,Summit Tech Accessories,Technology,2026-08,332.61,326.76,11,11,187,1,0,10,1
+PO-41667,Summit Tech Accessories,Technology,2026-08,644.98,636.27,15,15,210,1,1,6,1
+PO-41668,Summit Tech Accessories,Technology,2026-08,488.84,481.35,18,18,540,7,0,10,1
+PO-41669,Summit Tech Accessories,Technology,2026-08,359.3,359.52,10,10,60,0,1,6,1
+PO-41670,Summit Tech Accessories,Technology,2026-08,481.43,485.21,14,14,266,2,1,8,1
+PO-41671,Summit Tech Accessories,Technology,2026-08,683.05,679.45,3,3,84,0,1,7,1
+PO-41672,Summit Tech Accessories,Technology,2026-08,585.61,576.66,14,13,252,0,1,6,1
+PO-41673,Summit Tech Accessories,Technology,2026-08,566.8,559.61,4,4,108,0,1,7,1
+PO-41674,Summit Tech Accessories,Technology,2026-08,610.59,603.03,17,17,442,5,1,6,1
+PO-41675,Summit Tech Accessories,Technology,2026-08,728.59,724.95,14,14,182,1,1,6,1
+PO-41676,Summit Tech Accessories,Technology,2026-08,710.03,716.46,3,3,39,0,1,7,1
+PO-41677,Summit Tech Accessories,Technology,2026-08,400.67,397.03,3,3,117,1,1,8,1
+PO-41678,Summit Tech Accessories,Technology,2026-08,479.56,481.45,8,8,128,3,0,11,1
+PO-41679,Summit Tech Accessories,Technology,2026-08,684.54,678.77,4,4,68,1,1,5,1
+PO-41680,Summit Tech Accessories,Technology,2026-08,518.21,510.13,5,5,80,0,1,7,1
+PO-41681,Summit Tech Accessories,Technology,2026-08,617.22,612.43,12,12,384,3,1,7,1
+PO-41682,Summit Tech Accessories,Technology,2026-08,509.17,499.53,4,4,144,0,1,5,1
+PO-41683,Summit Tech Accessories,Technology,2026-08,470.04,472.35,7,7,203,2,1,6,1
+PO-41684,Summit Tech Accessories,Technology,2026-08,498.65,490.94,12,11,132,2,1,7,1
+PO-41685,Summit Tech Accessories,Technology,2026-08,427.04,423.61,10,9,160,3,1,6,1
+PO-41686,Summit Tech Accessories,Technology,2026-09,368.25,364.36,10,10,380,5,1,8,1
+PO-41687,Summit Tech Accessories,Technology,2026-09,703.38,702.63,3,3,72,0,0,10,1
+PO-41688,Summit Tech Accessories,Technology,2026-09,701.07,699.45,13,13,325,2,1,5,1
+PO-41689,Summit Tech Accessories,Technology,2026-09,555.85,556.94,6,6,150,2,1,6,1
+PO-41690,Summit Tech Accessories,Technology,2026-09,687.84,680.33,13,13,364,5,1,6,1
+PO-41691,Summit Tech Accessories,Technology,2026-09,658.86,662.25,9,9,99,2,1,5,1
+PO-41692,Summit Tech Accessories,Technology,2026-09,571.06,556.84,10,10,390,3,1,8,1
+PO-41693,Summit Tech Accessories,Technology,2026-09,369.42,368.48,6,6,198,2,1,9,1
+PO-41694,Summit Tech Accessories,Technology,2026-09,481.68,480.35,5,5,145,2,1,7,1
+PO-41695,Summit Tech Accessories,Technology,2026-09,702.3,691.88,16,16,624,7,1,10,1
+PO-41696,Summit Tech Accessories,Technology,2026-09,681.35,659.5,9,9,279,5,1,4,0
+PO-41697,Summit Tech Accessories,Technology,2026-09,694.93,697.88,9,9,234,1,1,10,1
+PO-41698,Summit Tech Accessories,Technology,2026-09,358.67,352.08,4,4,20,0,1,7,1
+PO-41699,Summit Tech Accessories,Technology,2026-09,407.11,400.59,14,12,378,2,1,8,1
+PO-41700,Summit Tech Accessories,Technology,2026-09,516.7,516.53,14,14,182,2,1,7,1
+PO-41701,Summit Tech Accessories,Technology,2026-09,659.33,668.39,18,18,162,0,0,12,1
+PO-41702,Summit Tech Accessories,Technology,2026-09,414.27,407.19,8,7,152,4,1,9,1
+PO-41703,Summit Tech Accessories,Technology,2026-09,523.67,513.75,4,4,28,0,1,5,1
+PO-41704,Summit Tech Accessories,Technology,2026-10,485.85,473.79,8,8,280,1,1,8,1
+PO-41705,Summit Tech Accessories,Technology,2026-10,601.19,593.19,12,11,360,7,0,8,1
+PO-41706,Summit Tech Accessories,Technology,2026-10,410.61,405.92,18,17,558,9,1,9,1
+PO-41707,Summit Tech Accessories,Technology,2026-10,850.37,848.28,14,14,140,0,1,8,1
+PO-41708,Summit Tech Accessories,Technology,2026-10,545.76,546.86,9,7,126,1,1,5,1
+PO-41709,Summit Tech Accessories,Technology,2026-10,422.41,420.7,10,10,70,2,1,7,1
+PO-41710,Summit Tech Accessories,Technology,2026-10,752.19,739.54,13,12,247,5,1,7,1
+PO-41711,Summit Tech Accessories,Technology,2026-10,452.66,445.81,16,16,624,6,1,7,1
+PO-41712,Summit Tech Accessories,Technology,2026-10,390.1,389.76,6,6,216,2,1,5,1
+PO-41713,Summit Tech Accessories,Technology,2026-10,513.58,508.85,7,7,56,2,1,6,1
+PO-41714,Summit Tech Accessories,Technology,2026-10,448.85,445.32,18,18,180,4,1,6,1
+PO-41715,Summit Tech Accessories,Technology,2026-10,805.84,799.5,14,14,560,5,1,8,1
+PO-41716,Summit Tech Accessories,Technology,2026-10,682.16,681.68,15,15,180,3,1,6,0
+PO-41717,Summit Tech Accessories,Technology,2026-10,561.24,555.4,7,7,161,2,1,8,1
+PO-41718,Summit Tech Accessories,Technology,2026-10,497.07,491.32,8,8,216,1,1,6,1
+PO-41719,Summit Tech Accessories,Technology,2026-11,807.89,794.57,6,5,90,1,1,5,1
+PO-41720,Summit Tech Accessories,Technology,2026-11,887.05,883.25,7,7,280,1,1,7,1
+PO-41721,Summit Tech Accessories,Technology,2026-11,910.53,904.52,18,17,540,3,1,7,1
+PO-41722,Summit Tech Accessories,Technology,2026-11,543.28,535.18,15,14,585,3,1,6,1
+PO-41723,Summit Tech Accessories,Technology,2026-11,784.34,770.39,3,3,21,0,1,10,1
+PO-41724,Summit Tech Accessories,Technology,2026-11,436.14,431.0,15,15,510,3,1,6,1
+PO-41725,Summit Tech Accessories,Technology,2026-11,858.7,852.1,18,18,198,2,1,8,1
+PO-41726,Summit Tech Accessories,Technology,2026-11,786.93,788.26,14,14,350,3,1,5,1
+PO-41727,Summit Tech Accessories,Technology,2026-11,894.25,897.65,11,11,418,5,1,6,1
+PO-41728,Summit Tech Accessories,Technology,2026-11,545.9,543.2,4,4,132,1,1,6,1
+PO-41729,Summit Tech Accessories,Technology,2026-11,636.15,635.76,5,5,45,0,1,5,1
+PO-41730,Summit Tech Accessories,Technology,2026-11,422.13,418.17,5,5,95,1,1,8,1
+PO-41731,Summit Tech Accessories,Technology,2026-11,629.79,622.91,17,17,85,1,1,6,1
+PO-41732,Redwood Breakroom Supply,Breakroom,2025-12,470.03,474.27,7,6,112,2,1,3,1
+PO-41733,Redwood Breakroom Supply,Breakroom,2025-12,769.02,765.14,5,4,25,0,1,3,1
+PO-41734,Redwood Breakroom Supply,Breakroom,2025-12,387.67,386.74,17,17,272,2,1,3,1
+PO-41735,Redwood Breakroom Supply,Breakroom,2025-12,643.63,643.01,6,6,162,0,1,4,1
+PO-41736,Redwood Breakroom Supply,Breakroom,2025-12,610.32,616.03,4,3,40,2,1,2,1
+PO-41737,Redwood Breakroom Supply,Breakroom,2025-12,432.55,437.4,7,7,238,1,1,2,1
+PO-41738,Redwood Breakroom Supply,Breakroom,2026-01,515.72,508.81,11,11,187,1,1,4,1
+PO-41739,Redwood Breakroom Supply,Breakroom,2026-01,392.62,387.38,9,9,54,0,1,3,1
+PO-41740,Redwood Breakroom Supply,Breakroom,2026-01,731.18,730.61,3,3,42,0,1,4,1
+PO-41741,Redwood Breakroom Supply,Breakroom,2026-01,831.82,842.6,9,7,45,0,1,3,1
+PO-41742,Redwood Breakroom Supply,Breakroom,2026-01,433.84,432.93,14,14,84,0,1,3,1
+PO-41743,Redwood Breakroom Supply,Breakroom,2026-01,761.2,766.31,4,4,144,1,1,3,1
+PO-41744,Redwood Breakroom Supply,Breakroom,2026-01,615.66,621.41,17,17,680,5,1,3,1
+PO-41745,Redwood Breakroom Supply,Breakroom,2026-01,377.84,383.6,13,10,78,0,1,3,1
+PO-41746,Redwood Breakroom Supply,Breakroom,2026-02,614.21,613.32,7,7,259,2,1,3,1
+PO-41747,Redwood Breakroom Supply,Breakroom,2026-02,630.69,631.82,17,15,442,1,1,4,1
+PO-41748,Redwood Breakroom Supply,Breakroom,2026-02,586.34,592.1,6,5,204,0,1,3,1
+PO-41749,Redwood Breakroom Supply,Breakroom,2026-02,635.61,632.02,4,4,116,1,1,3,1
+PO-41750,Redwood Breakroom Supply,Breakroom,2026-02,688.78,688.88,5,5,105,0,1,3,1
+PO-41751,Redwood Breakroom Supply,Breakroom,2026-02,530.83,528.15,14,14,224,2,1,3,1
+PO-41752,Redwood Breakroom Supply,Breakroom,2026-02,363.89,363.66,4,3,88,0,1,4,1
+PO-41753,Redwood Breakroom Supply,Breakroom,2026-03,711.92,711.03,14,14,70,0,0,8,1
+PO-41754,Redwood Breakroom Supply,Breakroom,2026-03,588.05,585.69,7,6,182,2,1,3,1
+PO-41755,Redwood Breakroom Supply,Breakroom,2026-03,773.49,775.25,7,7,273,1,1,2,1
+PO-41756,Redwood Breakroom Supply,Breakroom,2026-03,600.2,589.96,6,5,210,1,1,3,1
+PO-41757,Redwood Breakroom Supply,Breakroom,2026-03,398.34,394.47,5,5,50,0,1,4,1
+PO-41758,Redwood Breakroom Supply,Breakroom,2026-03,791.25,780.34,11,11,187,0,1,3,1
+PO-41759,Redwood Breakroom Supply,Breakroom,2026-03,854.31,861.93,12,12,456,0,1,3,1
+PO-41760,Redwood Breakroom Supply,Breakroom,2026-04,429.04,428.84,9,9,135,0,0,7,1
+PO-41761,Redwood Breakroom Supply,Breakroom,2026-04,685.03,675.77,12,11,276,0,1,4,1
+PO-41762,Redwood Breakroom Supply,Breakroom,2026-04,413.99,410.47,17,15,544,4,1,3,1
+PO-41763,Redwood Breakroom Supply,Breakroom,2026-04,696.94,696.3,16,14,176,1,1,3,1
+PO-41764,Redwood Breakroom Supply,Breakroom,2026-04,715.64,723.08,6,6,234,0,1,3,1
+PO-41765,Redwood Breakroom Supply,Breakroom,2026-04,674.41,670.52,18,18,108,0,1,2,1
+PO-41766,Redwood Breakroom Supply,Breakroom,2026-05,528.67,517.85,16,15,256,2,1,3,1
+PO-41767,Redwood Breakroom Supply,Breakroom,2026-05,755.21,758.46,7,7,105,1,1,3,1
+PO-41768,Redwood Breakroom Supply,Breakroom,2026-05,718.51,715.36,17,17,289,3,1,3,1
+PO-41769,Redwood Breakroom Supply,Breakroom,2026-05,706.45,700.74,17,14,408,2,1,2,1
+PO-41770,Redwood Breakroom Supply,Breakroom,2026-05,715.77,726.47,18,16,486,1,1,3,1
+PO-41771,Redwood Breakroom Supply,Breakroom,2026-06,1000.06,998.45,10,9,260,1,1,4,1
+PO-41772,Redwood Breakroom Supply,Breakroom,2026-06,489.22,490.8,18,17,594,3,1,4,1
+PO-41773,Redwood Breakroom Supply,Breakroom,2026-06,783.08,780.05,18,18,666,3,1,2,1
+PO-41774,Redwood Breakroom Supply,Breakroom,2026-06,1041.87,1045.55,6,6,168,2,1,4,1
+PO-41775,Redwood Breakroom Supply,Breakroom,2026-07,421.37,419.47,17,17,561,3,0,7,1
+PO-41776,Redwood Breakroom Supply,Breakroom,2026-07,749.01,745.96,4,4,84,1,1,3,1
+PO-41777,Redwood Breakroom Supply,Breakroom,2026-07,623.26,624.69,10,9,370,3,1,4,1
+PO-41778,Redwood Breakroom Supply,Breakroom,2026-07,721.56,725.67,16,15,368,3,1,3,1
+PO-41779,Redwood Breakroom Supply,Breakroom,2026-07,555.45,561.27,15,15,390,2,1,3,1
+PO-41780,Redwood Breakroom Supply,Breakroom,2026-07,543.27,539.92,17,17,646,2,1,3,1
+PO-41781,Redwood Breakroom Supply,Breakroom,2026-07,747.5,744.21,16,15,624,4,1,2,1
+PO-41782,Redwood Breakroom Supply,Breakroom,2026-07,686.57,680.55,3,3,72,2,1,3,1
+PO-41783,Redwood Breakroom Supply,Breakroom,2026-08,559.13,560.99,3,3,18,0,0,7,1
+PO-41784,Redwood Breakroom Supply,Breakroom,2026-08,769.84,766.74,11,11,264,4,1,3,1
+PO-41785,Redwood Breakroom Supply,Breakroom,2026-08,775.36,769.65,18,18,720,11,1,3,1
+PO-41786,Redwood Breakroom Supply,Breakroom,2026-08,412.96,414.6,5,5,130,0,1,3,1
+PO-41787,Redwood Breakroom Supply,Breakroom,2026-08,558.5,562.21,7,7,168,1,1,3,1
+PO-41788,Redwood Breakroom Supply,Breakroom,2026-08,787.68,792.15,15,15,315,2,1,2,1
+PO-41789,Redwood Breakroom Supply,Breakroom,2026-08,827.16,827.71,17,17,527,3,1,4,1
+PO-41790,Redwood Breakroom Supply,Breakroom,2026-08,808.5,808.1,7,7,245,2,1,3,1
+PO-41791,Redwood Breakroom Supply,Breakroom,2026-09,476.92,477.24,9,9,108,0,1,3,1
+PO-41792,Redwood Breakroom Supply,Breakroom,2026-09,419.88,418.1,10,8,250,1,1,3,1
+PO-41793,Redwood Breakroom Supply,Breakroom,2026-09,360.95,361.26,8,7,160,1,1,3,1
+PO-41794,Redwood Breakroom Supply,Breakroom,2026-09,502.42,504.83,10,10,260,1,1,3,0
+PO-41795,Redwood Breakroom Supply,Breakroom,2026-09,331.54,330.76,8,8,112,0,1,3,1
+PO-41796,Redwood Breakroom Supply,Breakroom,2026-09,373.22,371.17,5,4,145,1,1,3,1
+PO-41797,Redwood Breakroom Supply,Breakroom,2026-09,375.87,367.28,8,8,48,0,1,3,1
+PO-41798,Redwood Breakroom Supply,Breakroom,2026-09,537.01,537.56,6,6,192,0,0,8,1
+PO-41799,Redwood Breakroom Supply,Breakroom,2026-09,474.24,469.88,13,12,429,0,1,3,1
+PO-41800,Redwood Breakroom Supply,Breakroom,2026-09,417.73,417.42,3,3,75,2,1,3,1
+PO-41801,Redwood Breakroom Supply,Breakroom,2026-10,498.46,497.84,15,14,405,1,1,4,1
+PO-41802,Redwood Breakroom Supply,Breakroom,2026-10,619.04,619.57,10,10,50,0,1,3,1
+PO-41803,Redwood Breakroom Supply,Breakroom,2026-10,632.24,637.51,16,16,208,2,1,3,1
+PO-41804,Redwood Breakroom Supply,Breakroom,2026-10,934.31,928.52,17,16,646,1,1,4,1
+PO-41805,Redwood Breakroom Supply,Breakroom,2026-10,745.25,750.54,3,3,120,2,1,3,1
+PO-41806,Redwood Breakroom Supply,Breakroom,2026-11,682.27,678.12,9,9,72,1,1,2,1
+PO-41807,Redwood Breakroom Supply,Breakroom,2026-11,520.02,518.63,17,17,442,2,1,4,1
+PO-41808,Redwood Breakroom Supply,Breakroom,2026-11,399.36,396.37,4,4,148,1,1,3,1
+PO-41809,Redwood Breakroom Supply,Breakroom,2026-11,478.72,481.06,13,11,520,3,1,2,1
+PO-41810,Redwood Breakroom Supply,Breakroom,2026-11,355.23,355.32,13,13,455,3,1,3,1
+PO-41811,Redwood Breakroom Supply,Breakroom,2026-11,505.76,511.31,4,3,152,3,1,2,1
+PO-41812,Ironleaf Filing Systems,Filing,2025-12,860.64,865.39,8,8,248,3,1,4,1
+PO-41813,Ironleaf Filing Systems,Filing,2025-12,871.38,851.68,13,11,338,4,0,11,1
+PO-41814,Ironleaf Filing Systems,Filing,2025-12,531.64,524.78,6,6,240,5,1,6,1
+PO-41815,Ironleaf Filing Systems,Filing,2025-12,1013.6,989.77,18,17,378,4,1,6,1
+PO-41816,Ironleaf Filing Systems,Filing,2026-01,774.44,774.72,4,4,92,1,1,8,1
+PO-41817,Ironleaf Filing Systems,Filing,2026-01,922.22,910.24,17,17,578,10,1,8,1
+PO-41818,Ironleaf Filing Systems,Filing,2026-01,840.05,833.09,11,11,66,2,1,6,1
+PO-41819,Ironleaf Filing Systems,Filing,2026-01,698.14,684.5,4,4,88,1,1,7,1
+PO-41820,Ironleaf Filing Systems,Filing,2026-01,892.56,884.02,10,9,90,2,1,3,1
+PO-41821,Ironleaf Filing Systems,Filing,2026-02,514.04,506.05,4,4,68,0,1,5,1
+PO-41822,Ironleaf Filing Systems,Filing,2026-02,372.85,366.16,12,12,96,0,1,6,1
+PO-41823,Ironleaf Filing Systems,Filing,2026-02,530.12,520.44,10,10,340,4,1,5,1
+PO-41824,Ironleaf Filing Systems,Filing,2026-02,375.74,373.59,17,16,391,4,1,6,1
+PO-41825,Ironleaf Filing Systems,Filing,2026-02,575.25,577.93,10,8,250,4,1,7,1
+PO-41826,Ironleaf Filing Systems,Filing,2026-03,981.44,977.15,3,3,78,2,1,8,1
+PO-41827,Ironleaf Filing Systems,Filing,2026-03,714.46,713.61,7,7,266,6,1,7,1
+PO-41828,Ironleaf Filing Systems,Filing,2026-03,914.06,917.94,13,12,78,2,1,7,1
+PO-41829,Ironleaf Filing Systems,Filing,2026-03,938.08,927.83,7,7,84,0,1,5,1
+PO-41830,Ironleaf Filing Systems,Filing,2026-04,453.75,447.74,3,3,57,2,1,6,1
+PO-41831,Ironleaf Filing Systems,Filing,2026-04,569.07,565.98,3,2,81,0,1,4,1
+PO-41832,Ironleaf Filing Systems,Filing,2026-04,422.88,424.65,11,11,363,4,1,8,1
+PO-41833,Ironleaf Filing Systems,Filing,2026-04,629.44,625.36,8,8,72,0,1,9,1
+PO-41834,Ironleaf Filing Systems,Filing,2026-04,502.72,485.44,11,11,363,1,1,5,1
+PO-41835,Ironleaf Filing Systems,Filing,2026-05,612.68,597.3,7,7,203,2,1,6,1
+PO-41836,Ironleaf Filing Systems,Filing,2026-05,441.48,434.95,4,4,132,3,0,12,1
+PO-41837,Ironleaf Filing Systems,Filing,2026-05,848.96,837.11,10,9,350,4,1,7,1
+PO-41838,Ironleaf Filing Systems,Filing,2026-05,705.73,694.22,11,9,352,4,1,6,1
+PO-41839,Ironleaf Filing Systems,Filing,2026-05,433.93,426.93,5,5,195,4,1,7,1
+PO-41840,Ironleaf Filing Systems,Filing,2026-06,633.67,622.28,6,6,138,1,1,6,1
+PO-41841,Ironleaf Filing Systems,Filing,2026-06,440.96,433.8,18,15,234,3,1,8,1
+PO-41842,Ironleaf Filing Systems,Filing,2026-06,720.51,708.32,12,12,432,5,1,8,1
+PO-41843,Ironleaf Filing Systems,Filing,2026-06,632.83,629.23,3,3,78,1,1,5,1
+PO-41844,Ironleaf Filing Systems,Filing,2026-07,315.53,310.83,5,5,195,2,1,6,1
+PO-41845,Ironleaf Filing Systems,Filing,2026-07,582.17,578.27,8,8,72,0,1,6,1
+PO-41846,Ironleaf Filing Systems,Filing,2026-07,707.72,703.12,3,3,57,0,1,8,1
+PO-41847,Ironleaf Filing Systems,Filing,2026-07,556.39,554.78,14,14,126,1,1,5,0
+PO-41848,Ironleaf Filing Systems,Filing,2026-07,388.18,390.41,4,4,140,2,1,5,1
+PO-41849,Ironleaf Filing Systems,Filing,2026-07,653.62,648.48,7,7,147,3,1,7,1
+PO-41850,Ironleaf Filing Systems,Filing,2026-08,511.56,509.2,11,9,66,0,1,7,1
+PO-41851,Ironleaf Filing Systems,Filing,2026-08,367.11,359.85,18,17,342,4,1,4,1
+PO-41852,Ironleaf Filing Systems,Filing,2026-08,537.44,529.35,12,9,132,2,1,8,1
+PO-41853,Ironleaf Filing Systems,Filing,2026-08,597.65,596.51,18,17,432,8,1,5,1
+PO-41854,Ironleaf Filing Systems,Filing,2026-08,507.66,499.24,11,10,66,2,1,6,1
+PO-41855,Ironleaf Filing Systems,Filing,2026-08,498.77,494.64,3,3,78,1,1,7,1
+PO-41856,Ironleaf Filing Systems,Filing,2026-09,528.37,522.53,14,13,336,6,1,6,1
+PO-41857,Ironleaf Filing Systems,Filing,2026-09,639.53,639.44,11,11,297,3,1,5,1
+PO-41858,Ironleaf Filing Systems,Filing,2026-09,669.55,667.24,3,3,96,1,1,5,1
+PO-41859,Ironleaf Filing Systems,Filing,2026-09,451.06,445.54,6,6,108,2,1,6,1
+PO-41860,Ironleaf Filing Systems,Filing,2026-09,558.33,548.63,5,5,155,2,1,4,1
+PO-41861,Ironleaf Filing Systems,Filing,2026-09,532.64,523.82,7,7,91,0,1,5,1
+PO-41862,Ironleaf Filing Systems,Filing,2026-10,767.47,770.27,10,10,70,1,1,6,1
+PO-41863,Ironleaf Filing Systems,Filing,2026-10,582.8,567.16,14,13,406,3,1,6,1
+PO-41864,Ironleaf Filing Systems,Filing,2026-10,419.62,413.4,9,8,270,5,1,6,1
+PO-41865,Ironleaf Filing Systems,Filing,2026-10,611.83,597.66,10,9,170,4,1,6,1
+PO-41866,Ironleaf Filing Systems,Filing,2026-10,784.45,795.99,6,6,234,4,1,6,1
+PO-41867,Ironleaf Filing Systems,Filing,2026-11,712.25,702.89,8,8,112,0,1,7,0
+PO-41868,Ironleaf Filing Systems,Filing,2026-11,552.28,544.86,13,12,234,3,0,10,1
+PO-41869,Ironleaf Filing Systems,Filing,2026-11,530.27,523.54,9,9,324,5,1,5,1
+PO-41870,Ironleaf Filing Systems,Filing,2026-11,376.67,378.58,13,12,416,4,1,6,1
+PO-41871,Bayview Packaging,Packaging,2025-12,775.32,767.92,7,7,161,0,1,4,1
+PO-41872,Bayview Packaging,Packaging,2025-12,767.92,761.41,15,15,90,2,1,5,1
+PO-41873,Bayview Packaging,Packaging,2025-12,503.34,503.02,16,15,544,3,0,7,1
+PO-41874,Bayview Packaging,Packaging,2025-12,421.71,424.0,14,14,182,1,1,3,1
+PO-41875,Bayview Packaging,Packaging,2025-12,591.01,588.69,15,15,495,3,1,4,1
+PO-41876,Bayview Packaging,Packaging,2025-12,789.97,787.86,4,4,108,0,1,6,1
+PO-41877,Bayview Packaging,Packaging,2025-12,487.91,484.11,8,8,88,0,1,3,1
+PO-41878,Bayview Packaging,Packaging,2026-01,876.93,874.82,10,9,320,0,1,3,1
+PO-41879,Bayview Packaging,Packaging,2026-01,767.08,756.95,13,11,182,2,1,4,1
+PO-41880,Bayview Packaging,Packaging,2026-01,537.54,532.26,12,12,288,5,1,4,1
+PO-41881,Bayview Packaging,Packaging,2026-01,694.98,693.97,12,12,192,0,1,3,1
+PO-41882,Bayview Packaging,Packaging,2026-01,633.61,632.63,3,3,81,1,1,5,1
+PO-41883,Bayview Packaging,Packaging,2026-01,604.88,601.17,13,12,130,1,1,4,1
+PO-41884,Bayview Packaging,Packaging,2026-01,810.82,806.11,13,13,403,2,1,4,1
+PO-41885,Bayview Packaging,Packaging,2026-01,432.57,432.17,6,6,168,3,1,4,1
+PO-41886,Bayview Packaging,Packaging,2026-01,429.93,426.78,5,5,185,0,1,5,1
+PO-41887,Bayview Packaging,Packaging,2026-01,472.97,477.96,5,5,35,0,1,5,1
+PO-41888,Bayview Packaging,Packaging,2026-02,573.2,568.11,15,15,600,3,1,4,1
+PO-41889,Bayview Packaging,Packaging,2026-02,448.25,448.26,13,13,312,2,1,4,1
+PO-41890,Bayview Packaging,Packaging,2026-02,695.33,693.86,17,17,493,3,1,3,1
+PO-41891,Bayview Packaging,Packaging,2026-02,607.25,614.85,10,10,220,2,1,5,1
+PO-41892,Bayview Packaging,Packaging,2026-02,616.34,622.51,12,12,312,3,1,4,1
+PO-41893,Bayview Packaging,Packaging,2026-02,415.66,411.91,6,6,138,2,1,6,1
+PO-41894,Bayview Packaging,Packaging,2026-02,426.26,425.41,6,6,138,0,1,3,1
+PO-41895,Bayview Packaging,Packaging,2026-02,462.18,457.14,17,17,238,1,1,3,1
+PO-41896,Bayview Packaging,Packaging,2026-02,717.22,710.2,17,17,544,3,1,3,1
+PO-41897,Bayview Packaging,Packaging,2026-02,325.59,328.78,9,9,288,1,1,4,1
+PO-41898,Bayview Packaging,Packaging,2026-02,477.04,473.19,12,12,384,4,1,5,1
+PO-41899,Bayview Packaging,Packaging,2026-03,335.16,333.85,17,16,510,4,1,3,1
+PO-41900,Bayview Packaging,Packaging,2026-03,555.38,553.86,17,17,493,5,1,4,1
+PO-41901,Bayview Packaging,Packaging,2026-03,671.94,673.28,3,3,45,0,1,4,1
+PO-41902,Bayview Packaging,Packaging,2026-03,724.01,715.17,3,3,66,1,1,4,1
+PO-41903,Bayview Packaging,Packaging,2026-03,478.69,473.44,18,17,450,1,1,5,1
+PO-41904,Bayview Packaging,Packaging,2026-03,421.2,425.18,12,10,228,3,1,4,1
+PO-41905,Bayview Packaging,Packaging,2026-03,761.86,760.47,13,12,182,0,1,4,1
+PO-41906,Bayview Packaging,Packaging,2026-03,618.01,613.9,9,9,333,5,1,3,1
+PO-41907,Bayview Packaging,Packaging,2026-03,482.83,485.87,4,4,112,1,1,3,1
+PO-41908,Bayview Packaging,Packaging,2026-04,724.97,731.15,6,6,120,2,1,3,1
+PO-41909,Bayview Packaging,Packaging,2026-04,325.94,325.6,4,4,24,0,1,3,1
+PO-41910,Bayview Packaging,Packaging,2026-04,475.65,473.49,7,6,112,0,1,5,1
+PO-41911,Bayview Packaging,Packaging,2026-04,440.54,439.01,7,7,168,5,1,4,1
+PO-41912,Bayview Packaging,Packaging,2026-04,462.13,462.53,7,7,161,3,1,4,1
+PO-41913,Bayview Packaging,Packaging,2026-04,482.81,480.48,6,6,192,2,1,4,1
+PO-41914,Bayview Packaging,Packaging,2026-04,416.53,421.05,14,13,462,3,1,5,1
+PO-41915,Bayview Packaging,Packaging,2026-04,581.91,583.67,13,11,325,5,1,3,1
+PO-41916,Bayview Packaging,Packaging,2026-04,710.47,703.18,16,16,416,5,1,4,1
+PO-41917,Bayview Packaging,Packaging,2026-04,675.47,665.51,10,10,180,2,1,4,1
+PO-41918,Bayview Packaging,Packaging,2026-04,652.22,650.95,11,11,209,1,1,4,1
+PO-41919,Bayview Packaging,Packaging,2026-05,646.54,647.5,16,14,464,0,1,4,1
+PO-41920,Bayview Packaging,Packaging,2026-05,626.43,627.43,3,3,105,0,1,4,1
+PO-41921,Bayview Packaging,Packaging,2026-05,403.46,402.09,7,7,168,2,1,3,1
+PO-41922,Bayview Packaging,Packaging,2026-05,666.52,657.98,10,9,120,0,1,3,1
+PO-41923,Bayview Packaging,Packaging,2026-05,545.68,552.07,10,9,150,1,1,4,1
+PO-41924,Bayview Packaging,Packaging,2026-05,538.67,535.03,11,11,407,2,1,4,1
+PO-41925,Bayview Packaging,Packaging,2026-05,418.05,416.5,14,14,490,2,1,4,1
+PO-41926,Bayview Packaging,Packaging,2026-05,368.45,362.23,16,16,336,2,1,3,1
+PO-41927,Bayview Packaging,Packaging,2026-05,591.79,595.23,13,13,195,0,1,4,1
+PO-41928,Bayview Packaging,Packaging,2026-05,413.59,411.63,15,15,345,1,1,5,1
+PO-41929,Bayview Packaging,Packaging,2026-06,671.31,669.71,14,14,434,4,1,4,1
+PO-41930,Bayview Packaging,Packaging,2026-06,742.57,749.67,11,11,198,0,1,4,1
+PO-41931,Bayview Packaging,Packaging,2026-06,397.53,400.95,5,5,75,1,1,4,1
+PO-41932,Bayview Packaging,Packaging,2026-06,690.14,676.31,13,12,273,1,1,3,1
+PO-41933,Bayview Packaging,Packaging,2026-06,530.93,530.81,10,10,300,2,1,4,1
+PO-41934,Bayview Packaging,Packaging,2026-06,608.39,608.4,6,6,108,2,1,5,1
+PO-41935,Bayview Packaging,Packaging,2026-06,515.73,514.18,11,11,55,2,1,5,1
+PO-41936,Bayview Packaging,Packaging,2026-06,465.7,466.97,3,3,102,2,0,6,1
+PO-41937,Bayview Packaging,Packaging,2026-06,500.09,496.99,6,6,138,0,1,4,1
+PO-41938,Bayview Packaging,Packaging,2026-07,827.9,820.18,13,13,182,1,1,4,1
+PO-41939,Bayview Packaging,Packaging,2026-07,792.26,778.5,11,10,396,1,1,3,1
+PO-41940,Bayview Packaging,Packaging,2026-07,574.53,573.89,13,13,91,1,1,5,1
+PO-41941,Bayview Packaging,Packaging,2026-07,428.43,431.1,17,16,204,0,1,4,1
+PO-41942,Bayview Packaging,Packaging,2026-07,698.52,687.62,6,6,186,1,1,3,1
+PO-41943,Bayview Packaging,Packaging,2026-07,573.64,571.62,6,5,234,2,1,5,1
+PO-41944,Bayview Packaging,Packaging,2026-07,443.75,440.88,5,5,135,3,1,5,1
+PO-41945,Bayview Packaging,Packaging,2026-07,404.41,400.88,4,4,156,1,1,5,1
+PO-41946,Bayview Packaging,Packaging,2026-08,672.38,676.21,7,7,112,0,1,4,1
+PO-41947,Bayview Packaging,Packaging,2026-08,1034.0,1034.24,6,5,228,1,1,2,1
+PO-41948,Bayview Packaging,Packaging,2026-08,916.94,906.29,9,8,63,0,1,4,1
+PO-41949,Bayview Packaging,Packaging,2026-08,741.24,734.06,16,16,464,4,1,4,1
+PO-41950,Bayview Packaging,Packaging,2026-08,1077.44,1086.96,12,12,396,2,1,4,1
+PO-41951,Bayview Packaging,Packaging,2026-08,556.92,555.56,9,9,333,3,1,5,1
+PO-41952,Bayview Packaging,Packaging,2026-08,938.47,937.87,6,6,126,2,1,4,1
+PO-41953,Bayview Packaging,Packaging,2026-08,950.78,941.41,14,13,252,0,1,3,1
+PO-41954,Bayview Packaging,Packaging,2026-08,1003.51,1004.02,6,6,36,1,1,5,1
+PO-41955,Bayview Packaging,Packaging,2026-09,482.53,479.47,6,6,198,3,1,4,1
+PO-41956,Bayview Packaging,Packaging,2026-09,539.41,538.4,12,12,324,1,1,5,1
+PO-41957,Bayview Packaging,Packaging,2026-09,729.43,725.87,15,15,360,3,1,4,1
+PO-41958,Bayview Packaging,Packaging,2026-09,715.07,720.75,7,7,161,2,1,4,1
+PO-41959,Bayview Packaging,Packaging,2026-09,666.08,677.19,4,4,28,0,1,5,1
+PO-41960,Bayview Packaging,Packaging,2026-09,455.61,457.25,8,8,96,0,1,4,1
+PO-41961,Bayview Packaging,Packaging,2026-09,647.59,645.02,13,13,364,4,1,4,1
+PO-41962,Bayview Packaging,Packaging,2026-09,539.22,531.33,17,17,527,4,0,6,1
+PO-41963,Bayview Packaging,Packaging,2026-09,462.9,456.16,10,10,340,1,1,2,1
+PO-41964,Bayview Packaging,Packaging,2026-10,431.62,429.63,13,13,182,1,1,4,1
+PO-41965,Bayview Packaging,Packaging,2026-10,589.37,584.35,17,17,119,1,1,3,0
+PO-41966,Bayview Packaging,Packaging,2026-10,794.35,788.3,13,12,78,0,1,4,1
+PO-41967,Bayview Packaging,Packaging,2026-10,684.53,690.78,12,12,372,3,1,2,1
+PO-41968,Bayview Packaging,Packaging,2026-10,412.72,410.92,4,4,156,0,1,5,1
+PO-41969,Bayview Packaging,Packaging,2026-10,398.05,397.39,15,15,435,3,1,6,1
+PO-41970,Bayview Packaging,Packaging,2026-10,522.82,515.25,16,16,352,2,1,3,1
+PO-41971,Bayview Packaging,Packaging,2026-10,553.29,551.92,12,12,240,0,1,2,1
+PO-41972,Bayview Packaging,Packaging,2026-10,504.31,504.57,14,14,210,2,1,4,1
+PO-41973,Bayview Packaging,Packaging,2026-10,669.69,671.97,5,5,160,2,1,4,1
+PO-41974,Bayview Packaging,Packaging,2026-11,777.1,774.21,16,16,96,2,1,5,1
+PO-41975,Bayview Packaging,Packaging,2026-11,816.78,822.55,4,4,92,0,1,4,1
+PO-41976,Bayview Packaging,Packaging,2026-11,970.47,966.59,6,4,222,3,1,4,1
+PO-41977,Bayview Packaging,Packaging,2026-11,720.29,721.63,16,15,368,4,1,4,1
+PO-41978,Bayview Packaging,Packaging,2026-11,775.54,764.45,16,14,176,0,1,5,1
+PO-41979,Bayview Packaging,Packaging,2026-11,564.41,567.37,3,3,18,0,1,6,1
+PO-41980,Sunridge Labels & Tape,Packaging,2025-12,577.22,567.77,15,15,555,13,1,5,1
+PO-41981,Sunridge Labels & Tape,Packaging,2025-12,462.17,451.45,7,7,266,6,0,9,1
+PO-41982,Sunridge Labels & Tape,Packaging,2025-12,628.53,620.24,6,6,222,5,1,6,1
+PO-41983,Sunridge Labels & Tape,Packaging,2025-12,367.55,366.25,11,10,209,3,1,5,1
+PO-41984,Sunridge Labels & Tape,Packaging,2026-01,377.13,368.77,13,12,130,7,1,7,1
+PO-41985,Sunridge Labels & Tape,Packaging,2026-01,572.34,568.39,6,6,42,2,1,4,1
+PO-41986,Sunridge Labels & Tape,Packaging,2026-01,757.81,748.69,11,8,110,0,1,5,1
+PO-41987,Sunridge Labels & Tape,Packaging,2026-01,629.38,611.11,18,17,90,4,1,9,1
+PO-41988,Sunridge Labels & Tape,Packaging,2026-02,496.23,479.81,5,5,175,2,1,6,1
+PO-41989,Sunridge Labels & Tape,Packaging,2026-02,379.08,371.63,12,12,192,5,1,5,1
+PO-41990,Sunridge Labels & Tape,Packaging,2026-02,528.86,514.9,9,9,153,3,1,7,1
+PO-41991,Sunridge Labels & Tape,Packaging,2026-02,659.78,650.34,13,13,364,8,1,6,1
+PO-41992,Sunridge Labels & Tape,Packaging,2026-03,813.76,798.18,16,15,576,21,1,6,1
+PO-41993,Sunridge Labels & Tape,Packaging,2026-03,801.23,789.27,4,3,72,1,1,7,1
+PO-41994,Sunridge Labels & Tape,Packaging,2026-03,807.29,794.65,18,17,486,3,1,5,1
+PO-41995,Sunridge Labels & Tape,Packaging,2026-03,426.48,415.0,3,3,84,4,1,6,1
+PO-41996,Sunridge Labels & Tape,Packaging,2026-04,366.07,359.27,10,9,80,2,1,6,1
+PO-41997,Sunridge Labels & Tape,Packaging,2026-04,688.68,673.51,11,10,99,0,1,5,1
+PO-41998,Sunridge Labels & Tape,Packaging,2026-04,653.32,636.51,8,7,216,5,1,8,1
+PO-41999,Sunridge Labels & Tape,Packaging,2026-04,472.51,467.02,10,10,70,0,1,8,1
+PO-42000,Sunridge Labels & Tape,Packaging,2026-05,587.74,566.61,16,16,528,11,1,8,1
+PO-42001,Sunridge Labels & Tape,Packaging,2026-05,522.93,517.83,3,3,72,0,1,7,1
+PO-42002,Sunridge Labels & Tape,Packaging,2026-05,495.45,489.18,9,8,171,2,1,6,1
+PO-42003,Sunridge Labels & Tape,Packaging,2026-05,360.76,356.62,15,13,135,4,1,6,1
+PO-42004,Sunridge Labels & Tape,Packaging,2026-05,376.39,366.12,12,11,228,5,1,6,1
+PO-42005,Sunridge Labels & Tape,Packaging,2026-06,372.61,365.41,13,13,234,2,1,6,1
+PO-42006,Sunridge Labels & Tape,Packaging,2026-06,327.65,317.67,7,6,259,5,1,6,1
+PO-42007,Sunridge Labels & Tape,Packaging,2026-06,556.08,549.66,18,15,684,12,1,8,1
+PO-42008,Sunridge Labels & Tape,Packaging,2026-06,281.79,275.26,7,6,273,3,1,6,1
+PO-42009,Sunridge Labels & Tape,Packaging,2026-07,426.27,421.61,5,3,195,3,1,6,1
+PO-42010,Sunridge Labels & Tape,Packaging,2026-07,403.58,395.58,7,7,147,3,0,6,1
+PO-42011,Sunridge Labels & Tape,Packaging,2026-07,455.9,448.5,17,16,663,15,0,6,1
+PO-42012,Sunridge Labels & Tape,Packaging,2026-07,859.35,847.02,10,10,320,7,0,10,1
+PO-42013,Sunridge Labels & Tape,Packaging,2026-08,597.78,588.2,7,7,63,1,1,6,1
+PO-42014,Sunridge Labels & Tape,Packaging,2026-08,541.61,530.63,6,5,150,5,1,8,1
+PO-42015,Sunridge Labels & Tape,Packaging,2026-08,741.17,725.08,18,17,252,5,1,5,1
+PO-42016,Sunridge Labels & Tape,Packaging,2026-08,625.54,613.37,10,10,80,2,1,6,1
+PO-42017,Sunridge Labels & Tape,Packaging,2026-09,500.68,494.0,11,11,143,3,0,10,1
+PO-42018,Sunridge Labels & Tape,Packaging,2026-09,819.22,794.01,8,7,208,5,1,3,1
+PO-42019,Sunridge Labels & Tape,Packaging,2026-09,370.24,361.78,3,2,111,3,1,6,1
+PO-42020,Sunridge Labels & Tape,Packaging,2026-09,562.39,544.89,6,5,186,4,1,8,1
+PO-42021,Sunridge Labels & Tape,Packaging,2026-10,541.54,528.62,5,4,110,1,0,9,1
+PO-42022,Sunridge Labels & Tape,Packaging,2026-10,452.56,446.8,8,8,296,3,0,6,1
+PO-42023,Sunridge Labels & Tape,Packaging,2026-10,454.34,440.47,18,16,504,10,1,6,1
+PO-42024,Sunridge Labels & Tape,Packaging,2026-10,687.24,675.02,10,10,170,3,1,7,1
+PO-42025,Sunridge Labels & Tape,Packaging,2026-11,257.06,254.58,5,5,175,5,1,3,1
+PO-42026,Sunridge Labels & Tape,Packaging,2026-11,441.69,436.34,12,12,156,5,0,10,0
+PO-42027,Sunridge Labels & Tape,Packaging,2026-11,458.04,448.94,10,9,70,3,1,8,1
+PO-42028,Sunridge Labels & Tape,Packaging,2026-11,350.8,353.37,7,6,196,2,1,6,1
+PO-42029,Coastal Toner Remanufacturing,Toner & Ink,2025-12,593.31,607.88,8,8,272,6,1,6,1
+PO-42030,Coastal Toner Remanufacturing,Toner & Ink,2025-12,477.2,479.06,8,7,184,5,1,7,1
+PO-42031,Coastal Toner Remanufacturing,Toner & Ink,2025-12,670.55,677.76,14,14,224,5,1,5,1
+PO-42032,Coastal Toner Remanufacturing,Toner & Ink,2025-12,412.01,414.58,11,11,121,0,0,6,1
+PO-42033,Coastal Toner Remanufacturing,Toner & Ink,2025-12,707.19,726.21,5,5,50,0,1,6,1
+PO-42034,Coastal Toner Remanufacturing,Toner & Ink,2026-01,673.49,677.95,15,12,555,7,1,6,1
+PO-42035,Coastal Toner Remanufacturing,Toner & Ink,2026-01,720.17,725.53,16,14,592,8,1,5,1
+PO-42036,Coastal Toner Remanufacturing,Toner & Ink,2026-01,477.06,489.63,16,15,336,3,0,11,1
+PO-42037,Coastal Toner Remanufacturing,Toner & Ink,2026-01,634.59,646.6,10,10,400,5,1,5,1
+PO-42038,Coastal Toner Remanufacturing,Toner & Ink,2026-01,603.41,618.6,15,15,435,9,1,6,1
+PO-42039,Coastal Toner Remanufacturing,Toner & Ink,2026-01,506.66,517.44,16,16,288,4,1,7,1
+PO-42040,Coastal Toner Remanufacturing,Toner & Ink,2026-01,528.6,539.28,15,11,255,2,1,8,1
+PO-42041,Coastal Toner Remanufacturing,Toner & Ink,2026-01,451.92,465.55,7,6,140,1,1,6,1
+PO-42042,Coastal Toner Remanufacturing,Toner & Ink,2026-02,420.96,430.96,13,12,260,5,1,7,1
+PO-42043,Coastal Toner Remanufacturing,Toner & Ink,2026-02,420.84,423.55,16,15,272,1,1,8,1
+PO-42044,Coastal Toner Remanufacturing,Toner & Ink,2026-02,584.92,593.28,4,4,128,5,1,7,1
+PO-42045,Coastal Toner Remanufacturing,Toner & Ink,2026-02,468.05,477.82,10,10,320,4,1,6,1
+PO-42046,Coastal Toner Remanufacturing,Toner & Ink,2026-02,411.22,415.8,15,14,510,3,1,5,1
+PO-42047,Coastal Toner Remanufacturing,Toner & Ink,2026-02,465.09,471.48,8,7,280,5,0,9,1
+PO-42048,Coastal Toner Remanufacturing,Toner & Ink,2026-02,479.62,487.64,14,12,98,3,1,5,1
+PO-42049,Coastal Toner Remanufacturing,Toner & Ink,2026-02,335.36,343.71,4,4,92,3,1,3,1
+PO-42050,Coastal Toner Remanufacturing,Toner & Ink,2026-02,366.65,375.01,18,14,378,8,1,6,1
+PO-42051,Coastal Toner Remanufacturing,Toner & Ink,2026-03,552.08,558.13,9,9,342,7,1,7,1
+PO-42052,Coastal Toner Remanufacturing,Toner & Ink,2026-03,711.04,718.92,5,5,200,3,1,7,1
+PO-42053,Coastal Toner Remanufacturing,Toner & Ink,2026-03,344.38,349.15,11,11,352,9,1,5,1
+PO-42054,Coastal Toner Remanufacturing,Toner & Ink,2026-03,469.62,472.82,18,18,414,8,1,5,1
+PO-42055,Coastal Toner Remanufacturing,Toner & Ink,2026-03,352.87,353.05,8,8,104,3,1,5,1
+PO-42056,Coastal Toner Remanufacturing,Toner & Ink,2026-03,490.51,496.28,11,8,77,2,1,5,1
+PO-42057,Coastal Toner Remanufacturing,Toner & Ink,2026-03,375.99,375.75,8,8,208,2,1,7,1
+PO-42058,Coastal Toner Remanufacturing,Toner & Ink,2026-03,522.25,534.33,11,11,330,6,1,5,1
+PO-42059,Coastal Toner Remanufacturing,Toner & Ink,2026-04,327.01,331.13,17,16,85,0,1,7,1
+PO-42060,Coastal Toner Remanufacturing,Toner & Ink,2026-04,643.22,655.97,12,12,252,9,1,5,1
+PO-42061,Coastal Toner Remanufacturing,Toner & Ink,2026-04,533.13,538.13,9,9,342,7,1,6,1
+PO-42062,Coastal Toner Remanufacturing,Toner & Ink,2026-04,503.76,504.95,4,4,120,2,1,5,1
+PO-42063,Coastal Toner Remanufacturing,Toner & Ink,2026-04,500.75,504.3,16,16,256,1,1,7,1
+PO-42064,Coastal Toner Remanufacturing,Toner & Ink,2026-04,477.61,478.95,6,6,66,4,1,7,1
+PO-42065,Coastal Toner Remanufacturing,Toner & Ink,2026-04,601.36,611.83,5,5,200,1,1,7,1
+PO-42066,Coastal Toner Remanufacturing,Toner & Ink,2026-05,816.71,823.03,13,13,390,8,1,5,1
+PO-42067,Coastal Toner Remanufacturing,Toner & Ink,2026-05,760.24,777.64,13,12,429,9,1,4,1
+PO-42068,Coastal Toner Remanufacturing,Toner & Ink,2026-05,853.29,857.52,18,17,558,12,0,7,1
+PO-42069,Coastal Toner Remanufacturing,Toner & Ink,2026-05,463.82,462.36,14,14,518,10,1,8,1
+PO-42070,Coastal Toner Remanufacturing,Toner & Ink,2026-05,736.19,735.91,13,12,429,5,1,8,1
+PO-42071,Coastal Toner Remanufacturing,Toner & Ink,2026-05,611.41,625.72,13,12,65,1,1,4,1
+PO-42072,Coastal Toner Remanufacturing,Toner & Ink,2026-06,717.77,724.25,18,17,306,10,1,9,1
+PO-42073,Coastal Toner Remanufacturing,Toner & Ink,2026-06,418.46,419.2,7,6,105,2,1,5,1
+PO-42074,Coastal Toner Remanufacturing,Toner & Ink,2026-06,772.81,800.6,16,16,496,6,1,5,1
+PO-42075,Coastal Toner Remanufacturing,Toner & Ink,2026-06,667.09,679.86,8,8,56,1,1,7,1
+PO-42076,Coastal Toner Remanufacturing,Toner & Ink,2026-06,409.53,413.78,15,15,420,8,1,5,1
+PO-42077,Coastal Toner Remanufacturing,Toner & Ink,2026-06,693.08,694.7,16,15,560,13,1,6,1
+PO-42078,Coastal Toner Remanufacturing,Toner & Ink,2026-06,458.57,464.95,16,15,400,3,1,5,1
+PO-42079,Coastal Toner Remanufacturing,Toner & Ink,2026-06,418.23,424.39,8,7,96,0,1,6,1
+PO-42080,Coastal Toner Remanufacturing,Toner & Ink,2026-07,616.28,623.01,5,4,50,2,1,7,1
+PO-42081,Coastal Toner Remanufacturing,Toner & Ink,2026-07,620.62,634.37,16,13,176,2,1,4,1
+PO-42082,Coastal Toner Remanufacturing,Toner & Ink,2026-07,318.55,324.85,6,6,210,2,1,5,1
+PO-42083,Coastal Toner Remanufacturing,Toner & Ink,2026-07,391.09,397.04,12,11,480,6,1,7,1
+PO-42084,Coastal Toner Remanufacturing,Toner & Ink,2026-07,396.89,403.15,10,8,260,3,1,7,1
+PO-42085,Coastal Toner Remanufacturing,Toner & Ink,2026-07,359.62,368.18,4,4,44,1,1,6,1
+PO-42086,Coastal Toner Remanufacturing,Toner & Ink,2026-07,359.01,361.13,9,9,171,2,1,7,1
+PO-42087,Coastal Toner Remanufacturing,Toner & Ink,2026-07,446.19,451.93,12,12,120,1,1,8,1
+PO-42088,Coastal Toner Remanufacturing,Toner & Ink,2026-07,570.87,576.51,9,8,63,0,1,7,1
+PO-42089,Coastal Toner Remanufacturing,Toner & Ink,2026-07,399.63,404.5,4,4,100,3,1,6,1
+PO-42090,Coastal Toner Remanufacturing,Toner & Ink,2026-07,382.07,392.95,18,18,720,10,1,6,1
+PO-42091,Coastal Toner Remanufacturing,Toner & Ink,2026-08,692.61,694.88,6,5,144,6,1,8,1
+PO-42092,Coastal Toner Remanufacturing,Toner & Ink,2026-08,529.71,540.63,11,11,297,2,1,8,1
+PO-42093,Coastal Toner Remanufacturing,Toner & Ink,2026-08,496.62,496.14,3,3,102,2,1,5,1
+PO-42094,Coastal Toner Remanufacturing,Toner & Ink,2026-08,972.6,989.51,11,9,352,7,1,5,1
+PO-42095,Coastal Toner Remanufacturing,Toner & Ink,2026-08,752.12,765.85,10,10,190,3,1,7,1
+PO-42096,Coastal Toner Remanufacturing,Toner & Ink,2026-08,749.99,759.73,9,9,144,4,1,5,1
+PO-42097,Coastal Toner Remanufacturing,Toner & Ink,2026-08,804.54,805.89,7,7,266,3,1,5,1
+PO-42098,Coastal Toner Remanufacturing,Toner & Ink,2026-09,495.85,500.65,17,16,119,1,1,5,1
+PO-42099,Coastal Toner Remanufacturing,Toner & Ink,2026-09,631.66,636.86,12,11,144,2,1,6,1
+PO-42100,Coastal Toner Remanufacturing,Toner & Ink,2026-09,783.03,801.62,9,9,360,8,1,5,1
+PO-42101,Coastal Toner Remanufacturing,Toner & Ink,2026-09,534.67,548.43,14,14,84,0,1,7,1
+PO-42102,Coastal Toner Remanufacturing,Toner & Ink,2026-09,618.68,614.51,18,17,522,13,1,5,1
+PO-42103,Coastal Toner Remanufacturing,Toner & Ink,2026-09,482.66,494.15,18,16,648,12,1,7,0
+PO-42104,Coastal Toner Remanufacturing,Toner & Ink,2026-09,531.46,538.51,15,15,225,6,1,8,1
+PO-42105,Coastal Toner Remanufacturing,Toner & Ink,2026-10,971.28,989.07,9,8,225,6,1,7,1
+PO-42106,Coastal Toner Remanufacturing,Toner & Ink,2026-10,943.75,969.78,4,4,52,0,1,5,1
+PO-42107,Coastal Toner Remanufacturing,Toner & Ink,2026-10,872.48,894.84,17,16,221,6,0,9,1
+PO-42108,Coastal Toner Remanufacturing,Toner & Ink,2026-10,965.74,986.43,7,7,119,3,1,7,1
+PO-42109,Coastal Toner Remanufacturing,Toner & Ink,2026-10,1057.79,1056.73,4,4,68,2,1,6,1
+PO-42110,Coastal Toner Remanufacturing,Toner & Ink,2026-10,1004.69,1018.08,7,7,70,1,1,7,1
+PO-42111,Coastal Toner Remanufacturing,Toner & Ink,2026-11,416.97,419.28,16,16,528,7,1,7,1
+PO-42112,Coastal Toner Remanufacturing,Toner & Ink,2026-11,363.43,366.05,11,10,198,5,1,7,1
+PO-42113,Coastal Toner Remanufacturing,Toner & Ink,2026-11,386.82,389.7,8,7,56,1,1,5,1
+PO-42114,Coastal Toner Remanufacturing,Toner & Ink,2026-11,301.93,306.09,6,5,222,4,1,6,1
+PO-42115,Coastal Toner Remanufacturing,Toner & Ink,2026-11,519.81,529.33,16,16,560,11,1,5,1
+PO-42116,Coastal Toner Remanufacturing,Toner & Ink,2026-11,361.25,366.39,16,15,464,4,1,6,1
+PO-42117,Coastal Toner Remanufacturing,Toner & Ink,2026-11,358.49,364.97,16,16,176,1,1,5,1
+PO-42118,Coastal Toner Remanufacturing,Toner & Ink,2026-11,585.28,596.49,5,5,185,2,1,6,1

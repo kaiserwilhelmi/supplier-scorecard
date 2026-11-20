@@ -1,0 +1,49 @@
+supplier,category,month,spend,contract_value,pos,on_time_pos,lines_ordered,lines_filled,units_received,units_defective,invoices,invoices_accurate,lead_time_days_total
+Coastline Produce Co.,Produce,2026-06,17048.7,16891.75,30,29,330,316,7260,62,30,30,31
+Coastline Produce Co.,Produce,2026-07,19393.97,19373.96,31,28,403,389,10075,85,31,30,35
+Coastline Produce Co.,Produce,2026-08,17776.82,17703.56,23,22,230,221,3220,26,23,22,25
+Coastline Produce Co.,Produce,2026-09,17403.39,17317.5,28,26,280,273,7560,73,28,28,34
+Coastline Produce Co.,Produce,2026-10,20304.6,20080.56,37,34,222,214,6216,55,37,36,44
+Coastline Produce Co.,Produce,2026-11,19023.72,18957.34,22,21,286,274,7150,57,22,21,25
+Ridgeway Meats,Protein,2026-06,24309.75,24051.38,39,37,234,231,5148,32,39,36,79
+Ridgeway Meats,Protein,2026-07,26486.18,26089.84,41,40,246,239,3198,25,41,41,83
+Ridgeway Meats,Protein,2026-08,23576.33,23188.85,26,25,208,201,5824,34,26,26,50
+Ridgeway Meats,Protein,2026-09,25103.86,24900.45,47,44,564,551,14100,111,47,46,93
+Ridgeway Meats,Protein,2026-10,29227.24,28972.26,46,42,598,577,4784,31,46,45,97
+Ridgeway Meats,Protein,2026-11,22261.36,22098.7,25,24,150,144,4350,30,25,25,53
+Bluewater Seafood,Protein,2026-06,10002.44,9791.76,15,15,120,110,3240,64,15,15,29
+Bluewater Seafood,Protein,2026-07,8660.92,8477.68,13,10,182,170,3822,84,13,12,27
+Bluewater Seafood,Protein,2026-08,8107.42,7933.24,13,10,156,144,3276,51,13,12,29
+Bluewater Seafood,Protein,2026-09,10217.54,10014.37,15,15,165,154,2310,34,15,15,29
+Bluewater Seafood,Protein,2026-10,9902.54,9680.22,12,12,156,142,3744,78,12,12,25
+Bluewater Seafood,Protein,2026-11,8106.87,7908.34,11,10,121,112,3146,56,11,10,26
+Golden Field Bakery,Bakery,2026-06,3902.92,3864.35,7,6,84,84,840,7,7,7,9
+Golden Field Bakery,Bakery,2026-07,4591.15,4604.51,7,7,77,76,1771,6,7,7,10
+Golden Field Bakery,Bakery,2026-08,4702.06,4707.3,8,8,56,54,1344,0,8,8,9
+Golden Field Bakery,Bakery,2026-09,4285.88,4284.8,5,5,35,34,945,5,5,5,5
+Golden Field Bakery,Bakery,2026-10,4019.73,4009.89,5,5,30,30,840,4,5,5,5
+Golden Field Bakery,Bakery,2026-11,4604.01,4614.5,7,7,70,69,1820,11,7,7,8
+Valley Dairy Supply,Dairy,2026-06,6076.94,6049.25,10,9,110,106,1100,8,10,10,11
+Valley Dairy Supply,Dairy,2026-07,6666.44,6667.4,12,12,132,131,2376,14,12,12,15
+Valley Dairy Supply,Dairy,2026-08,7090.87,7068.34,12,12,132,127,1188,6,12,12,14
+Valley Dairy Supply,Dairy,2026-09,6872.06,6840.95,10,10,90,89,810,2,10,10,12
+Valley Dairy Supply,Dairy,2026-10,6050.5,6036.74,7,5,84,83,1680,8,7,7,9
+Valley Dairy Supply,Dairy,2026-11,6944.29,6916.26,9,6,90,88,1710,15,9,9,13
+Summit Beverage Dist.,Beverage,2026-06,10516.8,10457.02,16,15,96,92,2880,3,16,16,47
+Summit Beverage Dist.,Beverage,2026-07,12911.92,12846.51,18,16,144,138,2016,11,18,18,54
+Summit Beverage Dist.,Beverage,2026-08,12744.99,12653.75,16,15,160,156,4320,0,16,16,50
+Summit Beverage Dist.,Beverage,2026-09,11173.69,11141.88,16,14,224,217,3360,8,16,16,46
+Summit Beverage Dist.,Beverage,2026-10,13038.58,13051.17,17,17,204,198,4692,13,17,17,49
+Summit Beverage Dist.,Beverage,2026-11,11112.03,11029.73,17,16,170,164,4250,8,17,17,53
+Pinecrest Paper & Disposables,Disposables,2026-06,4837.46,4779.75,6,6,42,40,1050,15,6,6,24
+Pinecrest Paper & Disposables,Disposables,2026-07,4465.13,4392.98,6,6,60,55,720,7,6,6,22
+Pinecrest Paper & Disposables,Disposables,2026-08,4585.8,4500.11,9,8,117,108,3276,42,9,8,37
+Pinecrest Paper & Disposables,Disposables,2026-09,5212.66,5130.55,7,6,63,58,1890,20,7,7,28
+Pinecrest Paper & Disposables,Disposables,2026-10,5319.77,5226.65,7,4,84,77,672,9,7,7,33
+Pinecrest Paper & Disposables,Disposables,2026-11,4757.68,4710.48,7,4,91,84,819,8,7,6,31
+CleanPro Chemical,Cleaning,2026-06,2275.1,2244.65,5,5,30,29,330,2,5,5,24
+CleanPro Chemical,Cleaning,2026-07,2718.86,2701.42,4,4,56,54,1232,8,4,4,21
+CleanPro Chemical,Cleaning,2026-08,2330.5,2313.78,4,4,36,34,756,4,4,4,21
+CleanPro Chemical,Cleaning,2026-09,2589.04,2583.62,4,4,52,50,1404,13,4,4,20
+CleanPro Chemical,Cleaning,2026-10,2720.95,2697.88,4,4,56,55,840,6,4,4,21
+CleanPro Chemical,Cleaning,2026-11,2453.49,2433.35,4,4,40,38,1080,10,4,4,20
