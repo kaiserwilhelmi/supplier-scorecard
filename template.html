@@ -22,6 +22,15 @@
 .sc .drop b { color: var(--accent); }
 .sc .btn { font: inherit; border: 1px solid var(--border); background: var(--surface); color: var(--text); border-radius: 8px; padding: 8px 14px; cursor: pointer; margin-right: 8px; }
 .sc .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+.sc a.btn { display: inline-block; text-decoration: none; }
+.sc .btn:hover { border-color: var(--accent); }
+.sc .dl { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 10px 0 4px; }
+.sc .dl .btn { margin: 0; }
+.sc .note code { overflow-wrap: anywhere; }
+.sc .msg { display: block; margin-top: 10px; font-size: 13px; color: var(--text-2); white-space: pre-line; }
+.sc .msg.err { color: var(--crit-ink); }
+.sc .msg.ok { color: var(--good-ink); }
+.sc .msg ul { margin: 6px 0 0; padding-left: 18px; }
 body { margin: 0; }
 .sc { background: var(--bg); color: var(--text); min-height: 100vh;
   font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -116,6 +125,7 @@ table.sc-table { width: 100%; border-collapse: collapse; font-variant-numeric: t
         <button data-m="3">Last 3 mo</button><button data-m="6" aria-pressed="true">Last 6 mo</button><button data-m="12">Last 12 mo</button>
       </div>
       <select id="cat" aria-label="Category"><option value="">All categories</option></select>
+      <a class="btn" id="use-own" href="#own">Score your own suppliers</a>
     </div>
   </div>
 
@@ -150,15 +160,20 @@ table.sc-table { width: 100%; border-collapse: collapse; font-variant-numeric: t
     <p>Each KPI earns 0–100 points on a straight line from its floor (0 points) to its target (100 points), capped at both ends. The composite score is the weighted sum. Calculated from purchase-order data rolled up by month; the change column compares against the same-length period just before.</p>
     <div class="tablewrap" style="margin:0"><table id="method-table" style="min-width:520px"></table></div>
     <p><b>Tiers:</b> Preferred ≥ 85 · Approved 70–85 · Watch 55–70 · Probation &lt; 55.</p>
+    <p class="note">KPI definitions follow the SCOR perfect-order components (on time, in full, perfect condition, accurate documents; APICS, 2017) and the supplier-evaluation literature (Weber et al., 1991; Ho et al., 2010). Floors, targets and weights are this tool's defaults. Full definitions and citations are in the <a href="template/supplier-scorecard-template.xlsx" download style="color:var(--accent)">template</a>.</p>
     <p class="note">All suppliers and figures are fictional, generated for demonstration. Built with Python (data + scoring) and vanilla JavaScript/SVG.</p>
   </div>
 
-  <div class="card" style="margin-top:16px">
-    <details>
+  <div class="card" style="margin-top:16px" id="own">
+    <details id="own-details">
       <summary>Score your own suppliers</summary>
-      <p class="note">Paste a CSV with one row per supplier per month and these columns (header row required):<br>
-      <code>supplier,category,month,spend,contract_value,pos,on_time_pos,lines_ordered,lines_filled,units_received,units_defective,invoices,invoices_accurate,lead_time_days_total</code><br>
-      Month as YYYY-MM. Works with .csv, .tsv or Excel (.xlsx) files. Everything stays in your browser.</p>
+      <p class="note" style="margin-bottom:0">Start from the template: it has the exact columns, labeled sample rows, an Instructions tab explaining every field and unit, and the KPI definitions with sources. Delete the yellow SAMPLE rows, add one row per supplier per month, and drop the file below.</p>
+      <div class="dl">
+        <a class="btn primary" href="template/supplier-scorecard-template.xlsx" download>Download template (.xlsx)</a>
+        <a class="btn" href="template/supplier-scorecard-template.csv" download>Download template (.csv)</a>
+      </div>
+      <p class="note">Columns (header row required): <code>supplier,category,month,spend,contract_value,pos,on_time_pos,lines_ordered,lines_filled,units_received,units_defective,invoices,invoices_accurate,lead_time_days_total</code><br>
+      Month as YYYY-MM. Works with .csv, .tsv or Excel (.xlsx) files; in a workbook the sheet named “Data” is read. Everything stays in your browser.</p>
       <label class="drop" id="drop">
         <input type="file" id="file" accept=".csv,.tsv,.txt,.xlsx,.xls" hidden>
         <b>Choose a file</b> or drag it here
@@ -166,7 +181,7 @@ table.sc-table { width: 100%; border-collapse: collapse; font-variant-numeric: t
       <p class="note" style="margin:8px 0 0">Or paste data (from a file or straight from Excel):</p>
       <textarea id="csv" spellcheck="false" aria-label="CSV data"></textarea>
       <button class="btn primary" id="load">Load data</button><button class="btn" id="reset">Back to sample data</button>
-      <span class="note" id="csv-msg"></span>
+      <div class="msg" id="csv-msg" role="status" aria-live="polite"></div>
     </details>
   </div>
 
@@ -468,26 +483,83 @@ function splitRows(text) {
   if (cell !== "" || row.length) { row.push(cell); rows.push(row); }
   return rows.filter(r => r.some(x => x.trim() !== ""));
 }
-function loadTable(table, label) {
-  const msg = document.getElementById("csv-msg");
-  try {
-    if (table.length < 2) throw new Error("No data rows found.");
-    const head = table[0].map(h => String(h).trim().toLowerCase().replace(/\s+/g, "_"));
-    const need = ["supplier","category","month",...NUM].filter(c => !head.includes(c));
-    if (need.length) throw new Error("Missing columns: " + need.join(", "));
-    const rows = table.slice(1).map((cells, i) => {
-      const r = {};
-      head.forEach((h, j) => r[h] = String(cells[j] ?? "").trim());
-      NUM.forEach(k => { r[k] = parseFloat(r[k].replace(/[$,\s]/g, "")); if (!isFinite(r[k])) throw new Error(`Row ${i + 2}: ${k} is not a number`); });
-      const d = r.month.match(/^(\d{4})[-\/](\d{1,2})/) || r.month.match(/^(\d{1,2})\/\d{1,2}\/(\d{4})/);
-      if (!d) throw new Error(`Row ${i + 2}: month "${r.month}" should look like 2026-06`);
-      r.month = d[1].length === 4 ? `${d[1]}-${d[2].padStart(2, "0")}` : `${d[2]}-${d[1].padStart(2, "0")}`;
-      return r;
+const COUNTS = ["pos","on_time_pos","lines_ordered","lines_filled","units_received","units_defective","invoices","invoices_accurate"];
+const LIMITS = { on_time_pos: "pos", lines_filled: "lines_ordered", units_defective: "units_received", invoices_accurate: "invoices" };
+const MON = { jan: 1, feb: 2, mar: 3, apr: 4, may: 5, jun: 6, jul: 7, aug: 8, sep: 9, oct: 10, nov: 11, dec: 12 };
+function parseMonth(v) {
+  v = String(v).trim();
+  let m, y, mo;
+  if ((m = v.match(/^(\d{4})[-\/.](\d{1,2})(?:[-\/.]\d{1,2})?(?:[ T].*)?$/))) [y, mo] = [+m[1], +m[2]];          // 2026-06, 2026-06-01, 2026/6
+  else if ((m = v.match(/^(\d{1,2})\/\d{1,2}\/(\d{2}|\d{4})$/))) [y, mo] = [+m[2], +m[1]];                        // 6/1/2026, 6/1/26 (US)
+  else if ((m = v.match(/^(\d{1,2})[-\/](\d{4})$/))) [y, mo] = [+m[2], +m[1]];                                     // 06/2026
+  else if ((m = v.match(/^([a-z]{3})[a-z]*\.?[\s\-']+(\d{2}|\d{4})$/i)) && MON[m[1].toLowerCase()]) [y, mo] = [+m[2], MON[m[1].toLowerCase()]]; // Jun 2026, Jun-26, June 2026
+  else if (/^\d{5}(\.\d+)?$/.test(v) && +v > 20000 && +v < 80000) {                                                // Excel date serial
+    const d = new Date(Date.UTC(1899, 11, 30) + Math.floor(+v) * 864e5); [y, mo] = [d.getUTCFullYear(), d.getUTCMonth() + 1];
+  } else return null;
+  if (y < 100) y += 2000;
+  if (mo < 1 || mo > 12 || y < 1990 || y > 2100) return null;
+  return `${y}-${String(mo).padStart(2, "0")}`;
+}
+function validate(table) {
+  const errs = [], add = e => errs.push(e);
+  if (!table.length) return { errs: ["The file is empty."] };
+  const head = table[0].map(h => String(h).replace(/^﻿/, "").trim().toLowerCase().replace(/[\s\-]+/g, "_"));
+  const need = ["supplier", "category", "month", ...NUM].filter(c => !head.includes(c));
+  if (need.length) return { errs: [`Missing column${need.length > 1 ? "s" : ""}: ${need.join(", ")}. Row 1 must hold the template's column names (download the template above).`] };
+  if (table.length < 2) return { errs: ["The header row is there but there are no data rows."] };
+  const rows = [], seen = new Map();
+  table.slice(1).forEach((cells, i) => {
+    const n = i + 2, r = {};
+    head.forEach((h, j) => { if (h && !(h in r)) r[h] = String(cells[j] ?? "").trim(); });
+    const bad = [];
+    if (!r.supplier) bad.push("supplier is blank");
+    if (!r.category) bad.push("category is blank");
+    const mo = parseMonth(r.month);
+    if (!mo) bad.push(r.month ? `month "${r.month}" isn't a month (use YYYY-MM, e.g. 2026-06)` : "month is blank");
+    else r.month = mo;
+    NUM.forEach(k => {
+      const raw = r[k], neg = /^\(.*\)$/.test(raw);
+      const v = raw === "" ? NaN : parseFloat(raw.replace(/[$,\s()]/g, "")) * (neg ? -1 : 1);
+      if (!isFinite(v) || /[a-z]/i.test(raw.replace(/e[+-]?\d+$/i, ""))) { bad.push(raw === "" ? `${k} is blank` : `${k} "${raw}" isn't a number`); r[k] = NaN; return; }
+      if (v < 0) bad.push(`${k} is negative`);
+      if (COUNTS.includes(k) && Math.abs(v - Math.round(v)) > 1e-9) bad.push(`${k} should be a whole number`);
+      r[k] = v;
     });
-    useRows(rows);
-    msg.textContent = `Loaded ${rows.length} rows, ${new Set(rows.map(r => r.supplier)).size} suppliers, ${MONTHS.length} months${label ? " from " + label : ""}.`;
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  } catch (e) { msg.textContent = e.message; }
+    Object.entries(LIMITS).forEach(([k, lim]) => { if (r[k] > r[lim]) bad.push(`${k} (${r[k]}) is more than ${lim} (${r[lim]})`); });
+    if (mo && r.supplier) {
+      const key = r.supplier.toLowerCase() + "|" + mo;
+      if (seen.has(key)) bad.push(`duplicate of row ${seen.get(key)} (same supplier and month)`); else seen.set(key, n);
+    }
+    if (bad.length) add(`Row ${n}${r.supplier ? " (" + r.supplier + ")" : ""}: ${bad.join("; ")}.`);
+    rows.push(r);
+  });
+  if (!errs.length) {
+    const tot = new Map();
+    rows.forEach(r => { const t = tot.get(r.supplier) || { pos: 0, lines_ordered: 0, units_received: 0, invoices: 0, contract_value: 0 }; Object.keys(t).forEach(k => t[k] += r[k]); tot.set(r.supplier, t); });
+    tot.forEach((t, sup) => { const z = Object.keys(t).filter(k => !(t[k] > 0)); if (z.length) add(`${sup}: ${z.join(", ")} add up to 0 across all months, so its KPIs can't be calculated.`); });
+  }
+  const sample = rows.filter(r => /^sample\b/i.test(r.supplier)).length;
+  return { errs, rows, sample };
+}
+function showMsg(kind, text, list) {
+  const msg = document.getElementById("csv-msg");
+  msg.className = "msg" + (kind ? " " + kind : "");
+  msg.innerHTML = esc(text) + (list && list.length ? "<ul>" + list.slice(0, 12).map(e => `<li>${esc(e)}</li>`).join("") +
+    (list.length > 12 ? `<li>…and ${list.length - 12} more.</li>` : "") + "</ul>" : "");
+}
+function setBadge(own, label) {
+  document.querySelector(".badge-sample").textContent = own ? "Your data" : "Sample data";
+  document.querySelector(".topbar .sub").textContent = own ? `Uploaded${label ? " from " + label : ""} · ${new Set(ROWS.map(r => r.supplier)).size} suppliers · weighted scoring on delivery, fill rate, quality, invoicing and price`
+    : "Office-supply distributor · 12 suppliers · weighted scoring on delivery, fill rate, quality, invoicing and price";
+}
+function loadTable(table, label) {
+  const { errs, rows, sample } = validate(table);
+  if (errs.length) { showMsg("err", `Not loaded: ${errs.length} problem${errs.length > 1 ? "s" : ""} found${label ? " in " + label : ""}. Fix ${errs.length > 1 ? "these" : "this"} and try again (row numbers match your spreadsheet).`, errs); return false; }
+  useRows(rows); setBadge(true, label);
+  showMsg("ok", `Loaded ${rows.length} rows, ${new Set(rows.map(r => r.supplier)).size} suppliers, ${MONTHS.length} months${label ? " from " + label : ""}.` +
+    (sample ? `\nNote: ${sample} row${sample > 1 ? "s are" : " is"} still the template's SAMPLE data. Delete ${sample > 1 ? "them" : "it"} before scoring your own suppliers.` : ""));
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  return true;
 }
 let xlsxLib;
 function getXLSX() {
@@ -499,16 +571,16 @@ function getXLSX() {
   });
 }
 async function readFile(f) {
-  const msg = document.getElementById("csv-msg");
-  msg.textContent = "Reading " + f.name + "…";
+  showMsg("", "Reading " + f.name + "…");
   try {
-    if (/\.xlsx?$/i.test(f.name)) {
+    if (/\.xls$/i.test(f.name) || /\.xlsx$/i.test(f.name)) {
       const X = await getXLSX();
       const wb = X.read(await f.arrayBuffer(), { type: "array" });
-      const table = X.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]], { header: 1, raw: false, defval: "" });
+      const name = wb.SheetNames.find(n => n.trim().toLowerCase() === "data") || wb.SheetNames[0];
+      const table = X.utils.sheet_to_json(wb.Sheets[name], { header: 1, raw: false, defval: "", blankrows: false });
       loadTable(table.map(r => r.map(String)), f.name);
     } else loadTable(splitRows(await f.text()), f.name);
-  } catch (e) { msg.textContent = e.message; }
+  } catch (e) { showMsg("err", "Couldn't read " + f.name + ": " + e.message); }
 }
 document.getElementById("file").addEventListener("change", e => { if (e.target.files[0]) readFile(e.target.files[0]); e.target.value = ""; });
 const drop = document.getElementById("drop");
@@ -516,7 +588,10 @@ const drop = document.getElementById("drop");
 ["dragleave", "drop"].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.remove("over"); }));
 drop.addEventListener("drop", e => { const f = e.dataTransfer.files[0]; if (f) readFile(f); });
 document.getElementById("load").addEventListener("click", () => loadTable(splitRows(document.getElementById("csv").value), ""));
-document.getElementById("reset").addEventListener("click", () => { useRows(SAMPLE); document.getElementById("csv-msg").textContent = "Showing sample data."; });
+document.getElementById("reset").addEventListener("click", () => { useRows(SAMPLE); setBadge(false); showMsg("", "Showing sample data."); });
+function openOwn() { document.getElementById("own-details").open = true; }
+document.getElementById("use-own").addEventListener("click", openOwn);
+if (location.hash === "#own") openOwn();
 fillCats();
 document.getElementById("cat").addEventListener("change", e => { state.cat = e.target.value; state.selected = null; render(); });
 document.getElementById("period").addEventListener("click", e => {
