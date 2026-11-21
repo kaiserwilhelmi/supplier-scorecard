@@ -1,4 +1,4 @@
-supplier,category,month,spend,contract_value,pos,on_time_pos,lines_ordered,lines_filled,units_received,units_defective,invoices,invoices_accurate,lead_time_days_total
+supplier,category,month,spend,agreed_value,pos,on_time_pos,lines_ordered,lines_filled,units_received,units_defective,invoices,invoices_accurate,lead_time_days_total
 Harbor Line Paper,Paper,2025-12,19253.94,19186.39,41,37,429,418,9182,32,41,41,168
 Harbor Line Paper,Paper,2026-01,23230.79,23226.84,38,38,396,393,8666,43,38,38,158
 Harbor Line Paper,Paper,2026-02,19944.21,19906.4,39,38,390,386,10327,47,39,39,154

@@ -60,7 +60,7 @@ for (name, cat, spend, otd0, fill0, defect0, inv0, pv0, lead, trend) in SUPPLIER
         p_otd = clamp(otd + random.gauss(0, 1.5), 55, 99.8) / 100
         agg = dict(spend=0.0, pos=0, on_time=0, lines=0, lines_filled=0,
                    units=0, defective=0, invoices=0, invoices_ok=0,
-                   contract_value=0.0, lead_days=0)
+                   agreed_value=0.0, lead_days=0)
         for _ in range(n_pos):
             po_num += 1
             amount = month_spend_target / n_pos * random.uniform(0.6, 1.4)
@@ -76,7 +76,7 @@ for (name, cat, spend, otd0, fill0, defect0, inv0, pv0, lead, trend) in SUPPLIER
             contract = amount / (1 + var / 100)
             po_rows.append(dict(po_number=f"PO-{po_num}", supplier=name, category=cat,
                                 month=m.isoformat()[:7], amount=round(amount, 2),
-                                contract_value=round(contract, 2), lines_ordered=lines,
+                                agreed_value=round(contract, 2), lines_ordered=lines,
                                 lines_filled=filled, units_received=units,
                                 units_defective=defective, on_time=int(on_time),
                                 lead_time_days=lead_days, invoice_accurate=int(invoice_ok)))
@@ -84,10 +84,10 @@ for (name, cat, spend, otd0, fill0, defect0, inv0, pv0, lead, trend) in SUPPLIER
             agg["lines"] += lines; agg["lines_filled"] += filled
             agg["units"] += units; agg["defective"] += defective
             agg["invoices"] += 1; agg["invoices_ok"] += invoice_ok
-            agg["contract_value"] += contract; agg["lead_days"] += lead_days
+            agg["agreed_value"] += contract; agg["lead_days"] += lead_days
         monthly_rows.append(dict(supplier=name, category=cat, month=m.isoformat()[:7],
                                  spend=round(agg["spend"], 2),
-                                 contract_value=round(agg["contract_value"], 2),
+                                 agreed_value=round(agg["agreed_value"], 2),
                                  pos=agg["pos"], on_time_pos=agg["on_time"],
                                  lines_ordered=agg["lines"], lines_filled=agg["lines_filled"],
                                  units_received=agg["units"], units_defective=agg["defective"],
