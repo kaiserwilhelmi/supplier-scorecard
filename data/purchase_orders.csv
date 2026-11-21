@@ -1,4 +1,4 @@
-po_number,supplier,category,month,amount,contract_value,lines_ordered,lines_filled,units_received,units_defective,on_time,lead_time_days,invoice_accurate
+po_number,supplier,category,month,amount,agreed_value,lines_ordered,lines_filled,units_received,units_defective,on_time,lead_time_days,invoice_accurate
 PO-40101,Harbor Line Paper,Paper,2025-12,539.38,536.15,5,5,165,1,0,8,1
 PO-40102,Harbor Line Paper,Paper,2025-12,466.74,468.72,7,6,105,1,0,7,1
 PO-40103,Harbor Line Paper,Paper,2025-12,589.55,582.13,7,7,105,2,1,3,1

@@ -1,4 +1,4 @@
-supplier,category,month,spend,contract_value,pos,on_time_pos,lines_ordered,lines_filled,units_received,units_defective,invoices,invoices_accurate,lead_time_days_total
+supplier,category,month,spend,agreed_value,pos,on_time_pos,lines_ordered,lines_filled,units_received,units_defective,invoices,invoices_accurate,lead_time_days_total
 Coastline Produce Co.,Produce,2026-06,17048.7,16891.75,30,29,330,316,7260,62,30,30,31
 Coastline Produce Co.,Produce,2026-07,19393.97,19373.96,31,28,403,389,10075,85,31,30,35
 Coastline Produce Co.,Produce,2026-08,17776.82,17703.56,23,22,230,221,3220,26,23,22,25

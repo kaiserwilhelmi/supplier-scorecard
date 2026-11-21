@@ -27,6 +27,16 @@
 .sc .dl { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 10px 0 4px; }
 .sc .dl .btn { margin: 0; }
 .sc .note code { overflow-wrap: anywhere; }
+.method tr.off td { color: var(--text-3); }
+.method th.l, .method td.l { text-align: left; }
+.method input[type=checkbox] { width: 16px; height: 16px; accent-color: var(--accent); cursor: pointer; }
+.w-in { display: inline-flex; align-items: center; gap: 4px; }
+.w-num { width: 64px; font: inherit; text-align: right; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: 6px; padding: 4px 6px; font-variant-numeric: tabular-nums; }
+.w-num:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.w-num:disabled { opacity: .45; }
+.wbar { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; margin: 12px 0 4px; }
+.wbar .btn { margin: 0; padding: 6px 12px; }
+.wbar .btn:disabled { opacity: .45; cursor: default; }
 .sc .msg { display: block; margin-top: 10px; font-size: 13px; color: var(--text-2); white-space: pre-line; }
 .sc .msg.err { color: var(--crit-ink); }
 .sc .msg.ok { color: var(--good-ink); }
@@ -125,7 +135,7 @@ table.sc-table { width: 100%; border-collapse: collapse; font-variant-numeric: t
         <button data-m="3">Last 3 mo</button><button data-m="6" aria-pressed="true">Last 6 mo</button><button data-m="12">Last 12 mo</button>
       </div>
       <select id="cat" aria-label="Category"><option value="">All categories</option></select>
-      <a class="btn" id="use-own" href="#own">Score your own suppliers</a>
+      <a class="btn to-own" id="use-own" href="#own">Score your own suppliers</a>
     </div>
   </div>
 
@@ -155,24 +165,27 @@ table.sc-table { width: 100%; border-collapse: collapse; font-variant-numeric: t
     </div>
   </div>
 
-  <div class="card method">
+  <div class="card method" id="weights">
     <h2>How the score works</h2>
     <p>Each KPI earns 0–100 points on a straight line from its floor (0 points) to its target (100 points), capped at both ends. The composite score is the weighted sum. Calculated from purchase-order data rolled up by month; the change column compares against the same-length period just before.</p>
-    <div class="tablewrap" style="margin:0"><table id="method-table" style="min-width:520px"></table></div>
+    <p><b>Set your own weights:</b> type a weight for each KPI or untick the ones you don't track. Weights must add up to 100%. The scores above update right away, and the template you download includes only the columns for the KPIs you use.</p>
+    <div class="tablewrap" style="margin:0"><table id="method-table" style="min-width:620px"></table></div>
+    <div class="wbar"><span class="note" id="w-status" aria-live="polite"></span><button class="btn" id="w-fix" hidden>Make total 100%</button><button class="btn" id="w-reset">Reset to research defaults</button></div>
     <p><b>Tiers:</b> Preferred ≥ 85 · Approved 70–85 · Watch 55–70 · Probation &lt; 55.</p>
-    <p class="note">KPI definitions follow the SCOR perfect-order components (on time, in full, perfect condition, accurate documents; APICS, 2017) and the supplier-evaluation literature (Weber et al., 1991; Ho et al., 2010). Floors, targets and weights are this tool's defaults. Full definitions and citations are in the <a href="template/supplier-scorecard-template.xlsx" download style="color:var(--accent)">template</a>.</p>
+    <p class="note">KPI definitions follow the SCOR perfect-order components (on time, in full, perfect condition, accurate documents; APICS, 2017) and the supplier-evaluation literature (Weber et al., 1991; Ho et al., 2010). The default weights, floors and targets are this tool's choices, not published benchmarks. Full definitions and citations are in the <a href="#own" class="to-own" style="color:var(--accent)">template</a>.</p>
     <p class="note">All suppliers and figures are fictional, generated for demonstration. Built with Python (data + scoring) and vanilla JavaScript/SVG.</p>
   </div>
 
   <div class="card" style="margin-top:16px" id="own">
     <details id="own-details">
       <summary>Score your own suppliers</summary>
-      <p class="note" style="margin-bottom:0">Start from the template: it has the exact columns, labeled sample rows, an Instructions tab explaining every field and unit, and the KPI definitions with sources. Delete the yellow SAMPLE rows, add one row per supplier per month, and drop the file below.</p>
+      <p class="note" style="margin-bottom:0">Start from the template: it has the exact columns for the KPIs you use, labeled sample rows, an Instructions tab explaining every field and unit, and the KPI definitions with your weights and sources. Delete the yellow SAMPLE rows, add one row per supplier per month, and drop the file below. The .xlsx remembers your weights.</p>
       <div class="dl">
-        <a class="btn primary" href="template/supplier-scorecard-template.xlsx" download>Download template (.xlsx)</a>
-        <a class="btn" href="template/supplier-scorecard-template.csv" download>Download template (.csv)</a>
+        <button class="btn primary" id="dl-xlsx">Download template (.xlsx)</button>
+        <button class="btn" id="dl-csv">Download template (.csv)</button>
       </div>
-      <p class="note">Columns (header row required): <code>supplier,category,month,spend,contract_value,pos,on_time_pos,lines_ordered,lines_filled,units_received,units_defective,invoices,invoices_accurate,lead_time_days_total</code><br>
+      <p class="note" style="margin:0 0 8px"><span id="dl-weights"></span> · <a href="#weights" style="color:var(--accent)">change weights</a></p>
+      <p class="note">Columns (header row required): <code>supplier,category,month,spend,pos</code> plus the columns for each KPI you use: on-time <code>on_time_pos</code>, fill rate <code>lines_ordered,lines_filled</code>, defects <code>units_received,units_defective</code>, invoices <code>invoices,invoices_accurate</code>, price <code>agreed_value</code> (optional: contract, quote or PO price; blank rows are skipped). <code>lead_time_days_total</code> is optional.<br>
       Month as YYYY-MM. Works with .csv, .tsv or Excel (.xlsx) files; in a workbook the sheet named “Data” is read. Everything stays in your browser.</p>
       <label class="drop" id="drop">
         <input type="file" id="file" accept=".csv,.tsv,.txt,.xlsx,.xls" hidden>
@@ -192,14 +205,40 @@ table.sc-table { width: 100%; border-collapse: collapse; font-variant-numeric: t
 const SAMPLE = /*__DATA__*/[];
 let ROWS = SAMPLE;
 
+/* ---------- KPIs and weights ---------- */
+// cols: data columns the KPI needs (besides the always-required supplier, category, month, spend, pos)
 const KPIS = [
-  { key: "otd",     label: "On-time delivery", unit: "%", w: 0.30, floor: 80,  target: 97,  dp: 1 },
-  { key: "fill",    label: "Fill rate",        unit: "%", w: 0.20, floor: 88,  target: 99,  dp: 1 },
-  { key: "quality", label: "Defect rate",      unit: "%", w: 0.20, floor: 3,   target: 0.3, dp: 2 },
-  { key: "invoice", label: "Invoice accuracy", unit: "%", w: 0.15, floor: 92,  target: 99.5, dp: 1 },
-  { key: "price",   label: "Price vs. contract", unit: "%", w: 0.15, floor: 3, target: 0,   dp: 2, signed: true },
+  { key: "otd",     label: "On-time delivery", short: "On-time",     unit: "%", w0: 30, floor: 80,  target: 97,   dp: 1, cols: ["on_time_pos"],
+    how: "POs received by promised date", formula: "on_time_pos / pos x 100", dir: "Higher is better",
+    why: "Late deliveries drive expediting, safety stock and line stoppages.",
+    src: "APICS (2017) SCOR v12, 'delivery performance to customer commit date' (component of Perfect Order Fulfillment, RL.1.1); Mena et al. (2021) Table 3.2, p. 49 ('on-time, in-full deliveries'); Gunasekaran et al. (2004)." },
+  { key: "fill",    label: "Fill rate",        short: "Fill rate",   unit: "%", w0: 20, floor: 88,  target: 99,   dp: 1, cols: ["lines_ordered", "lines_filled"],
+    how: "Order lines shipped complete", formula: "lines_filled / lines_ordered x 100", dir: "Higher is better",
+    why: "Short shipments and backorders create shortages even when the truck is on time.",
+    src: "APICS (2017) SCOR v12, '% of orders delivered in full' (component of RL.1.1); Mena et al. (2021) Table 3.2, p. 49 (OTIF)." },
+  { key: "quality", label: "Defect rate",      short: "Defect rate", unit: "%", w0: 20, floor: 3,   target: 0.3,  dp: 2, cols: ["units_received", "units_defective"],
+    how: "Defective units ÷ units received", formula: "units_defective / units_received x 100  (x 10,000 = PPM)", dir: "Lower is better",
+    why: "Rejects cost inspection, rework, returns and production risk.",
+    src: "Mena et al. (2021) Table 3.2, p. 49 ('quality (PPM)'); APICS (2017) SCOR v12, 'perfect condition' (component of RL.1.1); Ho et al. (2010): quality is the most-used supplier evaluation criterion." },
+  { key: "invoice", label: "Invoice accuracy", short: "Invoice acc.", unit: "%", w0: 15, floor: 92,  target: 99.5, dp: 1, cols: ["invoices", "invoices_accurate"],
+    how: "Invoices matching PO & receipt", formula: "invoices_accurate / invoices x 100", dir: "Higher is better",
+    why: "Invoice errors block three-way match, delay payment and add AP and buyer workload.",
+    src: "APICS (2017) SCOR v12, 'documentation accuracy' (component of RL.1.1); Monczka et al. (2021) on the procure-to-pay cycle." },
+  { key: "price",   label: "Price vs. agreed", short: "Price var.",  unit: "%", w0: 15, floor: 3,   target: 0,    dp: 2, cols: ["agreed_value"], signed: true,
+    how: "Price paid vs. agreed price (contract, quote or PO)", formula: "(spend / agreed_value - 1) x 100, on rows with agreed_value", dir: "Lower is better (0% = paid the agreed price)",
+    why: "Shows leakage between the agreed price and what was actually paid. Optional: rows without agreed_value are left out.",
+    src: "Purchase price variance, Datar & Rajan (2021); Weber et al. (1991): net price is the most frequently cited vendor criterion." },
 ];
+const KEYS = KPIS.map(k => k.key);
+const DEFAULT_W = Object.fromEntries(KPIS.map(k => [k.key, k.w0]));
 const TIERS = [[85, "Preferred"], [70, "Approved"], [55, "Watch"], [0, "Probation"]];
+const store = { get(k) { try { return localStorage.getItem(k); } catch { return null; } }, set(k, v) { try { localStorage.setItem(k, v); } catch {} } };
+function validWeights(w) { return w && KEYS.every(k => Number.isFinite(w[k]) && w[k] >= 0 && w[k] <= 100) && Math.abs(KEYS.reduce((a, k) => a + w[k], 0) - 100) < 1e-6 && KEYS.some(k => w[k] > 0); }
+let W = (() => { try { const w = JSON.parse(store.get("sc-weights")); return validWeights(w) ? w : { ...DEFAULT_W }; } catch { return { ...DEFAULT_W }; } })();
+let DRAFT = { ...W };
+let HAS = new Set(KEYS);  // KPIs the loaded data has columns for
+const activeKPIs = (w = W, has = HAS) => KPIS.filter(k => w[k.key] > 0 && has.has(k.key));
+
 let MONTHS = [...new Set(ROWS.map(r => r.month))].sort();
 const state = { months: 6, cat: "", sort: { key: "score", dir: -1 }, selected: null };
 
@@ -207,23 +246,32 @@ const pts = (v, f, t) => Math.max(0, Math.min(100, (v - f) / (t - f) * 100));
 const tierOf = s => TIERS.find(([c]) => s >= c)[1];
 const fmt$ = v => v >= 1e6 ? "$" + (v / 1e6).toFixed(2) + "M" : v >= 1e3 ? "$" + Math.round(v / 1e3) + "K" : "$" + Math.round(v);
 const fmtK = (k, v) => (k.signed && v > 0 ? "+" : "") + v.toFixed(k.dp) + k.unit;
+const fmtW = v => +v.toFixed(1) + "%";
 const monthLabel = m => new Date(m + "-02").toLocaleString("en-US", { month: "short", year: "2-digit" });
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
-function metrics(rows) {
-  const s = k => rows.reduce((a, r) => a + r[k], 0);
+function metrics(rows, w = W, has = HAS) {
   if (!rows.length) return null;
-  const m = {
-    spend: s("spend"), pos: s("pos"),
-    otd: s("on_time_pos") / s("pos") * 100,
-    fill: s("lines_filled") / s("lines_ordered") * 100,
-    quality: s("units_defective") / s("units_received") * 100,
-    invoice: s("invoices_accurate") / s("invoices") * 100,
-    price: (s("spend") / s("contract_value") - 1) * 100,
-    lead: s("lead_time_days_total") / s("pos"),
+  const s = k => rows.reduce((a, r) => a + r[k], 0);
+  const m = { spend: s("spend"), pos: s("pos") };
+  const calc = {
+    otd: () => s("on_time_pos") / s("pos") * 100,
+    fill: () => s("lines_filled") / s("lines_ordered") * 100,
+    quality: () => s("units_defective") / s("units_received") * 100,
+    invoice: () => s("invoices_accurate") / s("invoices") * 100,
+    price: () => {  // agreed_value is optional: measured only on rows that have it
+      const priced = rows.filter(r => r.agreed_value !== null && r.agreed_value !== undefined && Number.isFinite(r.agreed_value));
+      const agreed = priced.reduce((a, r) => a + r.agreed_value, 0);
+      return agreed > 0 ? (priced.reduce((a, r) => a + r.spend, 0) / agreed - 1) * 100 : null;
+    },
   };
-  m.points = Object.fromEntries(KPIS.map(k => [k.key, pts(m[k.key], k.floor, k.target)]));
-  m.score = KPIS.reduce((a, k) => a + k.w * m.points[k.key], 0);
+  const act = activeKPIs(w, has);
+  KPIS.forEach(k => m[k.key] = act.includes(k) ? calc[k.key]() : null);
+  m.lead = rows.every(r => Number.isFinite(r.lead_time_days_total)) ? s("lead_time_days_total") / m.pos : null;
+  m.points = Object.fromEntries(KPIS.map(k => [k.key, m[k.key] === null ? null : pts(m[k.key], k.floor, k.target)]));
+  const used = act.filter(k => m.points[k.key] !== null), wSum = used.reduce((a, k) => a + w[k.key], 0);
+  m.wEff = Object.fromEntries(KPIS.map(k => [k.key, used.includes(k) ? w[k.key] / wSum : 0]));
+  m.score = used.reduce((a, k) => a + m.wEff[k.key] * m.points[k.key], 0);
   m.tier = tierOf(m.score);
   return m;
 }
@@ -255,11 +303,13 @@ function renderTiles({ list, total, cur }) {
   const wScore = list.reduce((a, s) => a + s.score * s.spend, 0) / total;
   const risk = list.filter(s => s.tier === "Watch" || s.tier === "Probation");
   const riskSpend = risk.reduce((a, s) => a + s.spend, 0);
+  const lead = all.lead === null ? "" : ` · avg lead time ${all.lead.toFixed(1)} days`;
+  const main = [...activeKPIs()].sort((a, b) => W[b.key] - W[a.key]).find(k => all[k.key] !== null);
   const tiles = [
     ["Spend in period", fmt$(total), `${all.pos.toLocaleString()} purchase orders`],
     ["Spend-weighted score", wScore.toFixed(1), `Tier: ${tierOf(wScore)} · weighted by dollars`],
     ["Spend at risk", (riskSpend / total * 100).toFixed(0) + "%", `${fmt$(riskSpend)} with ${risk.length} Watch/Probation supplier${risk.length === 1 ? "" : "s"}`],
-    ["On-time delivery", all.otd.toFixed(1) + "%", `Target 97% · avg lead time ${all.lead.toFixed(1)} days`],
+    main ? [main.label, fmtK(main, all[main.key]), `Target ${fmtK(main, main.target)}${lead}`] : ["Purchase orders", all.pos.toLocaleString(), lead.slice(3)],
   ];
   document.getElementById("tiles").innerHTML = tiles.map(([l, v, c]) =>
     `<div class="card tile"><div class="label">${l}</div><div class="value">${v}</div><div class="ctx">${esc(c)}</div></div>`).join("");
@@ -272,8 +322,8 @@ function renderInsights({ list, total }) {
   const bySpend = [...list].sort((a, b) => b.spend - a.spend);
   const strategicRisk = bySpend.filter(s => s.score < 70 && s.share >= 8);
   strategicRisk.forEach(s => {
-    const worst = KPIS.map(k => ({ k, gap: 100 - s.points[k.key], w: k.w })).sort((a, b) => b.gap * b.w - a.gap * a.w)[0];
-    out.push(`<b>${esc(s.name)}</b> holds ${s.share.toFixed(0)}% of spend but scores ${s.score.toFixed(0)} (${s.tier}). Biggest drag: ${worst.k.label.toLowerCase()} at ${fmtK(worst.k, s[worst.k.key])} vs. ${fmtK(worst.k, worst.k.target)} target.`);
+    const worst = KPIS.filter(k => s.points[k.key] !== null).map(k => ({ k, gap: 100 - s.points[k.key], w: s.wEff[k.key] })).sort((a, b) => b.gap * b.w - a.gap * a.w)[0];
+    out.push(`<b>${esc(s.name)}</b> holds ${s.share.toFixed(0)}% of spend but scores ${s.score.toFixed(0)} (${s.tier}).` + (worst ? ` Biggest drag: ${worst.k.label.toLowerCase()} at ${fmtK(worst.k, s[worst.k.key])} vs. ${fmtK(worst.k, worst.k.target)} target.` : ""));
   });
   const movers = list.filter(s => s.change !== null).sort((a, b) => a.change - b.change);
   if (movers.length) {
@@ -283,24 +333,28 @@ function renderInsights({ list, total }) {
   }
   const top = bySpend.slice(0, 3);
   out.push(`Top 3 suppliers account for ${(top.reduce((a, s) => a + s.share, 0)).toFixed(0)}% of spend (${top.map(s => esc(s.name)).join(", ")}).`);
-  const over = list.filter(s => s.price > 1).reduce((a, s) => a + (s.spend - s.spend / (1 + s.price / 100)), 0);
-  if (over > 0) out.push(`Estimated ${fmt$(over)} paid above contract price with suppliers running more than 1% over.`);
+  const over = list.filter(s => s.price !== null && s.price > 1).reduce((a, s) => a + (s.spend - s.spend / (1 + s.price / 100)), 0);
+  if (over > 0) out.push(`Estimated ${fmt$(over)} paid above the agreed price with suppliers running more than 1% over.`);
+  const noPrice = W.price > 0 ? list.filter(s => s.price === null) : [];
+  if (noPrice.length) out.push(`${noPrice.length} supplier${noPrice.length > 1 ? "s have" : " has"} no agreed_value in this period, so price isn't scored for ${noPrice.length > 1 ? "them" : "it"}; the other KPIs are reweighted to 100%.`);
   document.getElementById("insights").innerHTML = out.map(x => `<li>${x}</li>`).join("");
   document.getElementById("findings-note").textContent = "Generated from the data for the selected period and category";
 }
 
 /* ---------- table ---------- */
-const COLS = [
+const cols = () => [
   { key: "rank", label: "#", cls: "l", noSort: true },
   { key: "name", label: "Supplier", cls: "l" },
   { key: "score", label: "Score" },
   { key: "tier", label: "Tier", cls: "l", sortVal: s => s.score },
   { key: "change", label: "Δ vs prior" },
   { key: "spend", label: "Spend" },
-  ...KPIS.map(k => ({ key: k.key, label: k.label.replace("Price vs. contract", "Price var.").replace("Invoice accuracy", "Invoice acc.").replace("On-time delivery", "On-time"), kpi: k })),
+  ...activeKPIs().map(k => ({ key: k.key, label: k.short, kpi: k })),
   { key: "lead", label: "Lead days" },
 ];
 function renderTable({ list }) {
+  const COLS = cols();
+  if (!COLS.find(c => c.key === state.sort.key)) state.sort = { key: "score", dir: -1 };
   const { key, dir } = state.sort;
   const col = COLS.find(c => c.key === key);
   const val = s => col.sortVal ? col.sortVal(s) : s[key];
@@ -320,8 +374,8 @@ function renderTable({ list }) {
       case "change": return s.change === null ? `<td class="chg flat">—</td>` :
         `<td class="chg ${s.change > 1 ? "up" : s.change < -1 ? "down" : "flat"}">${s.change > 1 ? "▲" : s.change < -1 ? "▼" : "•"} ${Math.abs(s.change).toFixed(1)}</td>`;
       case "spend": return `<td>${fmt$(s.spend)}<div class="cat">${s.share.toFixed(1)}%</div></td>`;
-      case "lead": return `<td>${s.lead.toFixed(1)}</td>`;
-      default: { const k = c.kpi; return `<td class="${s.points[k.key] < 60 ? "miss" : ""}">${fmtK(k, s[k.key])}</td>`; }
+      case "lead": return `<td>${s.lead === null ? "—" : s.lead.toFixed(1)}</td>`;
+      default: { const k = c.kpi; return s[k.key] === null ? `<td class="note" title="No agreed_value: not scored">n/a</td>` : `<td class="${s.points[k.key] < 60 ? "miss" : ""}">${fmtK(k, s[k.key])}</td>`; }
     }
   }).join("");
   const t = document.getElementById("table");
@@ -340,14 +394,18 @@ function renderDetail({ list }) {
       <div><h2>${esc(s.name)}</h2><span class="note">${esc(s.category)} · ${fmt$(s.spend)} spend · ${s.pos} POs</span></div>
       <div style="text-align:right"><div class="bigscore">${s.score.toFixed(1)}</div><span class="tier ${s.tier}"><span class="dot"></span>${s.tier}</span></div>
     </div>
-    <div class="kpirows">${KPIS.map(k => `
+    <div class="kpirows">${activeKPIs().map(k => s.points[k.key] === null ? `
+      <div class="kpirow">
+        <div class="top"><span><b>${k.label}</b> <span class="val">not scored · no agreed_value</span></span><span class="val">0 / 0 pts</span></div>
+        <div class="track"></div>
+      </div>` : `
       <div class="kpirow">
         <div class="top"><span><b>${k.label}</b> <span class="val">${fmtK(k, s[k.key])} · target ${fmtK(k, k.target)}</span></span>
-        <span class="val">${(k.w * s.points[k.key]).toFixed(1)} / ${k.w * 100} pts</span></div>
+        <span class="val">${(s.wEff[k.key] * s.points[k.key]).toFixed(1)} / ${fmtW(s.wEff[k.key] * 100).replace("%", "")} pts</span></div>
         <div class="track"><i style="width:${s.points[k.key]}%"></i></div>
       </div>`).join("")}
     </div>
-    <h2 style="margin-top:20px">Score trend</h2><span class="note">Rolling 3-month score, all 12 months · shaded bands are tiers</span>
+    <h2 style="margin-top:20px">Score trend</h2><span class="note">Rolling 3-month score, all months · shaded bands are tiers</span>
     <div class="chart" id="trend"></div>`;
   drawTrend(s.name);
 }
@@ -369,18 +427,19 @@ function tipFor(container) {
 
 function drawTrend(name) {
   const box = document.getElementById("trend");
-  const W = box.clientWidth, H = 180, m = { l: 30, r: 10, t: 10, b: 24 };
+  const CW = box.clientWidth, H = 180, m = { l: 30, r: 10, t: 10, b: 24 };
   const pts3 = [];
   for (let i = 2; i < MONTHS.length; i++) {
     const set = new Set(MONTHS.slice(i - 2, i + 1));
     const rows = ROWS.filter(r => r.supplier === name && set.has(r.month));
-    pts3.push({ m: MONTHS[i], s: metrics(rows).score });
+    const mm = metrics(rows); if (mm) pts3.push({ m: MONTHS[i], s: mm.score });
   }
-  const x = i => m.l + i * (W - m.l - m.r) / (pts3.length - 1);
+  if (pts3.length < 2) { box.innerHTML = "<p class='note'>Needs at least 4 months of data.</p>"; return; }
+  const x = i => m.l + i * (CW - m.l - m.r) / (pts3.length - 1);
   const y = v => m.t + (100 - v) * (H - m.t - m.b) / 100;
   const bands = [[85, 100, "--good"], [70, 85, "--neutral"], [55, 70, "--warn"], [0, 55, "--crit"]];
-  let g = svgEl(W, H);
-  bands.forEach(([a, b, c]) => g += `<rect x="${m.l}" y="${y(b)}" width="${W - m.l - m.r}" height="${y(a) - y(b)}" fill="var(${c})" opacity=".09"/>`);
+  let g = svgEl(CW, H);
+  bands.forEach(([a, b, c]) => g += `<rect x="${m.l}" y="${y(b)}" width="${CW - m.l - m.r}" height="${y(a) - y(b)}" fill="var(${c})" opacity=".09"/>`);
   [0, 55, 70, 85, 100].forEach(v => g += `<text x="${m.l - 6}" y="${y(v) + 4}" text-anchor="end">${v}</text>`);
   pts3.forEach((p, i) => { if (i % 2 === 0 || i === pts3.length - 1) g += `<text x="${x(i)}" y="${H - 6}" text-anchor="middle">${monthLabel(p.m)}</text>`; });
   g += `<path d="${pts3.map((p, i) => (i ? "L" : "M") + x(i).toFixed(1) + "," + y(p.s).toFixed(1)).join("")}" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"/>`;
@@ -388,13 +447,13 @@ function drawTrend(name) {
   g += `<circle cx="${x(pts3.length - 1)}" cy="${y(last.s)}" r="4" fill="var(--accent)" stroke="var(--surface)" stroke-width="2"/>`;
   g += `<line id="xh" x1="0" x2="0" y1="${m.t}" y2="${H - m.b}" stroke="var(--text-3)" stroke-dasharray="3 3" opacity="0"/>`;
   g += `<circle id="xd" r="5" fill="var(--accent)" stroke="var(--surface)" stroke-width="2" opacity="0"/>`;
-  g += `<rect x="${m.l}" y="0" width="${W - m.l - m.r}" height="${H}" fill="transparent" id="hit"/></svg>`;
+  g += `<rect x="${m.l}" y="0" width="${CW - m.l - m.r}" height="${H}" fill="transparent" id="hit"/></svg>`;
   box.innerHTML = g;
   const tip = tipFor(box), svg = box.querySelector("svg");
   const xh = svg.querySelector("#xh"), xd = svg.querySelector("#xd");
   svg.querySelector("#hit").addEventListener("pointermove", e => {
     const r = svg.getBoundingClientRect(), px = e.clientX - r.left;
-    const i = Math.max(0, Math.min(pts3.length - 1, Math.round((px - m.l) / (W - m.l - m.r) * (pts3.length - 1))));
+    const i = Math.max(0, Math.min(pts3.length - 1, Math.round((px - m.l) / (CW - m.l - m.r) * (pts3.length - 1))));
     const p = pts3[i];
     xh.setAttribute("x1", x(i)); xh.setAttribute("x2", x(i)); xh.setAttribute("opacity", 1);
     xd.setAttribute("cx", x(i)); xd.setAttribute("cy", y(p.s)); xd.setAttribute("opacity", 1);
@@ -406,28 +465,28 @@ function drawTrend(name) {
 /* ---------- matrix ---------- */
 function drawMatrix({ list }) {
   const box = document.getElementById("matrix");
-  const W = box.clientWidth, H = Math.max(260, Math.min(360, W * 0.75)), m = { l: 48, r: 14, t: 14, b: 34 };
+  const CW = box.clientWidth, H = Math.max(260, Math.min(360, CW * 0.75)), m = { l: 48, r: 14, t: 14, b: 34 };
   const maxSpend = Math.max(...list.map(s => s.spend)) * 1.1 || 1;
-  const x = v => m.l + v / 100 * (W - m.l - m.r);
+  const x = v => m.l + v / 100 * (CW - m.l - m.r);
   const y = v => m.t + (1 - v / maxSpend) * (H - m.t - m.b);
   const medSpend = [...list.map(s => s.spend)].sort((a, b) => a - b)[Math.floor(list.length / 2)] || 0;
   const color = { Preferred: "--good", Approved: "--neutral", Watch: "--warn", Probation: "--crit" };
-  let g = svgEl(W, H);
+  let g = svgEl(CW, H);
   // risk quadrant
   g += `<rect x="${x(0)}" y="${y(maxSpend)}" width="${x(70) - x(0)}" height="${y(medSpend) - y(maxSpend)}" fill="var(--crit)" opacity=".07"/>`;
   g += `<text x="${x(1)}" y="${y(maxSpend) + 14}" style="font-weight:600;fill:var(--crit-ink)">High spend, low score</text>`;
   g += `<line x1="${x(70)}" x2="${x(70)}" y1="${m.t}" y2="${H - m.b}" stroke="var(--border)" stroke-dasharray="4 4"/>`;
-  g += `<line x1="${m.l}" x2="${W - m.r}" y1="${y(medSpend)}" y2="${y(medSpend)}" stroke="var(--border)" stroke-dasharray="4 4"/>`;
+  g += `<line x1="${m.l}" x2="${CW - m.r}" y1="${y(medSpend)}" y2="${y(medSpend)}" stroke="var(--border)" stroke-dasharray="4 4"/>`;
   [0, 25, 50, 70, 85, 100].forEach(v => g += `<text x="${x(v)}" y="${H - m.b + 16}" text-anchor="middle">${v}</text>`);
-  g += `<text x="${(m.l + W - m.r) / 2}" y="${H - 2}" text-anchor="middle">Supplier score →</text>`;
+  g += `<text x="${(m.l + CW - m.r) / 2}" y="${H - 2}" text-anchor="middle">Supplier score →</text>`;
   const ticks = 4; for (let i = 0; i <= ticks; i++) { const v = maxSpend / ticks * i; g += `<text x="${m.l - 6}" y="${y(v) + 4}" text-anchor="end">${fmt$(v)}</text>`; }
-  g += `<line x1="${m.l}" x2="${W - m.r}" y1="${H - m.b}" y2="${H - m.b}" stroke="var(--border)"/>`;
+  g += `<line x1="${m.l}" x2="${CW - m.r}" y1="${H - m.b}" y2="${H - m.b}" stroke="var(--border)"/>`;
   const labeled = new Set([...list].sort((a, b) => b.spend - a.spend).slice(0, 3).map(s => s.name).concat(list.filter(s => s.score < 70 && s.spend >= medSpend).map(s => s.name)));
   list.forEach(s => {
     const cx = x(s.score), cy = y(s.spend), sel = s.name === state.selected;
     g += `<circle cx="${cx}" cy="${cy}" r="${sel ? 8 : 6}" fill="var(${color[s.tier]})" stroke="${sel ? "var(--text)" : "var(--surface)"}" stroke-width="2"/>`;
     if (labeled.has(s.name) || sel) {
-      const right = cx < W * 0.62;
+      const right = cx < CW * 0.62;
       g += `<text x="${cx + (right ? 10 : -10)}" y="${cy + 4}" text-anchor="${right ? "start" : "end"}" style="fill:var(--text);font-weight:${sel ? 600 : 400}">${esc(s.name.split(" ").slice(0, 2).join(" "))}</text>`;
     }
     g += `<circle cx="${cx}" cy="${cy}" r="14" fill="transparent" data-n="${esc(s.name)}" style="cursor:pointer"/>`;
@@ -444,11 +503,49 @@ function drawMatrix({ list }) {
     `<span class="note">Dashed lines: Approved cutoff (70) and median spend</span>`;
 }
 
+/* ---------- weights editor ("How the score works") ---------- */
 function renderMethod() {
-  document.getElementById("method-table").innerHTML = `<thead><tr><th>KPI</th><th>Weight</th><th>Floor (0 pts)</th><th>Target (100 pts)</th><th>How it's measured</th></tr></thead><tbody>` +
-    KPIS.map((k, i) => `<tr><td>${k.label}</td><td>${k.w * 100}%</td><td>${fmtK(k, k.floor)}</td><td>${fmtK(k, k.target)}</td><td class="note" style="text-align:right">${[
-      "POs received by promised date", "Order lines shipped complete", "Defective units ÷ units received", "Invoices matching PO & receipt", "Price paid vs. contracted price"][i]}</td></tr>`).join("") + "</tbody>";
+  document.getElementById("method-table").innerHTML =
+    `<thead><tr><th class="l">Use</th><th class="l">KPI</th><th>Weight</th><th>Floor (0 pts)</th><th>Target (100 pts)</th><th>How it's measured</th></tr></thead><tbody>` +
+    KPIS.map(k => {
+      const on = DRAFT[k.key] > 0, miss = on && !HAS.has(k.key);
+      return `<tr class="${on ? "" : "off"}">
+        <td class="l"><input type="checkbox" class="w-on" data-k="${k.key}" ${on ? "checked" : ""} aria-label="Use ${k.label}"></td>
+        <td class="l">${k.label}${miss ? `<div class="note" style="color:var(--warn-ink)">Your data has no ${k.cols.join("/")} column, so this KPI is skipped</div>` : ""}</td>
+        <td><span class="w-in"><input type="number" class="w-num" data-k="${k.key}" min="0" max="100" step="1" value="${+DRAFT[k.key].toFixed(2)}" aria-label="${k.label} weight, percent" ${on ? "" : "disabled"}>%</span></td>
+        <td>${fmtK(k, k.floor)}</td><td>${fmtK(k, k.target)}</td><td class="note" style="text-align:right">${k.how}</td></tr>`;
+    }).join("") + "</tbody>";
+  renderStatus();
 }
+function renderStatus() {
+  const total = KEYS.reduce((a, k) => a + (DRAFT[k] || 0), 0);
+  const ok = Math.abs(total - 100) < 1e-6 && KEYS.some(k => DRAFT[k] > 0);
+  const isDefault = KEYS.every(k => Math.abs(W[k] - DEFAULT_W[k]) < 1e-9);
+  document.getElementById("w-status").innerHTML = ok
+    ? `<span style="color:var(--good-ink)">Total 100%</span> · ${isDefault ? "research-based defaults" : "your weights (scores and the template use them)"}`
+    : `<span style="color:var(--crit-ink)">Total ${fmtW(total)}: weights must add up to 100%.</span> Scores still use the last valid weights.`;
+  document.getElementById("w-fix").hidden = ok;
+  document.getElementById("w-reset").disabled = isDefault && ok;
+  document.getElementById("dl-weights").textContent = "Template uses: " + KPIS.filter(k => W[k.key] > 0).map(k => `${k.short} ${fmtW(W[k.key])}`).join(" · ") +
+    (KPIS.some(k => !W[k.key]) ? " (off: " + KPIS.filter(k => !W[k.key]).map(k => k.short).join(", ") + ")" : "");
+}
+// Scale the enabled weights so they total 100, rounding to whole % (largest remainder).
+function rebalance(w, fixed) {
+  const on = KEYS.filter(k => w[k] > 0 && k !== fixed);
+  const target = 100 - (fixed ? w[fixed] : 0), cur = on.reduce((a, k) => a + w[k], 0);
+  const out = { ...w };
+  if (!on.length) return out;
+  const raw = on.map(k => cur > 0 ? w[k] / cur * target : target / on.length);
+  const fl = raw.map(Math.floor); let left = Math.round(target - fl.reduce((a, b) => a + b, 0));
+  raw.map((v, i) => [v - fl[i], i]).sort((a, b) => b[0] - a[0]).forEach(([, i]) => { if (left > 0) { fl[i]++; left--; } });
+  on.forEach((k, i) => out[k] = fl[i]);
+  return out;
+}
+function applyDraft(full = true) {
+  if (validWeights(DRAFT)) { W = { ...DRAFT }; store.set("sc-weights", JSON.stringify(W)); render(); }
+  full ? renderMethod() : renderStatus();
+}
+function setWeights(w) { DRAFT = { ...w }; applyDraft(); }
 
 function render() {
   const d = compute();
@@ -460,15 +557,22 @@ function fillCats() {
   document.getElementById("cat").innerHTML = '<option value="">All categories</option>' +
     [...new Set(ROWS.map(r => r.category))].sort().map(c => `<option>${esc(c)}</option>`).join("");
 }
+function dataHas(rows) {
+  return new Set(KPIS.filter(k => k.key === "price" || k.cols.every(c => rows.every(r => Number.isFinite(r[c])))).map(k => k.key));
+}
 function useRows(rows) {
-  ROWS = rows; MONTHS = [...new Set(ROWS.map(r => r.month))].sort();
+  ROWS = rows; MONTHS = [...new Set(ROWS.map(r => r.month))].sort(); HAS = dataHas(rows);
   state.cat = ""; state.selected = null;
   state.months = Math.min(state.months, MONTHS.length);
-  fillCats(); render();
+  fillCats(); renderMethod(); render();
 }
-const NUM = ["spend","contract_value","pos","on_time_pos","lines_ordered","lines_filled","units_received","units_defective","invoices","invoices_accurate","lead_time_days_total"];
+const BASE = ["supplier", "category", "month", "spend", "pos"];
+const COUNTS = ["pos","on_time_pos","lines_ordered","lines_filled","units_received","units_defective","invoices","invoices_accurate"];
+const LIMITS = { on_time_pos: "pos", lines_filled: "lines_ordered", units_defective: "units_received", invoices_accurate: "invoices" };
+const ALIASES = { contract_value: "agreed_value", agreed_price_value: "agreed_value" };  // older files used contract_value
+const MON = { jan: 1, feb: 2, mar: 3, apr: 4, may: 5, jun: 6, jul: 7, aug: 8, sep: 9, oct: 10, nov: 11, dec: 12 };
 function splitRows(text) {
-  text = text.replace(/^\uFEFF/, "");
+  text = text.replace(/^﻿/, "");
   const first = text.split(/\r?\n/)[0];
   const delim = ["\t", ";", ","].sort((a, b) => first.split(b).length - first.split(a).length)[0];
   const rows = []; let row = [], cell = "", q = false;
@@ -483,16 +587,13 @@ function splitRows(text) {
   if (cell !== "" || row.length) { row.push(cell); rows.push(row); }
   return rows.filter(r => r.some(x => x.trim() !== ""));
 }
-const COUNTS = ["pos","on_time_pos","lines_ordered","lines_filled","units_received","units_defective","invoices","invoices_accurate"];
-const LIMITS = { on_time_pos: "pos", lines_filled: "lines_ordered", units_defective: "units_received", invoices_accurate: "invoices" };
-const MON = { jan: 1, feb: 2, mar: 3, apr: 4, may: 5, jun: 6, jul: 7, aug: 8, sep: 9, oct: 10, nov: 11, dec: 12 };
 function parseMonth(v) {
   v = String(v).trim();
   let m, y, mo;
   if ((m = v.match(/^(\d{4})[-\/.](\d{1,2})(?:[-\/.]\d{1,2})?(?:[ T].*)?$/))) [y, mo] = [+m[1], +m[2]];          // 2026-06, 2026-06-01, 2026/6
   else if ((m = v.match(/^(\d{1,2})\/\d{1,2}\/(\d{2}|\d{4})$/))) [y, mo] = [+m[2], +m[1]];                        // 6/1/2026, 6/1/26 (US)
   else if ((m = v.match(/^(\d{1,2})[-\/](\d{4})$/))) [y, mo] = [+m[2], +m[1]];                                     // 06/2026
-  else if ((m = v.match(/^([a-z]{3})[a-z]*\.?[\s\-']+(\d{2}|\d{4})$/i)) && MON[m[1].toLowerCase()]) [y, mo] = [+m[2], MON[m[1].toLowerCase()]]; // Jun 2026, Jun-26, June 2026
+  else if ((m = v.match(/^([a-z]{3})[a-z]*\.?[\s\-']+(\d{2}|\d{4})$/i)) && MON[m[1].toLowerCase()]) [y, mo] = [+m[2], MON[m[1].toLowerCase()]]; // Jun 2026, Jun-26
   else if (/^\d{5}(\.\d+)?$/.test(v) && +v > 20000 && +v < 80000) {                                                // Excel date serial
     const d = new Date(Date.UTC(1899, 11, 30) + Math.floor(+v) * 864e5); [y, mo] = [d.getUTCFullYear(), d.getUTCMonth() + 1];
   } else return null;
@@ -500,32 +601,54 @@ function parseMonth(v) {
   if (mo < 1 || mo > 12 || y < 1990 || y > 2100) return null;
   return `${y}-${String(mo).padStart(2, "0")}`;
 }
-function validate(table) {
+function toNum(raw) {
+  raw = String(raw ?? "").trim();
+  if (raw === "") return { blank: true, v: null };
+  const neg = /^\(.*\)$/.test(raw), v = parseFloat(raw.replace(/[$,\s()]/g, "")) * (neg ? -1 : 1);
+  return Number.isFinite(v) && !/[a-z]/i.test(raw.replace(/e[+-]?\d+$/i, "")) ? { v } : { bad: true, v: NaN };
+}
+function validate(table, w = W) {
   const errs = [], add = e => errs.push(e);
   if (!table.length) return { errs: ["The file is empty."] };
-  const head = table[0].map(h => String(h).replace(/^﻿/, "").trim().toLowerCase().replace(/[\s\-]+/g, "_"));
-  const need = ["supplier", "category", "month", ...NUM].filter(c => !head.includes(c));
-  if (need.length) return { errs: [`Missing column${need.length > 1 ? "s" : ""}: ${need.join(", ")}. Row 1 must hold the template's column names (download the template above).`] };
+  const head = table[0].map(h => String(h).replace(/^﻿/, "").trim().toLowerCase().replace(/[\s\-]+/g, "_")).map(h => ALIASES[h] || h);
+  const on = KPIS.filter(k => w[k.key] > 0);
+  const missBase = BASE.filter(c => !head.includes(c));
+  const missKpi = on.filter(k => k.key !== "price" && k.cols.some(c => !head.includes(c)));
+  if (missBase.length || missKpi.length) {
+    const e = [];
+    if (missBase.length) e.push(`Missing column${missBase.length > 1 ? "s" : ""}: ${missBase.join(", ")}. Row 1 must hold the template's column names (download the template above).`);
+    missKpi.forEach(k => e.push(`${k.label} is turned on but the file has no ${k.cols.filter(c => !head.includes(c)).join(" or ")} column. Add it, or turn ${k.label} off under "How the score works" and load the file again.`));
+    return { errs: e };
+  }
   if (table.length < 2) return { errs: ["The header row is there but there are no data rows."] };
+  const required = new Set(["spend", "pos", ...on.filter(k => k.key !== "price").flatMap(k => k.cols)]);
+  const optional = [...new Set(["agreed_value", "lead_time_days_total", ...KPIS.flatMap(k => k.cols)])].filter(c => !required.has(c) && head.includes(c));
   const rows = [], seen = new Map();
   table.slice(1).forEach((cells, i) => {
-    const n = i + 2, r = {};
+    const n = i + 2, r = {}, bad = [];
     head.forEach((h, j) => { if (h && !(h in r)) r[h] = String(cells[j] ?? "").trim(); });
-    const bad = [];
     if (!r.supplier) bad.push("supplier is blank");
     if (!r.category) bad.push("category is blank");
     const mo = parseMonth(r.month);
     if (!mo) bad.push(r.month ? `month "${r.month}" isn't a month (use YYYY-MM, e.g. 2026-06)` : "month is blank");
     else r.month = mo;
-    NUM.forEach(k => {
-      const raw = r[k], neg = /^\(.*\)$/.test(raw);
-      const v = raw === "" ? NaN : parseFloat(raw.replace(/[$,\s()]/g, "")) * (neg ? -1 : 1);
-      if (!isFinite(v) || /[a-z]/i.test(raw.replace(/e[+-]?\d+$/i, ""))) { bad.push(raw === "" ? `${k} is blank` : `${k} "${raw}" isn't a number`); r[k] = NaN; return; }
-      if (v < 0) bad.push(`${k} is negative`);
-      if (COUNTS.includes(k) && Math.abs(v - Math.round(v)) > 1e-9) bad.push(`${k} should be a whole number`);
-      r[k] = v;
+    required.forEach(k => {
+      const p = toNum(r[k]);
+      if (p.blank) bad.push(`${k} is blank`); else if (p.bad) bad.push(`${k} "${r[k]}" isn't a number`);
+      else { if (p.v < 0) bad.push(`${k} is negative`); if (COUNTS.includes(k) && Math.abs(p.v - Math.round(p.v)) > 1e-9) bad.push(`${k} should be a whole number`); }
+      r[k] = p.v;
     });
-    Object.entries(LIMITS).forEach(([k, lim]) => { if (r[k] > r[lim]) bad.push(`${k} (${r[k]}) is more than ${lim} (${r[lim]})`); });
+    optional.forEach(k => {  // optional or unused columns: blank is fine; checked only where it matters
+      const p = toNum(r[k]);
+      if (k === "agreed_value" && w.price > 0) {
+        if (p.bad) bad.push(`agreed_value "${r[k]}" isn't a number (leave it blank if there's no agreed price)`);
+        else if (p.v !== null && p.v < 0) bad.push("agreed_value is negative");
+      } else if (k === "lead_time_days_total" && (p.bad || (p.v !== null && p.v < 0))) bad.push(`lead_time_days_total "${r[k]}" should be a number of days, 0 or more (or blank)`);
+      r[k] = p.bad ? NaN : p.v;
+    });
+    if (!("agreed_value" in r)) r.agreed_value = null;
+    if (!("lead_time_days_total" in r)) r.lead_time_days_total = null;
+    Object.entries(LIMITS).forEach(([k, lim]) => { if (required.has(k) && r[k] > r[lim]) bad.push(`${k} (${r[k]}) is more than ${lim} (${r[lim]})`); });
     if (mo && r.supplier) {
       const key = r.supplier.toLowerCase() + "|" + mo;
       if (seen.has(key)) bad.push(`duplicate of row ${seen.get(key)} (same supplier and month)`); else seen.set(key, n);
@@ -534,12 +657,20 @@ function validate(table) {
     rows.push(r);
   });
   if (!errs.length) {
+    const bases = ["pos", ...on.filter(k => k.key !== "price").map(k => k.cols[0])];
     const tot = new Map();
-    rows.forEach(r => { const t = tot.get(r.supplier) || { pos: 0, lines_ordered: 0, units_received: 0, invoices: 0, contract_value: 0 }; Object.keys(t).forEach(k => t[k] += r[k]); tot.set(r.supplier, t); });
-    tot.forEach((t, sup) => { const z = Object.keys(t).filter(k => !(t[k] > 0)); if (z.length) add(`${sup}: ${z.join(", ")} add up to 0 across all months, so its KPIs can't be calculated.`); });
+    rows.forEach(r => { const t = tot.get(r.supplier) || Object.fromEntries(bases.map(b => [b, 0])); bases.forEach(b => t[b] += r[b]); tot.set(r.supplier, t); });
+    tot.forEach((t, sup) => { const z = bases.filter(b => !(t[b] > 0)); if (z.length) add(`${sup}: ${z.join(", ")} add${z.length > 1 ? "" : "s"} up to 0 across all months, so its KPIs can't be calculated.`); });
+    if (w.price > 0) {
+      const ag = new Map();
+      rows.forEach(r => { if (r.agreed_value !== null && Number.isFinite(r.agreed_value)) ag.set(r.supplier, (ag.get(r.supplier) || 0) + r.agreed_value); });
+      ag.forEach((t, sup) => { if (!(t > 0)) add(`${sup}: agreed_value adds up to 0. Leave it blank if there's no agreed price.`); });
+    }
   }
+  const sups = new Set(rows.map(r => r.supplier));
+  const noAgreed = w.price > 0 ? sups.size - new Set(rows.filter(r => r.agreed_value !== null && Number.isFinite(r.agreed_value)).map(r => r.supplier)).size : 0;
   const sample = rows.filter(r => /^sample\b/i.test(r.supplier)).length;
-  return { errs, rows, sample };
+  return { errs, rows, sample, noAgreed };
 }
 function showMsg(kind, text, list) {
   const msg = document.getElementById("csv-msg");
@@ -549,14 +680,24 @@ function showMsg(kind, text, list) {
 }
 function setBadge(own, label) {
   document.querySelector(".badge-sample").textContent = own ? "Your data" : "Sample data";
-  document.querySelector(".topbar .sub").textContent = own ? `Uploaded${label ? " from " + label : ""} · ${new Set(ROWS.map(r => r.supplier)).size} suppliers · weighted scoring on delivery, fill rate, quality, invoicing and price`
+  document.querySelector(".topbar .sub").textContent = own ? `Uploaded${label ? " from " + label : ""} · ${new Set(ROWS.map(r => r.supplier)).size} suppliers · weighted on ${activeKPIs().map(k => k.label.toLowerCase()).join(", ")}`
     : "Office-supply distributor · 12 suppliers · weighted scoring on delivery, fill rate, quality, invoicing and price";
 }
-function loadTable(table, label) {
-  const { errs, rows, sample } = validate(table);
-  if (errs.length) { showMsg("err", `Not loaded: ${errs.length} problem${errs.length > 1 ? "s" : ""} found${label ? " in " + label : ""}. Fix ${errs.length > 1 ? "these" : "this"} and try again (row numbers match your spreadsheet).`, errs); return false; }
+function loadTable(table, label, fileWeights) {
+  let note = "", cand = W;
+  if (fileWeights) {
+    if (!validWeights(fileWeights)) note = "\nThe Settings tab in this file has weights that don't add up to 100%, so the page kept its current weights.";
+    else if (KEYS.some(k => Math.abs(fileWeights[k] - W[k]) > 1e-9)) {
+      cand = fileWeights;
+      note = "\nApplied the weights saved in this template: " + KPIS.filter(k => cand[k.key] > 0).map(k => `${k.short} ${fmtW(cand[k.key])}`).join(" · ") + ".";
+    }
+  }
+  const { errs, rows, sample, noAgreed } = validate(table, cand);
+  if (errs.length) { showMsg("err", `Not loaded: ${errs.length} problem${errs.length > 1 ? "s" : ""} found${label ? " in " + label : ""}. Fix ${errs.length > 1 ? "these" : "this"} and try again (row numbers match your spreadsheet).` + note, errs); return false; }
+  if (cand !== W) { W = { ...cand }; DRAFT = { ...cand }; store.set("sc-weights", JSON.stringify(W)); }
   useRows(rows); setBadge(true, label);
-  showMsg("ok", `Loaded ${rows.length} rows, ${new Set(rows.map(r => r.supplier)).size} suppliers, ${MONTHS.length} months${label ? " from " + label : ""}.` +
+  showMsg("ok", `Loaded ${rows.length} rows, ${new Set(rows.map(r => r.supplier)).size} suppliers, ${MONTHS.length} months${label ? " from " + label : ""}.` + note +
+    (noAgreed ? `\n${noAgreed} supplier${noAgreed > 1 ? "s have" : " has"} no agreed_value, so price is skipped for ${noAgreed > 1 ? "them" : "it"} and the other KPIs are reweighted to 100%.` : "") +
     (sample ? `\nNote: ${sample} row${sample > 1 ? "s are" : " is"} still the template's SAMPLE data. Delete ${sample > 1 ? "them" : "it"} before scoring your own suppliers.` : ""));
   window.scrollTo({ top: 0, behavior: "smooth" });
   return true;
@@ -566,22 +707,271 @@ function getXLSX() {
   return xlsxLib ||= new Promise((res, rej) => {
     const sc = document.createElement("script");
     sc.src = "https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js";
-    sc.onload = () => res(window.XLSX); sc.onerror = () => rej(new Error("Couldn't load the Excel reader. Save the file as CSV and try again."));
+    sc.onload = () => res(window.XLSX); sc.onerror = () => { xlsxLib = null; rej(new Error("Couldn't load the Excel reader. Save the file as CSV and try again.")); };
     document.head.appendChild(sc);
   });
+}
+function readSettings(X, wb) {  // weights saved by the template's Settings tab
+  const name = wb.SheetNames.find(n => n.trim().toLowerCase() === "settings");
+  if (!name) return null;
+  const t = X.utils.sheet_to_json(wb.Sheets[name], { header: 1, raw: true, defval: "" });
+  const w = {};
+  t.forEach(r => { const k = String(r[0]).trim(); if (KEYS.includes(k)) w[k] = +r[2]; });
+  return KEYS.every(k => k in w) ? w : null;
 }
 async function readFile(f) {
   showMsg("", "Reading " + f.name + "…");
   try {
-    if (/\.xls$/i.test(f.name) || /\.xlsx$/i.test(f.name)) {
+    if (/\.xlsx?$/i.test(f.name)) {
       const X = await getXLSX();
       const wb = X.read(await f.arrayBuffer(), { type: "array" });
       const name = wb.SheetNames.find(n => n.trim().toLowerCase() === "data") || wb.SheetNames[0];
       const table = X.utils.sheet_to_json(wb.Sheets[name], { header: 1, raw: false, defval: "", blankrows: false });
-      loadTable(table.map(r => r.map(String)), f.name);
+      loadTable(table.map(r => r.map(String)), f.name, readSettings(X, wb));
     } else loadTable(splitRows(await f.text()), f.name);
   } catch (e) { showMsg("err", "Couldn't read " + f.name + ": " + e.message); }
 }
+
+/* ---------- template download: built in the browser from the chosen weights ---------- */
+// Minimal .xlsx writer (Office Open XML in a stored zip). No library needed.
+const crcTable = (() => { const t = new Uint32Array(256); for (let n = 0; n < 256; n++) { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xEDB88320 ^ (c >>> 1) : c >>> 1; t[n] = c >>> 0; } return t; })();
+const crc32 = b => { let c = 0xFFFFFFFF; for (let i = 0; i < b.length; i++) c = crcTable[(c ^ b[i]) & 0xFF] ^ (c >>> 8); return (c ^ 0xFFFFFFFF) >>> 0; };
+function zipStore(files) {  // files: [[name, string]]
+  const enc = new TextEncoder(), parts = [], central = []; let off = 0;
+  const d = new Date(), time = (d.getHours() << 11) | (d.getMinutes() << 5) | (d.getSeconds() >> 1), date = ((d.getFullYear() - 1980) << 9) | ((d.getMonth() + 1) << 5) | d.getDate();
+  for (const [name, text] of files) {
+    const nm = enc.encode(name), data = enc.encode(text), crc = crc32(data);
+    const h = new DataView(new ArrayBuffer(30));
+    [[0, 0x04034b50, 4], [4, 20, 2], [6, 0x0800, 2], [8, 0, 2], [10, time, 2], [12, date, 2], [14, crc, 4], [18, data.length, 4], [22, data.length, 4], [26, nm.length, 2], [28, 0, 2]]
+      .forEach(([o, v, s]) => s === 4 ? h.setUint32(o, v, true) : h.setUint16(o, v, true));
+    const c = new DataView(new ArrayBuffer(46));
+    [[0, 0x02014b50, 4], [4, 20, 2], [6, 20, 2], [8, 0x0800, 2], [10, 0, 2], [12, time, 2], [14, date, 2], [16, crc, 4], [20, data.length, 4], [24, data.length, 4], [28, nm.length, 2],
+     [30, 0, 2], [32, 0, 2], [34, 0, 2], [36, 0, 2], [38, 0, 4], [42, off, 4]].forEach(([o, v, s]) => s === 4 ? c.setUint32(o, v, true) : c.setUint16(o, v, true));
+    parts.push(new Uint8Array(h.buffer), nm, data); central.push(new Uint8Array(c.buffer), nm);
+    off += 30 + nm.length + data.length;
+  }
+  const cdSize = central.reduce((a, p) => a + p.length, 0), e = new DataView(new ArrayBuffer(22));
+  [[0, 0x06054b50, 4], [4, 0, 2], [6, 0, 2], [8, files.length, 2], [10, files.length, 2], [12, cdSize, 4], [16, off, 4], [20, 0, 2]]
+    .forEach(([o, v, s]) => s === 4 ? e.setUint32(o, v, true) : e.setUint16(o, v, true));
+  return new Blob([...parts, ...central, new Uint8Array(e.buffer)], { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" });
+}
+const xesc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])).replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g, "");
+const colL = n => { let s = ""; n++; while (n) { const m = (n - 1) % 26; s = String.fromCharCode(65 + m) + s; n = Math.floor((n - 1) / 26); } return s; };
+// Style ids (cellXfs order in STYLES below)
+const S = { head: 1, sText: 2, sMoney: 3, sCount: 4, sMonth: 5, money: 6, count: 7, month: 8, title: 9, bold: 10, note: 11, wrap: 12, code: 13, pct0: 14, pct1: 15, para: 16, usd: 17, cell: 18, sNum: 19 };
+const STYLES = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">
+<numFmts count="2"><numFmt numFmtId="164" formatCode="&quot;$&quot;#,##0"/><numFmt numFmtId="165" formatCode="0.0%"/></numFmts>
+<fonts count="6"><font><sz val="11"/><color rgb="FF1A1A1A"/><name val="Calibri"/><family val="2"/></font><font><b/><sz val="11"/><color rgb="FFFFFFFF"/><name val="Calibri"/><family val="2"/></font><font><b/><sz val="14"/><color rgb="FF1A1A1A"/><name val="Calibri"/><family val="2"/></font><font><b/><sz val="11"/><color rgb="FF1A1A1A"/><name val="Calibri"/><family val="2"/></font><font><i/><sz val="11"/><color rgb="FF6B7280"/><name val="Calibri"/><family val="2"/></font><font><b/><sz val="11"/><color rgb="FF1A1A1A"/><name val="Consolas"/><family val="3"/></font></fonts>
+<fills count="4"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill><fill><patternFill patternType="solid"><fgColor rgb="FF1F3A5F"/><bgColor indexed="64"/></patternFill></fill><fill><patternFill patternType="solid"><fgColor rgb="FFFFF4D6"/><bgColor indexed="64"/></patternFill></fill></fills>
+<borders count="2"><border><left/><right/><top/><bottom/><diagonal/></border><border><left/><right/><top/><bottom style="thin"><color rgb="FFD0D5DD"/></bottom><diagonal/></border></borders>
+<cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs>
+<cellXfs count="20">
+<xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0"/>
+<xf numFmtId="0" fontId="1" fillId="2" borderId="0" xfId="0" applyFont="1" applyFill="1" applyAlignment="1"><alignment vertical="center" wrapText="1"/></xf>
+<xf numFmtId="0" fontId="0" fillId="3" borderId="0" xfId="0" applyFill="1"/>
+<xf numFmtId="4" fontId="0" fillId="3" borderId="0" xfId="0" applyNumberFormat="1" applyFill="1"/>
+<xf numFmtId="3" fontId="0" fillId="3" borderId="0" xfId="0" applyNumberFormat="1" applyFill="1"/>
+<xf numFmtId="49" fontId="0" fillId="3" borderId="0" xfId="0" applyNumberFormat="1" applyFill="1"/>
+<xf numFmtId="4" fontId="0" fillId="0" borderId="0" xfId="0" applyNumberFormat="1"/>
+<xf numFmtId="3" fontId="0" fillId="0" borderId="0" xfId="0" applyNumberFormat="1"/>
+<xf numFmtId="49" fontId="0" fillId="0" borderId="0" xfId="0" applyNumberFormat="1"/>
+<xf numFmtId="0" fontId="2" fillId="0" borderId="0" xfId="0" applyFont="1"/>
+<xf numFmtId="0" fontId="3" fillId="0" borderId="0" xfId="0" applyFont="1"/>
+<xf numFmtId="0" fontId="4" fillId="0" borderId="0" xfId="0" applyFont="1"/>
+<xf numFmtId="0" fontId="0" fillId="0" borderId="1" xfId="0" applyBorder="1" applyAlignment="1"><alignment vertical="top" wrapText="1"/></xf>
+<xf numFmtId="0" fontId="5" fillId="0" borderId="1" xfId="0" applyFont="1" applyBorder="1" applyAlignment="1"><alignment vertical="top" wrapText="1"/></xf>
+<xf numFmtId="9" fontId="0" fillId="0" borderId="1" xfId="0" applyNumberFormat="1" applyBorder="1" applyAlignment="1"><alignment vertical="top"/></xf>
+<xf numFmtId="165" fontId="0" fillId="0" borderId="1" xfId="0" applyNumberFormat="1" applyBorder="1" applyAlignment="1"><alignment vertical="top"/></xf>
+<xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0" applyAlignment="1"><alignment vertical="top" wrapText="1"/></xf>
+<xf numFmtId="164" fontId="0" fillId="0" borderId="1" xfId="0" applyNumberFormat="1" applyBorder="1"/>
+<xf numFmtId="0" fontId="0" fillId="0" borderId="1" xfId="0" applyBorder="1"/>
+<xf numFmtId="0" fontId="0" fillId="3" borderId="0" xfId="0" applyFill="1"/>
+</cellXfs>
+<cellStyles count="1"><cellStyle name="Normal" xfId="0" builtinId="0"/></cellStyles>
+<dxfs count="0"/><tableStyles count="0" defaultTableStyle="TableStyleMedium2" defaultPivotStyle="PivotStyleLight16"/>
+</styleSheet>`;
+// sheet: { name, cols:[{w, s?}], rows: [[cell...]] with cell = value | {v, s} | null, heights:{r:ht}, merges:["A1:F1"], freeze:"B2", filter:"A1:N10", validations:[{...}], selected }
+function sheetXml(sh) {
+  const rows = sh.rows.map((row, i) => {
+    const r = i + 1, ht = sh.heights?.[r];
+    const cells = row.map((c, j) => {
+      if (c === null || c === undefined) return "";
+      const o = typeof c === "object" ? c : { v: c }, ref = colL(j) + r, st = o.s ? ` s="${o.s}"` : "";
+      if (o.v === null || o.v === undefined || o.v === "") return o.s ? `<c r="${ref}"${st}/>` : "";
+      return typeof o.v === "number" ? `<c r="${ref}"${st}><v>${o.v}</v></c>` : `<c r="${ref}"${st} t="inlineStr"><is><t xml:space="preserve">${xesc(o.v)}</t></is></c>`;
+    }).join("");
+    return `<row r="${r}"${ht ? ` ht="${ht}" customHeight="1"` : ""}>${cells}</row>`;
+  }).join("");
+  const [fc, fr] = sh.freeze ? [sh.freeze.match(/[A-Z]+/)[0].charCodeAt(0) - 65, +sh.freeze.match(/\d+/)[0] - 1] : [0, 0];
+  const pane = sh.freeze ? `<pane${fc ? ` xSplit="${fc}"` : ""} ySplit="${fr}" topLeftCell="${sh.freeze}" activePane="${fc ? "bottomRight" : "bottomLeft"}" state="frozen"/><selection pane="${fc ? "bottomRight" : "bottomLeft"}" activeCell="${sh.freeze}" sqref="${sh.freeze}"/>` : "";
+  const dv = (sh.validations || []).map(v => `<dataValidation type="${v.type}"${v.op ? ` operator="${v.op}"` : ""}${v.style ? ` errorStyle="${v.style}"` : ""} allowBlank="1"${v.prompt ? ` showInputMessage="1" promptTitle="${xesc(v.promptTitle)}" prompt="${xesc(v.prompt)}"` : ""} showErrorMessage="1" errorTitle="${xesc(v.errorTitle)}" error="${xesc(v.error)}" sqref="${v.sqref}"><formula1>${xesc(v.f)}</formula1></dataValidation>`).join("");
+  return `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">` +
+    `<sheetViews><sheetView${sh.selected ? ' tabSelected="1"' : ""} workbookViewId="0">${pane}</sheetView></sheetViews><sheetFormatPr defaultRowHeight="15"/>` +
+    `<cols>${sh.cols.map((c, j) => `<col min="${j + 1}" max="${j + 1}" width="${c.w}"${c.s ? ` style="${c.s}"` : ""} customWidth="1"/>`).join("")}</cols>` +
+    `<sheetData>${rows}</sheetData>` +
+    (sh.filter ? `<autoFilter ref="${sh.filter}"/>` : "") +
+    (sh.merges?.length ? `<mergeCells count="${sh.merges.length}">${sh.merges.map(m => `<mergeCell ref="${m}"/>`).join("")}</mergeCells>` : "") +
+    (dv ? `<dataValidations count="${sh.validations.length}">${dv}</dataValidations>` : "") +
+    `<pageMargins left="0.7" right="0.7" top="0.75" bottom="0.75" header="0.3" footer="0.3"/></worksheet>`;
+}
+function workbookBlob(sheets) {
+  const ns = "http://schemas.openxmlformats.org/", files = [];
+  files.push(["[Content_Types].xml", `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Types xmlns="${ns}package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/>${sheets.map((_, i) => `<Override PartName="/xl/worksheets/sheet${i + 1}.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>`).join("")}<Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/><Override PartName="/docProps/core.xml" ContentType="application/vnd.openxmlformats-package.core-properties+xml"/></Types>`]);
+  files.push(["_rels/.rels", `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Relationships xmlns="${ns}package/2006/relationships"><Relationship Id="rId1" Type="${ns}officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/><Relationship Id="rId2" Type="${ns}package/2006/relationships/metadata/core-properties" Target="docProps/core.xml"/></Relationships>`]);
+  files.push(["docProps/core.xml", `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<cp:coreProperties xmlns:cp="${ns}package/2006/metadata/core-properties" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><dc:title>Supplier Scorecard upload template</dc:title><dc:creator>Dawson Wilhelmi - dawsonwilhelmi.com</dc:creator><dcterms:created xsi:type="dcterms:W3CDTF">${new Date().toISOString().slice(0, 19)}Z</dcterms:created></cp:coreProperties>`]);
+  const filt = sheets.map((s, i) => s.filter ? `<definedName name="_xlnm._FilterDatabase" localSheetId="${i}" hidden="1">'${s.name}'!$${s.filter.replace(":", ":$").replace(/([A-Z]+)(\d+)/g, "$1$$$2")}</definedName>` : "").join("");
+  files.push(["xl/workbook.xml", `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<workbook xmlns="${ns}spreadsheetml/2006/main" xmlns:r="${ns}officeDocument/2006/relationships"><bookViews><workbookView activeTab="0"/></bookViews><sheets>${sheets.map((s, i) => `<sheet name="${xesc(s.name)}" sheetId="${i + 1}" r:id="rId${i + 1}"/>`).join("")}</sheets>${filt ? `<definedNames>${filt}</definedNames>` : ""}</workbook>`]);
+  files.push(["xl/_rels/workbook.xml.rels", `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Relationships xmlns="${ns}package/2006/relationships">${sheets.map((_, i) => `<Relationship Id="rId${i + 1}" Type="${ns}officeDocument/2006/relationships/worksheet" Target="worksheets/sheet${i + 1}.xml"/>`).join("")}<Relationship Id="rId${sheets.length + 1}" Type="${ns}officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>`]);
+  files.push(["xl/styles.xml", STYLES]);
+  sheets.forEach((s, i) => files.push([`xl/worksheets/sheet${i + 1}.xml`, sheetXml(s)]));
+  return zipStore(files);
+}
+
+// Template content
+const FIELDS = [  // column, type, unit, what to enter, upload rule, example
+  ["supplier", "text", "-", "Supplier name. One row per supplier per month; same spelling every month.", "Required.", "Acme Fasteners"],
+  ["category", "text", "-", "Spend category the supplier belongs to. Drives the category filter.", "Required.", "Fasteners"],
+  ["month", "text", "YYYY-MM", "Calendar month the deliveries were due in.", "Required. YYYY-MM (2026-06). Also accepted: 2026-06-01, 6/1/2026, Jun 2026, Excel dates.", "2026-06"],
+  ["spend", "number", "USD", "Amount actually invoiced/paid for the month's POs.", "Required, 0 or more.", "12,480.50"],
+  ["pos", "whole number", "count", "Purchase orders (deliveries) due in the month.", "Required, 0 or more; total per supplier above 0.", "24"],
+  ["agreed_value", "number", "USD", "What the same quantities should have cost at the agreed price: contract price, quote, or the price on the PO (qty x agreed price).", "Optional. Leave blank if there's no agreed price; price is then skipped for that row, and a supplier with none is scored on the other KPIs.", "12,415.20"],
+  ["on_time_pos", "whole number", "count", "POs received by the promised (supplier-confirmed) date. Pick one late-day tolerance and keep it constant.", "Required, 0 to pos.", "22"],
+  ["lines_ordered", "whole number", "count", "PO lines due in the month.", "Required, 0 or more; total per supplier above 0.", "180"],
+  ["lines_filled", "whole number", "count", "PO lines received in full quantity (no short-ship or backorder).", "Required, 0 to lines_ordered.", "176"],
+  ["units_received", "whole number", "count", "Units received (or inspected) in the month.", "Required, 0 or more; total per supplier above 0.", "5,400"],
+  ["units_defective", "whole number", "count", "Units rejected at receiving/inspection or returned for a quality reason. PPM = units_defective / units_received x 1,000,000.", "Required, 0 to units_received.", "11"],
+  ["invoices", "whole number", "count", "Supplier invoices received for the month's POs.", "Required, 0 or more; total per supplier above 0.", "24"],
+  ["invoices_accurate", "whole number", "count", "Invoices that passed three-way match (PO, goods receipt, invoice) first time, with no correction or credit note.", "Required, 0 to invoices.", "23"],
+  ["lead_time_days_total", "number", "days", "Sum over the month's POs of (receipt date - PO date), in days. The page shows the average (total / pos). Shown, not scored.", "Optional, 0 or more.", "168"],
+];
+const TEMPLATE_SAMPLE = [  // fictional, clearly labeled
+  ["SAMPLE - Northwind Fasteners", "Fasteners", "2026-04", 12480.50, 24, 12415.20, 24, 180, 179, 5400, 3, 24, 24, 120],
+  ["SAMPLE - Northwind Fasteners", "Fasteners", "2026-05", 13105.75, 26, 13040.10, 25, 196, 195, 5880, 4, 26, 26, 128],
+  ["SAMPLE - Northwind Fasteners", "Fasteners", "2026-06", 11890.00, 22, 11850.40, 22, 165, 164, 4950, 2, 22, 22, 108],
+  ["SAMPLE - Bayview Packaging", "Packaging", "2026-04", 8650.00, 18, 8480.40, 16, 90, 86, 2700, 30, 18, 17, 126],
+  ["SAMPLE - Bayview Packaging", "Packaging", "2026-05", 9120.30, 19, 8920.00, 17, 95, 91, 2850, 31, 19, 18, 135],
+  ["SAMPLE - Bayview Packaging", "Packaging", "2026-06", 8840.60, 17, 8660.25, 16, 85, 82, 2550, 25, 17, 16, 117],
+  ["SAMPLE - Ridgeway Industrial", "MRO", "2026-04", 21300.00, 30, 20280.00, 25, 240, 214, 3600, 95, 30, 27, 300],
+  ["SAMPLE - Ridgeway Industrial", "MRO", "2026-05", 22650.40, 32, 21540.00, 26, 256, 230, 3840, 104, 32, 29, 330],
+  ["SAMPLE - Ridgeway Industrial", "MRO", "2026-06", 20980.10, 29, 19975.50, 25, 232, 210, 3480, 88, 29, 27, 285],
+];
+const SOURCES = [
+  ["APICS (2017)", "APICS. (2017). Supply Chain Operations Reference Model (SCOR), Version 12.0. Chicago, IL: APICS (now ASCM). Perfect Order Fulfillment (RL.1.1) and its components: % of orders delivered in full, delivery performance to customer commit date, documentation accuracy, perfect condition.", "Standards body (ASCM)"],
+  ["Datar & Rajan (2021)", "Datar, S. M., & Rajan, M. V. (2021). Horngren's Cost Accounting: A Managerial Emphasis (17th ed.). Pearson. Price variances.", "Textbook"],
+  ["Dickson (1966)", "Dickson, G. W. (1966). An analysis of vendor selection systems and decisions. Journal of Purchasing, 2(1), 5-17.", "Peer-reviewed"],
+  ["Gunasekaran et al. (2004)", "Gunasekaran, A., Patel, C., & McGaughey, R. E. (2004). A framework for supply chain performance measurement. International Journal of Production Economics, 87(3), 333-347. https://doi.org/10.1016/j.ijpe.2003.08.003", "Peer-reviewed"],
+  ["Ho et al. (2010)", "Ho, W., Xu, X., & Dey, P. K. (2010). Multi-criteria decision making approaches for supplier evaluation and selection: A literature review. European Journal of Operational Research, 202(1), 16-24. https://doi.org/10.1016/j.ejor.2009.05.009", "Peer-reviewed"],
+  ["Mena et al. (2021)", "Mena, C., van Hoek, R., & Christopher, M. (2021). Leading Procurement Strategy: Driving Value Through the Supply Chain (3rd ed.). Kogan Page. Table 3.2 (p. 49), balanced scorecard for procurement; pp. 70-71, rules for supplier dashboards.", "Textbook"],
+  ["Monczka et al. (2021)", "Monczka, R. M., Handfield, R. B., Giunipero, L. C., & Patterson, J. L. (2021). Purchasing and Supply Chain Management (7th ed.). Cengage. Supplier performance measurement and the weighted-point evaluation method.", "Textbook"],
+  ["Weber et al. (1991)", "Weber, C. A., Current, J. R., & Benton, W. C. (1991). Vendor selection criteria and methods. European Journal of Operational Research, 50(1), 2-18. https://doi.org/10.1016/0377-2217(91)90033-R", "Peer-reviewed"],
+];
+// Columns the template includes for given weights: base + agreed_value (if price on) + the enabled KPIs' columns + lead time
+function templateColumns(w = W) {
+  const on = new Set(KPIS.filter(k => w[k.key] > 0).flatMap(k => k.cols));
+  return FIELDS.map(f => f[0]).filter(c => BASE.includes(c) || c === "lead_time_days_total" || on.has(c));
+}
+function templateSampleRows() {
+  const names = FIELDS.map(f => f[0]);
+  return TEMPLATE_SAMPLE.map(r => Object.fromEntries(names.map((n, i) => [n, r[i]])));
+}
+function buildTemplate(w = W) {
+  const cols = templateColumns(w), sample = templateSampleRows(), N = 1001, isDef = KEYS.every(k => w[k] === DEFAULT_W[k]);
+  const money = new Set(["spend", "agreed_value"]), text = new Set(["supplier", "category", "month"]);
+  const L = Object.fromEntries(cols.map((c, j) => [c, colL(j)]));
+  const fieldOf = c => FIELDS.find(f => f[0] === c);
+  // Data
+  const data = {
+    name: "Data", selected: true, freeze: "B2", filter: `A1:${colL(cols.length - 1)}${sample.length + 1}`, heights: { 1: 30 },
+    cols: cols.map(c => ({ w: Math.max(10, c.length + 3, c === "supplier" ? 32 : 0), s: c === "month" ? S.month : money.has(c) ? S.money : COUNTS.includes(c) ? S.count : 0 })),
+    rows: [cols.map(c => ({ v: c, s: S.head })), ...sample.map(r => cols.map(c => ({ v: r[c], s: c === "month" ? S.sMonth : text.has(c) ? S.sText : money.has(c) ? S.sMoney : COUNTS.includes(c) ? S.sCount : S.sNum })))],
+    validations: [],
+  };
+  const rng = c => `${L[c]}2:${L[c]}${N}`;
+  cols.filter(c => money.has(c) || c === "lead_time_days_total").forEach(c => data.validations.push({ type: "decimal", op: "greaterThanOrEqual", f: "0", sqref: rng(c), errorTitle: "Not a valid number", error: `${c} must be a number of 0 or more (no text).` }));
+  ["pos", "lines_ordered", "units_received", "invoices"].filter(c => L[c]).forEach(c => data.validations.push({ type: "whole", op: "greaterThanOrEqual", f: "0", sqref: rng(c), errorTitle: "Whole number needed", error: `${c} must be a whole number of 0 or more.` }));
+  Object.entries(LIMITS).filter(([c, lim]) => L[c] && L[lim]).forEach(([c, lim]) => data.validations.push({ type: "custom", f: `AND(INT(${L[c]}2)=${L[c]}2,${L[c]}2>=0,${L[c]}2<=${L[lim]}2)`, sqref: rng(c), errorTitle: "Check this count", error: `${c} must be a whole number between 0 and ${lim} on the same row.` }));
+  data.validations.push({ type: "custom", f: `AND(LEN(${L.month}2)=7,MID(${L.month}2,5,1)="-")`, sqref: rng("month"), style: "warning", prompt: "Type as YYYY-MM, e.g. 2026-06", promptTitle: "Month", errorTitle: "Month format", error: "Use YYYY-MM, e.g. 2026-06." });
+
+  // Instructions
+  const steps = [
+    "1. Go to the Data tab. The yellow rows starting with 'SAMPLE -' are fictional examples. Delete them before adding your own data.",
+    "2. Add one row per supplier per month. Keep the header row (row 1) exactly as it is; extra columns to the right are ignored.",
+    "3. Enter counts for the month, not percentages. The page calculates the KPIs and weights them by volume.",
+    "4. Save as .xlsx (keeps your weights from the Settings tab), or File > Save As > CSV (Data tab only). Open dawsonwilhelmi.com/supplier-scorecard/, open 'Score your own suppliers', and drop the file in.",
+    "5. If something is wrong, the page lists each problem with its row number. Nothing is uploaded: the file is read in your browser.",
+    "Tip: load this template unchanged first. The page should show the three SAMPLE suppliers with the scores in the 'Worked example' on the KPI definitions tab.",
+  ];
+  const ins = { name: "Instructions", cols: [{ w: 24 }, { w: 13 }, { w: 10 }, { w: 62 }, { w: 46 }, { w: 16 }], rows: [[{ v: "Supplier Scorecard upload template", s: S.title }], []], heights: {}, merges: [] };
+  steps.forEach(s => { ins.rows.push([{ v: s, s: S.para }]); const r = ins.rows.length; ins.merges.push(`A${r}:F${r}`); ins.heights[r] = 30; });
+  ins.rows.push([], [{ v: "Columns in this template", s: S.bold }], ["Column", "Type", "Unit", "What to enter", "Rule checked on upload", "Example"].map(v => ({ v, s: S.head })));
+  cols.forEach(c => { const f = fieldOf(c); ins.rows.push([{ v: f[0], s: S.code }, { v: f[1], s: S.wrap }, { v: f[2], s: S.wrap }, { v: f[3], s: S.wrap }, { v: f[4], s: S.wrap }, { v: f[5], s: S.wrap }]); ins.heights[ins.rows.length] = 32; });
+  const off = KPIS.filter(k => !(w[k.key] > 0));
+  if (off.length) ins.rows.push([{ v: `Not in this template because you turned the KPI off: ${off.map(k => `${k.label} (${k.cols.join(", ")})`).join("; ")}.`, s: S.note }]);
+  ins.rows.push([], [{ v: "Data quality notes", s: S.bold }]);
+  ["- Count each PO, line and invoice once, in the month its delivery was due, so on-time and fill rate use the same base.",
+   "- 'On time' means received by the date the supplier confirmed. Decide the late-day tolerance once (e.g. 0 days) and keep it.",
+   "- Use the same supplier name every month (one vendor ID per name). Duplicate supplier + month rows are rejected.",
+   "- Money in one currency (USD assumed). Leave out tax and freight unless the agreed price includes them."].forEach(s => { ins.rows.push([s]); const r = ins.rows.length; ins.merges.push(`A${r}:F${r}`); });
+
+  // KPI definitions
+  const kp = { name: "KPI definitions", cols: [{ w: 30 }, { w: 34 }, { w: 9 }, { w: 12 }, { w: 14 }, { w: 18 }, { w: 40 }, { w: 70 }, { w: 16 }, { w: 16 }, { w: 16 }], rows: [], heights: {}, merges: [] };
+  const para = (s, h = 32) => { kp.rows.push([{ v: s, s: S.para }]); const r = kp.rows.length; kp.merges.push(`A${r}:H${r}`); kp.heights[r] = h; };
+  kp.rows.push([{ v: "How the score is calculated", s: S.title }]);
+  para("Each KPI earns 0-100 points on a straight line from its floor (0 pts) to its target (100 pts), capped at both ends. The composite score is the weighted sum (weighted-point method; Monczka et al., 2021). KPIs are calculated from summed counts over the period, so larger months carry more weight.", 45);
+  kp.rows.push([{ v: isDef ? "Weights: research-based defaults." : "Weights: chosen on the page when this template was downloaded (also saved on the Settings tab, which the page reads back on upload).", s: S.bold }]);
+  kp.rows.push(["KPI", "Formula (template columns)", "Weight", "Floor (0 pts)", "Target (100 pts)", "Direction", "Why it matters", "Definition source"].map(v => ({ v, s: S.head })));
+  KPIS.forEach(k => {
+    kp.rows.push([{ v: k.label + (w[k.key] > 0 ? "" : " (off)"), s: S.wrap }, { v: k.formula, s: S.wrap }, { v: w[k.key] / 100, s: S.pct0 }, { v: k.floor / 100, s: S.pct1 }, { v: k.target / 100, s: S.pct1 },
+      { v: k.dir, s: S.wrap }, { v: k.why, s: S.wrap }, { v: k.src, s: S.wrap }]);
+    kp.heights[kp.rows.length] = 62;
+  });
+  kp.rows.push([{ v: "Total", s: S.bold }, null, { v: KEYS.reduce((a, k) => a + w[k], 0) / 100, s: S.pct0 }]);
+  kp.rows.push([{ v: "Average lead time = lead_time_days_total / pos (days). Shown for context, not scored.", s: S.note }]);
+  kp.rows.push([{ v: "Tiers: Preferred >= 85 | Approved >= 70 | Watch >= 55 | Probation < 55", s: S.bold }], []);
+  kp.rows.push([{ v: "Why these KPIs and default weights", s: S.bold }]);
+  para("- Quality, delivery and price are the criteria most used to evaluate suppliers in the research literature (Dickson, 1966; Weber et al., 1991; Ho et al., 2010).");
+  para("- On-time, in-full, damage-free and correctly documented are the four parts of the SCOR 'perfect order' (APICS, 2017); this scorecard measures each one separately so a buyer can see which part fails.");
+  para("- Defaults: delivery (on-time 30% + fill 20%) and quality (20%) carry 70% because they are what stops operations; price vs. agreed (15%) because the price itself is set at award; invoice accuracy (15%) reflects procure-to-pay workload.");
+  para("- The default weights, floors, targets and tier cut-offs are this tool's choices for a distribution business, not published benchmarks. Set weights to what matters in your own supplier agreements, and keep the KPI set short and stable (Mena et al., 2021, pp. 70-71).");
+  kp.rows.push([]);
+  kp.rows.push([{ v: "Worked example: the SAMPLE rows on the Data tab (Apr-Jun 2026) with the weights above. Upload the template unchanged and the page should show these numbers.", s: S.bold }]);
+  const act = KPIS.filter(k => w[k.key] > 0);
+  kp.rows.push(["Supplier", "Score", "Tier", ...act.map(k => k.label + " %"), "Spend"].map(v => ({ v, s: S.head })));
+  const by = {}; sample.forEach(r => (by[r.supplier] ||= []).push(r));
+  Object.entries(by).map(([n, rs]) => [n, metrics(rs, w, new Set(KEYS))]).sort((a, b) => b[1].score - a[1].score).forEach(([n, m]) =>
+    kp.rows.push([{ v: n, s: S.cell }, { v: +m.score.toFixed(1), s: S.cell }, { v: m.tier, s: S.cell }, ...act.map(k => ({ v: +m[k.key].toFixed(k.dp), s: S.cell })), { v: +m.spend.toFixed(2), s: S.usd }]));
+
+  // Sources
+  const so = { name: "Sources", cols: [{ w: 24 }, { w: 120 }, { w: 20 }], rows: [[{ v: "Sources", s: S.title }], [], ["Short cite", "Full reference", "Type"].map(v => ({ v, s: S.head }))], heights: {} };
+  SOURCES.forEach(s => { so.rows.push(s.map(v => ({ v, s: S.wrap }))); so.heights[so.rows.length] = 34; });
+  so.rows.push([], [{ v: "Sample rows are fictional. Template from dawsonwilhelmi.com/supplier-scorecard/", s: S.note }]);
+
+  // Settings (read back by the page on upload)
+  const st = { name: "Settings", cols: [{ w: 12 }, { w: 22 }, { w: 12 }, { w: 60 }], rows: [
+    [{ v: "Settings the page reads when you upload this workbook", s: S.bold }], [],
+    ["kpi", "KPI", "weight_pct", "note"].map(v => ({ v, s: S.head })),
+    ...KPIS.map(k => [{ v: k.key, s: S.cell }, { v: k.label, s: S.cell }, { v: w[k.key], s: S.cell }, { v: w[k.key] > 0 ? "" : "off", s: S.cell }]),
+    [], [{ v: "Weights must add up to 100. 0 turns a KPI off. Change them here or on the page.", s: S.note }],
+  ] };
+  return workbookBlob([data, ins, kp, so, st]);
+}
+function buildCsv(w = W) {
+  const cols = templateColumns(w), q = v => /[",\n]/.test(String(v)) ? `"${String(v).replace(/"/g, '""')}"` : String(v);
+  return new Blob([[cols.join(","), ...templateSampleRows().map(r => cols.map(c => q(r[c])).join(","))].join("\r\n") + "\r\n"], { type: "text/csv" });
+}
+function download(blob, name) {
+  const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = name;
+  document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+}
+
+/* ---------- wiring ---------- */
 document.getElementById("file").addEventListener("change", e => { if (e.target.files[0]) readFile(e.target.files[0]); e.target.value = ""; });
 const drop = document.getElementById("drop");
 ["dragenter", "dragover"].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.add("over"); }));
@@ -589,9 +979,33 @@ const drop = document.getElementById("drop");
 drop.addEventListener("drop", e => { const f = e.dataTransfer.files[0]; if (f) readFile(f); });
 document.getElementById("load").addEventListener("click", () => loadTable(splitRows(document.getElementById("csv").value), ""));
 document.getElementById("reset").addEventListener("click", () => { useRows(SAMPLE); setBadge(false); showMsg("", "Showing sample data."); });
-function openOwn() { document.getElementById("own-details").open = true; }
-document.getElementById("use-own").addEventListener("click", openOwn);
-if (location.hash === "#own") openOwn();
+document.getElementById("dl-xlsx").addEventListener("click", () => download(buildTemplate(), "supplier-scorecard-template.xlsx"));
+document.getElementById("dl-csv").addEventListener("click", () => download(buildCsv(), "supplier-scorecard-template.csv"));
+document.querySelectorAll(".to-own").forEach(a => a.addEventListener("click", () => { document.getElementById("own-details").open = true; }));
+if (location.hash === "#own") document.getElementById("own-details").open = true;
+
+const mt = document.getElementById("method-table");
+mt.addEventListener("input", e => {
+  if (!e.target.classList.contains("w-num")) return;
+  const v = parseFloat(e.target.value);
+  DRAFT[e.target.dataset.k] = Number.isFinite(v) ? Math.max(0, Math.min(100, v)) : 0;
+  applyDraft(false);  // keep focus in the field while typing
+});
+mt.addEventListener("change", e => {
+  if (e.target.classList.contains("w-num")) { renderMethod(); return; }  // tidy the field after typing
+  if (!e.target.classList.contains("w-on")) return;
+  const k = e.target.dataset.k;
+  if (!e.target.checked) {
+    if (KEYS.filter(x => DRAFT[x] > 0).length <= 1) { e.target.checked = true; return; }  // keep at least one KPI
+    DRAFT = rebalance({ ...DRAFT, [k]: 0 });
+  } else {
+    DRAFT = rebalance({ ...DRAFT, [k]: Math.min(DEFAULT_W[k], 99) }, k);
+  }
+  applyDraft();
+});
+document.getElementById("w-fix").addEventListener("click", () => { DRAFT = rebalance(DRAFT); applyDraft(); });
+document.getElementById("w-reset").addEventListener("click", () => setWeights(DEFAULT_W));
+
 fillCats();
 document.getElementById("cat").addEventListener("change", e => { state.cat = e.target.value; state.selected = null; render(); });
 document.getElementById("period").addEventListener("click", e => {
@@ -602,7 +1016,7 @@ document.getElementById("period").addEventListener("click", e => {
 });
 document.getElementById("table").addEventListener("click", e => {
   const th = e.target.closest("th");
-  if (th) { const k = th.dataset.k; if (COLS.find(c => c.key === k).noSort) return;
+  if (th) { const k = th.dataset.k; if (cols().find(c => c.key === k).noSort) return;
     state.sort = { key: k, dir: state.sort.key === k ? -state.sort.dir : (k === "name" || k === "quality" || k === "price" || k === "lead" ? 1 : -1) }; render(); return; }
   const tr = e.target.closest("tr[data-n]");
   if (tr) { state.selected = tr.dataset.n; render(); if (window.innerWidth < 900) document.getElementById("detail").scrollIntoView({ behavior: "smooth" }); }
@@ -611,5 +1025,6 @@ let rt; window.addEventListener("resize", () => { clearTimeout(rt); rt = setTime
 renderMethod();
 render();
 </script>
+
 </body>
 </html>
