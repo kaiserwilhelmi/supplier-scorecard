@@ -6,31 +6,14 @@
 <title>Supplier Scorecard Dashboard</title>
 <style>
 .sc {
-  color-scheme: light;
-  --bg: #f6f5f2; --surface: #fcfcfb; --border: #e3e1db; --grid: #ebe9e4;
-  --text: #0b0b0b; --text-2: #52514e; --text-3: #7a7974;
-  --accent: #2a78d6; --accent-soft: #cde2fb;
-  --good: #0ca30c; --warn: #fab219; --serious: #ec835a; --crit: #d03b3b; --neutral: #8a8984;
-  --good-ink: #006300; --warn-ink: #8a5a00; --crit-ink: #a52222; --neutral-ink: #52514e;
+  color-scheme: dark;
+  --bg: #0b0c0e; --surface: #141518; --border: #26282d; --grid: #1e2024;
+  --text: #ecedef; --text-2: #b4b7bd; --text-3: #8b8f97;
+  --accent: #4c9aff; --accent-soft: #1c3a5e;
+  --good: #2fb344; --warn: #f2b01e; --serious: #ec835a; --crit: #e5534b; --neutral: #7d828a;
+  --good-ink: #4cc94c; --warn-ink: #f2b01e; --crit-ink: #f07a7a; --neutral-ink: #b4b7bd;
 }
-@media (prefers-color-scheme: dark) {
-  :root:where(:not([data-theme="light"])) .sc {
-    color-scheme: dark;
-    --bg: #121211; --surface: #1a1a19; --border: #33332f; --grid: #2a2a27;
-    --text: #f0efec; --text-2: #c3c2b7; --text-3: #94938b;
-    --accent: #3987e5; --accent-soft: #1c3a5e;
-    --neutral: #8f8e86;
-    --good-ink: #4cc94c; --warn-ink: #fab219; --crit-ink: #f07a7a; --neutral-ink: #c3c2b7;
-  }
-}
-:root[data-theme="dark"] .sc {
-    color-scheme: dark;
-    --bg: #121211; --surface: #1a1a19; --border: #33332f; --grid: #2a2a27;
-    --text: #f0efec; --text-2: #c3c2b7; --text-3: #94938b;
-    --accent: #3987e5; --accent-soft: #1c3a5e;
-    --neutral: #8f8e86;
-    --good-ink: #4cc94c; --warn-ink: #fab219; --crit-ink: #f07a7a; --neutral-ink: #c3c2b7;
-}
+:root { color-scheme: dark; background: #0b0c0e; }
 * { box-sizing: border-box; }
 .sc details summary { cursor: pointer; font-weight: 600; }
 .sc textarea { width: 100%; min-height: 140px; font: 12px/1.4 ui-monospace, Menlo, monospace; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 8px; margin: 8px 0; }
