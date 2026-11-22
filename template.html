@@ -4,6 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Supplier Scorecard Dashboard</title>
+<meta name="description" content="Score suppliers on delivery, fill rate, quality, invoice accuracy and price, with adjustable weights. Runs on labeled sample data or on your own upload.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dawson Wilhelmi">
+<meta property="og:title" content="Supplier Scorecard">
+<meta property="og:description" content="Score suppliers on delivery, fill rate, quality, invoice accuracy and price, with adjustable weights. Runs on labeled sample data or on your own upload.">
+<meta property="og:url" content="https://dawsonwilhelmi.com/supplier-scorecard/">
+<meta property="og:image" content="https://dawsonwilhelmi.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <style>
 .sc {
   color-scheme: dark;
@@ -21,7 +32,7 @@
 .sc .drop:hover, .sc .drop.over { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 6%, transparent); }
 .sc .drop b { color: var(--accent); }
 .sc .btn { font: inherit; border: 1px solid var(--border); background: var(--surface); color: var(--text); border-radius: 8px; padding: 8px 14px; cursor: pointer; margin-right: 8px; }
-.sc .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+.sc .btn.primary { background: var(--accent); color: #0b0c0e; border-color: var(--accent); }
 .sc a.btn { display: inline-block; text-decoration: none; }
 .sc .btn:hover { border-color: var(--accent); }
 .sc .dl { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 10px 0 4px; }
@@ -60,7 +71,7 @@ body { margin: 0; }
 .seg { display: inline-flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; background: var(--surface); }
 .seg button { border: 0; background: none; color: var(--text-2); font: inherit; padding: 6px 12px; cursor: pointer; }
 .seg button + button { border-left: 1px solid var(--border); }
-.seg button[aria-pressed="true"] { background: var(--accent); color: #fff; }
+.seg button[aria-pressed="true"] { background: var(--accent); color: #0b0c0e; }
 .sc select { font: inherit; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 16px; }
 .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
@@ -410,7 +421,7 @@ function renderDetail({ list }) {
   drawTrend(s.name);
 }
 
-function svgEl(w, h) { return `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img">`; }
+function svgEl(w, h, label) { return `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img"><title>${esc(label || "Chart")}</title>`; }
 function tipFor(container) {
   let tip = container.querySelector(".tip");
   if (!tip) { tip = document.createElement("div"); tip.className = "tip"; container.appendChild(tip); }
@@ -438,7 +449,7 @@ function drawTrend(name) {
   const x = i => m.l + i * (CW - m.l - m.r) / (pts3.length - 1);
   const y = v => m.t + (100 - v) * (H - m.t - m.b) / 100;
   const bands = [[85, 100, "--good"], [70, 85, "--neutral"], [55, 70, "--warn"], [0, 55, "--crit"]];
-  let g = svgEl(CW, H);
+  let g = svgEl(CW, H, `${name}: rolling 3-month score, ${monthLabel(pts3[0].m)} ${pts3[0].s.toFixed(0)} to ${monthLabel(pts3[pts3.length - 1].m)} ${pts3[pts3.length - 1].s.toFixed(0)} (${tierOf(pts3[pts3.length - 1].s)})`);
   bands.forEach(([a, b, c]) => g += `<rect x="${m.l}" y="${y(b)}" width="${CW - m.l - m.r}" height="${y(a) - y(b)}" fill="var(${c})" opacity=".09"/>`);
   [0, 55, 70, 85, 100].forEach(v => g += `<text x="${m.l - 6}" y="${y(v) + 4}" text-anchor="end">${v}</text>`);
   pts3.forEach((p, i) => { if (i % 2 === 0 || i === pts3.length - 1) g += `<text x="${x(i)}" y="${H - 6}" text-anchor="middle">${monthLabel(p.m)}</text>`; });
@@ -471,7 +482,8 @@ function drawMatrix({ list }) {
   const y = v => m.t + (1 - v / maxSpend) * (H - m.t - m.b);
   const medSpend = [...list.map(s => s.spend)].sort((a, b) => a - b)[Math.floor(list.length / 2)] || 0;
   const color = { Preferred: "--good", Approved: "--neutral", Watch: "--warn", Probation: "--crit" };
-  let g = svgEl(CW, H);
+  const risky = list.filter(s => s.score < 70 && s.spend >= medSpend).map(s => s.name);
+  let g = svgEl(CW, H, `Score versus spend for ${list.length} suppliers. High spend, low score: ${risky.length ? risky.join(", ") : "none"}.`);
   // risk quadrant
   g += `<rect x="${x(0)}" y="${y(maxSpend)}" width="${x(70) - x(0)}" height="${y(medSpend) - y(maxSpend)}" fill="var(--crit)" opacity=".07"/>`;
   g += `<text x="${x(1)}" y="${y(maxSpend) + 14}" style="font-weight:600;fill:var(--crit-ink)">High spend, low score</text>`;
