@@ -1,11 +1,12 @@
 // Drives the real page in headless Chromium for tests/roundtrip.py and prints JSON.
-//   node tests/browser_upload.js download <site_dir> <xlsx.full.min.js> <out_dir>
+//   node tests/browser_upload.js download <site_dir> <out_dir>
 //     -> downloads the default template and a custom-weights template (fill rate off), checks the weights editor
-//   node tests/browser_upload.js upload <site_dir> <xlsx.full.min.js> <file>...
+//   node tests/browser_upload.js upload <site_dir> <file>...
+// The page reads .xlsx itself (no library), so any request that leaves the test server is blocked and reported as an error.
 //     -> resets weights to defaults, uploads each file and reports the message, weights and scores shown
 const { chromium } = require("playwright");
 const http = require("http"), fs = require("fs"), path = require("path");
-const [mode, site, xlsxLib, ...rest] = process.argv.slice(2);
+const [mode, site, ...rest] = process.argv.slice(2);
 const CUSTOM = { otd: 40, fill: 0, quality: 30, invoice: 10, price: 20 };
 
 (async () => {
@@ -17,7 +18,7 @@ const CUSTOM = { otd: 40, fill: 0, quality: 30, invoice: 10, price: 20 };
   const page = await browser.newPage({ acceptDownloads: true });
   const errors = [];
   page.on("pageerror", e => errors.push(String(e)));
-  await page.route("https://cdnjs.cloudflare.com/**", r => r.fulfill({ body: fs.readFileSync(xlsxLib), contentType: "text/javascript" }));
+  await page.route(u => !u.href.startsWith("http://localhost:"), r => { errors.push("outside request: " + r.request().url()); r.abort(); });
   await page.goto(`http://localhost:${srv.address().port}/`);
   const weights = () => page.$$eval(".w-num", els => Object.fromEntries(els.map(e => [e.dataset.k, +e.value])));
   const status = () => page.$eval("#w-status", e => e.textContent);

@@ -1,6 +1,9 @@
 """
 Round-trip test for the downloadable template and the upload parser.
 
+Step 0 checks that the committed index.html is a fresh build, so a template change that was
+never rebuilt (no favicon or link preview on the live page, Nov 2026) fails the test.
+
 The template is generated in the browser from the weights chosen on the page, so this test
 drives the real page in headless Chromium (tests/browser_upload.js):
   1. Download the default template and a custom-weights template (fill rate off). Check the files
@@ -9,7 +12,7 @@ drives the real page in headless Chromium (tests/browser_upload.js):
   2. Build filled-in and broken files from those downloads, upload each through the page, and check
      the page's scores against score.py and the error messages.
 
-Usage: python tests/roundtrip.py <path to xlsx.full.min.js 0.18.5>
+Usage: python tests/roundtrip.py   (needs Node with Playwright, and openpyxl)
 """
 import csv
 import datetime as dt
@@ -27,7 +30,6 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 from score import DEFAULT_WEIGHTS, KPIS, scores_by_supplier, tier  # noqa: E402
 
-LIB = sys.argv[1]
 TMP = Path(tempfile.mkdtemp())
 CUSTOM = {"otd": 0.40, "fill": 0.0, "quality": 0.30, "invoice": 0.10, "price": 0.20}
 BASE = ["supplier", "category", "month", "spend", "pos"]
@@ -70,8 +72,12 @@ def read_data(path):
     return head, [dict(zip(head, [c.value for c in r])) for r in ws.iter_rows(min_row=2) if r[0].value]
 
 
+# ---------------- 0. the committed index.html is a fresh build of template.html + data
+from build import build_html  # noqa: E402
+check((ROOT / "index.html").read_text() == build_html()[0], "index.html matches a fresh `python build.py` (rebuild and commit it if not)")
+
 # ---------------- 1. downloads
-d = browser("download", str(ROOT), LIB, str(TMP))
+d = browser("download", str(ROOT), str(TMP))
 check(not d["errors"], f"no page errors {d['errors']}")
 check(d["detailsOpen"], "'Score your own suppliers' button opens the upload panel")
 check(d["names"] == ["supplier-scorecard-template.xlsx", "supplier-scorecard-template.csv"], f"download file names {d['names']}")
@@ -182,7 +188,7 @@ bad_settings = TMP / "H_bad_settings.xlsx"
 wb.save(bad_settings)
 
 files = [TMP / "default.xlsx", TMP / "default.csv", TMP / "custom.xlsx", TMP / "custom.csv", filled_xlsx, filled_csv, bad_xlsx, bad_csv, bad_settings]
-u = browser("upload", str(ROOT), LIB, *map(str, files))
+u = browser("upload", str(ROOT), *map(str, files))
 check(not u["errors"], f"no page errors during uploads {u['errors']}")
 res = {r["file"]: r for r in u["results"]}
 _, sample_rows = read_data(TMP / "default.xlsx")
