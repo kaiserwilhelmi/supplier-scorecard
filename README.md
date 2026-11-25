@@ -28,5 +28,9 @@ APICS (2017) SCOR v12, Perfect Order Fulfillment components; Mena, van Hoek & Ch
 ```
 python generate_data.py && python build.py
 python score.py 6 --weights otd=40,fill=0,quality=30,invoice=10,price=20   # check any weights
-python tests/roundtrip.py path/to/xlsx.full.min.js   # SheetJS 0.18.5, the version the page loads
+python tests/roundtrip.py   # headless Chromium via Playwright; the page reads .xlsx itself, no library
 ```
+
+## Rights
+
+© 2026 Dawson Wilhelmi. All rights reserved. The code is public so it can be read; it is not licensed for reuse. The data is made-up sample data.

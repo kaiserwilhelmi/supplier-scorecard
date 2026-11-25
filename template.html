@@ -43,7 +43,8 @@
 .sc .note code { overflow-wrap: anywhere; }
 .method tr.off td { color: var(--text-3); }
 .method th.l, .method td.l { text-align: left; }
-.method input[type=checkbox] { width: 16px; height: 16px; accent-color: var(--accent); cursor: pointer; }
+.method input[type=checkbox] { width: 22px; height: 22px; margin: 1px; accent-color: var(--accent); cursor: pointer; }
+.sc details summary { min-height: 24px; padding: 2px 0; }
 .w-in { display: inline-flex; align-items: center; gap: 4px; }
 .w-num { width: 64px; font: inherit; text-align: right; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: 6px; padding: 4px 6px; font-variant-numeric: tabular-nums; }
 .w-num:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
@@ -85,7 +86,7 @@ body { margin: 0; }
 table.sc-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; min-width: 860px; }
 .sc-table th { text-align: right; font-weight: 600; font-size: 12px; color: var(--text-2); padding: 8px 8px; border-bottom: 1px solid var(--border);
   white-space: nowrap; user-select: none; position: sticky; top: 0; background: var(--surface); }
-.sc-table th .sortb { font: inherit; color: inherit; background: none; border: 0; padding: 0; margin: 0; cursor: pointer; text-align: inherit; }
+.sc-table th .sortb { font: inherit; color: inherit; background: none; border: 0; padding: 0; margin: 0; cursor: pointer; text-align: inherit; min-height: 24px; display: inline-flex; align-items: center; }
 .sc-table th.l, .sc-table td.l { text-align: left; }
 .sc-table th[aria-sort="ascending"]::after { content: " ▲"; font-size: 9px; }
 .sc-table th[aria-sort="descending"]::after { content: " ▼"; font-size: 9px; }
@@ -740,32 +741,88 @@ function loadTable(table, label, fileWeights) {
   window.scrollTo({ top: 0, behavior: "smooth" });
   return true;
 }
-let xlsxLib;
-function getXLSX() {
-  return xlsxLib ||= new Promise((res, rej) => {
-    const sc = document.createElement("script");
-    sc.src = "https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js";
-    sc.onload = () => res(window.XLSX); sc.onerror = () => { xlsxLib = null; rej(new Error("Couldn't load the Excel reader. Save the file as CSV and try again.")); };
-    document.head.appendChild(sc);
-  });
+/* ---------- .xlsx reader: no library. An .xlsx file is a zip of XML parts; the browser's own
+   DecompressionStream inflates them. Same approach as the reader in the Forecast tool. ---------- */
+const u16 = (b, o) => b[o] | (b[o + 1] << 8);
+const u32 = (b, o) => (b[o] | (b[o + 1] << 8) | (b[o + 2] << 16) | (b[o + 3] << 24)) >>> 0;
+function unzip(buf) {
+  const b = new Uint8Array(buf), files = {};
+  let eocd = -1;
+  for (let i = b.length - 22; i >= Math.max(0, b.length - 65557); i--) if (u32(b, i) === 0x06054b50) { eocd = i; break; }
+  if (eocd < 0) throw new Error("this doesn't look like an .xlsx file (no zip directory). Save it as .xlsx or CSV and try again.");
+  let off = u32(b, eocd + 16);
+  for (let k = 0, n = u16(b, eocd + 10); k < n && u32(b, off) === 0x02014b50; k++) {
+    const nlen = u16(b, off + 28), lho = u32(b, off + 42), start = lho + 30 + u16(b, lho + 26) + u16(b, lho + 28);
+    files[new TextDecoder().decode(b.subarray(off + 46, off + 46 + nlen))] = { method: u16(b, off + 10), data: b.subarray(start, start + u32(b, off + 20)) };
+    off += 46 + nlen + u16(b, off + 30) + u16(b, off + 32);
+  }
+  return files;
 }
-function readSettings(X, wb) {  // weights saved by the template's Settings tab
-  const name = wb.SheetNames.find(n => n.trim().toLowerCase() === "settings");
-  if (!name) return null;
-  const t = X.utils.sheet_to_json(wb.Sheets[name], { header: 1, raw: true, defval: "" });
+function inflate(f) {
+  if (f.method === 0) return Promise.resolve(new TextDecoder().decode(f.data));
+  if (typeof DecompressionStream === "undefined") return Promise.reject(new Error("this browser can't open Excel files. Save the sheet as CSV and upload that."));
+  return new Response(new Blob([f.data]).stream().pipeThrough(new DecompressionStream("deflate-raw"))).text();
+}
+const DATE_FMT_IDS = new Set([14, 15, 16, 17, 18, 19, 20, 21, 22, 27, 30, 36, 45, 46, 47, 50, 57]);
+const isDateCode = code => { const c = String(code).replace(/"[^"]*"/g, "").replace(/\[[^\]]*\]/g, "").replace(/\\./g, "");
+  return /[dmyhs]/i.test(c) && !/^[#0.,%E+\-\s]*$/.test(c) && !/General/i.test(c); };
+const xmlDoc = t => new DOMParser().parseFromString(t, "application/xml");
+const byTag = (node, tag) => [...node.getElementsByTagNameNS("*", tag)];
+const colIndex = ref => [...ref.match(/^[A-Z]+/)[0]].reduce((n, ch) => n * 26 + ch.charCodeAt(0) - 64, 0) - 1;
+/* Returns [{ name, rows }], each row an array of cell values: text, numbers, and dates as YYYY-MM-DD text. */
+async function readXlsx(buf) {
+  const files = unzip(buf), get = p => files[p] ? inflate(files[p]) : Promise.resolve(null);
+  const [wbX, relX, sstX, stX] = await Promise.all(["xl/workbook.xml", "xl/_rels/workbook.xml.rels", "xl/sharedStrings.xml", "xl/styles.xml"].map(get));
+  if (!wbX) throw new Error("this file is not an Excel workbook.");
+  const wb = xmlDoc(wbX), pr = byTag(wb, "workbookPr")[0], d1904 = !!pr && /^(1|true)$/.test(pr.getAttribute("date1904") || "");
+  const sst = sstX ? byTag(xmlDoc(sstX), "si").map(si => byTag(si, "t").map(t => t.textContent).join("")) : [];
+  const isDate = [];
+  if (stX) {
+    const st = xmlDoc(stX), custom = {};
+    byTag(st, "numFmt").forEach(f => { custom[f.getAttribute("numFmtId")] = f.getAttribute("formatCode"); });
+    const xfs = byTag(st, "cellXfs")[0];
+    if (xfs) byTag(xfs, "xf").forEach(xf => { const id = +xf.getAttribute("numFmtId"); isDate.push(DATE_FMT_IDS.has(id) || (custom[id] !== undefined && isDateCode(custom[id]))); });
+  }
+  const rel = {};
+  if (relX) byTag(xmlDoc(relX), "Relationship").forEach(x => { rel[x.getAttribute("Id")] = x.getAttribute("Target"); });
+  const sheets = byTag(wb, "sheet").map(s => {
+    const t = rel[s.getAttribute("r:id") || s.getAttributeNS("http://schemas.openxmlformats.org/officeDocument/2006/relationships", "id")] || "";
+    return { name: s.getAttribute("name"), path: t.startsWith("/") ? t.slice(1) : "xl/" + t.replace(/^\.\//, "") };
+  });
+  const serialDate = n => new Date(Date.UTC(d1904 ? 1904 : 1899, d1904 ? 0 : 11, d1904 ? 1 : 30) + Math.floor(n) * 864e5).toISOString().slice(0, 10);
+  return Promise.all(sheets.map(async s => {
+    const text = await get(s.path), rows = [];
+    if (text) byTag(xmlDoc(text), "row").forEach(row => {
+      const out = [];
+      byTag(row, "c").forEach((c, ci) => {
+        const ref = c.getAttribute("r"), t = c.getAttribute("t"), v = byTag(c, "v")[0];
+        let val = "";
+        if (t === "s") val = v ? sst[+v.textContent] ?? "" : "";
+        else if (t === "inlineStr") val = byTag(c, "t").map(x => x.textContent).join("");
+        else if (v) { const num = parseFloat(v.textContent); val = t || isNaN(num) ? v.textContent : isDate[+(c.getAttribute("s") || 0)] ? serialDate(num) : num; }
+        out[ref ? colIndex(ref) : ci] = val;
+      });
+      rows[+row.getAttribute("r") - 1 || rows.length] = Array.from(out, x => x ?? "");
+    });
+    return { name: s.name, rows: rows.filter(r => r && r.some(x => String(x).trim() !== "")) };
+  }));
+}
+function readSettings(sheets) {  // weights saved by the template's Settings tab
+  const sh = sheets.find(x => x.name.trim().toLowerCase() === "settings");
+  if (!sh) return null;
   const w = {};
-  t.forEach(r => { const k = String(r[0]).trim(); if (KEYS.includes(k)) w[k] = +r[2]; });
+  sh.rows.forEach(r => { const k = String(r[0] ?? "").trim(); if (KEYS.includes(k)) w[k] = +r[2]; });
   return KEYS.every(k => k in w) ? w : null;
 }
 async function readFile(f) {
   showMsg("", "Reading " + f.name + "…");
   try {
-    if (/\.xlsx?$/i.test(f.name)) {
-      const X = await getXLSX();
-      const wb = X.read(await f.arrayBuffer(), { type: "array" });
-      const name = wb.SheetNames.find(n => n.trim().toLowerCase() === "data") || wb.SheetNames[0];
-      const table = X.utils.sheet_to_json(wb.Sheets[name], { header: 1, raw: false, defval: "", blankrows: false });
-      loadTable(table.map(r => r.map(String)), f.name, readSettings(X, wb));
+    if (/\.xls$/i.test(f.name)) throw new Error("this is the old .xls format. Open it in Excel, save it as .xlsx or CSV, and upload that.");
+    if (/\.xlsx$/i.test(f.name)) {
+      const sheets = await readXlsx(await f.arrayBuffer());
+      const sh = sheets.find(x => x.name.trim().toLowerCase() === "data") || sheets[0];
+      if (!sh) throw new Error("the workbook has no sheets.");
+      loadTable(sh.rows.map(r => r.map(String)), f.name, readSettings(sheets));
     } else loadTable(splitRows(await f.text()), f.name);
   } catch (e) { showMsg("err", "Couldn't read " + f.name + ": " + e.message); }
 }
