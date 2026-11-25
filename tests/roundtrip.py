@@ -1,6 +1,9 @@
 """
 Round-trip test for the downloadable template and the upload parser.
 
+Step 0 checks that the committed index.html is a fresh build, so a template change that was
+never rebuilt (no favicon or link preview on the live page, Nov 2026) fails the test.
+
 The template is generated in the browser from the weights chosen on the page, so this test
 drives the real page in headless Chromium (tests/browser_upload.js):
   1. Download the default template and a custom-weights template (fill rate off). Check the files
@@ -69,6 +72,10 @@ def read_data(path):
     head = [c.value for c in ws[1]]
     return head, [dict(zip(head, [c.value for c in r])) for r in ws.iter_rows(min_row=2) if r[0].value]
 
+
+# ---------------- 0. the committed index.html is a fresh build of template.html + data
+from build import build_html  # noqa: E402
+check((ROOT / "index.html").read_text() == build_html()[0], "index.html matches a fresh `python build.py` (rebuild and commit it if not)")
 
 # ---------------- 1. downloads
 d = browser("download", str(ROOT), LIB, str(TMP))

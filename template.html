@@ -15,6 +15,9 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" media="print" onload="this.media='all'">
 <style>
 .sc {
   color-scheme: dark;
@@ -55,15 +58,12 @@
 body { margin: 0; }
 .sc { background: var(--bg); color: var(--text); min-height: 100vh;
   font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  padding: 24px clamp(12px, 3vw, 40px) 48px; }
+  padding: 0 clamp(12px, 3vw, 40px) 48px; }
 .sc h1 { font-size: 24px; margin: 0 0 4px; letter-spacing: -0.01em; }
 .sc h2 { font-size: 16px; margin: 0 0 2px; }
 .sc .sub { color: var(--text-2); margin: 0; }
 .sc .note { color: var(--text-3); font-size: 12px; }
 .wrap { max-width: 1240px; margin: 0 auto; }
-.home { margin-bottom: 16px; }
-.home a { font-weight: 700; font-size: 15px; color: var(--text); text-decoration: none; }
-.home a:hover { color: var(--accent); }
 .topbar { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-end; justify-content: space-between; margin-bottom: 20px; }
 .badge-sample { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
   color: var(--text-2); border: 1px solid var(--border); border-radius: 999px; padding: 2px 8px; margin-left: 8px; vertical-align: 3px; }
@@ -84,7 +84,8 @@ body { margin: 0; }
 .tablewrap { overflow-x: auto; margin: 0 -16px; padding: 0 16px; }
 table.sc-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; min-width: 860px; }
 .sc-table th { text-align: right; font-weight: 600; font-size: 12px; color: var(--text-2); padding: 8px 8px; border-bottom: 1px solid var(--border);
-  cursor: pointer; white-space: nowrap; user-select: none; position: sticky; top: 0; background: var(--surface); }
+  white-space: nowrap; user-select: none; position: sticky; top: 0; background: var(--surface); }
+.sc-table th .sortb { font: inherit; color: inherit; background: none; border: 0; padding: 0; margin: 0; cursor: pointer; text-align: inherit; }
 .sc-table th.l, .sc-table td.l { text-align: left; }
 .sc-table th[aria-sort="ascending"]::after { content: " ▲"; font-size: 9px; }
 .sc-table th[aria-sort="descending"]::after { content: " ▼"; font-size: 9px; }
@@ -128,13 +129,33 @@ table.sc-table { width: 100%; border-collapse: collapse; font-variant-numeric: t
 .method p { color: var(--text-2); margin: 8px 0; }
 .insights { margin: 0; padding-left: 18px; color: var(--text); }
 .insights li { margin: 4px 0; }
+.sc a:focus-visible, .sc button:focus-visible, .sc select:focus-visible, .sc summary:focus-visible, .sc textarea:focus-visible,
+.sc-table tbody tr:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.sc-table tbody tr:focus-visible { outline-offset: -2px; }
+.chart circle[data-n] { outline: none; }
+.chart circle[data-n]:focus-visible { stroke: var(--text); stroke-width: 2; }
+/* Site header and skip link: same as the home page header */
+.dw-skip { position: absolute; left: 12px; top: -80px; z-index: 1000; padding: 10px 16px; border-radius: 4px; background: #ebe8e1; color: #161a1f; font: 600 15px/1.2 "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; text-decoration: none; }
+.dw-skip:focus { top: 12px; outline: 2px solid #9cc0dc; outline-offset: 2px; }
+.dw-site { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; padding: 22px 0 18px; margin: 0 0 20px; border-bottom: 1px solid #303741; font: 16px/1.6 "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+.dw-site .dw-me { font-family: "Source Serif 4", Georgia, "Times New Roman", serif; font-weight: 600; font-size: 19px; color: #ebe8e1; text-decoration: none; }
+.dw-site nav { display: flex; gap: 22px; font-size: 15px; }
+.dw-site nav a { color: #aeb3b9; text-decoration: none; padding: 6px 0; }
+.dw-site nav a:hover { color: #ebe8e1; }
+.dw-site nav a.on { color: #ebe8e1; box-shadow: inset 0 -2px 0 #9cc0dc; }
+.dw-site a:focus-visible { outline: 2px solid #9cc0dc; outline-offset: 3px; border-radius: 2px; }
+main:focus { outline: none; }
 </style>
 </head>
 <body>
+<a class="dw-skip" href="#main">Skip to content</a>
 <div class="sc">
 <div class="wrap">
-
-  <nav class="home"><a href="/">Dawson Wilhelmi</a></nav>
+<header class="dw-site">
+  <a class="dw-me" href="/">Dawson Wilhelmi</a>
+  <nav aria-label="Site"><a href="/" class="on">Projects</a><a href="/about/">About</a></nav>
+</header>
+<main id="main" tabindex="-1">
 
   <div class="topbar">
     <div>
@@ -209,6 +230,7 @@ table.sc-table { width: 100%; border-collapse: collapse; font-variant-numeric: t
     </details>
   </div>
 
+</main>
 </div>
 </div>
 
@@ -375,7 +397,7 @@ function renderTable({ list }) {
     return (typeof va === "string" ? va.localeCompare(vb) : va - vb) * dir;
   });
   const rankBy = [...list].sort((a, b) => b.score - a.score).map(s => s.name);
-  const th = COLS.map(c => `<th class="${c.cls || ""}" data-k="${c.key}" ${c.key === key ? `aria-sort="${dir > 0 ? "ascending" : "descending"}"` : ""}>${c.label}</th>`).join("");
+  const th = COLS.map(c => `<th class="${c.cls || ""}" data-k="${c.key}" ${c.key === key ? `aria-sort="${dir > 0 ? "ascending" : "descending"}"` : ""}>${c.noSort ? c.label : `<button type="button" class="sortb">${c.label}</button>`}</th>`).join("");
   const td = s => COLS.map(c => {
     switch (c.key) {
       case "rank": return `<td class="l note">${rankBy.indexOf(s.name) + 1}</td>`;
@@ -391,7 +413,7 @@ function renderTable({ list }) {
   }).join("");
   const t = document.getElementById("table");
   t.innerHTML = `<thead><tr>${th}</tr></thead><tbody>${rows.map(s =>
-    `<tr data-n="${esc(s.name)}" class="${s.name === state.selected ? "sel" : ""}">${td(s)}</tr>`).join("")}</tbody>`;
+    `<tr data-n="${esc(s.name)}" tabindex="0" class="${s.name === state.selected ? "sel" : ""}"${s.name === state.selected ? ' aria-selected="true"' : ""}>${td(s)}</tr>`).join("")}</tbody>`;
 }
 
 /* ---------- detail ---------- */
@@ -501,15 +523,19 @@ function drawMatrix({ list }) {
       const right = cx < CW * 0.62;
       g += `<text x="${cx + (right ? 10 : -10)}" y="${cy + 4}" text-anchor="${right ? "start" : "end"}" style="fill:var(--text);font-weight:${sel ? 600 : 400}">${esc(s.name.split(" ").slice(0, 2).join(" "))}</text>`;
     }
-    g += `<circle cx="${cx}" cy="${cy}" r="14" fill="transparent" data-n="${esc(s.name)}" style="cursor:pointer"/>`;
+    g += `<circle cx="${cx}" cy="${cy}" r="14" fill="transparent" data-n="${esc(s.name)}" tabindex="0" role="button" aria-label="${esc(s.name)}: score ${s.score.toFixed(1)}, ${s.tier}, spend ${fmt$(s.spend)}" style="cursor:pointer"/>`;
   });
   box.innerHTML = g + "</svg>";
+  const svg = box.querySelector("svg"); svg.setAttribute("role", "group"); svg.setAttribute("aria-label", svg.querySelector("title").textContent);
   const tip = tipFor(box);
   box.querySelectorAll("circle[data-n]").forEach(c => {
     const s = list.find(v => v.name === c.dataset.n);
-    c.addEventListener("pointerenter", () => tip.show(`<b>${esc(s.name)}</b><br>Score ${s.score.toFixed(1)} · ${s.tier}<br>Spend ${fmt$(s.spend)} (${s.share.toFixed(1)}%)`, +c.getAttribute("cx"), +c.getAttribute("cy")));
-    c.addEventListener("pointerleave", () => tip.hide());
-    c.addEventListener("click", () => { state.selected = s.name; render(); });
+    const show = () => tip.show(`<b>${esc(s.name)}</b><br>Score ${s.score.toFixed(1)} · ${s.tier}<br>Spend ${fmt$(s.spend)} (${s.share.toFixed(1)}%)`, +c.getAttribute("cx"), +c.getAttribute("cy"));
+    const pick = () => { state.selected = s.name; render(); };
+    c.addEventListener("pointerenter", show); c.addEventListener("focus", show);
+    c.addEventListener("pointerleave", () => tip.hide()); c.addEventListener("blur", () => tip.hide());
+    c.addEventListener("click", pick);
+    c.addEventListener("keydown", e => { if (e.key !== "Enter" && e.key !== " ") return; e.preventDefault(); pick(); refocus(`#matrix circle[data-n="${CSS.escape(s.name)}"]`); });
   });
   document.getElementById("matrix-legend").innerHTML = TIERS.map(([, t]) => `<span class="tier ${t}"><span class="dot"></span>${t}</span>`).join("") +
     `<span class="note">Dashed lines: Approved cutoff (70) and median spend</span>`;
@@ -1026,12 +1052,21 @@ document.getElementById("period").addEventListener("click", e => {
   document.querySelectorAll("#period button").forEach(x => x.setAttribute("aria-pressed", x === b));
   render();
 });
+/* the table is redrawn on every change, so keyboard focus is put back on the same header or row */
+const refocus = sel => { const el = document.querySelector(sel); if (el) el.focus({ preventScroll: true }); };
 document.getElementById("table").addEventListener("click", e => {
   const th = e.target.closest("th");
   if (th) { const k = th.dataset.k; if (cols().find(c => c.key === k).noSort) return;
-    state.sort = { key: k, dir: state.sort.key === k ? -state.sort.dir : (k === "name" || k === "quality" || k === "price" || k === "lead" ? 1 : -1) }; render(); return; }
+    const kb = document.activeElement && th.contains(document.activeElement);
+    state.sort = { key: k, dir: state.sort.key === k ? -state.sort.dir : (k === "name" || k === "quality" || k === "price" || k === "lead" ? 1 : -1) }; render();
+    if (kb) refocus(`#table th[data-k="${k}"] button`); return; }
   const tr = e.target.closest("tr[data-n]");
   if (tr) { state.selected = tr.dataset.n; render(); if (window.innerWidth < 900) document.getElementById("detail").scrollIntoView({ behavior: "smooth" }); }
+});
+document.getElementById("table").addEventListener("keydown", e => {
+  const tr = e.target.closest("tr[data-n]");
+  if (!tr || e.target !== tr || (e.key !== "Enter" && e.key !== " ")) return;
+  e.preventDefault(); const n = tr.dataset.n; state.selected = n; render(); refocus(`#table tr[data-n="${CSS.escape(n)}"]`);
 });
 let rt; window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(render, 120); });
 renderMethod();
