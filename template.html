@@ -17,25 +17,26 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/theme.css">
 <style>
 .sc {
   color-scheme: dark;
-  /* same slate, text and steel-blue link colors as the home page */
-  --bg: #161a1f; --surface: #1b2026; --border: #303741; --grid: #262c34;
-  --text: #ebe8e1; --text-2: #aeb3b9; --text-3: #8f969f;
-  --accent: #9cc0dc; --accent-soft: #2a3a48;
-  --good: #2fb344; --warn: #f2b01e; --serious: #ec835a; --crit: #e5534b; --neutral: #7d828a;
-  --good-ink: #4cc94c; --warn-ink: #f2b01e; --crit-ink: #f07a7a; --neutral-ink: #b4b7bd;
+  /* Colors and fonts come from /theme.css, the site theme. The value after each comma is only a fallback. */
+  --bg: var(--ink, #080c15); --surface: var(--ink-2, #0e1422); --border: var(--rule, #25324a); --grid: var(--rule-soft, #1a2438);
+  --text: var(--paper, #eef2f8); --text-2: var(--pencil, #aab5c7); --text-3: var(--faint, #7d89a1);
+  --accent: var(--steel, #7cc7f2); --accent-soft: #1b3145;     /* opaque: steel at about 16% over a panel */
+  --good: var(--opp, #5cc46a); --warn: var(--watch, #e9b23c); --serious: #ec835a; --crit: var(--alert, #f08079); --neutral: var(--stable, #6f7b92);
+  --good-ink: var(--opp, #5cc46a); --warn-ink: var(--watch, #e9b23c); --crit-ink: var(--alert, #f08079); --neutral-ink: var(--pencil, #aab5c7);
 }
-:root { color-scheme: dark; background: #161a1f; }
+:root { color-scheme: dark; }
 * { box-sizing: border-box; }
 .sc details summary { cursor: pointer; font-weight: 600; }
 .sc textarea { width: 100%; min-height: 140px; font: 12px/1.4 ui-monospace, Menlo, monospace; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 8px; margin: 8px 0; }
 .sc .drop { display: block; border: 2px dashed var(--border); border-radius: 10px; padding: 22px; text-align: center; color: var(--text-2); cursor: pointer; margin-top: 8px; }
 .sc .drop:hover, .sc .drop.over { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 6%, transparent); }
 .sc .drop b { color: var(--accent); }
-.sc .btn { font: inherit; border: 1px solid var(--border); background: var(--surface); color: var(--text); border-radius: 8px; padding: 8px 14px; cursor: pointer; margin-right: 8px; }
-.sc .btn.primary { background: var(--accent); color: #161a1f; border-color: var(--accent); }
+.sc .btn { font: inherit; border: 1px solid var(--border); background: var(--surface); color: var(--text); border-radius: 6px; padding: 8px 14px; cursor: pointer; margin-right: 8px; }
+.sc .btn.primary { background: var(--accent); color: var(--on-steel, #10151a); border-color: var(--accent); }
 .sc a.btn { display: inline-block; text-decoration: none; }
 .sc .btn:hover { border-color: var(--accent); }
 .sc .dl { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 10px 0 4px; }
@@ -56,26 +57,26 @@
 .sc .msg.err { color: var(--crit-ink); }
 .sc .msg.ok { color: var(--good-ink); }
 .sc .msg ul { margin: 6px 0 0; padding-left: 18px; }
-body { margin: 0; }
-.sc { background: var(--bg); color: var(--text); min-height: 100vh;
-  font: 14px/1.45 "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+body { margin: 0; background: var(--ink, #080c15); }
+.sc { color: var(--text); min-height: 100vh;
+  font: 14px/1.45 var(--f-body, "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif);
   padding: 0 clamp(12px, 3vw, 40px) 48px; }
-.sc h1 { font-family: "Source Serif 4", Georgia, "Times New Roman", serif; font-weight: 600; font-size: clamp(26px, 3.4vw, 32px); margin: 0 0 4px; }
-.sc h2 { font-family: "Source Serif 4", Georgia, "Times New Roman", serif; font-weight: 600; font-size: 19px; margin: 0 0 2px; }
+.sc h1 { font-family: var(--f-head, "Space Grotesk", "IBM Plex Sans", sans-serif); font-weight: 600; letter-spacing: -0.015em; font-size: clamp(26px, 3.4vw, 32px); margin: 0 0 4px; }
+.sc h2 { font-family: var(--f-head, "Space Grotesk", "IBM Plex Sans", sans-serif); font-weight: 600; letter-spacing: -0.015em; font-size: 19px; margin: 0 0 2px; }
 .sc .sub { color: var(--text-2); margin: 0; }
 .sc .note { color: var(--text-3); font-size: 12px; }
 .wrap { max-width: 1240px; margin: 0 auto; }
 .topbar { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-end; justify-content: space-between; margin-bottom: 20px; }
-.badge-sample { display: inline-block; font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
+.badge-sample { display: inline-block; font-family: var(--f-body, "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif); font-size: 12px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
   color: var(--text-2); border: 1px solid var(--border); border-radius: 999px; padding: 2px 8px; margin-left: 8px; vertical-align: 3px; }
 .filters { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
 .seg { display: inline-flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; background: var(--surface); }
 .seg button { border: 0; background: none; color: var(--text-2); font: inherit; padding: 6px 12px; cursor: pointer; }
 .seg button + button { border-left: 1px solid var(--border); }
-.seg button[aria-pressed="true"] { background: var(--accent); color: #161a1f; }
-.sc select { font: inherit; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--on-steel, #10151a); }
+.sc select { font: inherit; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 6px 10px; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 16px; }
-.card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 16px; }
 .tile .label { color: var(--text-2); font-size: 13px; }
 .tile .value { font-size: 28px; font-weight: 650; letter-spacing: -0.02em; margin: 2px 0; font-variant-numeric: tabular-nums; }
 .tile .ctx { color: var(--text-3); font-size: 12px; }
@@ -118,7 +119,7 @@ table.sc-table { width: 100%; border-collapse: collapse; font-variant-numeric: t
 .chart { width: 100%; position: relative; }
 .chart svg { display: block; overflow: visible; }
 .chart text { fill: var(--text-2); font-size: 11px; }
-.tip { position: absolute; pointer-events: none; background: var(--surface); color: var(--text); border: 1px solid var(--border);
+.tip { position: absolute; pointer-events: none; background: #050810; color: var(--text); border: 1px solid var(--border);
   border-radius: 8px; padding: 8px 10px; font-size: 12px; box-shadow: 0 4px 16px rgba(0,0,0,.12); opacity: 0; transition: opacity .1s;
   white-space: nowrap; z-index: 5; }
 .tip b { font-weight: 600; }
@@ -135,16 +136,7 @@ table.sc-table { width: 100%; border-collapse: collapse; font-variant-numeric: t
 .sc-table tbody tr:focus-visible { outline-offset: -2px; }
 .chart circle[data-n] { outline: none; }
 .chart circle[data-n]:focus-visible { stroke: var(--text); stroke-width: 2; }
-/* Site header and skip link: same as the home page header */
-.dw-skip { position: absolute; left: 12px; top: -80px; z-index: 1000; padding: 10px 16px; border-radius: 4px; background: #ebe8e1; color: #161a1f; font: 600 15px/1.2 "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; text-decoration: none; }
-.dw-skip:focus { top: 12px; outline: 2px solid #9cc0dc; outline-offset: 2px; }
-.dw-site { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; padding: 22px 0 18px; margin: 0 0 20px; border-bottom: 1px solid #303741; font: 16px/1.6 "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
-.dw-site .dw-me { font-family: "Source Serif 4", Georgia, "Times New Roman", serif; font-weight: 600; font-size: 19px; color: #ebe8e1; text-decoration: none; }
-.dw-site nav { display: flex; gap: 22px; font-size: 15px; }
-.dw-site nav a { color: #aeb3b9; text-decoration: none; padding: 6px 0; }
-.dw-site nav a:hover { color: #ebe8e1; }
-.dw-site nav a.on { color: #ebe8e1; box-shadow: inset 0 -2px 0 #9cc0dc; }
-.dw-site a:focus-visible { outline: 2px solid #9cc0dc; outline-offset: 3px; border-radius: 2px; }
+.dw-site { margin-bottom: 20px; }
 main:focus { outline: none; }
 </style>
 </head>
@@ -1129,6 +1121,6 @@ let rt; window.addEventListener("resize", () => { clearTimeout(rt); rt = setTime
 renderMethod();
 render();
 </script>
-
+<script src="/theme.js" defer></script>
 </body>
 </html>
