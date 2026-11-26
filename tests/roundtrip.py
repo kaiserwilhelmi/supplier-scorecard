@@ -76,6 +76,16 @@ def read_data(path):
 from build import build_html  # noqa: E402
 check((ROOT / "index.html").read_text() == build_html()[0], "index.html matches a fresh `python build.py` (rebuild and commit it if not)")
 
+# ---------------- 0b. the page is on the site theme (same rule as tools/check_theme.py in the site repo)
+import re  # noqa: E402
+page = (ROOT / "template.html").read_text()
+check(bool(re.search(r'<link rel="stylesheet" href="/theme\.css">', page)), "template.html links /theme.css")
+check('<script src="/theme.js" defer></script>' in page, "template.html loads /theme.js")
+check(page.index('href="/theme.css"') < page.index("<style>"), "/theme.css comes before the page's own styles")
+check('<header class="dw-site">' in page and 'class="dw-skip"' in page, "template.html has the shared header and skip link")
+for old in ["#161a1f", "#1b2026", "#303741", "#262c34", "#ebe8e1", "#aeb3b9", "#8f969f", "#9cc0dc", "156,192,220", "Source Serif"]:
+    check(old.lower().replace(" ", "") not in page.lower().replace(" ", ""), f"template.html no longer uses {old}")
+
 # ---------------- 1. downloads
 d = browser("download", str(ROOT), str(TMP))
 check(not d["errors"], f"no page errors {d['errors']}")

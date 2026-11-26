@@ -31,6 +31,10 @@ python score.py 6 --weights otd=40,fill=0,quality=30,invoice=10,price=20   # che
 python tests/roundtrip.py   # headless Chromium via Playwright; the page reads .xlsx itself, no library
 ```
 
+## Theme
+
+The pages use the site theme from the site repo (`kaiserwilhelmi/kaiserwilhelmi.github.io`): `template.html` loads `/fonts/fonts.css`, `/theme.css` (before its own styles) and `/theme.js`, uses the shared `dw-site` header and `dw-skip` skip link, and reads every color and font from a theme token with a fallback, for example `--bg: var(--ink, #080c15);`. The fallbacks only show if the theme file can't be reached. To change the look, edit `theme.css` in the site repo, not this page. `tests/roundtrip.py` (step 0b) checks this.
+
 ## Rights
 
 © 2026 Dawson Wilhelmi. All rights reserved. The code is public so it can be read; it is not licensed for reuse. The data is made-up sample data.
